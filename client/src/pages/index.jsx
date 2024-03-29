@@ -1,2 +1,2 @@
 export {LandingPage} from './Home'
-export {SignUp, SignIn} from './Auth'
+export {SignUp, SignIn, ForgotPassword, ResetPassword} from './Auth'

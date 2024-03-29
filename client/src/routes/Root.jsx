@@ -1,9 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import { LandingPage, SignUp, SignIn } from "../pages";
+import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword } from "../pages";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 export default function Root(){
     const theme = createTheme({
-     
         components: {
             MuiIconButton: {
               styleOverrides: {
@@ -31,6 +30,8 @@ export default function Root(){
           <Route path='/' element={<LandingPage/>}/>
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/signin' element={<SignIn/>}/>
+          <Route path="/forgotpassword" element={<ForgotPassword/>}/>
+          <Route path="/resetpassword" element={<ResetPassword/>}/>
         </Routes>
         </ThemeProvider>
     )

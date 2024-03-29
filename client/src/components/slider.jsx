@@ -78,7 +78,7 @@ const Slider = ({ images, autoSwipeInterval = 5000 }) => {
               }}
             />
         {/* Text overlay */}
-          <Stack direction="column" gap={2} sx={{ position: 'absolute', top:{xs:'60%', sm:'60%', md:'60%', lg:'64%', xl:'60%'} , left: {xs:'44%', sm:'38%', md:'30%', lg:'28%', xl:'20%'}, transform: 'translate(-50%, -50%)', color: 'white', textAlign: 'left' }}>
+          <Stack direction="column" gap={2} sx={{ position: 'absolute', top:{xs:'60%', sm:'60%', md:'60%', lg:'64%', xl:'60%'} , left: {xs:'44%', sm:'38%', md:'32%', lg:'25%', xl:'16%'}, transform: 'translate(-50%, -50%)', color: 'white', textAlign: 'left' }}>
            <Typography variant='h4' fontWeight='medium'>{image.title}</Typography>
            <Typography variant='h2' fontWeight="medium" style={{color:'#818181'}}>{image.caption}</Typography>
            <Typography variant='p' color='inherit'>{image.arr} </Typography>
