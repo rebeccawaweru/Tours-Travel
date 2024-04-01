@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword } from "../pages";
+import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword, Packages } from "../pages";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 export default function Root(){
     const theme = createTheme({
@@ -8,7 +8,8 @@ export default function Root(){
               styleOverrides: {
                 root: {
                   color: 'whitesmoke', // Set color to white for all icon buttons
-                  fontFamily: `system-ui, -apple-system Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
+                  fontFamily:`"Poppins",sans-serif`,
+                  letterSpacing:"0.9px"
 
                 },
               },
@@ -16,7 +17,8 @@ export default function Root(){
           },
         typography:{
        
-                fontFamily: `system-ui, -apple-system Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
+                fontFamily:`"Poppins",sans-serif`,
+                letterSpacing:"0.9px",
                 body1:{
                     color:"whitesmoke"
                 }
@@ -32,6 +34,7 @@ export default function Root(){
           <Route path='/signin' element={<SignIn/>}/>
           <Route path="/forgotpassword" element={<ForgotPassword/>}/>
           <Route path="/resetpassword" element={<ResetPassword/>}/>
+          <Route path="/packages" element={<Packages/>}/>
         </Routes>
         </ThemeProvider>
     )

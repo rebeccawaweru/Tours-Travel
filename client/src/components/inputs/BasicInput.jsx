@@ -10,7 +10,7 @@ export default function BasicInput({...props}){
         variant="outlined" 
         aria-describedby="my-helper-text" 
         InputProps={{
-            startAdornment: (
+            startAdornment:props.start &&  (
               <InputAdornment  position="start"><props.start fontSize="small" color="primary" /></InputAdornment>
             ),
             endAdornment: props.end && (
