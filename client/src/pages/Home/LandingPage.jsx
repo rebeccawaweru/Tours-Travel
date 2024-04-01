@@ -18,7 +18,6 @@ export default function LandingPage(){
     return (
         <Wrapper>
         <Slider images={content}/>
- 
         <Box sx={{height:"35vh",backgroundColor:"#2196f3",display:"flex",justifyContent:"space-around", flexWrap:"wrap", alignItems:"center"}}>
           <Quality src={Plane} alt="destinations" title="500+ DESTINATIONS" caption="Morbi leo risus, porta ac"/>
           <Quality src={Price} alt="prices" title="BEST PRICE GUARANTEE" caption="Morbi leo risus, porta ac"/>
@@ -46,8 +45,9 @@ export default function LandingPage(){
 
         </Box>
      
-        <Container maxWidth sx={{paddingY:"50px"}}>
-            <Typography fontWeight="bold" variant="h6">Popular Destinations / <LinkBtn to="/destinations" title="View All Destinations"/></Typography>
+        <Container maxWidth sx={{paddingY:"40px",backgroundColor:"white"}}>
+            <Typography fontWeight="bold" variant="h6" lineHeight={2}>Popular Destinations / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/packages">View All Destinations</Link></Typography>
+            <Typography color="#8c8c8c" lineHeight={2}>Dive into a treasure trove of enchanting locales, each offering a unique tapestry of culture, adventure, and natural beauty. From iconic landmarks to hidden gems, embark on a virtual journey with us as we showcase the destinations that capture the hearts and imaginations of travelers worldwide. </Typography>
         </Container>
         <CustomImageList/>
         </Wrapper>

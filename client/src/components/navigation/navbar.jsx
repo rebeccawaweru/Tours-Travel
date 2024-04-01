@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import { Typography, Toolbar, AppBar, MenuItem, Stack, IconButton, Drawer, Container} from '@mui/material';
+import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Drawer, Container} from '@mui/material';
 import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu } from '@mui/icons-material';
 import Logo from '../../assets/logodenze.png'
+import LinkItem from './linkitem';
 export default function NavBar({hideToolbar}) {
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleDrawerOpen = () => {
@@ -17,32 +18,33 @@ export default function NavBar({hideToolbar}) {
     <Container sx={{ flexGrow: 1}}>
       <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? 'black' : 'rgba(0, 0, 0, 0.6)', color: "white",  }} elevation={0}>
          {!hideToolbar && 
-        <Toolbar sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' } }}>
-          <Stack direction="row" spacing={4} component="div" sx={{ flexGrow: 1 }}>
+        <Toolbar sx={{ display: { xs: 'none', sm: 'flex'} }}>
+          <Stack direction="row" spacing={1} component="div" sx={{ flexGrow: 1 }}>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 726 647 255</IconButton>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
           </Stack>
-
+          <Box display={{xs:'none',sm:"none", md:"flex"}}>
           <IconButton><Facebook sx={{ fontSize: 16 }} /></IconButton>
           <IconButton><Instagram sx={{ fontSize: 16 }} /></IconButton>
           <IconButton><X sx={{ fontSize: 16 }} /></IconButton>
-          <IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Lock sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/><Link className='link' to="/signin">Login</Link></IconButton>
-          <IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Person sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/><Link className='link' to="/signup">Sign up</Link></IconButton>
+          <Link className='link' to="/signup"><IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Person sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Sign up</IconButton></Link>
+          </Box>
+          <Link className='link' to="/signin"> <IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Lock sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Login</IconButton></Link>
         </Toolbar>}
 
         <Toolbar>
-          <Typography variant="p" component="div" sx={{ flexGrow: 1,}}>
+          <Typography variant="p" component="div" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
             <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 85 : 110} height={hideToolbar ? 80 : 90} style={{objectFit:"cover"}}/>
           </Typography>
-          <IconButton sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
-          <Stack direction="row" sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
-            <MenuItem component={Link} to="/" sx={{'&:hover':{scale:"110%", backgroundColor:"#2196f3", color:"whitesmoke"}, color:"#2196f3"}}>Home</MenuItem>
-            <MenuItem>About</MenuItem>
-            <MenuItem>Services</MenuItem>
-            <MenuItem><Link className='link' to="/packages">Packages</Link></MenuItem>
-            <MenuItem>Destinations</MenuItem>
-            <MenuItem><Link className='link' to="/contact">Contact</Link></MenuItem>
-          </Stack>
+          <IconButton sx={{ display: { xs: 'block', sm: 'none', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
+          <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }}>
+            <LinkItem to="/" page="Home"/>
+            <LinkItem to="/about" page="About"/>
+            {/* <LinkItem to="/?services" page="Services"/> */}
+            <LinkItem to="/packages" page="Packages"/>
+            <LinkItem to="/destinations" page="Destinations"/>
+            <LinkItem to="/contact" page="Contact"/>
+          </Box>
         </Toolbar>
       </AppBar>
 

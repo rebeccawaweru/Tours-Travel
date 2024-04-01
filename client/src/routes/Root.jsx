@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword, Packages } from "../pages";
+import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword, Packages, Contact } from "../pages";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 export default function Root(){
     const theme = createTheme({
@@ -35,6 +35,7 @@ export default function Root(){
           <Route path="/forgotpassword" element={<ForgotPassword/>}/>
           <Route path="/resetpassword" element={<ResetPassword/>}/>
           <Route path="/packages" element={<Packages/>}/>
+          <Route path="/contact" element={<Contact/>}/>
         </Routes>
         </ThemeProvider>
     )
