@@ -12,13 +12,13 @@ export default function SignUp(){
 
         <FormControl sx={{width:"100%"}}>
         <Grid gap={4} sx={{display:{xs:"block",sm:"block", md:"flex", lg:"flex"}}}>
-        <BasicInput  lbl="Username" type="email" name="email" start={Person}/>
-        <BasicInput lbl="Email Address" type="email" name="email" start={Email}/>
+        <BasicInput required  lbl="Username" type="email" name="email" start={Person}/>
+        <BasicInput required lbl="Email Address" type="email" name="email" start={Email}/>
         </Grid>
 
         <Grid gap={4} sx={{display:{xs:"block",sm:"block", md:"flex", lg:"flex"}}}>
-        <BasicInput lbl="Password" type="password" name="password" end={<VisibilityOff/>} start={Lock}/>
-        <BasicInput lbl="Confirm Password" type="password" name="password" end={<VisibilityOff/>} start={Lock}/>
+        <BasicInput required lbl="Password" type="password" name="password" end={<VisibilityOff/>} start={Lock}/>
+        <BasicInput required lbl="Confirm Password" type="password" name="password" end={<VisibilityOff/>} start={Lock}/>
         </Grid>
 
         <Stack direction="row" spacing={2} sx={{display:"flex", alignItems:"center", marginTop:2}}>

@@ -32,7 +32,7 @@ export default function LandingPage(){
         </Container>
      
         <Container maxWidth sx={{backgroundColor: 'rgba(0, 0, 0, 0.7)',paddingY:"50px"}}>
-            <Typography sx={{marginBottom:"40px"}} fontSize="large" fontWeight="bold">Popular Tour Packages / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/packages">View All Tours</Link></Typography>
+            <Typography sx={{marginBottom:"40px"}} fontSize="large" fontWeight="bold" color="whitesmoke">Popular Tour Packages / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/packages">View All Tours</Link></Typography>
             <Stack direction="row" spacing={2} sx={{display:"flex",flexDirection:{xs:"column",sm:"column",md:"row", lg:"row",xl:"row"}, justifyContent:"space-between",alignItems:"center",cursor:"pointer"}}>
             <KeyboardArrowLeft sx={{backgroundColor:"#2196f3", padding:2, color:"whitesmoke"}}/>
              <Package image={Train}/>

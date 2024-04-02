@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword, Packages, Contact } from "../pages";
+import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword, Packages, Contact, Bookings,CreatePackage,TourPackages,Users } from "../pages";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 export default function Root(){
     const theme = createTheme({
@@ -14,14 +14,31 @@ export default function Root(){
                 },
               },
             },
+            MuiMenuItem:{
+              styleOverrides: {
+                root: {
+                  color: 'black', // Set color to white for all icon buttons
+                  fontFamily:`"Poppins",sans-serif`,
+                  letterSpacing:"0.9px"
+
+                },
+              },
+            },
+            MuiFormControlLabel:{
+              styleOverrides:{
+                root:{
+                  fontSize:"12px"
+                }
+              }
+            }
           },
         typography:{
        
                 fontFamily:`"Poppins",sans-serif`,
                 letterSpacing:"0.9px",
-                body1:{
-                    color:"whitesmoke"
-                }
+                // body1:{
+                //     color:"whitesmoke"
+                // }
             
 
         }
@@ -36,6 +53,10 @@ export default function Root(){
           <Route path="/resetpassword" element={<ResetPassword/>}/>
           <Route path="/packages" element={<Packages/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/bookings" element={<Bookings/>}/>
+          <Route path="/newpackage" element={<CreatePackage/>}/>
+          <Route path="/tourpackages" element={<TourPackages/>}/>
+          <Route path="/users" element={<Users/>}/>
         </Routes>
         </ThemeProvider>
     )

@@ -7,7 +7,7 @@ import { BasicInput, ContactItem } from "../../components";
 export default function Contact(){
     return (
       <AuthWrapper title="Get In Touch" caption="Contact Us" bg={Contactbg}>
-        <Grid maxWidth container gap={4} bgcolor="whitesmoke" padding={4}>
+        <Grid maxWidth container gap={6} bgcolor="whitesmoke" padding={4}>
            <Grid item xs={12} md={6}>
               <Typography fontWeight="bold" variant="h5">Leave us your info</Typography>
              <Box marginY={2} width="10%" borderBottom={2} borderColor="#2196f3"></Box>

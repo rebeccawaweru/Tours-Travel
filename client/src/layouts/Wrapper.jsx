@@ -14,9 +14,9 @@ export default function Wrapper({children}){
       }
     };
 
-    if(location.pathname !== "/"){
-      setHideToolbar(true); // Hide the Toolbar
-    }
+    // if(location.pathname !== "/"){
+    //   setHideToolbar(true); // Hide the Toolbar
+    // }
 
     // Add event listener for scroll event
     window.addEventListener('scroll', handleScroll);

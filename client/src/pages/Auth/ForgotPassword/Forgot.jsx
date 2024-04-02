@@ -9,7 +9,7 @@ export default function ForgotPassword(){
         <Typography fontWeight="bold" color="primary" variant="h6">Enter email to receive instructions</Typography>
         <Divider sx={{marginY:2}}></Divider>
         <FormControl sx={{width:"100%"}}>
-        <BasicInput lbl="Email Address" type="email" name="email" start={Email}/>
+        <BasicInput required lbl="Email Address" type="email" name="email" start={Email}/>
         <Stack direction="row" spacing={2} sx={{display:"flex", alignItems:"center"}}>
         <Button variant="contained">Submit</Button>
         <LinkBtn to="/signin" title="Login"/>

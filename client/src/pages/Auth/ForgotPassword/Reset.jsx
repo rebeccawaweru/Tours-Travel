@@ -9,9 +9,9 @@ export default function ResetPassword(){
         <Typography fontWeight="bold" color="primary" variant="h6">Confirmation</Typography>
         <Divider sx={{marginY:2}}></Divider>
         <FormControl sx={{width:"100%"}}>
-        <BasicInput lbl="OTP" type="text" name="otp" start={Code}/>
-        <BasicInput lbl="New Password" type="password" name="password" end={<VisibilityOff/>} start={Lock}/>
-        <BasicInput lbl="Confirm New Password" type="password" name="password" end={<VisibilityOff/>} start={Lock}/>
+        <BasicInput required lbl="OTP" type="text" name="otp" start={Code}/>
+        <BasicInput required lbl="New Password" type="password" name="password" end={<VisibilityOff/>} start={Lock}/>
+        <BasicInput required lbl="Confirm New Password" type="password" name="password" end={<VisibilityOff/>} start={Lock}/>
         <Box>
         <Button variant="contained">Submit</Button>
         </Box>

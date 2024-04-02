@@ -2,10 +2,10 @@ import {InputAdornment, TextField, Box, FormControl, FormHelperText, Input, Typo
 export default function BasicInput({...props}){
     return (
         <Box sx={{width:"100%", marginBottom:4}}>
-        <Typography fontSize={15} sx={{color:"gray"}}>{props.lbl}</Typography>
+        <Typography variant="body1" color="inherit" fontSize={14}>{props.lbl}{props.required && <span style={{color:"red"}}>*</span>}</Typography>
         <TextField 
-        required
         fullWidth 
+        size="small"
         sx={{backgroundColor:"white"}}
         {...props}
         variant="outlined" 

@@ -35,7 +35,7 @@ export default function CustomImageList() {
          >
         <Box position="absolute" paddingX={1} bottom={30}>
          <Box display={{xs:"block", sm:"block", md:"flex", lg:"flex", xl:"flex"}} justifyContent="space-between" >
-           <Stack  direction="row" spacing={1}>
+           <Stack  direction="row" spacing={1} color="whitesmoke">
             <Typography><LocationOn /></Typography>
             <Typography  fontWeight="bold">{item.title}</Typography>
            </Stack>
