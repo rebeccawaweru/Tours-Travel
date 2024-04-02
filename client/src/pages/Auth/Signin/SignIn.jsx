@@ -5,7 +5,8 @@ import { AuthWrapper } from "../../../layouts"
 export default function SignIn(){
     return (
        <AuthWrapper title="Get Started" caption="Login">
-        <Typography fontWeight="bold" color="inherit" variant="h6">Welcome back</Typography>
+        <Grid bgcolor="whitesmoke" padding={4}>
+        <Typography fontWeight="bold" color="primary" variant="h6">Welcome back</Typography>
         <Divider sx={{marginY:2}}></Divider>
         <FormControl sx={{width:"100%"}}>
         <Box gap={2} sx={{display:{xs:"block",sm:"block", md:"flex", lg:"flex"}}}>
@@ -20,7 +21,7 @@ export default function SignIn(){
         </Stack>
         </Grid>
         </FormControl>
-       
+        </Grid>
     </AuthWrapper>
     )
 }

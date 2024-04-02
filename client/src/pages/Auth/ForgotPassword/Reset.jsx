@@ -1,10 +1,11 @@
-import { Typography, FormControl, Button, Divider, Box} from "@mui/material"
+import { Typography, FormControl, Button, Divider, Box, Grid} from "@mui/material"
 import {BasicInput} from '../../../components'
 import { AuthWrapper } from "../../../layouts"
 import { Lock, VisibilityOff, Code} from "@mui/icons-material"
 export default function ResetPassword(){
     return (
         <AuthWrapper title="Security" caption="Reset Password">
+        <Grid bgcolor="whitesmoke" padding={4}>
         <Typography fontWeight="bold" color="primary" variant="h6">Confirmation</Typography>
         <Divider sx={{marginY:2}}></Divider>
         <FormControl sx={{width:"100%"}}>
@@ -15,6 +16,7 @@ export default function ResetPassword(){
         <Button variant="contained">Submit</Button>
         </Box>
         </FormControl>
+        </Grid>
      </AuthWrapper>
     )
 }

@@ -3,14 +3,16 @@ import {BasicInput, LinkBtn} from '../../../components'
 import { AuthWrapper } from "../../../layouts"
 import { Lock, Email, VisibilityOff, Person } from "@mui/icons-material"
 export default function SignUp(){
+    
     return (
         <AuthWrapper title="Join Us" caption="Sign Up">
+        <Grid bgcolor="whitesmoke" padding={4}>
         <Typography fontWeight="bold" color="primary" variant="h6">Get started</Typography>
          <Divider sx={{marginY:2}}></Divider>
 
         <FormControl sx={{width:"100%"}}>
         <Grid gap={4} sx={{display:{xs:"block",sm:"block", md:"flex", lg:"flex"}}}>
-        <BasicInput lbl="Username" type="email" name="email" start={Person}/>
+        <BasicInput  lbl="Username" type="email" name="email" start={Person}/>
         <BasicInput lbl="Email Address" type="email" name="email" start={Email}/>
         </Grid>
 
@@ -24,6 +26,7 @@ export default function SignUp(){
         <LinkBtn to="/signin" title="Already have an account?"/>
         </Stack>
         </FormControl>
+        </Grid>
      </AuthWrapper>
     )
 }

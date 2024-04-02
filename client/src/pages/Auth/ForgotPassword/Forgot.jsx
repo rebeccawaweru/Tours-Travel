@@ -5,7 +5,8 @@ import { AuthWrapper } from "../../../layouts"
 export default function ForgotPassword(){
     return (
        <AuthWrapper title="Security" caption="Forgot Password">
-        <Typography fontWeight="bold" color="inherit" variant="h6">Enter email to receive instructions</Typography>
+        <Grid bgcolor="whitesmoke" padding={4}>
+        <Typography fontWeight="bold" color="primary" variant="h6">Enter email to receive instructions</Typography>
         <Divider sx={{marginY:2}}></Divider>
         <FormControl sx={{width:"100%"}}>
         <BasicInput lbl="Email Address" type="email" name="email" start={Email}/>
@@ -14,7 +15,7 @@ export default function ForgotPassword(){
         <LinkBtn to="/signin" title="Login"/>
         </Stack>
         </FormControl>
-       
+        </Grid>
     </AuthWrapper>
     )
 }

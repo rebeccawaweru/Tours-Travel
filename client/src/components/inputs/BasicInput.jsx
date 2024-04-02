@@ -6,6 +6,7 @@ export default function BasicInput({...props}){
         <TextField 
         required
         fullWidth 
+        sx={{backgroundColor:"white"}}
         {...props}
         variant="outlined" 
         aria-describedby="my-helper-text" 
