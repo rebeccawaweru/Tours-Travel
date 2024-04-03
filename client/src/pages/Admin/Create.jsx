@@ -35,8 +35,10 @@ export default function CreatePackage(){
     return <AdminDashboard>
            <BreadCrumb cap1="Tours" cap2="Add Package"/>
            <Box component="form" marginY={2} padding={4} bgcolor="whitesmoke">
-            <BasicInput onChange={handleUpload} required type="file" lbl="Poster" helperText="Ad photo of the tour package"/>
-             <Box component="img" src={preview} alt="preview" height={100} width={100}/>
+             
+             <BasicInput onChange={handleUpload} required type="file" lbl="Poster" helperText="Ad photo of the tour package"/>
+             <Box component="img" marginBottom={2} src={preview} alt="preview" height={200} width={200} sx={{objectFit:"cover"}}/>
+
             <BasicInput required lbl="Package Name" name="title" onChange={handleChange}/>
             <CustomSelect required lbl="Destination Category" name="category" onChange={handleChange}>
                 <MenuItem value="Africa">Local Travels</MenuItem>

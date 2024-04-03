@@ -2,10 +2,7 @@ import { Box, Grid, Stack, Typography} from '@mui/material';
 import { LocationOn } from '@mui/icons-material';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Palm from '../assets/palm.jpg'
-import Europe from '../assets/europe.webp'
-import Asia from '../assets/asia.webp'
-import Africa from '../assets/africa.webp'
+import { itemData } from '../utils/helpers';
 export default function CustomImageList() {
     const [hovered, setHovered] = useState(false);
 
@@ -76,74 +73,4 @@ export default function CustomImageList() {
   );
 }
 
-const itemData = [
-  {
-    img: Palm,
-    title: 'America',
-    author: '@bkristastucchio',
-    featured: true,
-  },
-  {
-    img: Europe,
-    title: 'Europe',
-    author: '@rollelflex_graphy726',
-  },
-  {
-    img: Asia,
-    title: 'Asia',
-    author: '@helloimnik',
-  },
-  {
-    img: Africa,
-    title: 'Africa',
-    author: '@nolanissac',
-    cols: 2,
-  },
-//   {
-//     img: Africa,
-//     title: 'Africa',
-//     author: '@hjrc33',
-//     cols: 2,
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-//     title: 'Honey',
-//     author: '@arwinneil',
-//     rows: 2,
-//     cols: 2,
-//     featured: true,
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-//     title: 'Basketball',
-//     author: '@tjdragotta',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-//     title: 'Fern',
-//     author: '@katie_wasserman',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-//     title: 'Mushrooms',
-//     author: '@silverdalex',
-//     rows: 2,
-//     cols: 2,
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-//     title: 'Tomato basil',
-//     author: '@shelleypauls',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-//     title: 'Sea star',
-//     author: '@peterlaster',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-//     title: 'Bike',
-//     author: '@southside_customs',
-//     cols: 2,
-//   },
-];
+

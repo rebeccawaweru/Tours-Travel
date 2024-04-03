@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Drawer, Container} from '@mui/material';
 import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu } from '@mui/icons-material';
-import Logo from '../../assets/logodenze.png'
+import Logo from '../../assets/tour-logo.png'
 import LinkItem from './linkitem';
 export default function NavBar({hideToolbar}) {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -34,7 +34,7 @@ export default function NavBar({hideToolbar}) {
 
         <Toolbar>
           <Typography variant="p" component="div" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
-            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 85 : 110} height={hideToolbar ? 80 : 90} style={{objectFit:"cover"}}/>
+            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 150 : 185} height={hideToolbar ? 80 : 75} style={{objectFit:"cover"}}/>
           </Typography>
           <IconButton sx={{ display: { xs: 'block', sm: 'none', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
           <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }}>
