@@ -1,7 +1,7 @@
 from app import app, mongo
 from flask import request, jsonify
 from app.models import User
-from bson import json_util
+from bson import json_util, ObjectId
 from datetime import datetime
 from pymongo import DESCENDING
 
@@ -72,7 +72,7 @@ def newpackage():
    
 
 @app.route('/find', methods=['GET'])
-def getpackages():
+def get_packages():
    packages = list(db.packages.find().sort('createdAt', DESCENDING))
    if not packages:
       return jsonify({'error':'No packages found'}), 404
@@ -82,10 +82,23 @@ def getpackages():
 
    return json_util.dumps(packages), 200
 
-@app.route('/update/<package_id>/', methods=['PUT'])
-def update(package_id):
+@app.route('/find/<id>/', methods=['GET'])
+def get_package(id):
    query = {
-      "_id":package_id
+      "_id":ObjectId(id)
+   }
+   package = db.packages.find_one(query)
+   if not package:
+      return jsonify({'error':'Package not found'}), 404
+   
+   package['_id'] = str(package['_id'])
+   return jsonify({'package':package}), 200
+
+
+@app.route('/update/<id>/', methods=['PUT'])
+def update_package(id):
+   query = {
+      "_id":ObjectId(id)
    }
    data = { "$set": dict(request.json) }
    result = db.packages.update_one(query, data)
@@ -98,10 +111,10 @@ def update(package_id):
 
    
 
-@app.route('/packages/<package_id>/', methods=['DELETE'])
+@app.route('/delete/<package_id>/', methods=['DELETE'])
 def delete_package(package_id):
    query = {
-      "_id": package_id
+      "_id": ObjectId(package_id)
    }
    result = db.packages.delete_one(query)
 
