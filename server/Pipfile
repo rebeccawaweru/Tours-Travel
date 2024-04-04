@@ -10,6 +10,7 @@ python-dotenv = "*"
 bcrypt = "*"
 flask-bcrypt = "*"
 pytz = "*"
+flask-cors = "*"
 
 [dev-packages]
 

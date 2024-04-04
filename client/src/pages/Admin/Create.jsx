@@ -2,9 +2,15 @@ import { useState } from "react";
 import { BasicInput, CustomSelect, BreadCrumb, CheckBox} from "../../components";
 import { AdminDashboard } from "../../layouts";
 import { Box, Button, MenuItem, Stack, Typography } from "@mui/material";
+import { handleFileUpload } from "../../utils/helpers";
+import client from "../../api/client"
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 export default function CreatePackage(){
+    const navigate = useNavigate()
     const [activities, setActivities] = useState([])
     const [preview,setPreview] = useState('')
+    const [image, setImage] = useState('')
     const [tour, setTour] = useState({
         title:"",
         category:"",
@@ -31,16 +37,28 @@ export default function CreatePackage(){
     }
     const handleUpload = (e) =>{
        setPreview(URL.createObjectURL(e.target.files[0]))
+       setImage(e.target.files)
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const cover = await handleFileUpload(image)
+        const data = {...tour, poster:cover.url, activity:activities}
+        await client.post('/new', data).then((response)=>{
+             if(response.data.success){
+                Swal.fire('Success', response.data.message, 'success')
+                navigate('/tourpackages')
+             }
+        })
     }
     return <AdminDashboard>
            <BreadCrumb cap1="Tours" cap2="Add Package"/>
-           <Box component="form" marginY={2} padding={4} bgcolor="whitesmoke">
-             
-             <BasicInput onChange={handleUpload} required type="file" lbl="Poster" helperText="Ad photo of the tour package"/>
-             <Box component="img" marginBottom={2} src={preview} alt="preview" height={200} width={200} sx={{objectFit:"cover"}}/>
+           <Box component="form" onSubmit={handleSubmit} marginY={2} padding={4} bgcolor="whitesmoke">
+           <BasicInput onChange={handleUpload} required type="file" lbl="Poster" helperText="Ad photo of the tour package"/>
+             {preview && <Box component="img" marginBottom={2} src={preview} alt="preview" height={200} width={200} sx={{objectFit:"cover"}}/>}
 
             <BasicInput required lbl="Package Name" name="title" onChange={handleChange}/>
-            <CustomSelect required lbl="Destination Category" name="category" onChange={handleChange}>
+            <CustomSelect required lbl="Destination Category" value={tour.category} name="category" onChange={handleChange}>
                 <MenuItem value="Africa">Local Travels</MenuItem>
                 <MenuItem value="East Africa">East Africa</MenuItem>
                 <MenuItem value="Hot Pick">Hot Pick</MenuItem>

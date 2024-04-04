@@ -51,3 +51,18 @@ export const itemData = [
       cols: 2,
     }
 ]
+
+export const handleFileUpload = async (files) =>{
+  const data = new FormData()
+  data.append("file", files[0])
+  data.append("upload_preset", "Images");
+  const res = await fetch(
+    "https://api.cloudinary.com/v1_1/marite/image/upload",
+    {
+      method:"POST",
+      body:data
+    }
+  )
+  const File = await res.json()
+  return File
+}

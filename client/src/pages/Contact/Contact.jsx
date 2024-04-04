@@ -41,12 +41,8 @@ export default function Contact(){
               <ContactItem title="instagram.com" icon={ <Instagram/>}/>
                <ContactItem title="twitter.com" icon={ <X/>}/>
               </Stack>
-
-
            </Grid>
         </Grid>
-  
-    
       </AuthWrapper>
     )
 }

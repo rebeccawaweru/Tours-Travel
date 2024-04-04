@@ -37,7 +37,7 @@ def signup():
       'createdAt':new_user.createdAt
    })
 
-   return jsonify({'success':True, 'message':'Signup successfull'}), 201
+   return jsonify({'success':True, 'message':'Signup successful'}), 201
 
 
 @app.route('/login', methods=['POST'])
@@ -95,7 +95,7 @@ def get_package(id):
    return jsonify({'package':package}), 200
 
 
-@app.route('/update/<id>/', methods=['PUT'])
+@app.route('/update/<id>', methods=['PUT'])
 def update_package(id):
    query = {
       "_id":ObjectId(id)
@@ -107,14 +107,14 @@ def update_package(id):
    elif not result.modified_count:
       return jsonify({'message':'Failed to update'}),  500
    
-   return jsonify({'success':True, 'message':'Package updated successfully'})
+   return jsonify({'success':True, 'message':'Package updated successfully'}), 200
 
    
 
-@app.route('/delete/<package_id>/', methods=['DELETE'])
-def delete_package(package_id):
+@app.route('/delete/<id>/', methods=['DELETE','OPTIONS'])
+def delete_package(id):
    query = {
-      "_id": ObjectId(package_id)
+      "_id": ObjectId(id)
    }
    result = db.packages.delete_one(query)
 

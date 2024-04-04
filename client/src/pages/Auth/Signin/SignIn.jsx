@@ -3,11 +3,26 @@ import {BasicInput, LinkBtn} from '../../../components'
 import { Lock, Email, VisibilityOff } from "@mui/icons-material"
 import { AuthWrapper } from "../../../layouts"
 import { useNavigate } from "react-router-dom"
+import client from "../../../api/client"
+import { useState } from "react"
 export default function SignIn(){
     const navigate = useNavigate()
-    const handleSubmit = (e) =>{
+    const [data, setData] = useState({
+        email:"",
+        password:""
+    })
+    const handleChange = (e) =>{
+        setData((data) => ({...data, [e.target.name]:e.target.value}))
+    }
+    const handleSubmit = async (e) =>{
         e.preventDefault()
-        navigate('/tourpackages')
+        await client.post('/login', data).then((response)=>{
+            if(response.data.success){
+                localStorage.setItem('user_id', response.data.user._id)
+                 navigate('/tourpackages')
+            }
+        })
+     
     }
     return (
        <AuthWrapper title="Get Started" caption="Login">
@@ -16,8 +31,8 @@ export default function SignIn(){
         <Divider sx={{marginY:2}}></Divider>
         <FormControl component="form" onSubmit={handleSubmit} sx={{width:"100%"}}>
         <Box gap={2} sx={{display:{xs:"block",sm:"block", md:"flex", lg:"flex"}}}>
-        <BasicInput required lbl="Email Address" type="email" name="email" start={Email}/>
-        <BasicInput required lbl="Password" type="password" name="password" end={<VisibilityOff/>} start={Lock}/>
+        <BasicInput required lbl="Email Address" type="email" name="email" onChange={handleChange} start={Email}/>
+        <BasicInput required lbl="Password" type="password" name="password" onChange={handleChange} end={<VisibilityOff/>} start={Lock}/>
         </Box>
         <Grid container direction="column" gap={4}>
         <LinkBtn to="/forgotpassword" title="Forgot Password?"/>
