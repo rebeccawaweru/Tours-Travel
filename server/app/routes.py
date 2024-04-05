@@ -1,5 +1,5 @@
 from app import app, mongo
-from flask import request, jsonify
+from flask import request, jsonify, make_response
 from app.models import User
 from bson import json_util, ObjectId
 from datetime import datetime
@@ -111,14 +111,22 @@ def update_package(id):
 
    
 
-@app.route('/delete/<id>/', methods=['DELETE','OPTIONS'])
+@app.route('/delete/<id>', methods=['DELETE','OPTIONS'])
 def delete_package(id):
-   query = {
+    if request.method == 'OPTIONS':
+        # This is a preflight request, respond with the appropriate headers
+        response = make_response()
+        response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
+        response.headers.add("Access-Control-Allow-Methods", "DELETE")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type")
+        return response
+     
+    query = {
       "_id": ObjectId(id)
-   }
-   result = db.packages.delete_one(query)
+    }
+    result = db.packages.delete_one(query)
 
-   if not result.deleted_count:
+    if not result.deleted_count:
       return jsonify({'error':'Failed to delete package'}), 500
    
-   return jsonify({'success':True, 'message':'Package deleted successfully'}), 200
+    return jsonify({'success':True, 'message':'Package deleted successfully'}), 200

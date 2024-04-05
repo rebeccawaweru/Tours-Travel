@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword, Packages, Contact, Bookings,CreatePackage, UpdatePackage, TourPackages,Users } from "../pages";
+import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword, About, Packages, PackageDetails, Destinations, Contact, Bookings,CreatePackage, UpdatePackage, TourPackages,Users } from "../pages";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 export default function Root(){
     const theme = createTheme({
@@ -51,7 +51,10 @@ export default function Root(){
           <Route path='/signin' element={<SignIn/>}/>
           <Route path="/forgotpassword" element={<ForgotPassword/>}/>
           <Route path="/resetpassword" element={<ResetPassword/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/destinations" element={<Destinations/>}/>
           <Route path="/packages" element={<Packages/>}/>
+          <Route path="/package/:id" element={<PackageDetails/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/bookings" element={<Bookings/>}/>
           <Route path="/newpackage" element={<CreatePackage/>}/>

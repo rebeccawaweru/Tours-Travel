@@ -21,18 +21,7 @@ export default function TourPackages(){
         showCancelButton: true,
       }).then((result) => {
         if (result.isConfirmed) {
-           client.delete(`/delete/${id}`,{
-            headers: {
-              "Access-Control-Allow-Origin":
-                "http://localhost:5000",
-              "Access-Control-Allow-Methods": [
-                "POST",
-                "GET",
-                "OPTIONS",
-                "DELETE",
-                "PUT",
-              ],}
-           }).then((response)=>{
+           client.delete(`/delete/${id}`).then((response)=>{
               if(response.data.success) {
                 Swal.fire('Success', response.data.message, 'success')
               }

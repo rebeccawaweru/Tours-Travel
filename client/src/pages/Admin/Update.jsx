@@ -48,6 +48,7 @@ export default function UpdatePackage(){
         const post = cover ? cover.url : preview
         const newdata = {...tour, poster:post, activity:activities}
         delete newdata._id
+        delete newdata.createdAt
         await client.put(`/update/${id}`, newdata).then((response)=>{
              if(response.data.success){
                 Swal.fire('Success', response.data.message, 'success')

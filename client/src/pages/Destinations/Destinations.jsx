@@ -1,5 +1,5 @@
 import Wrapper from "../../layouts/Wrapper";
-import { Box, FormControl, Grid, Container, Stack, Button, Typography, IconButton, TextField } from "@mui/material";
+import { Box, Grid, Container, Stack,  Typography } from "@mui/material";
 import Sky from '../../assets/packagebg.jpg'
 import { Filter, Package} from "../../components";
 import Train from '../../assets/train.jpg'
@@ -8,7 +8,7 @@ import Bridge from '../../assets/bridge.jpg'
 import { LocationSearching } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
-export default function Packages(){
+export default function Destinations(){
     const [data,setData] = useState([])
     async function getPackages(){
         await client.get('/find').then((response)=>{
@@ -36,10 +36,10 @@ export default function Packages(){
        <Container maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:28,md:0}}}>
         <Stack direction="row" spacing={1}>
         <LocationSearching fontSize="large"/>
-        <Typography variant="h4" fontWeight="bold" >Search Tours</Typography>
+        <Typography variant="h4" fontWeight="bold" >DESTINATIONS</Typography>
         </Stack>
+        <Typography color="whitesmoke" variant="body1">Explore Tours By Destinations</Typography>
        </Container>
-        <Filter/>
        </Box>
        <Box sx={{backgroundColor: 'whitesmoke',paddingY:"50px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={2} sx={{alignItems:"center",justifyContent:"center",cursor:"pointer"}}>

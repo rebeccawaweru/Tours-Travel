@@ -18,7 +18,7 @@ export default function NavBar({hideToolbar}) {
     <Container sx={{ flexGrow: 1}}>
       <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? 'black' : 'rgba(0, 0, 0, 0.6)', color: "white",  }} elevation={0}>
          {!hideToolbar && 
-        <Toolbar sx={{ display: { xs: 'none', sm: 'flex'} }}>
+        <Toolbar sx={{ display: { xs: 'none', md: 'flex'} }}>
           <Stack direction="row" spacing={1} component="div" sx={{ flexGrow: 1 }}>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 726 647 255</IconButton>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
@@ -36,11 +36,11 @@ export default function NavBar({hideToolbar}) {
           <Typography variant="p" component="div" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
             <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 150 : 185} height={hideToolbar ? 80 : 75} style={{objectFit:"cover"}}/>
           </Typography>
-          <IconButton sx={{ display: { xs: 'block', sm: 'none', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
-          <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }}>
+          <IconButton sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
+          <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }}>
             <LinkItem to="/" page="Home"/>
             <LinkItem to="/about" page="About"/>
-            <LinkItem to="/services" page="Services"/>
+            <LinkItem to="/" page="Services"/>
             <LinkItem to="/packages" page="Packages"/>
             <LinkItem to="/destinations" page="Destinations"/>
             <LinkItem to="/contact" page="Contact"/>
@@ -61,7 +61,7 @@ export default function NavBar({hideToolbar}) {
    
          <Link style={{textDecoration:"none"}} to="/">Home</Link>
          <Link style={{textDecoration:"none"}} to="/about">About</Link>
-         <Link style={{textDecoration:"none"}} to="/services">Services</Link>
+         <Link style={{textDecoration:"none"}} to="/">Services</Link>
          <Link style={{textDecoration:"none"}} to="/packages">Packages</Link>
          <Link style={{textDecoration:"none"}} to="/destinations">Destinations</Link>
          <Link style={{textDecoration:"none"}} to="/contact">Contact</Link>

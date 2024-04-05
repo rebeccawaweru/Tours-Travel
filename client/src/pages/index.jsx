@@ -1,5 +1,7 @@
 export {LandingPage} from './Home'
 export {SignUp, SignIn, ForgotPassword, ResetPassword} from './Auth'
-export {default as Packages} from './Packages/Packages'
+export {Packages, PackageDetails} from './Packages'
 export {default as Contact} from './Contact/Contact'
 export {Bookings,CreatePackage,UpdatePackage,TourPackages,Users} from './Admin'
+export {default as About} from './About/About'
+export {default as Destinations} from './Destinations/Destinations'

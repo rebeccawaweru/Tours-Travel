@@ -13,7 +13,7 @@ export default function SideBar() {
         <CustomMenuItem icon={<TravelExplore/>} title="Tours" to="/tourpackages"/>
         <CustomMenuItem icon={<Add/>} title="Create Package" to="/newpackage"/>
         <CustomMenuItem icon={<BookOnline/>} title="Bookings" to="/bookings"/>
-        <CustomMenuItem icon={<Tour/>} title="Advertisements"/>
+        <CustomMenuItem icon={<Tour/>} title="Referals"/>
         {/* <CustomMenuItem icon={<Notifications/>} title="Notifications"/> */}
    
 

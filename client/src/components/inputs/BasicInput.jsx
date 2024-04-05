@@ -1,8 +1,8 @@
-import {InputAdornment, TextField, Box, FormControl, FormHelperText, Input, Typography, Icon} from "@mui/material"
+import {InputAdornment, TextField, Box, Typography} from "@mui/material"
 export default function BasicInput({...props}){
     return (
         <Box sx={{width:"100%", marginBottom:4}}>
-        <Typography variant="body1" color="inherit" fontSize={14}>{props.lbl}{props.required && <span style={{color:"red"}}>*</span>}</Typography>
+        <Typography variant="body1" color={props.coloor ? props.coloor : "inherit"} fontSize={14}>{props.lbl}{props.required && <span style={{color:"red"}}>*</span>}</Typography>
         <TextField 
         fullWidth 
         size="small"
