@@ -59,7 +59,7 @@ export default function CreatePackage(){
 
             <BasicInput required lbl="Package Name" name="title" onChange={handleChange}/>
             <CustomSelect required lbl="Destination Category" value={tour.category} name="category" onChange={handleChange}>
-                <MenuItem value="Africa">Local Travels</MenuItem>
+                <MenuItem value="Local Travels">Local Travels</MenuItem>
                 <MenuItem value="East Africa">East Africa</MenuItem>
                 <MenuItem value="Hot Pick">Hot Pick</MenuItem>
                 <MenuItem value="International Holiday">International Holiday</MenuItem>

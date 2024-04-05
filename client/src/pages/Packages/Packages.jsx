@@ -8,7 +8,12 @@ import Bridge from '../../assets/bridge.jpg'
 import { LocationSearching } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
+import { useParams } from "react-router-dom";
 export default function Packages(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const category = urlParams.get('category')
+
     const [data,setData] = useState([])
     async function getPackages(){
         await client.get('/find').then((response)=>{
@@ -36,7 +41,7 @@ export default function Packages(){
        <Container maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:28,md:0}}}>
         <Stack direction="row" spacing={1}>
         <LocationSearching fontSize="large"/>
-        <Typography variant="h4" fontWeight="bold" >Search Tours</Typography>
+        <Typography variant="h4" fontWeight="bold" >Search Tours {category && `/ ${category}`}</Typography>
         </Stack>
        </Container>
         <Filter/>

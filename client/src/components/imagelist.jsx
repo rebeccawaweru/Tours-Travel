@@ -3,7 +3,7 @@ import { LocationOn } from '@mui/icons-material';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { itemData } from '../utils/helpers';
-export default function CustomImageList() {
+export default function CustomImageList({...props}) {
     const [hovered, setHovered] = useState(false);
 
     const handleMouseEnter = () => {
@@ -14,9 +14,9 @@ export default function CustomImageList() {
       setHovered(false);
     };
   return (
-    <Grid container alignItems="center" direction="row" >
+    <Grid container alignItems="center" direction="row" {...props}>
             {itemData.map((item) =>  (
-            <Grid  position="relative" item xs={12} sm={3} md={3}  key={item.title}>
+            <Grid component={Link} to={`/packages?category=${item.title}`} position="relative" item xs={12} sm={3} md={3}  key={item.title}>
             <Box  
 
              onMouseEnter={handleMouseEnter}
@@ -34,10 +34,10 @@ export default function CustomImageList() {
          <Box display={{xs:"block", sm:"block", md:"flex", lg:"flex", xl:"flex"}} justifyContent="space-between" >
            <Stack  direction="row" spacing={1} color="whitesmoke">
             <Typography><LocationOn /></Typography>
-            <Typography  fontWeight="bold">{item.title}</Typography>
+            <Typography variant="h6" fontWeight="bold">{item.title}</Typography>
            </Stack>
 
-            <Typography marginLeft={{xs:1,sm:1,md:6,lg:16,xl:16}} fontWeight="bold" color="primary">3 Tours</Typography>
+            {/* <Typography marginLeft={{xs:1,sm:1,md:6,lg:16,xl:16}} fontWeight="bold" color="primary">3 Tours</Typography> */}
          </Box>
             {hovered ? <Typography marginLeft={1} component={Link} to="/destinations" fontWeight="bold" color="primary">View all tours</Typography> : null}
       

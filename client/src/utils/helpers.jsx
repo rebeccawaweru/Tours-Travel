@@ -30,23 +30,23 @@ export const content = [
 export const itemData = [
     {
       img: Palm,
-      title: 'America',
+      title: 'Local Travels',
       author: '@bkristastucchio',
       featured: true,
     },
     {
       img: Europe,
-      title: 'Europe',
+      title: 'Hot Pick',
       author: '@rollelflex_graphy726',
     },
     {
       img: Asia,
-      title: 'Asia',
+      title: 'International Holiday',
       author: '@helloimnik',
     },
     {
       img: Africa,
-      title: 'Africa',
+      title: 'East Africa',
       author: '@nolanissac',
       cols: 2,
     }
