@@ -69,7 +69,16 @@ def newpackage():
       return jsonify({'error':'Error occurred'}), 400
    else:
       return jsonify({'success':True, 'message':'Package created successfully'}), 200
-   
+
+
+@app.route('/users', methods=['GET'])
+def get_users():
+   users = list(db.users.find().sort('createdAt', DESCENDING))
+   for user in users:
+      user['_id'] = str(user['_id'])
+
+   return json_util.dumps(users), 200
+
 
 @app.route('/find', methods=['GET'])
 def get_packages():
