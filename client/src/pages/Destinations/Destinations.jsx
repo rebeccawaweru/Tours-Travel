@@ -1,10 +1,7 @@
 import Wrapper from "../../layouts/Wrapper";
-import { Box, Grid, Container, Stack,  Typography } from "@mui/material";
+import { Container, Stack,  Typography } from "@mui/material";
 import Sky from '../../assets/packagebg.jpg'
 import { Video, Package, CustomImageList} from "../../components";
-import Train from '../../assets/train.jpg'
-import America from '../../assets/america.webp'
-import Bridge from '../../assets/bridge.jpg'
 import { LocationSearching } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'

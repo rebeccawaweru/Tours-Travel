@@ -52,11 +52,9 @@ const Slider = ({ images, autoSwipeInterval = 5000 }) => {
       <div style={{ position: 'relative',  height: '100vh', overflow: 'hidden',  }}>
         {images.map((image, index) => (
           <div key={index} style={{ display: index === currentIndex ? 'block' : 'none' , width: '100%',}}>
-            
             <Box
-          
               sx={{
-                paddingTop:5,
+                paddingTop:8,
                 display:"flex",
                 flexDirection:"column",
                 color:"whitesmoke",

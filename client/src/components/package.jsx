@@ -8,11 +8,11 @@ import Typography from '@mui/material/Typography';
 import { Timer, Star, Share, LocationOn } from '@mui/icons-material';
 import { Stack, Grid} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-export default function Package({id,image, duration, title, price, location}) {
+export default function Package({id,image, duration, title, price, location, link}) {
   const rating = [1, 2, 3, 4, 5]
   const navigate = useNavigate()
   return (
-    <Card  sx={{width: 400}}>
+    <Card sx={{width:{xs:"100%",sm:350,md:400}}}>
       <CardMedia
         sx={{ height: 250, objectFit:"cover" }}
         image={image}
@@ -43,7 +43,9 @@ export default function Package({id,image, duration, title, price, location}) {
            </Stack>          
       </CardContent>
       <CardActions sx={{justifyContent:"space-between", cursor:"pointer"}}>
-        <Button onClick={()=>navigate(`/package/${id}`)} variant="outlined" size="small">Learn More</Button>
+        {link ? <Button variant="outlined" size="small" component="a" href={link}>LEARN MORE</Button> :
+        <Button onClick={()=>navigate(`/package/${id}`)} variant="outlined" size="small">Learn More</Button> 
+        }
         <Share/>
       </CardActions>
     </Card>

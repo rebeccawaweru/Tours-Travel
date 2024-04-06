@@ -1,11 +1,13 @@
 import Wrapper from "../../layouts/Wrapper"
-import { Container, Box, Typography, Stack } from "@mui/material"
+import { useEffect, useState } from "react"
+import client from '../../api/client'
+import { Container, Box, Typography, Stack, Button } from "@mui/material"
 import { Slider, Quality, Package } from "../../components"
 import { content } from "../../utils/helpers"
 import background from '../../assets/background.jpg'
 import {CustomImageList, Filter} from "../../components"
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material"
-import { Link } from "react-router-dom"
+import { Link,useNavigate } from "react-router-dom"
 import Plane from '../../assets/plane.webp'
 import Price from '../../assets/prices.png'
 import Support from '../../assets/support.png'
@@ -14,6 +16,24 @@ import Train from '../../assets/train.jpg'
 import America from '../../assets/america.webp'
 import Bridge from '../../assets/bridge.jpg'
 export default function LandingPage(){
+  const navigate = useNavigate()
+  const [data,setData] = useState([])
+  const [referrals, setReferrals] = useState([])
+  const combined = [...data, ...referrals]
+  async function getPackages(){
+      await client.get('/find').then((response)=>{
+           setData(response.data)
+      })
+    }
+  async function getReferrals(){
+    await client.get('/find/referrals').then((response)=>{
+      setReferrals(response.data)
+    })
+  }
+  useEffect(()=>{
+      getPackages()
+      getReferrals()
+  },[data,referrals])
     return (
         <Wrapper>
         <Slider images={content}/>
@@ -32,12 +52,16 @@ export default function LandingPage(){
      
         <Container maxWidth sx={{backgroundColor: 'rgba(0, 0, 0, 0.7)',paddingY:"50px"}}>
             <Typography sx={{marginBottom:"40px"}} fontSize="large" fontWeight="bold" color="whitesmoke">Popular Tour Packages / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/packages">View All Tours</Link></Typography>
-            <Stack direction="row" spacing={2} sx={{display:"flex",flexDirection:{xs:"column",sm:"column",md:"row", lg:"row",xl:"row"}, justifyContent:"space-between",alignItems:"center",cursor:"pointer"}}>
-            <KeyboardArrowLeft sx={{backgroundColor:"#2196f3", padding:2, color:"whitesmoke"}}/>
-             <Package image={Train}/>
+           
+            <Stack direction="row" spacing={2} sx={{display:"flex",flexDirection:{xs:"column",sm:"row"}, justifyContent:"start",alignItems:"center",cursor:"pointer"}}>
+            {combined && combined.length > 3 && <KeyboardArrowLeft sx={{backgroundColor:"#2196f3", padding:2, color:"whitesmoke", display:{xs:"none",sm:"block"}}}/>}
+            {combined && combined.length > 0 && combined.map((item)=>{
+                    return <Package id={item._id} link={item.link} price={item.price} location={item.location} title={item.title} duration={item.duration} image={item.poster}/>
+                })}
+             {/* <Package image={Train}/>
              <Package image={America}/>
-             <Package image={Bridge}/>
-             <KeyboardArrowRight sx={{backgroundColor:"#2196f3", padding:2, color:"whitesmoke"}}/>
+             <Package image={Bridge}/> */}
+             {combined && combined.length > 3 && <KeyboardArrowRight sx={{backgroundColor:"#2196f3", padding:2, color:"whitesmoke", display:{xs:"none",sm:"block"}}}/>}
             </Stack>
 
         </Container>

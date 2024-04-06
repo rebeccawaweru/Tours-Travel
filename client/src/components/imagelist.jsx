@@ -18,7 +18,6 @@ export default function CustomImageList({...props}) {
             {itemData.map((item) =>  (
             <Grid component={Link} to={`/packages?category=${item.title}`} position="relative" item xs={12} sm={3} md={3}  key={item.title}>
             <Box  
-
              onMouseEnter={handleMouseEnter}
              onMouseLeave={handleMouseLeave}
           sx={{width:"100%", height:"400px",backgroundSize:"cover",
