@@ -1,7 +1,13 @@
 import { Logout } from '@mui/icons-material'
 import {AppBar, Container, IconButton, Toolbar, Typography, Grid} from '@mui/material'
 import { SideBar } from '../components'
+import {useNavigate} from 'react-router-dom'
 export default function AdminDashboard({children}){
+    const navigate = useNavigate()
+    const handleLogout = () =>{
+        localStorage.removeItem('user_id')
+        navigate('/')
+    }
     return (
         <Grid container direction="row">
             <Grid item sm={0} md={3} lg={2} display={{xs:"none",sm:"none",md:"block"}}>
@@ -11,7 +17,7 @@ export default function AdminDashboard({children}){
              <AppBar position="static" elevation={0}>
                 <Toolbar>
                   <Typography flexGrow={1}>Welcome, Rebecca Waweru</Typography>
-                  <IconButton><Logout/></IconButton>
+                  <IconButton onClick={handleLogout}><Logout/></IconButton>
                 </Toolbar>
              </AppBar>
              <Container maxWidth>

@@ -1,6 +1,7 @@
 import { useEffect,useState } from 'react';
 import { NavBar, Footer } from '../components';
 import { useLocation } from 'react-router-dom';
+import {Box} from '@mui/material';
 export default function Wrapper({children}){
   const location = useLocation()
   const [hideToolbar, setHideToolbar] = useState(false);
@@ -27,10 +28,10 @@ export default function Wrapper({children}){
     };
   }, [location]);
     return (
-        <>
+        <Box maxWidth width="100%" overflow="hidden">
           <NavBar hideToolbar={hideToolbar} />
           {children}
           <Footer/>
-        </>
+        </Box>
     )
 }

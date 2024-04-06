@@ -130,3 +130,74 @@ def delete_package(id):
       return jsonify({'error':'Failed to delete package'}), 500
    
     return jsonify({'success':True, 'message':'Package deleted successfully'}), 200
+
+
+#Referrals
+
+@app.route('/new/referral', methods=['POST'])
+def newreferral():
+   data = request.json
+   data['createdAt'] = datetime.now()
+   data['clicks'] = 0
+   new_package = db.referrals.insert_one(data)
+   if not new_package.inserted_id:
+      return jsonify({'error':'Error occurred'}), 400
+   else:
+      return jsonify({'success':True, 'message':'Referral  created successfully'}), 200
+   
+@app.route('/find/referrals', methods=['GET'])
+def get_referrals():
+   referrals = list(db.referrals.find().sort('createdAt', DESCENDING))
+   # if not referrals:
+   #    return jsonify({'error':'No referrals found'}), 404
+   
+   for referral in referrals:
+      referral['_id'] = str(referral['_id'])
+
+   return json_util.dumps(referrals), 200
+
+@app.route('/find/referral/<id>/', methods=['GET'])
+def get_referral(id):
+   query = {
+      "_id":ObjectId(id)
+   }
+   referral = db.referrals.find_one(query)
+   if not referral:
+      return jsonify({'error':'Referral not found'}), 404
+   
+   referral['_id'] = str(referral['_id'])
+   return jsonify({'referral':referral}), 200
+
+@app.route('/update/referral/<id>', methods=['PUT'])
+def update_referral(id):
+   query = {
+      "_id":ObjectId(id)
+   }
+   data = { "$set": dict(request.json) }
+   result = db.referrals.update_one(query, data)
+   if not result.matched_count:
+      return jsonify({'message':'Failed to update. Record not found'}), 404
+   elif not result.modified_count:
+      return jsonify({'message':'Failed to update'}),  500
+   
+   return jsonify({'success':True, 'message':'Referral updated successfully'}), 200
+
+@app.route('/delete/referral/<id>', methods=['DELETE','OPTIONS'])
+def delete_referral(id):
+    if request.method == 'OPTIONS':
+        # This is a preflight request, respond with the appropriate headers
+        response = make_response()
+        response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
+        response.headers.add("Access-Control-Allow-Methods", "DELETE")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type")
+        return response
+     
+    query = {
+      "_id": ObjectId(id)
+    }
+    result = db.referrals.delete_one(query)
+
+    if not result.deleted_count:
+      return jsonify({'error':'Failed to delete referral'}), 500
+   
+    return jsonify({'success':True, 'message':'Referral deleted successfully'}), 200

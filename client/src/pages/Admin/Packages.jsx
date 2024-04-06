@@ -66,7 +66,7 @@ export default function TourPackages(){
     }
     useEffect(()=>{
         getPackages()
-    },[]) 
+    },[data]) 
     return <AdminDashboard>
        <Box sx={{ height: "auto", width: '100%' }}>
         <BreadCrumb cap1="Tours" cap2="Package List"/>

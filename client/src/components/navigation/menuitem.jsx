@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom"
 export default function CustomMenuItem(props){
     const {icon, title,to} = props
     const location = useLocation()
-    const customcolor = location.pathname === to ? {color:'#2196f3', fontWeight:"bold"} : {color:"black"};
+    const customcolor = location.pathname === to ? {color:'whitesmoke', fontWeight:"bold"} : {color:"#2196f3"};
     return (
         <>
         <MenuItem component={Link} to={to} >

@@ -1,11 +1,10 @@
 import Wrapper from "../../layouts/Wrapper"
-import { Container, Box, Button, Grid, Typography, Stack, Icon, IconButton } from "@mui/material"
-import { Slider, Quality, Package, LinkBtn } from "../../components"
+import { Container, Box, Typography, Stack } from "@mui/material"
+import { Slider, Quality, Package } from "../../components"
 import { content } from "../../utils/helpers"
-import {  CalendarViewMonth, Search} from "@mui/icons-material"
 import background from '../../assets/background.jpg'
-import {BasicInput, BasicSelect, CustomImageList, Filter} from "../../components"
-import { KeyboardArrowLeft, KeyboardArrowRight, LocationOn } from "@mui/icons-material"
+import {CustomImageList, Filter} from "../../components"
+import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material"
 import { Link } from "react-router-dom"
 import Plane from '../../assets/plane.webp'
 import Price from '../../assets/prices.png'
@@ -18,7 +17,7 @@ export default function LandingPage(){
     return (
         <Wrapper>
         <Slider images={content}/>
-        <Box sx={{height:"35vh",backgroundColor:"#2196f3",display:"flex",justifyContent:"space-around", flexWrap:"wrap", alignItems:"center"}}>
+        <Box sx={{height:"40vh",backgroundColor:"#2196f3",display:"flex", flexDirection:{xs:"column",md:"row"},justifyContent:"space-around", alignItems:"center"}}>
           <Quality src={Plane} alt="destinations" title="500+ DESTINATIONS" caption="Morbi leo risus, porta ac"/>
           <Quality src={Price} alt="prices" title="BEST PRICE GUARANTEE" caption="Morbi leo risus, porta ac"/>
           <Quality src={Support} alt="support" title="GREAT CUSTOMER" caption="Morbi leo risus, porta ac"/>

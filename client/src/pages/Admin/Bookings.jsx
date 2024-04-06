@@ -1,44 +1,85 @@
 import { AdminDashboard } from "../../layouts";
 import { DataGrid } from '@mui/x-data-grid';
-import { Box } from "@mui/material";
-import { BreadCrumb } from "../../components";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
+import Swal from 'sweetalert2'
+import { BreadCrumb, LinkBtn } from "../../components";
+import {useNavigate} from 'react-router-dom'
+import {useState, useEffect} from 'react'
+import client from '../../api/client'
+import { Edit, Delete } from "@mui/icons-material";
 export default function Bookings(){
-    const columns = [
-        { field: 'id', headerName: 'ID', width: 70 },
-        { field: 'firstName', headerName: 'First name', width: 130 },
-        { field: 'lastName', headerName: 'Last name', width: 130 },
-        {
-          field: 'age',
-          headerName: 'Age',
-          type: 'number',
-          width: 90,
-        },
-        {
-          field: 'fullName',
-          headerName: 'Full name',
-          description: 'This column has a value getter and is not sortable.',
-          sortable: false,
-          width: 160,
-          valueGetter: (value, row) => `${row.firstName || ''} ${row.lastName || ''}`,
-        },
-      ];
-      const rows = [
-        { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-        { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-        { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-        { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-        { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-        { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-        { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-        { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-        { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-      ];
-      
+  const navigate = useNavigate()
+  const [data, setData] = useState([])
+  const handleEdit = (id) => navigate(`/updatereferal/${id}`)
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      confirmButtonText:'Delete',
+      confirmButtonColor:'red',
+      showCancelButton: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+         client.delete(`/delete/referral/${id}`).then((response)=>{
+            if(response.data.success) {
+              Swal.fire('Success', response.data.message, 'success')
+            }
+         })
+      }
+    })
+  }
+  const columns = [
+    { field: 'client', headerName: 'Client', width: 150 },
+    { field: 'phone', headerName: 'phone', width: 150 },
+      { field: 'title', headerName: 'Title', width: 150 },
+      { field: 'location', headerName: 'Location', width: 130 },
+      { field: 'charge', headerName: 'Charge per click', width: 150, renderCell:(params)=>{
+        return Number(params.value).toLocaleString()
+      }},
+      { field: 'clicks', headerName: 'Clicks', width: 90, renderCell:(params)=>{
+        return Number(params.value).toLocaleString()
+      }},
+      {
+        field: 'total',
+        headerName: 'Total',
+        width: 90,
+        renderCell: (params) => {
+          const click = Number(params.row.clicks);
+          const charge = Number(params.row.charge);
+          const total = click * charge;
+          return total.toLocaleString();
+        }
+      },
+      { field: 'createdAt', headerName: 'Created On', width: 130, renderCell:(params)=>{
+         const createdAtDate = new Date(params.value.$date);
+        return createdAtDate.toLocaleDateString();
+      }},
+      {field:'Action',width:100,renderCell:(cellValues)=>{
+        return(
+        <Stack direction="row" spacing={1}>
+          <IconButton onClick={()=>handleEdit(cellValues.id)} sx={{color:"green"}}><Edit/></IconButton>
+          <IconButton onClick={()=>handleDelete(cellValues.id)} sx={{color:"red"}}><Delete/></IconButton>
+         </Stack>
+        )
+       }}
+    ];
+
+  async function getReferrals(){
+    await client.get('/find/referrals').then((response)=>{
+         setData(response.data)
+    })
+  }
+  useEffect(()=>{
+      getReferrals()
+  },[data]) 
     return <AdminDashboard>
          <Box sx={{ height: "auto", width: '100%' }}>
-         <BreadCrumb cap1="Bookings" cap2="List"/>
-        <DataGrid
-        rows={rows}
+         <BreadCrumb cap1="Referrals" cap2="List" link={<LinkBtn to="/addreferal" title="+ Add"/>}/>
+         {data && data.length > 0 ? 
+         <DataGrid
+        rows={data}
+        getRowId={(row) => row._id}
         columns={columns}
         initialState={{
           pagination: {
@@ -46,7 +87,7 @@ export default function Bookings(){
           },
         }}
         pageSizeOptions={[5, 10]}
-      />
+      /> : <Typography>No referrals</Typography>}
     </Box>
     </AdminDashboard>
 }

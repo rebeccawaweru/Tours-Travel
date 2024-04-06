@@ -40,7 +40,7 @@ export default function NavBar({hideToolbar}) {
           <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }}>
             <LinkItem to="/" page="Home"/>
             <LinkItem to="/about" page="About"/>
-            <LinkItem to="/" page="Services"/>
+            {/* <LinkItem to="/" page="Services"/> */}
             <LinkItem to="/packages" page="Packages"/>
             <LinkItem to="/destinations" page="Destinations"/>
             <LinkItem to="/contact" page="Contact"/>
@@ -61,7 +61,7 @@ export default function NavBar({hideToolbar}) {
    
          <Link style={{textDecoration:"none"}} to="/">Home</Link>
          <Link style={{textDecoration:"none"}} to="/about">About</Link>
-         <Link style={{textDecoration:"none"}} to="/">Services</Link>
+         {/* <Link style={{textDecoration:"none"}} to="/">Services</Link> */}
          <Link style={{textDecoration:"none"}} to="/packages">Packages</Link>
          <Link style={{textDecoration:"none"}} to="/destinations">Destinations</Link>
          <Link style={{textDecoration:"none"}} to="/contact">Contact</Link>

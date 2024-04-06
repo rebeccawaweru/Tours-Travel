@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import { Box, IconButton, Typography, Stack, Button } from '@mui/material';
+import { Box, Container, IconButton, Typography, Grid, Button } from '@mui/material';
 import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material';
+import {motion as m} from 'framer-motion';
 const Slider = ({ images, autoSwipeInterval = 5000 }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,26 +48,30 @@ const Slider = ({ images, autoSwipeInterval = 5000 }) => {
   };
 
   return (
-    <Box {...swipeHandlers} sx={{ position: 'relative', overflow: 'hidden' }}>
-      <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
+    <Box {...swipeHandlers} sx={{ position: 'relative', overflow: 'hidden', width:"100%" }}>
+      <div style={{ position: 'relative',  height: '100vh', overflow: 'hidden',  }}>
         {images.map((image, index) => (
-          <div key={index} style={{ display: index === currentIndex ? 'block' : 'none' }}>
+          <div key={index} style={{ display: index === currentIndex ? 'block' : 'none' , width: '100%',}}>
             
-            <div
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
+            <Box
+          
+              sx={{
+                paddingTop:5,
+                display:"flex",
+                flexDirection:"column",
+                color:"whitesmoke",
+                justifyContent:"center",
+                alignItems:"start",
                 width: '100%',
-                height: '100%',
+                height: '100vh',
                 backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(${image.image})`,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
               }}
-            />
+            >
             {/* Original image */}
-            <img
+            {/* <img
               src={image.image}
               alt={`Image ${index + 1}`}
               style={{
@@ -75,15 +80,34 @@ const Slider = ({ images, autoSwipeInterval = 5000 }) => {
                 width: '100%',
                 maxWidth: '100%',
                 height: '100vh',
+             
               }}
-            />
+            /> */}
         {/* Text overlay */}
-          <Stack direction="column" gap={2} sx={{ position: 'absolute', top:{xs:'60%', sm:'60%', md:'60%', lg:'64%', xl:'60%'} , left: {xs:'44%', sm:'38%', md:'32%', lg:'27%', xl:'16%'}, transform: 'translate(-50%, -50%)', color: 'white', textAlign: 'left' }}>
-           <Typography variant='h4' fontWeight='medium'>{image.title}</Typography>
-           <Typography variant='h2' fontWeight="medium" style={{color:'#818181'}}>{image.caption}</Typography>
+           <Grid component={Container} container direction="column">
+            {index === currentIndex &&
+             <>
+            <m.h3 
+            style={{fontSize:"35px"}}
+            initial={{y:"300%"}} 
+            animate={{y:"100%"}} 
+            transition={{delay:0.5, duration:1.5}}
+           >{image.title}
+           </m.h3>
+           <m.h2
+            initial={{x:"-50%"}} 
+            animate={{x:"0%"}} 
+            transition={{delay:0.8, duration:1.5}}
+            style={{color:'#818181',fontSize:"45px"}}>
+            {image.caption}
+           </m.h2>
+            </>}
            <Typography variant='p' color='inherit'>{image.arr} </Typography>
-           <Button size="medium" variant="contained" sx={{width:250, paddingY:2}}>Learn More</Button>
-          </Stack>
+           <Button size="medium" variant="contained" sx={{width:250, paddingY:2,marginTop:2}}>Learn More</Button>
+           </Grid>
+         
+          </Box>
+ 
 
           </div>
         ))}

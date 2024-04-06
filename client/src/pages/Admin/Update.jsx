@@ -69,7 +69,7 @@ export default function UpdatePackage(){
            <BasicInput onChange={handleUpload}  type="file" lbl="Poster" helperText="Ad photo of the tour package"/>
              {preview && <Box component="img" marginBottom={2} src={preview} alt="preview" height={200} width={200} sx={{objectFit:"cover"}}/>}
 
-            <BasicInput  lbl="Package Name" value={tour.title} name="title" onChange={handleChange}/>
+            <BasicInput  lbl="Package Title" value={tour.title} name="title" onChange={handleChange}/>
             <CustomSelect lbl="Destination Category" displayEmpty renderValue={()=>tour.category} value={tour.category} name="category" onChange={handleChange}>
                <MenuItem value="Local Travels">Local Travels</MenuItem>
                 <MenuItem value="East Africa">East Africa</MenuItem>
