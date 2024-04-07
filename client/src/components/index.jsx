@@ -1,4 +1,4 @@
-export {NavBar,Footer, SideBar} from './navigation'
+export {NavBar,Footer, SideBar, CustomDrawer} from './navigation'
 export {default as Slider} from './slider'
 export {BasicInput,BasicSelect,CustomSelect,CheckBox} from './inputs'
 export {LinkBtn} from './buttons'

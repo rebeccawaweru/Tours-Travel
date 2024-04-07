@@ -4,6 +4,7 @@ import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Drawer, Container}
 import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu } from '@mui/icons-material';
 import Logo from '../../assets/tour-logo.png'
 import LinkItem from './linkitem';
+import CustomDrawer from './drawer';
 export default function NavBar({hideToolbar}) {
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleDrawerOpen = () => {
@@ -49,7 +50,7 @@ export default function NavBar({hideToolbar}) {
       </AppBar>
 
       {/* Drawer */}
-      <Drawer  anchor="right" open={openDrawer} onClose={handleDrawerClose}>
+      <CustomDrawer open={openDrawer} onClose={handleDrawerClose}>
         <Stack
            direction="column"
            gap={10}
@@ -68,7 +69,7 @@ export default function NavBar({hideToolbar}) {
          <Link style={{textDecoration:"none"}} to="/signup">Sign Up</Link>
          <Link style={{textDecoration:"none"}} to="/signin">Login</Link>
         </Stack>
-      </Drawer>
+      </CustomDrawer>
     </Container>
   );
 }

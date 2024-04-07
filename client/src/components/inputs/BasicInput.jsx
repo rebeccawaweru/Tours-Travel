@@ -15,7 +15,7 @@ export default function BasicInput({...props}){
               <InputAdornment  position="start"><props.start fontSize="small" color="primary" /></InputAdornment>
             ),
             endAdornment: props.end && (
-              <InputAdornment position="end">{props.end}</InputAdornment>
+              <InputAdornment sx={{cursor:"pointer"}} onClick={props.show}  position="end">{props.end}</InputAdornment>
             )
           }}
          />

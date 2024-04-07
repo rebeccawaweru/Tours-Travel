@@ -1,6 +1,6 @@
 import { AdminDashboard } from "../../layouts";
 import { DataGrid } from '@mui/x-data-grid';
-import { Box, Stack, IconButton } from "@mui/material";
+import { Box, Stack, IconButton, Typography } from "@mui/material";
 import { BreadCrumb } from "../../components";
 import { useState, useEffect } from "react";
 import client from '../../api/client'
@@ -70,7 +70,7 @@ export default function TourPackages(){
     return <AdminDashboard>
           <BreadCrumb cap1="Tours" cap2="Package List"/>
        <Box sx={{ height: "auto", width: '100%' }}>
-    
+      {data && data.length > 0 ? 
       <DataGrid
         rows={data}
         getRowId={(row) => row._id}
@@ -81,7 +81,7 @@ export default function TourPackages(){
           },
         }}
         pageSizeOptions={[5, 10]}
-      />
+      /> : <Typography>Loading...</Typography>}
     </Box>
     </AdminDashboard>
 }

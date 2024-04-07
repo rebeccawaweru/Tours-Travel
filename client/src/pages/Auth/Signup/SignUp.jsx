@@ -1,13 +1,14 @@
 import { Stack, Typography, FormControl, Button, Divider, Grid } from "@mui/material"
 import {BasicInput, LinkBtn} from '../../../components'
 import { AuthWrapper } from "../../../layouts"
-import { Lock, Email, VisibilityOff, Person } from "@mui/icons-material"
+import { Lock, Email, Visibility, VisibilityOff, Person } from "@mui/icons-material"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import client from "../../../api/client"
 import Swal from "sweetalert2"
 export default function SignUp(){
     const navigate = useNavigate()
+    const [type, setType] = useState('password')
     const [data, setData] = useState({
         username:"",
         email:"",
@@ -16,6 +17,9 @@ export default function SignUp(){
     })
     const handleChange = (e) =>{
         setData((data) => ({...data, [e.target.name]:e.target.value}))
+    }
+    const handleVisible = () => {
+        setType(type === 'password' ? 'text' : 'password')
     }
     const handleSubmit = async (e) =>{
         e.preventDefault()
@@ -40,8 +44,8 @@ export default function SignUp(){
         </Grid>
 
         <Grid gap={4} sx={{display:{xs:"block",sm:"block", md:"flex", lg:"flex"}}}>
-        <BasicInput required lbl="Password" type="password" name="password" onChange={handleChange} end={<VisibilityOff/>} start={Lock}/>
-        <BasicInput required lbl="Confirm Password" type="password" name="confirmpassword" onChange={handleChange} end={<VisibilityOff/>} start={Lock}/>
+        <BasicInput show={handleVisible} required lbl="Password" type={type} name="password" onChange={handleChange} end={type === 'password' ? <VisibilityOff/> : <Visibility/>} start={Lock}/>
+        <BasicInput show={handleVisible} required lbl="Confirm Password" type={type} name="confirmpassword" onChange={handleChange} end={type === 'password' ? <VisibilityOff/> : <Visibility/>} start={Lock}/>
         </Grid>
 
         <Stack direction="row" spacing={2} sx={{display:"flex", alignItems:"center", marginTop:2}}>

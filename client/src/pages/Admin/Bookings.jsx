@@ -87,7 +87,7 @@ export default function Bookings(){
           },
         }}
         pageSizeOptions={[5, 10]}
-      /> : <Typography>No referrals</Typography>}
+      /> : <Typography>Loading...</Typography>}
     </Box>
     </AdminDashboard>
 }

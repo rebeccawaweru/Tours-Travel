@@ -95,7 +95,7 @@ export default function UpdatePackage(){
             <BasicInput  lbl="Price" type="number" value={tour.price} name="price" onChange={handleChange}/>
             <BasicInput lbl="Promotion (%)"  type="number" value={tour.promotion} name="promotion" onChange={handleChange}/>
             <BasicInput  lbl="Duration" value={tour.duration} name="duration" onChange={handleChange}/>
-            <Stack direction="row" gap={2}>
+            <Stack direction={{xs:"column", md:"row"}} gap={{xs:0,md:2}}>
             <BasicInput lbl="Start Date" type="date" value={tour.startdate} name="startdate" onChange={handleChange}/>
             <BasicInput lbl="End Date" type="date" value={tour.endate} name="endate" onChange={handleChange}/>
             </Stack>
