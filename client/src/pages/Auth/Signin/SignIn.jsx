@@ -19,7 +19,7 @@ export default function SignIn(){
         await client.post('/login', data).then((response)=>{
             if(response.data.success){
                 localStorage.setItem('user_id', response.data.user._id)
-                 navigate('/tourpackages')
+                 navigate('/dashboard')
             }
         })
      

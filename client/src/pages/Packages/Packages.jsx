@@ -59,7 +59,7 @@ export default function Packages(){
         if (category) {
             setSearch(true)
         }
-    },[data, referrals])
+    },[])
     return (
         <Wrapper>
        <Box sx={{
@@ -85,6 +85,11 @@ export default function Packages(){
        </Box>
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"50px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={2} sx={{alignItems:"center",justifyContent:"start",cursor:"pointer"}}>
+            {!search && combined && combined.length > 0 && combined.map((item)=>{
+                    return <Package id={item._id} link={item.link} price={item.price} location={item.location} title={item.title} duration={item.duration} image={item.poster}/>
+                  })
+               }
+
             {search && category === null && filtered && filtered.length > 0 ? filtered.map((item)=>{
                     return <Package id={item._id} link={item.link} price={item.price} location={item.location} title={item.title} duration={item.duration} image={item.poster}/>
                   }) : search && category === null && <p>No tour packages found <Button onClick={handleReset} component="p">Reset</Button> </p>
@@ -95,10 +100,7 @@ export default function Packages(){
                   }) : category && <p>No tour packages available under {category}. <Button onClick={()=>window.location.replace('/packages')} component="p">Reset</Button></p>
                 } 
                   
-                {!search && combined && combined.length > 0 && combined.map((item)=>{
-                    return <Package id={item._id} link={item.link} price={item.price} location={item.location} title={item.title} duration={item.duration} image={item.poster}/>
-                  })
-               }
+           
              {/* <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image={Train}/>
              <Package price={3000} image={America} title="America – 2 Days in Lake Tahoe" location="America" duration="7 days"/>
              <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image={Bridge}/> */}
