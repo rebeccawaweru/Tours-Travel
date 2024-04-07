@@ -2,10 +2,10 @@
 FROM python:3.8
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /server
 
 # Copy the contents of the current directory into the container at /app
-COPY . /app
+COPY . /server
 
 # Install Flask (assuming it's not already installed in your environment)
 RUN pip install Flask
