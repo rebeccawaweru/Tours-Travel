@@ -8,7 +8,7 @@ WORKDIR /server
 COPY . /server
 
 # Install Flask (assuming it's not already installed in your environment)
-RUN pip install Flask
+RUN pip install Flask pymongo
 
 # Expose the port that the Flask app runs on
 EXPOSE 5000
