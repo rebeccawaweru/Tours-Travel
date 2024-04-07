@@ -36,7 +36,7 @@ export default function UpdateReferal(){
         e.preventDefault()
         setLoading(true)
         const cover = image ? await handleFileUpload(image) : undefined
-        const post = cover ? cover.url : preview
+        const post = cover ? cover.secure_url : preview
         const newdata = {...tour, poster:post}
         delete newdata._id
         delete newdata.createdAt

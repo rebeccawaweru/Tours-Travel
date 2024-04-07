@@ -47,7 +47,7 @@ export default function UpdatePackage(){
         e.preventDefault()
         setLoading(true)
         const cover = image ? await handleFileUpload(image) : undefined
-        const post = cover ? cover.url : preview
+        const post = cover ? cover.secure_url : preview
         const newdata = {...tour, poster:post, activity:activities}
         delete newdata._id
         delete newdata.createdAt

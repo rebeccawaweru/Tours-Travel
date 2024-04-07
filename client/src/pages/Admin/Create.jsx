@@ -45,7 +45,7 @@ export default function CreatePackage(){
         e.preventDefault()
         setLoading(true)
         const cover = await handleFileUpload(image)
-        const data = {...tour, poster:cover.url, activity:activities}
+        const data = {...tour, poster:cover.secure_url, activity:activities}
         await client.post('/new', data).then((response)=>{
             setLoading(false)
              if(response.data.success){

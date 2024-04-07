@@ -35,7 +35,7 @@ export default function AddReferal(){
         e.preventDefault()
         setLoading(true)
         const cover = await handleFileUpload(image)
-        const data = {...tour, poster:cover.url}
+        const data = {...tour, poster:cover.secure_url}
         await client.post('/new/referral', data).then((response)=>{
             setLoading(false)
              if(response.data.success){
