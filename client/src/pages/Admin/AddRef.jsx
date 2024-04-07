@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { BasicInput, CustomSelect, BreadCrumb, CheckBox} from "../../components";
+import { BasicInput, CustomSelect, BreadCrumb, Loader} from "../../components";
 import { AdminDashboard } from "../../layouts";
-import { Box, Button, MenuItem, Stack, Typography } from "@mui/material";
+import { Box, Button, MenuItem } from "@mui/material";
 import { handleFileUpload } from "../../utils/helpers";
 import client from "../../api/client"
 import Swal from "sweetalert2";
@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 export default function AddReferal(){
     const navigate = useNavigate()
     const [preview,setPreview] = useState('')
+    const [loading, setLoading] = useState(false)
     const [image, setImage] = useState('')
     const [tour, setTour] = useState({
         client:"",
@@ -32,9 +33,11 @@ export default function AddReferal(){
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        setLoading(true)
         const cover = await handleFileUpload(image)
         const data = {...tour, poster:cover.url}
         await client.post('/new/referral', data).then((response)=>{
+            setLoading(false)
              if(response.data.success){
                 Swal.fire('Success', response.data.message, 'success')
                 navigate('/bookings')
@@ -61,7 +64,8 @@ export default function AddReferal(){
             <BasicInput required lbl="Duration" name="duration" onChange={handleChange}/>
             <BasicInput required lbl="Charge per click" type="number" name="charge" onChange={handleChange}/>
             <BasicInput required lbl="External Website Link" name="link" onChange={handleChange}/>
-            <Button type="submit" variant="contained">Submit</Button>
+             {loading ? <Loader/> :
+            <Button type="submit" variant="contained">Submit</Button>}
            </Box>
     </AdminDashboard>
 }

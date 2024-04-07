@@ -1,5 +1,5 @@
 import { Stack, Typography, FormControl, Button, Divider, Grid } from "@mui/material"
-import {BasicInput, LinkBtn} from '../../../components'
+import {BasicInput, LinkBtn, Loader} from '../../../components'
 import { AuthWrapper } from "../../../layouts"
 import { Lock, Email, Visibility, VisibilityOff, Person } from "@mui/icons-material"
 import { useState } from "react"
@@ -8,6 +8,7 @@ import client from "../../../api/client"
 import Swal from "sweetalert2"
 export default function SignUp(){
     const navigate = useNavigate()
+    const [loading, setLoading] = useState(false)
     const [type, setType] = useState('password')
     const [data, setData] = useState({
         username:"",
@@ -23,8 +24,9 @@ export default function SignUp(){
     }
     const handleSubmit = async (e) =>{
         e.preventDefault()
+        setLoading(true)
         await client.post('/signup', data).then((response)=>{
-            console.log(response)
+            setLoading(false)
             if(response.data.success){
                 Swal.fire('Success', response.data.message, 'success')
                  navigate('/signin')
@@ -47,11 +49,11 @@ export default function SignUp(){
         <BasicInput show={handleVisible} required lbl="Password" type={type} name="password" onChange={handleChange} end={type === 'password' ? <VisibilityOff/> : <Visibility/>} start={Lock}/>
         <BasicInput show={handleVisible} required lbl="Confirm Password" type={type} name="confirmpassword" onChange={handleChange} end={type === 'password' ? <VisibilityOff/> : <Visibility/>} start={Lock}/>
         </Grid>
-
+         {loading ? <Loader/> :
         <Stack direction="row" spacing={2} sx={{display:"flex", alignItems:"center", marginTop:2}}>
-        <Button type="submit" variant="contained">Submit</Button>
+         <Button type="submit" variant="contained">Submit</Button>
         <LinkBtn to="/signin" title="Already have an account?"/>
-        </Stack>
+        </Stack>}
         </FormControl>
 
         </Grid>

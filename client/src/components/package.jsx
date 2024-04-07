@@ -12,7 +12,7 @@ export default function Package({id,image, duration, title, price, location, lin
   const rating = [1, 2, 3, 4, 5]
   const navigate = useNavigate()
   return (
-    <Card sx={{width:{xs:"100%",sm:350,md:400}}}>
+    <Card sx={{width:{xs:"100%",sm:300,md:380}}}>
       <CardMedia
         sx={{ height: 250, objectFit:"cover" }}
         image={image}

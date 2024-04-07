@@ -93,6 +93,13 @@ def get_packages():
 
 @app.route('/find/<id>/', methods=['GET'])
 def get_package(id):
+   if request.method == 'OPTIONS':
+        # This is a preflight request, respond with the appropriate headers
+        response = make_response()
+        response.headers.add("Access-Control-Allow-Origin", "https://denzetoursandtravels.netlify.app")
+        response.headers.add("Access-Control-Allow-Methods", "GET")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type")
+        return response
    query = {
       "_id":ObjectId(id)
    }
@@ -125,7 +132,7 @@ def delete_package(id):
     if request.method == 'OPTIONS':
         # This is a preflight request, respond with the appropriate headers
         response = make_response()
-        response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
+        response.headers.add("Access-Control-Allow-Origin", "https://denzetoursandtravels.netlify.app")
         response.headers.add("Access-Control-Allow-Methods", "DELETE")
         response.headers.add("Access-Control-Allow-Headers", "Content-Type")
         return response
@@ -196,7 +203,7 @@ def delete_referral(id):
     if request.method == 'OPTIONS':
         # This is a preflight request, respond with the appropriate headers
         response = make_response()
-        response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
+        response.headers.add("Access-Control-Allow-Origin", "https://denzetoursandtravels.netlify.app")
         response.headers.add("Access-Control-Allow-Methods", "DELETE")
         response.headers.add("Access-Control-Allow-Headers", "Content-Type")
         return response

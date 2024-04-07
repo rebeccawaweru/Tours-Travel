@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BasicInput, CustomSelect, BreadCrumb, CheckBox} from "../../components";
+import { BasicInput, CustomSelect, BreadCrumb, CheckBox, Loader} from "../../components";
 import { AdminDashboard } from "../../layouts";
 import { Box, Button, MenuItem, Stack, Typography, InputLabel } from "@mui/material";
 import { handleFileUpload } from "../../utils/helpers";
@@ -10,6 +10,7 @@ export default function UpdatePackage(){
     const {id} = useParams()
     const [data, setData] = useState({})
     const navigate = useNavigate()
+    const [loading, setLoading] = useState(false)
     const [activities, setActivities] = useState([])
     const [preview,setPreview] = useState(data.poster)
     const [image, setImage] = useState('')
@@ -44,12 +45,14 @@ export default function UpdatePackage(){
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        setLoading(true)
         const cover = image ? await handleFileUpload(image) : undefined
         const post = cover ? cover.url : preview
         const newdata = {...tour, poster:post, activity:activities}
         delete newdata._id
         delete newdata.createdAt
         await client.put(`/update/${id}`, newdata).then((response)=>{
+            setLoading(false)
              if(response.data.success){
                 Swal.fire('Success', response.data.message, 'success')
                 navigate('/tourpackages')
@@ -101,7 +104,8 @@ export default function UpdatePackage(){
             </Stack>
             <BasicInput lbl="Deadline" type="date" helperText="Booking / Payment deadline" value={tour.deadline} name="deadline" onChange={handleChange}/>
             <BasicInput lbl="Description" multiline rows={6} value={tour.description} name="description" onChange={handleChange}/>
-            <Button type="submit" variant="contained">Update</Button>
+            {loading ? <Loader/> :
+            <Button type="submit" variant="contained">Update</Button>}
            </Box>
     </AdminDashboard>
 }

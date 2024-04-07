@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BasicInput, CustomSelect, BreadCrumb, CheckBox} from "../../components";
+import { BasicInput, CustomSelect, BreadCrumb, CheckBox, Loader} from "../../components";
 import { AdminDashboard } from "../../layouts";
 import { Box, Button, MenuItem, Stack, Typography } from "@mui/material";
 import { handleFileUpload } from "../../utils/helpers";
@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 export default function CreatePackage(){
     const navigate = useNavigate()
+    const [loading, setLoading] = useState(false)
     const [activities, setActivities] = useState([])
     const [preview,setPreview] = useState('')
     const [image, setImage] = useState('')
@@ -42,9 +43,11 @@ export default function CreatePackage(){
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        setLoading(true)
         const cover = await handleFileUpload(image)
         const data = {...tour, poster:cover.url, activity:activities}
         await client.post('/new', data).then((response)=>{
+            setLoading(false)
              if(response.data.success){
                 Swal.fire('Success', response.data.message, 'success')
                 navigate('/tourpackages')
@@ -88,7 +91,8 @@ export default function CreatePackage(){
             </Stack>
             <BasicInput lbl="Deadline" type="date" helperText="Booking / Payment deadline" name="deadline" onChange={handleChange}/>
             <BasicInput lbl="Description" multiline rows={6} name="description" onChange={handleChange}/>
-            <Button type="submit" variant="contained">Submit</Button>
+             {loading ? <Loader/> :
+            <Button type="submit" variant="contained">Submit</Button>}
            </Box>
     </AdminDashboard>
 }

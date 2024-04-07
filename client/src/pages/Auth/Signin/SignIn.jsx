@@ -1,5 +1,5 @@
 import { Grid, Divider, Box, Stack, Typography, FormControl, Button } from "@mui/material"
-import {BasicInput, LinkBtn} from '../../../components'
+import {BasicInput, LinkBtn, Loader} from '../../../components'
 import { Lock, Email, VisibilityOff, Visibility } from "@mui/icons-material"
 import { AuthWrapper } from "../../../layouts"
 import { useNavigate } from "react-router-dom"
@@ -8,6 +8,7 @@ import { useState } from "react"
 export default function SignIn(){
     const navigate = useNavigate()
     const [type, setType] = useState('password')
+    const [loading, setLoading] = useState(false)
     const [data, setData] = useState({
         email:"",
         password:""
@@ -20,7 +21,9 @@ export default function SignIn(){
     }
     const handleSubmit = async (e) =>{
         e.preventDefault()
+        setLoading(true)
         await client.post('/login', data).then((response)=>{
+            setLoading(false)
             if(response.data.success){
                 localStorage.setItem('user_id', response.data.user._id)
                  navigate('/dashboard')
@@ -40,10 +43,12 @@ export default function SignIn(){
         </Box>
         <Grid container direction="column" gap={4}>
         <LinkBtn to="/forgotpassword" title="Forgot Password?"/>
+         {loading ? <Loader/> :
         <Stack direction="row" spacing={2} sx={{display:"flex", alignItems:"center"}}>
         <Button type="submit" variant="contained">Submit</Button>
         <LinkBtn to="/signup" title="Don't have an account?"/>
-        </Stack>
+        </Stack>}
+
         </Grid>
         </FormControl>
         </Grid>

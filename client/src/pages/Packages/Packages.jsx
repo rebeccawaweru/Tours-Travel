@@ -68,7 +68,7 @@ export default function Packages(){
         color:"whitesmoke",
         justifyContent:"center",
         // alignItems:"start",
-        height:{xs:"120vh",sm:"100vh",md:"70vh", lg:"100vh", xl:"100vh"},
+        height:{xs:"120vh",sm:"80vh",md:"70vh", lg:"100vh", xl:"100vh"},
         width:"100%",
         backgroundSize: 'cover',
         backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Sky})`,
@@ -84,7 +84,7 @@ export default function Packages(){
         <Filter handleChange={handleChange} handleSearch={handleSearch}/>
        </Box>
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"50px", marginTop:{xs:-4,md:-20}}}>
-            <Grid direction="row" container  gap={2} sx={{alignItems:"center",justifyContent:"start",cursor:"pointer"}}>
+            <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:"start",cursor:"pointer"}}>
             {!search && combined && combined.length > 0 && combined.map((item)=>{
                     return <Package id={item._id} link={item.link} price={item.price} location={item.location} title={item.title} duration={item.duration} image={item.poster}/>
                   })
@@ -100,10 +100,13 @@ export default function Packages(){
                   }) : category && <p>No tour packages available under {category}. <Button onClick={()=>window.location.replace('/packages')} component="p">Reset</Button></p>
                 } 
                   
-           
-             {/* <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image={Train}/>
+              {!search &&
+              <>
+             <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image={Train}/>
              <Package price={3000} image={America} title="America – 2 Days in Lake Tahoe" location="America" duration="7 days"/>
-             <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image={Bridge}/> */}
+             <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image={Bridge}/>
+             </>
+             }
             </Grid>
 
         </Container>

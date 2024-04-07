@@ -4,7 +4,7 @@ import { BubbleChartTwoTone, Search } from "@mui/icons-material";
 export default function Filter({handleChange, handleSearch}){
     return (
         <Container maxWidth>
-        <Box component={Stack}  spacing={2}  direction={{xs:"column",sm:"column",md:"row"}} justifyContent="space-between" alignItems="center">
+        <Box component={Stack}  spacing={2}  direction={{xs:"column",sm:"row",md:"row"}} justifyContent="space-between" alignItems="center">
         {/* <BasicSelect lbl="Keywords"/> */}
         <BasicInput name="keyword" start={Search} lbl="Keyword" onChange={handleChange}/>
          <BasicSelect name="activity" lbl="Activity" onChange={handleChange}>

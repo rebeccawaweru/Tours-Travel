@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BasicInput, CustomSelect, BreadCrumb} from "../../components";
+import { BasicInput, CustomSelect, BreadCrumb, Loader} from "../../components";
 import { AdminDashboard } from "../../layouts";
 import { Box, Button, MenuItem } from "@mui/material";
 import { handleFileUpload } from "../../utils/helpers";
@@ -9,6 +9,7 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function UpdateReferal(){
     const {id} = useParams()
     const [data, setData] = useState({})
+    const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
     const [preview,setPreview] = useState(data.poster)
     const [image, setImage] = useState('')
@@ -33,12 +34,14 @@ export default function UpdateReferal(){
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        setLoading(true)
         const cover = image ? await handleFileUpload(image) : undefined
         const post = cover ? cover.url : preview
         const newdata = {...tour, poster:post}
         delete newdata._id
         delete newdata.createdAt
         await client.put(`/update/referral/${id}`, newdata).then((response)=>{
+             setLoading(false)
              if(response.data.success){
                 Swal.fire('Success', response.data.message, 'success')
                 navigate('/bookings')
@@ -70,7 +73,8 @@ export default function UpdateReferal(){
             <BasicInput  lbl="Duration" value={tour.duration} name="duration" onChange={handleChange}/>
             <BasicInput lbl="Charge per click" value={tour.charge} type="number" name="charge" onChange={handleChange}/>
             <BasicInput lbl="External Website Link" value={tour.link} name="link" onChange={handleChange}/>
-           <Button type="submit" variant="contained">Update</Button>
+            {loading ? <Loader/> :
+           <Button type="submit" variant="contained">Update</Button>}
            </Box>
     </AdminDashboard>
 }

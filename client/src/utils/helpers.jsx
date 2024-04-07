@@ -66,3 +66,7 @@ export const handleFileUpload = async (files) =>{
   const File = await res.json()
   return File
 }
+
+export const whatsappchat = () =>{
+  window.open('https://wa.me/254726647255', '_blank')
+}
