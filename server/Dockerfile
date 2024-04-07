@@ -7,8 +7,8 @@ WORKDIR /server
 # Copy the contents of the current directory into the container at /app
 COPY . /server
 
-# Install Flask (assuming it's not already installed in your environment)
-RUN pip install Flask pymongo python-dotenv
+# Install dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose the port that the Flask app runs on
 EXPOSE 5000
