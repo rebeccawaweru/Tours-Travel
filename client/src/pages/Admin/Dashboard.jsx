@@ -31,7 +31,7 @@ export default function Dashboard(){
     getReferrals()
     },[])
     return <AdminDashboard>
-     <BreadCrumb cap1="Dashboard" cap2="Analysis"/>
+     <BreadCrumb cap1="Report" cap2="Analysis"/>
      <Grid container direction="row" maxWidth gap={4} justifyContent="center">
      <Statistic icon={<Group/>} caption="Users" number={users.length}/>
      <Statistic icon={<Folder/>} caption="Packages" number={data}/>
