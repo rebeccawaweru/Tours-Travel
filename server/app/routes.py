@@ -91,7 +91,7 @@ def get_packages():
 
    return json_util.dumps(packages), 200
 
-@app.route('/<id>', methods=['GET'])
+@app.route('/<id>', methods=['GET'], strict_slashes=True)
 def get_package(id):
    query = {
       "_id":ObjectId(id)
@@ -104,7 +104,7 @@ def get_package(id):
    return jsonify({'package':package}), 200
 
 
-@app.route('/update/<id>', methods=['PUT'])
+@app.route('/update/<id>', methods=['PUT'], strict_slashes=True)
 def update_package(id):
    query = {
       "_id":ObjectId(id)
@@ -120,7 +120,7 @@ def update_package(id):
 
    
 
-@app.route('/delete/<id>', methods=['DELETE','OPTIONS'])
+@app.route('/delete/<id>', methods=['DELETE','OPTIONS'], strict_slashes=True)
 def delete_package(id):
     if request.method == 'OPTIONS':
         # This is a preflight request, respond with the appropriate headers
@@ -143,7 +143,7 @@ def delete_package(id):
 
 #Referrals
 
-@app.route('/new/referral', methods=['POST'])
+@app.route('/new/referral', methods=['POST'], strict_slashes=True)
 def newreferral():
    data = request.json
    data['createdAt'] = datetime.now()
@@ -154,7 +154,7 @@ def newreferral():
    else:
       return jsonify({'success':True, 'message':'Referral  created successfully'}), 200
    
-@app.route('/find/referrals', methods=['GET'])
+@app.route('/find/referrals', methods=['GET'], strict_slashes=True)
 def get_referrals():
    referrals = list(db.referrals.find().sort('createdAt', DESCENDING))
    # if not referrals:
@@ -165,7 +165,7 @@ def get_referrals():
 
    return json_util.dumps(referrals), 200
 
-@app.route('/find/referral/<id>', methods=['GET'])
+@app.route('/find/referral/<id>', methods=['GET'], strict_slashes=True)
 def get_referral(id):
    query = {
       "_id":ObjectId(id)
@@ -177,7 +177,7 @@ def get_referral(id):
    referral['_id'] = str(referral['_id'])
    return jsonify({'referral':referral}), 200
 
-@app.route('/update/referral/<id>', methods=['PUT'])
+@app.route('/update/referral/<id>', methods=['PUT'], strict_slashes=True)
 def update_referral(id):
    query = {
       "_id":ObjectId(id)
@@ -191,7 +191,7 @@ def update_referral(id):
    
    return jsonify({'success':True, 'message':'Referral updated successfully'}), 200
 
-@app.route('/delete/referral/<id>', methods=['DELETE','OPTIONS'])
+@app.route('/delete/referral/<id>', methods=['DELETE','OPTIONS'], strict_slashes=True)
 def delete_referral(id):
     if request.method == 'OPTIONS':
         # This is a preflight request, respond with the appropriate headers
