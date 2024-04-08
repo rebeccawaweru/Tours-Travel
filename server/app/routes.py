@@ -91,7 +91,7 @@ def get_packages():
 
    return json_util.dumps(packages), 200
 
-@app.route('/find/<id>/', methods=['GET'])
+@app.route('/find/<id>', methods=['GET','OPTIONS'])
 def get_package(id):
    if request.method == 'OPTIONS':
         # This is a preflight request, respond with the appropriate headers
@@ -172,7 +172,7 @@ def get_referrals():
 
    return json_util.dumps(referrals), 200
 
-@app.route('/find/referral/<id>/', methods=['GET'])
+@app.route('/find/referral/<id>', methods=['GET','OPTIONS'])
 def get_referral(id):
    if request.method == 'OPTIONS':
         # This is a preflight request, respond with the appropriate headers
