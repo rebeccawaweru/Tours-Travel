@@ -6,7 +6,6 @@ import { handleFileUpload } from "../../utils/helpers";
 import client from "../../api/client"
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from 'axios'
 export default function UpdateReferal(){
     const {id} = useParams()
     const [data, setData] = useState({})
@@ -50,7 +49,7 @@ export default function UpdateReferal(){
         })
     }
     useEffect(()=>{
-      axios.get(`https://tours-travel-production.up.railway.app/find/${id}`).then((response)=>{
+       client.get(`/find/referral/${id}`).then((response)=>{
         setTour(response.data.referral)
         setPreview(response.data.referral.poster)
        })
