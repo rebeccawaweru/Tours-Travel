@@ -165,7 +165,7 @@ def get_referrals():
 
    return json_util.dumps(referrals), 200
 
-@app.route('/find/referral/<id>', methods=['GET'], strict_slashes=True)
+@app.route('/referral/<id>', methods=['GET'], strict_slashes=True)
 def get_referral(id):
    query = {
       "_id":ObjectId(id)

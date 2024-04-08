@@ -49,7 +49,7 @@ export default function UpdateReferal(){
         })
     }
     useEffect(()=>{
-       client.get(`/find/referral/${id}`).then((response)=>{
+       client.get(`/referral/${id}`).then((response)=>{
         setTour(response.data.referral)
         setPreview(response.data.referral.poster)
        })
