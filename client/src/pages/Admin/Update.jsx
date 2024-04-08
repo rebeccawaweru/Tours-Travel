@@ -60,7 +60,7 @@ export default function UpdatePackage(){
         })
     }
     useEffect(()=>{
-       client.get(`/find/${id}`).then((response)=>{
+       client.get(`/${id}`).then((response)=>{
         setTour(response.data.package)
         setPreview(response.data.package.poster)
         setActivities(response.data.package.activity)

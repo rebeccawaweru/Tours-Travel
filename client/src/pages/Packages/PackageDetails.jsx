@@ -11,7 +11,7 @@ export default function PackageDetails(){
      const {id} = useParams()
     const [data,setData] = useState({})
     async function getPackage(){
-        await client.get(`/find/${id}`).then((response)=>{
+        await client.get(`/${id}`).then((response)=>{
              setData(response.data.package)
         })
       }

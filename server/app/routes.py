@@ -91,15 +91,8 @@ def get_packages():
 
    return json_util.dumps(packages), 200
 
-@app.route('/find/<id>', methods=['GET','OPTIONS'])
+@app.route('/<id>', methods=['GET'])
 def get_package(id):
-   if request.method == 'OPTIONS':
-        # This is a preflight request, respond with the appropriate headers
-        response = make_response()
-        response.headers.add("Access-Control-Allow-Origin", "https://denzetoursandtravels.netlify.app")
-        response.headers.add("Access-Control-Allow-Methods", "GET")
-        response.headers.add("Access-Control-Allow-Headers", "Content-Type")
-        return response
    query = {
       "_id":ObjectId(id)
    }
@@ -172,15 +165,8 @@ def get_referrals():
 
    return json_util.dumps(referrals), 200
 
-@app.route('/find/referral/<id>', methods=['GET','OPTIONS'])
+@app.route('/find/referral/<id>', methods=['GET'])
 def get_referral(id):
-   if request.method == 'OPTIONS':
-        # This is a preflight request, respond with the appropriate headers
-        response = make_response()
-        response.headers.add("Access-Control-Allow-Origin", "https://denzetoursandtravels.netlify.app")
-        response.headers.add("Access-Control-Allow-Methods", "GET")
-        response.headers.add("Access-Control-Allow-Headers", "Content-Type")
-        return response
    query = {
       "_id":ObjectId(id)
    }
