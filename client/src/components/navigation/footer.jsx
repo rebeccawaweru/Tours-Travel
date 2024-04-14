@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function Footer(){
   const navigate = useNavigate()
     return (
-    <Box bgcolor="black" textAlign="center" overflow="hidden" paddingY={2}>
+    <Box bgcolor="#000435" textAlign="center" overflow="hidden" paddingY={2}>
         <Container sx={{display:"flex" }} gap={{xs:1,md:1,lg:2,xl:6}} component={Grid}  container maxWidth direction="row" paddingBottom={8} paddingTop={4}>
              
               <Grid display="flex" flexDirection="column" gap={2} justifyContent={{xs:"center",sm:"start"}} xs={12} sm={4} md={3} lg={3} item container color="whitesmoke" fontSize="small" textAlign="left">

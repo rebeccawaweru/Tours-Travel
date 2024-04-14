@@ -210,3 +210,4 @@ def delete_referral(id):
       return jsonify({'error':'Failed to delete referral'}), 500
    
     return jsonify({'success':True, 'message':'Referral deleted successfully'}), 200
+

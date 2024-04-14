@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Drawer, Container} from '@mui/material';
-import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu } from '@mui/icons-material';
+import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Button, Container} from '@mui/material';
+import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu, GTranslate } from '@mui/icons-material';
 import Logo from '../../assets/tour-logo.png'
 import LinkItem from './linkitem';
 import CustomDrawer from './drawer';
@@ -14,15 +14,25 @@ export default function NavBar({hideToolbar}) {
   const handleDrawerClose = () => {
     setOpenDrawer(false);
   };
-
+  function googleTranslateElementInit() {
+    new window.google.translate.TranslateElement({pageLanguage: 'en', layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element')
+  }
+  useEffect(()=>{
+    googleTranslateElementInit()
+  },[])
   return (
     <Container sx={{ flexGrow: 1}}>
-      <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? 'black' : 'rgba(0, 0, 0, 0.6)', color: "white",  }} elevation={0}>
+      <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? '#000435' : 'rgba(0, 4, 53, 0.4)', color: "white",  }} elevation={0}>
          {!hideToolbar && 
         <Toolbar sx={{ display: { xs: 'none', md: 'flex'} }}>
           <Stack direction="row" spacing={1} component="div" sx={{ flexGrow: 1 }}>
-            <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 726 647 255</IconButton>
+            <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 707 741 232 </IconButton>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
+            <div style={{position:"relative"}}>
+              <div id="google_translate_element" style={{position:"relative",display:"none"}}></div>
+              <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><GTranslate color='primary' sx={{ fontSize: 16, marginRight: 0.8 }} />Translate</IconButton>
+
+            </div>
           </Stack>
           <Box display={{xs:'none',sm:"none", md:"flex"}}>
           <IconButton><Facebook sx={{ fontSize: 16 }} /></IconButton>
@@ -34,8 +44,9 @@ export default function NavBar({hideToolbar}) {
         </Toolbar>}
 
         <Toolbar>
-          <Typography variant="p" component="div" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
+          <Typography  variant="p" component="div" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
             <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 150 : 185} height={hideToolbar ? 80 : 75} style={{objectFit:"cover"}}/>
+          
           </Typography>
           <IconButton sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
           <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }}>
