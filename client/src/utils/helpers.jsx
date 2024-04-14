@@ -68,5 +68,5 @@ export const handleFileUpload = async (files) =>{
 }
 
 export const whatsappchat = () =>{
-  window.open('https://wa.me/254726647255', '_blank')
+  window.open('https://wa.me/254707741232', '_blank')
 }

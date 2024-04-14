@@ -14,12 +14,22 @@ export default function NavBar({hideToolbar}) {
   const handleDrawerClose = () => {
     setOpenDrawer(false);
   };
-  function googleTranslateElementInit() {
-    new window.google.translate.TranslateElement({pageLanguage: 'en', layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element')
-  }
-  useEffect(()=>{
-    googleTranslateElementInit()
-  },[])
+  // function googleTranslateElementInit() {
+  //   new window.google.translate.TranslateElement({pageLanguage: 'en', layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element')
+  // }
+  const handleTranslateClick = () => {
+    const translateElement = document.getElementById('google_translate_element');
+    if (translateElement) {
+        // Simulate a click event on the Google Translate dropdown
+        const translateDropdown = translateElement.querySelector('.goog-te-menu-value');
+        if (translateDropdown) {
+            translateDropdown.click();
+        }
+    }
+}
+  // useEffect(()=>{
+  //   googleTranslateElementInit()
+  // },[])
   return (
     <Container sx={{ flexGrow: 1}}>
       <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? '#000435' : 'rgba(0, 4, 53, 0.4)', color: "white",  }} elevation={0}>
@@ -52,9 +62,9 @@ export default function NavBar({hideToolbar}) {
           <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }}>
             <LinkItem to="/" page="Home"/>
             <LinkItem to="/about" page="About"/>
-            {/* <LinkItem to="/" page="Services"/> */}
             <LinkItem to="/packages" page="Packages"/>
             <LinkItem to="/destinations" page="Destinations"/>
+           <LinkItem to="/class" page="Class"/>
             <LinkItem to="/contact" page="Contact"/>
           </Box>
         </Toolbar>

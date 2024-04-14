@@ -68,7 +68,7 @@ export default function Packages(){
         color:"whitesmoke",
         justifyContent:"center",
         // alignItems:"start",
-        height:{xs:"120vh",sm:"80vh",md:"70vh", lg:"100vh", xl:"100vh"},
+        height:{xs:"120vh",sm:"80vh",md:"90vh", lg:"100vh", xl:"100vh"},
         width:"100%",
         backgroundSize: 'cover',
         backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Sky})`,

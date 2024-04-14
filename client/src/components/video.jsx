@@ -7,7 +7,7 @@ export default function Video({children}){
         color:"whitesmoke",
         justifyContent:"center",
         alignItems:"center",
-        height:{xs:"120vh",sm:"100vh",md:"70vh", lg:"100vh", xl:"100vh"},
+        height:{xs:"120vh",sm:"100vh",md:"90vh", lg:"100vh", xl:"100vh"},
         width:"100%",
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',

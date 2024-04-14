@@ -32,8 +32,8 @@ export default function Footer(){
 
                 <Typography color="whitesmoke" fontSize="small" fontWeight="bold" textAlign={{xs:"center",sm:"left"}} >CONTACT INFO</Typography>
                  <Box component={Stack} direction="column" spacing={2}>
-                 <Typography fontSize="small">Address:worldwide</Typography>
-                <Typography fontSize="small">Phone:+254 7XX XXX XXX</Typography>
+                 <Typography fontSize="small">Location: Hurlingham Plaza, Along Argwings Kodhek Road, Nairobi, Kenya</Typography>
+                <Typography fontSize="small">Tel: +254-707-741232 | +254-769-665298</Typography>
                 <Typography fontSize="small">info@denzetoursandtravels.com</Typography>
                  </Box>
    
