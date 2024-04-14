@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword, About, Packages, PackageDetails, Destinations, Contact, Bookings,CreatePackage, UpdatePackage, TourPackages, AddReferal, UpdateReferal, Dashboard } from "../pages";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-
 export default function Root(){
     const theme = createTheme({
         components: {

@@ -82,7 +82,7 @@ const Slider = ({ images, autoSwipeInterval = 5000 }) => {
               }}
             /> */}
         {/* Text overlay */}
-           <Grid component={Container} container direction="column">
+           <Grid component={Container} container direction="column" position="absolute" left={0}>
             {index === currentIndex &&
              <>
             <m.h3 
