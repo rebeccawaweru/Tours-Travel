@@ -7,6 +7,7 @@ import LinkItem from './linkitem';
 import CustomDrawer from './drawer';
 export default function NavBar({hideToolbar}) {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [translate, setTranslate] = useState(false)
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
   };
@@ -30,19 +31,45 @@ export default function NavBar({hideToolbar}) {
   // useEffect(()=>{
   //   googleTranslateElementInit()
   // },[])
+  // const googleTranslateElementInit = () => {
+  //   new window.google.translate.TranslateElement(
+  //     {
+  //       pageLanguage: "en",
+  //       autoDisplay: false
+  //     },
+  //     "google_translate_element"
+  //   );
+  // };
+  // useEffect(() => {
+  //   if (!document.getElementById('google_translate_script')) {
+  //     var addScript = document.createElement("script");
+  //     addScript.id = 'google_translate_script'; // Add an ID to the script element
+  //     addScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  //     document.body.appendChild(addScript);
+  // }
+  //   window.googleTranslateElementInit = googleTranslateElementInit;
+  // }, []);
+
   return (
-    <Container sx={{ flexGrow: 1}}>
+    <Container  sx={{ flexGrow: 1}}>
+
       <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? '#000435' : 'rgba(0, 4, 53, 0.4)', color: "white",  }} elevation={0}>
-         {!hideToolbar && 
+      
+      
+
+  
+
+      {!hideToolbar && 
         <Toolbar sx={{ display: { xs: 'none', md: 'flex'} }}>
           <Stack direction="row" spacing={1} component="div" sx={{ flexGrow: 1 }}>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 707 741 232 </IconButton>
-            <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
-            <div style={{position:"relative"}}>
-              <div id="google_translate_element" style={{position:"relative",display:"none"}}></div>
-              <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><GTranslate color='primary' sx={{ fontSize: 16, marginRight: 0.8 }} />Translate</IconButton>
+            <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline  sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
+           
+           
+            {!translate &&
+            <IconButton onClick={()=>setTranslate(true)} sx={{ fontSize: 14, letterSpacing:1 }}><GTranslate color="primary" sx={{ fontSize: 16, marginRight: 0.8 }} />Translate</IconButton>
+             }
 
-            </div>
           </Stack>
           <Box display={{xs:'none',sm:"none", md:"flex"}}>
           <IconButton><Facebook sx={{ fontSize: 16 }} /></IconButton>
@@ -51,20 +78,24 @@ export default function NavBar({hideToolbar}) {
           <Link className='link' to="/signup"><IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Person sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Sign up</IconButton></Link>
           </Box>
           <Link className='link' to="/signin"> <IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Lock sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Login</IconButton></Link>
-        </Toolbar>}
+        </Toolbar>
+        }
 
         <Toolbar>
-          <Typography  variant="p" component="div" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
+          <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
             <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 220 : 240} height={hideToolbar ? 80 : 75} style={{objectFit:"cover"}}/>
             {/* width={240} height={100} */}
+            <Box id="google_translate_element"  style={{opacity:translate ? 1 : 0}}></Box> 
+            {translate && <Typography onClick={()=>setTranslate(false)} marginLeft={2} sx={{cursor:"pointer"}}>Exit</Typography>}
           </Typography>
+
           <IconButton sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
           <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }}>
             <LinkItem to="/" page="Home"/>
             <LinkItem to="/about" page="About"/>
             <LinkItem to="/packages" page="Packages"/>
             <LinkItem to="/destinations" page="Destinations"/>
-           <LinkItem to="/classes" page="Classes"/>
+           {/* <LinkItem to="/classes" page="Classes"/> */}
             <LinkItem to="/contact" page="Contact"/>
           </Box>
         </Toolbar>
@@ -85,7 +116,7 @@ export default function NavBar({hideToolbar}) {
          <Link style={{textDecoration:"none"}} to="/about">About</Link>
          <Link style={{textDecoration:"none"}} to="/packages">Packages</Link>
          <Link style={{textDecoration:"none"}} to="/destinations">Destinations</Link>
-        <Link style={{textDecoration:"none"}} to="/classes">Classes</Link>
+        {/* <Link style={{textDecoration:"none"}} to="/classes">Classes</Link> */}
          <Link style={{textDecoration:"none"}} to="/contact">Contact</Link>
          <Link style={{textDecoration:"none"}} to="/signup">Sign Up</Link>
          <Link style={{textDecoration:"none"}} to="/signin">Login</Link>
