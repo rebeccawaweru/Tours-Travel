@@ -9,9 +9,9 @@ export default function Footer(){
     <Box bgcolor="#000435" textAlign="center" overflow="hidden" paddingY={2}>
         <Container sx={{display:"flex" }} gap={{xs:1,md:1,lg:2,xl:6}} component={Grid}  container maxWidth direction="row" paddingBottom={8} paddingTop={4}>
              
-              <Grid display="flex" flexDirection="column" gap={2} justifyContent={{xs:"center",sm:"start"}} xs={12} sm={4} md={3} lg={3} item container color="whitesmoke" fontSize="small" textAlign="left">
+              <Grid display="flex" flexDirection="column" justifyContent={{xs:"center",sm:"start"}} xs={12} sm={4} md={3} lg={3} item container color="whitesmoke" fontSize="small" textAlign="left">
               <Typography color="whitesmoke" fontSize="small" fontWeight="bold" textAlign={{xs:"center",md:"left"}} >ABOUT US</Typography>
-                <Box component="img" src={Logo} alt="denze logo" width={180} height={80} sx={{objectFit:"cover",alignSelf:{xs:"center",md:"start"} }}/>
+                <Box component="img" src={Logo} alt="denze logo" width={240} height={100} sx={{objectFit:"cover",alignSelf:{xs:"center",md:"start"} }}/>
                 <Typography color="#8c8c8c" fontSize="small">An international tour operator that specializes in custom
             business and leisure itineraries, and luxury vacation packages with an intent to provide
             travelers with flawless holidays and sparkling travel experience.</Typography>
@@ -20,7 +20,7 @@ export default function Footer(){
               <Grid xs={12} sm={6} md={6} lg={6} item>
                 <Typography color="whitesmoke" fontSize="small" fontWeight="bold">TOP DESTINATIONS</Typography>
                  <Grid  alignItems="center" display="flex" justifyContent="center" container maxWidth gap={1} direction="row" marginTop={2} >
-                {itemData.map((item)=>{
+                {itemData.slice(0, 4).map((item)=>{
                 return <Box  onClick={()=>navigate(`/packages?category=${item.title}`)} height={100} component={Grid}  item sm={5} md={5}  xs={2}
                 alignItems="center" display="flex" justifyContent="center"
                sx={{backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${item.img})`,backgroundPosition:"center", cursor:"pointer"}}>

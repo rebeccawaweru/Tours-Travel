@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { LandingPage, SignUp, SignIn, ForgotPassword, ResetPassword, About, Packages, PackageDetails, Destinations, Contact, Bookings,CreatePackage, UpdatePackage, TourPackages, AddReferal, UpdateReferal, Dashboard, Classes } from "../pages";
+import { LandingPage, SignUp, SignIn, Category, ForgotPassword, ResetPassword, About, Packages, PackageDetails, Destinations, Contact, Bookings,CreatePackage, UpdatePackage, TourPackages, AddReferal, UpdateReferal, Dashboard, Classes } from "../pages";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 export default function Root(){
     const theme = createTheme({
@@ -67,6 +67,7 @@ export default function Root(){
           <Route path="/updatepackage/:id" element={<UpdatePackage/>}/>
           <Route path="/tourpackages" element={<TourPackages/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/destination" element={<Category/>}/>
         </Routes>
         </ThemeProvider>
     )

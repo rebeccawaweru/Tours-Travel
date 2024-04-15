@@ -23,6 +23,16 @@ export default function Filter({handleChange, handleSearch}){
                 <MenuItem value="East Africa">East Africa</MenuItem>
                 <MenuItem value="Hot Pick">Hot Pick</MenuItem>
                 <MenuItem value="International Holiday">International Holiday</MenuItem>
+                <MenuItem value="vacation">Vacations</MenuItem>
+                <MenuItem value="education">Educational Tours</MenuItem>
+                <MenuItem value="special">Special Tours</MenuItem>
+                <MenuItem value="sport">Sporting events</MenuItem>
+                <MenuItem value="charity">Charity Tours</MenuItem>
+                <MenuItem value="wine">Wine tasting tours</MenuItem>
+                <MenuItem value="food">Food festivals</MenuItem>
+                <MenuItem value="birds">Bird watching explorations</MenuItem>
+                <MenuItem value="gliding">Sky gliding tours</MenuItem>
+
         </BasicSelect>
 
          <BasicSelect name="duration" lbl="Duration" onChange={handleChange}>

@@ -55,8 +55,8 @@ export default function NavBar({hideToolbar}) {
 
         <Toolbar>
           <Typography  variant="p" component="div" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
-            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 150 : 185} height={hideToolbar ? 80 : 75} style={{objectFit:"cover"}}/>
-          
+            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 220 : 240} height={hideToolbar ? 80 : 75} style={{objectFit:"cover"}}/>
+            {/* width={240} height={100} */}
           </Typography>
           <IconButton sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
           <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }}>

@@ -75,7 +75,7 @@ export default function LandingPage(){
         </Box>
      
         <Container maxWidth sx={{paddingY:"40px",backgroundColor:"white"}}>
-            <Typography fontWeight="bold" variant="h6" lineHeight={2}>Popular Destinations / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/packages">View All Destinations</Link></Typography>
+            <Typography fontWeight="bold" variant="h6" lineHeight={2}>Popular Destinations / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/destinations">View All Destinations</Link></Typography>
             <Typography color="#8c8c8c" lineHeight={2}>Dive into a treasure trove of enchanting locales, each offering a unique tapestry of culture, adventure, and natural beauty. From iconic landmarks to hidden gems, embark on a virtual journey with us as we showcase the destinations that capture the hearts and imaginations of travelers worldwide. </Typography>
         </Container>
         <CustomImageList/>

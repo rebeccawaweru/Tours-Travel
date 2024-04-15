@@ -11,6 +11,16 @@ import three from '../assets/3.jpg'
 import four from '../assets/4.jpg'
 import five from '../assets/5.jpg'
 import six from '../assets/6.jpg'
+import vacation from '../assets/vacation.jpg'
+import sport from '../assets/sport.jpg'
+import education from '../assets/education.jpg'
+import food from '../assets/foodfestival.jpg'
+import charity from '../assets/charity.jpg'
+import special from '../assets/special.jpg'
+import birds from '../assets/birds.jpg'
+import wine from '../assets/wine.jpg'
+import gliding from '../assets/gliding.jpg'
+
 export const content = [
     {
         title:"Special",
@@ -91,7 +101,43 @@ export const itemData = [
       title: 'East Africa',
       author: '@nolanissac',
       cols: 2,
-    }
+    },
+    {
+      img: vacation,
+      title: 'Vacations',
+    },
+    {
+      img: education,
+      title: 'Educational Tours',
+    },
+    {
+      img: special,
+      title: 'Special Tours',
+    },
+    {
+      img: sport,
+      title: 'Sporting events',
+    },
+    {
+      img: charity,
+      title: 'Charity tours',
+    },
+    {
+      img: wine,
+      title: 'Wine tasting tours',
+    },
+    {
+      img: food,
+      title: 'Food festivals',
+    },
+    {
+      img: birds,
+      title: 'Bird watching explorations',
+    },
+    {
+      img: gliding,
+      title: 'Sky gliding tours',
+    },
 ]
 
 export const handleFileUpload = async (files) =>{
