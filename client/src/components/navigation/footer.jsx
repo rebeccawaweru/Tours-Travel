@@ -12,7 +12,9 @@ export default function Footer(){
               <Grid display="flex" flexDirection="column" gap={2} justifyContent={{xs:"center",sm:"start"}} xs={12} sm={4} md={3} lg={3} item container color="whitesmoke" fontSize="small" textAlign="left">
               <Typography color="whitesmoke" fontSize="small" fontWeight="bold" textAlign={{xs:"center",md:"left"}} >ABOUT US</Typography>
                 <Box component="img" src={Logo} alt="denze logo" width={180} height={80} sx={{objectFit:"cover",alignSelf:{xs:"center",md:"start"} }}/>
-                <Typography color="#8c8c8c" fontSize="small">We help travelers to discover, plan, and book unforgettable experiences worldwide.</Typography>
+                <Typography color="#8c8c8c" fontSize="small">An international tour operator that specializes in custom
+            business and leisure itineraries, and luxury vacation packages with an intent to provide
+            travelers with flawless holidays and sparkling travel experience.</Typography>
               </Grid>
                
               <Grid xs={12} sm={6} md={6} lg={6} item>
@@ -33,7 +35,7 @@ export default function Footer(){
                 <Typography color="whitesmoke" fontSize="small" fontWeight="bold" textAlign={{xs:"center",sm:"left"}} >CONTACT INFO</Typography>
                  <Box component={Stack} direction="column" spacing={2}>
                  <Typography fontSize="small">Location: Hurlingham Plaza, Along Argwings Kodhek Road, Nairobi, Kenya</Typography>
-                <Typography fontSize="small">Tel: +254-707-741232 | +254-769-665298</Typography>
+                <Typography fontSize="small">Tel: +254 707 741 232</Typography>
                 <Typography fontSize="small">info@denzetoursandtravels.com</Typography>
                  </Box>
    

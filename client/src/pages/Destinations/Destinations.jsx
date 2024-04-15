@@ -18,8 +18,8 @@ export default function Destinations(){
     return (
         <Wrapper>
        <Video>
-       <Container maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:28,md:0}}}>
-        <Stack direction="row" spacing={1} marginTop={2}>
+       <Container maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:28,md:10}}}>
+        <Stack direction="row" spacing={1} >
         <LocationSearching fontSize="large"/>
         <Typography variant="h4" fontWeight="bold" >DESTINATIONS</Typography>
         </Stack>

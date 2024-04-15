@@ -64,7 +64,7 @@ export default function NavBar({hideToolbar}) {
             <LinkItem to="/about" page="About"/>
             <LinkItem to="/packages" page="Packages"/>
             <LinkItem to="/destinations" page="Destinations"/>
-           <LinkItem to="/class" page="Class"/>
+           <LinkItem to="/classes" page="Classes"/>
             <LinkItem to="/contact" page="Contact"/>
           </Box>
         </Toolbar>
@@ -83,9 +83,9 @@ export default function NavBar({hideToolbar}) {
    
          <Link style={{textDecoration:"none"}} to="/">Home</Link>
          <Link style={{textDecoration:"none"}} to="/about">About</Link>
-         {/* <Link style={{textDecoration:"none"}} to="/">Services</Link> */}
          <Link style={{textDecoration:"none"}} to="/packages">Packages</Link>
          <Link style={{textDecoration:"none"}} to="/destinations">Destinations</Link>
+        <Link style={{textDecoration:"none"}} to="/classes">Classes</Link>
          <Link style={{textDecoration:"none"}} to="/contact">Contact</Link>
          <Link style={{textDecoration:"none"}} to="/signup">Sign Up</Link>
          <Link style={{textDecoration:"none"}} to="/signin">Login</Link>
