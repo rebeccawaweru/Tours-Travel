@@ -46,12 +46,12 @@ export default function PackageDetails(){
             <Grid direction="column" width="50%" container gap={4}>
                 <Stack direction="row" spacing={1}>
                 <Timer/>
-                <Typography color="inherit" variant="body1">{data.duration}</Typography>
+                <Typography color="inherit" variant="body1">{data.nights} {data.days}</Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
                 <LocationOn/>
-                <Typography color="inherit" variant="body1">{data.location}</Typography>
+                <Typography color="inherit" variant="body1">{data.hotel} {data.location} {data.region} {data.country}</Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
@@ -63,17 +63,17 @@ export default function PackageDetails(){
             <Grid direction="column" container gap={4}>
                 <Stack direction="row" spacing={1}>
                 <CalendarMonth/>
-                <Typography color="inherit" variant="body1">Deadline: {data.deadline}</Typography>
+                <Typography color="inherit" variant="body1">Valid Till: {data.deadline && new Date(data.deadline).toLocaleDateString()}</Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
                 <People/>
-                <Typography color="inherit" variant="body1">Max. {data.maximum}</Typography>
+                <Typography color="inherit" variant="body1">Max. {data.maximum || '-'}</Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
                 <People/>
-                <Typography color="inherit" variant="body1">Min. {data.minimum}</Typography>
+                <Typography color="inherit" variant="body1">Min. {data.minimum || '-'}</Typography>
                 </Stack>
             </Grid>
 
@@ -82,7 +82,7 @@ export default function PackageDetails(){
                     <Typography color="whitesmoke" variant="body1">{data && data.promotion} % off</Typography>
                  </Box>
                  <Box maxWidth display="flex" justifyContent="center" bgcolor="#2196f3" padding={3}>
-                    <Typography color="whitesmoke" variant="h3">$ {data && Number(data.price).toLocaleString()}</Typography>
+                    <Typography color="whitesmoke" variant="h3">{data.currency} {data && Number(data.price).toLocaleString()}</Typography>
                  </Box>
                 <Box padding={4}>
                 <Typography variant="h5" marginBottom={3}>Are you interested? </Typography>
@@ -101,7 +101,7 @@ export default function PackageDetails(){
 
            <Grid direction="column" container gap={4} marginTop={4}>
             <Divider></Divider>
-           <Typography variant="h5" fontWeight="bold" color="primary">Description</Typography>
+           <Typography width={{xs:"100%",md:"60%"}} variant="h5" fontWeight="bold" color="primary">Description</Typography>
            <Typography color="inherit" variant="body1">{data.description}</Typography>
            <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">Activities</Typography>

@@ -38,18 +38,15 @@ export default function TourPackages(){
           width: 160,
           valueGetter: (value, row) => `${row.country || ''} ${row.region || ''}`,
         },
-        { field: 'hotel', headerName: 'Hotel', width: 130 },
-        { field: 'nights', headerName: 'No. of nights', width: 130 },
-        { field: 'days', headerName: 'No. of days', width: 130 },
+        { field: 'hotel', headerName: 'Hotel', width: 180 },
+        { field: 'nights', headerName: 'Nights', width: 50 },
+        { field: 'days', headerName: 'Days', width: 50 },
         {
           field: 'crrncy',
           headerName: 'Price',
-          width: 90,
+          width: 150,
           valueGetter: (value, row) => `${row.currency || ''} ${Number(row.price).toLocaleString() || ''}`,
         },
-        { field: 'price', headerName: 'Price', width: 90, renderCell:(params)=>{
-          return Number(params.value).toLocaleString()
-        }},
         { field: 'deadline', headerName: 'Valid Till', width: 130 },
         { field: 'createdAt', headerName: 'Created On', width: 130, renderCell:(params)=>{
            const createdAtDate = new Date(params.value.$date);

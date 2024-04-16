@@ -78,12 +78,12 @@ export default function Packages(){
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"20px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:{xs:"center",md:"center",lg:"start"},cursor:"pointer"}}>
             {!search && combined && combined.length > 0 && combined.map((item)=>{
-                    return <Package id={item._id} link={item.link} price={item.price} location={item.location} title={item.title} duration={item.duration} image={item.poster}/>
+                    return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.hotel} ${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${item.days}`} image={item.poster}/>
                   })
                }
 
             {search && filtered && filtered.length > 0 ? filtered.map((item)=>{
-                    return <Package id={item._id} link={item.link} price={item.price} location={item.location} title={item.title} duration={item.duration} image={item.poster}/>
+                    return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.hotel} ${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${item.days}`} image={item.poster}/>
                   }) : search  && <p>No tour packages found <Button onClick={handleReset} component="p">Reset</Button> </p>
                 } 
                 
