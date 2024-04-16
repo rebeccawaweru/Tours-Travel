@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Paper, MenuList, Stack, Box} from '@mui/material';
 import {Add, AddLink, Dashboard, TravelExplore} from '@mui/icons-material';
-import Logo from '../../assets/tour-logo.png'
+import Logo from '../../assets/denze-new.png'
 import CustomMenuItem from './menuitem';
 export default function SideBar() {
   return (

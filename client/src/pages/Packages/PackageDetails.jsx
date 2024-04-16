@@ -1,7 +1,7 @@
 import Wrapper from "../../layouts/Wrapper";
 import { Box, Container, Stack, Typography, Grid, Divider, Button, Paper } from "@mui/material";
 import Sky from '../../assets/packagebg.jpg'
-import { CalendarMonth, LabelImportant, Public, LocationOn, LocationSearching, Timer, People, Done, TrendingUp} from "@mui/icons-material";
+import { CalendarMonth, LabelImportant, Public, LocationOn,  Timer, People, Done, TrendingUp} from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
 import { useParams } from "react-router-dom";
@@ -35,7 +35,7 @@ export default function PackageDetails(){
        }}>
        <Container  maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:28,md:0}}}>
         <Stack justifyContent="center" direction="row" spacing={1}>
-        <LocationSearching fontSize="large"/>
+        <Public fontSize="large"/>
         <Typography variant="h4" fontWeight="bold">{data.title}</Typography>
         </Stack>
        </Container>
@@ -66,7 +66,7 @@ export default function PackageDetails(){
                 <Grid  direction="column" container gap={4}>
                 <Stack direction="row" spacing={1}>
                 <CalendarMonth color="primary"/>
-                <Typography color="inherit" variant="body1">Valid Till: {data.deadline && new Date(data.deadline).toLocaleString()}</Typography>
+                <Typography color="inherit" variant="body1">Valid Till: {data.deadline && new Date(data.deadline).toDateString()}</Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
@@ -86,7 +86,7 @@ export default function PackageDetails(){
             <>
            <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">Rates:</Typography>
-           {data.rates && data.rates.map((item,index)=> {
+           {data.rates.length > 0 && data.rates.map((item,index)=> {
               return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {item.pricerate}</Typography><hr></hr></Box>
            })}
            </>}
