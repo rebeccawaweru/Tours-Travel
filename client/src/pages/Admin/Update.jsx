@@ -1,18 +1,28 @@
 import { useState, useEffect } from "react";
 import { BasicInput, CustomSelect, BreadCrumb, CheckBox, Loader} from "../../components";
 import { AdminDashboard } from "../../layouts";
-import { Box, Button, MenuItem, Stack, Typography } from "@mui/material";
+import { Box, Button, MenuItem, Stack, Typography, Grid } from "@mui/material";
 import { handleFileUpload } from "../../utils/helpers";
 import client from "../../api/client"
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router-dom";
 import {CountryDropdown, RegionDropdown} from 'react-country-region-selector'
+import { DeleteForever } from "@mui/icons-material";
 
 export default function UpdatePackage(){
     const {id} = useParams()
     const [data, setData] = useState({})
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
+    const [rate, setRate] = useState({
+        ratename: '',
+        pricerate: 0
+    });
+    const [rates, setRates] = useState([])
+    const [inclusive,setInclusive] = useState({
+        desc:''
+    })
+    const [inclusives,setInclusives] = useState([])
     const [activities, setActivities] = useState([])
     const [preview,setPreview] = useState(data.poster)
     const [image, setImage] = useState('')
@@ -38,6 +48,46 @@ export default function UpdatePackage(){
     const handleChange = (e) => {
        setTour((tour) => ({...tour, [e.target.name]:e.target.value}))
     }
+    const handleChange2 = (e) => {
+        const { name, value } = e.target;
+        setRate((prevRate) => ({
+            ...prevRate,
+            [name]: name === 'pricerate' ? parseFloat(value) : value
+        }));
+    };
+    const handleChange3 = (e) => {
+        const { name, value } = e.target;
+        setInclusive((prevInc) => ({
+            ...prevInc,
+            [name]:value
+        }));
+    };
+     // Handle button click
+     const handleAdd = () => {
+        // Add the rate object to the rates array
+        setRates((prevRates) => [...prevRates, rate]);
+        setRate({
+            ratename: '',
+            pricerate: 0
+        });
+
+    };
+    const handleAdd2 = () => {
+        // Add the rate object to the rates array
+        setInclusives((prevInc) => [...prevInc, inclusive]);
+        // Optionally, clear the input fields after adding
+        setInclusive({
+            desc:''
+        })
+    };
+    const handleDelete = (index) => {
+        // Remove the rate at the specified index
+        setRates((prevRates) => prevRates.filter((_, i) => i !== index));
+    };
+    const handleDelete2 = (index) => {
+        // Remove the rate at the specified index
+        setInclusives((prevInc) => prevInc.filter((_, i) => i !== index));
+    };
     const handleCheckboxChange = (label) => {
         if(activities.includes(label)){
            setActivities(activities.filter(item => item !== label))
@@ -55,7 +105,7 @@ export default function UpdatePackage(){
         setLoading(true)
         const cover = image ? await handleFileUpload(image) : undefined
         const post = cover ? cover.secure_url : preview
-        const newdata = {...tour, poster:post, activity:activities}
+        const newdata = {...tour,country:country,region:region, poster:post,rates:rates, inclusives:inclusives, activity:activities}
         delete newdata._id
         delete newdata.createdAt
         await client.put(`/update/${id}`, newdata).then((response)=>{
@@ -72,6 +122,8 @@ export default function UpdatePackage(){
         setCountry(response.data.package.country)
         setRegion(response.data.package.region)
         setPreview(response.data.package.poster)
+        setRates(response.data.package.rates)
+        setInclusives(response.data.package.inclusives)
         setActivities(response.data.package.activity)
        })
     },[id])
@@ -128,6 +180,42 @@ export default function UpdatePackage(){
             <BasicInput lbl="Nights" type="number" value={tour.nights}  name="nights" onChange={handleChange}/>
             <BasicInput lbl="Days" type="number" value={tour.days} name="days" onChange={handleChange}/>
              </Stack>
+
+             <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>+ Add Rates</Typography>
+            {rates.length > 0 ? 
+                <Grid container direction="column" gap={2} marginBottom={2}>
+                    {rates.map((rate,index) => (
+                        <Stack key={index} direction="row" spacing={2}>
+                            <Typography>{rate.ratename} - {Number(rate.pricerate).toLocaleString() || 0}</Typography> 
+                            <DeleteForever onClick={() => handleDelete(index)} />
+                        </Stack>
+                    ))}
+                </Grid> 
+                : null
+            }
+            <Stack direction={{xs:"column",md:"row"}} gap={2}>  
+            <BasicInput placeholder="e.g CHILDREN" lbl="Rate title" name="ratename"   value={rate.ratename} helperText="Please ensure you click 'Save' for each rate" onChange={handleChange2}/>
+            <BasicInput type="number"  lbl="Price Rate" name="pricerate"   value={rate.pricerate} onChange={handleChange2}/>
+            <Typography marginTop={3} onClick={handleAdd} sx={{cursor:"pointer"}}>Save</Typography>
+            </Stack>
+
+            <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>The Rates Include:</Typography>
+            {inclusives.length > 0 ? 
+                <Grid container direction="column" gap={2} marginBottom={2}>
+                    {inclusives.map((rate,index) => (
+                        <Stack key={index} direction="row" spacing={2}>
+                            <Typography>{rate.desc}</Typography> 
+                            <DeleteForever onClick={() => handleDelete2(index)} />
+                        </Stack>
+                    ))}
+                </Grid> 
+                : null
+            }
+           
+            <Stack direction={{xs:"column",md:"row"}} gap={2}>  
+            <BasicInput lbl="Notes" placeholder="e.g Half board meals" multiline rows={3} value={inclusive.desc} name="desc" helperText="Please add each point at a time and click 'Save'" onChange={handleChange3}/>
+            <Typography marginTop={3} onClick={handleAdd2} sx={{cursor:"pointer"}}>Save</Typography>
+            </Stack>
 
             <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>Activities</Typography>
             <CheckBox checked={activities.includes('Honeymoon')} label="Honeymoon" onChange={()=>handleCheckboxChange('Honeymoon')}/>
