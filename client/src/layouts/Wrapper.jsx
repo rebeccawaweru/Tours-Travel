@@ -29,7 +29,9 @@ export default function Wrapper({children}){
   }, [location]);
     return (
         <Box maxWidth width="100%" overflow="hidden">
+ 
           <NavBar hideToolbar={hideToolbar} />
+       
           {children}
           <Footer/>
         </Box>

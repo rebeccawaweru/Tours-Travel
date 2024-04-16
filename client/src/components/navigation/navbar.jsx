@@ -15,6 +15,9 @@ export default function NavBar({hideToolbar}) {
   const handleDrawerClose = () => {
     setOpenDrawer(false);
   };
+    function googleTranslateElementInit() {
+      new window.google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
   // function googleTranslateElementInit() {
   //   new window.google.translate.TranslateElement({pageLanguage: 'en', layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element')
   // }
@@ -49,7 +52,6 @@ export default function NavBar({hideToolbar}) {
   // }
   //   window.googleTranslateElementInit = googleTranslateElementInit;
   // }, []);
-
   return (
     <Container  sx={{ flexGrow: 1}}>
 
@@ -67,7 +69,7 @@ export default function NavBar({hideToolbar}) {
            
            
             {!translate &&
-            <IconButton onClick={()=>setTranslate(true)} sx={{ fontSize: 14, letterSpacing:1 }}><GTranslate color="primary" sx={{ fontSize: 16, marginRight: 0.8 }} />Translate</IconButton>
+            <IconButton onClick={()=>(setTranslate(true),googleTranslateElementInit())} sx={{ fontSize: 14, letterSpacing:1 }}><GTranslate color="primary" sx={{ fontSize: 16, marginRight: 0.8 }} />Translate</IconButton>
              }
 
           </Stack>
