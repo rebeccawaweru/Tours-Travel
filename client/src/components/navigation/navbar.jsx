@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Button, Container} from '@mui/material';
 import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu, GTranslate } from '@mui/icons-material';
-import Logo from '../../assets/tour-logo.png'
+import Logo from '../../assets/denze-new.png'
 import LinkItem from './linkitem';
 import CustomDrawer from './drawer';
 export default function NavBar({hideToolbar}) {

@@ -39,7 +39,7 @@ export default function TourPackages(){
           valueGetter: (value, row) => `${row.country || ''} ${row.region || ''}`,
         },
         { field: 'hotel', headerName: 'Hotel', width: 180 },
-        { field: 'nights', headerName: 'Nights', width: 50 },
+        { field: 'nights', headerName: 'Nights', width: 80 },
         { field: 'days', headerName: 'Days', width: 50 },
         {
           field: 'crrncy',

@@ -42,7 +42,6 @@ export default function UpdatePackage(){
         startdate:"",
         endate:"",
         deadline:"",
-        description:"",
         currency:""
     })
     const handleChange = (e) => {
@@ -247,7 +246,6 @@ export default function UpdatePackage(){
             <BasicInput lbl="End Date" type="date" value={tour.endate} name="endate" onChange={handleChange}/>
             </Stack>
             <BasicInput lbl="Deadline" type="date" helperText="Valid Till" value={tour.deadline} name="deadline" onChange={handleChange}/>
-            <BasicInput lbl="Description" multiline rows={6} value={tour.description} name="description" onChange={handleChange}/>
             {loading ? <Loader/> :
             <Button type="submit" variant="contained">Update</Button>}
            </Box>

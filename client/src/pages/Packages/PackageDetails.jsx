@@ -1,7 +1,7 @@
 import Wrapper from "../../layouts/Wrapper";
 import { Box, Container, Stack, Typography, Grid, Divider, Button } from "@mui/material";
 import Sky from '../../assets/packagebg.jpg'
-import { CalendarMonth, LocationOn, LocationSearching, Timer, People, Done} from "@mui/icons-material";
+import { CalendarMonth, LabelImportant, Public, LocationOn, LocationSearching, Timer, People, Done} from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
 import { useParams } from "react-router-dom";
@@ -33,17 +33,19 @@ export default function PackageDetails(){
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
        }}>
-       <Container maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:28,md:0}}}>
-        <Stack direction="row" spacing={1}>
+       <Container  maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:28,md:0}}}>
+        <Stack justifyContent="center" direction="row" spacing={1}>
         <LocationSearching fontSize="large"/>
         <Typography variant="h4" fontWeight="bold">{data.title}</Typography>
         </Stack>
        </Container>
+
        </Box>
        <Container  maxWidth sx={{position:"relative", backgroundColor: 'whitesmoke',paddingY:"50px", marginTop:{xs:-4,md:-20}}}>
-        <Box display={{xs:"block",sm:"flex", md:"flex"}}>
+        <Grid container>
 
-            <Grid direction="column" width="50%" container gap={4}>
+            <Grid item container xs={12} md={8} direction="column" gap={4}>
+
                 <Stack direction="row" spacing={1}>
                 <Timer/>
                 <Typography color="inherit" variant="body1">{data.nights}nights {data.days}days</Typography>
@@ -51,16 +53,15 @@ export default function PackageDetails(){
 
                 <Stack direction="row" spacing={1}>
                 <LocationOn/>
-                <Typography color="inherit" variant="body1">{data.hotel} {data.location} {data.region} {data.country}</Typography>
+                <Typography color="inherit" variant="body1">{data.hotel} {data.location} </Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
-                <CalendarMonth/>
-                <Typography color="inherit" variant="body1">{data.startdate} - {data.endate}</Typography>
+                <Public/>
+                <Typography color="inherit" variant="body1">{data.region} {data.country}</Typography>
                 </Stack>
-            </Grid>
 
-            <Grid direction="column" container gap={4}>
+                <Grid  direction="column" container gap={4}>
                 <Stack direction="row" spacing={1}>
                 <CalendarMonth/>
                 <Typography color="inherit" variant="body1">Valid Till: {data.deadline && new Date(data.deadline).toLocaleDateString()}</Typography>
@@ -75,9 +76,40 @@ export default function PackageDetails(){
                 <People/>
                 <Typography color="inherit" variant="body1">Min. {data.minimum || '-'}</Typography>
                 </Stack>
+
             </Grid>
 
-            <Grid position={{xs:"relative",sm:"absolute",md:"absolute"}} container width={{xs:"100%",sm:"40%",md:"40%"}} right={{sm:0, md:10}} marginTop={{xs:3,sm:0,md:0}} top={{xs:0,sm:-280,md:-250,lg:-250,xl:-230}} bgcolor="white" direction="column">
+            <Grid direction="column" container gap={4} marginTop={4}>
+            {data.rates &&
+            <>
+           <Divider></Divider>
+           <Typography variant="h5" fontWeight="bold" color="primary">Rates:</Typography>
+           {data.rates && data.rates.map((item,index)=> {
+              return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {item.pricerate}</Typography><hr></hr></Box>
+           })}
+           </>}
+            <Divider></Divider>
+           <Typography variant="h5" fontWeight="bold" color="primary">Includes:</Typography>
+           {data.inclusives && data.inclusives.map((item,index)=> {
+              return <Stack direction="row" spacing={1}><LabelImportant/><Typography key={index} color="inherit" variant="body1">{item.desc}</Typography></Stack>
+           })}
+           
+           <Divider></Divider>
+           <Typography variant="h5" fontWeight="bold" color="primary">Activities</Typography>
+           <Grid xs={12} sm={6} md={6} container gap={4}>
+           {data && data.activity && data.activity.length > 0 && data.activity.map((item)=>{
+                 return  <Stack direction="row" key={item}><Done fontSize="small" color="primary"/><Typography color="inherit" variant="body1">{item}</Typography></Stack>
+            })}
+           </Grid>
+           </Grid>
+           
+            </Grid>
+
+
+
+        
+
+            <Grid item container xs={12} md={4}  bgcolor="white" direction="column">
                  <Box maxWidth display="flex" justifyContent="center" bgcolor="black" padding={1}>
                     <Typography color="whitesmoke" variant="body1">{data && data.promotion} % off</Typography>
                  </Box>
@@ -97,33 +129,11 @@ export default function PackageDetails(){
                 </Box>
             
             </Grid>
-           </Box>
 
-           <Grid direction="column" container gap={4} marginTop={4}>
-            {data.rates &&
-            <>
-           <Divider></Divider>
-           <Typography variant="h5" fontWeight="bold" color="primary">Rates:</Typography>
-           {data.rates && data.rates.map((item,index)=> {
-              return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {item.pricerate}</Typography><hr></hr></Box>
-           })}
-           </>}
-            <Divider></Divider>
-           <Typography variant="h5" fontWeight="bold" color="primary">Includes:</Typography>
-           {data.inclusives && data.inclusives.map((item,index)=> {
-              return <Typography key={index} color="inherit" variant="body1">{item.desc}</Typography>
-           })}
-           
-           <Divider></Divider>
-           <Typography variant="h5" fontWeight="bold" color="primary">Activities</Typography>
-           <Grid xs={12} sm={6} md={6} container gap={4}>
-           {data && data.activity && data.activity.length > 0 && data.activity.map((item)=>{
-                 return  <Stack direction="row" key={item}><Done fontSize="small" color="primary"/><Typography color="inherit" variant="body1">{item}</Typography></Stack>
-            })}
+
            </Grid>
-      
-        
-           </Grid>
+
+         
 
        
         </Container>

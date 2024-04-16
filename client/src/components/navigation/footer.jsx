@@ -1,5 +1,5 @@
 import { Typography, Grid, Box, Container, Stack } from "@mui/material";
-import Logo from '../../assets/tour-logo.png'
+import Logo from '../../assets/denze-new.png'
 import { itemData } from "../../utils/helpers";
 import { Facebook, Instagram, X } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
