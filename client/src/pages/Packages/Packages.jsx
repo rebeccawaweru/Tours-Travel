@@ -60,14 +60,14 @@ export default function Packages(){
         color:"whitesmoke",
         justifyContent:"center",
         // alignItems:"start",
-        height:{xs:"120vh",sm:"80vh",md:"90vh", lg:"120vh", xl:"100vh"},
+        height:{xs:"120vh",sm:"80vh",md:"100vh", lg:"120vh", xl:"100vh"},
         width:"100%",
         backgroundSize: 'cover',
         backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Sky})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
        }}>
-       <Container maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:28,md:0}}}>
+       <Container maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:16,md:0}}}>
         <Stack direction="row" spacing={1}>
         <TravelExplore fontSize="large"/>
         <Typography variant="h4" fontWeight="bold" >Search Tours </Typography>
@@ -75,8 +75,8 @@ export default function Packages(){
        </Container>
         <Filter handleChange={handleChange} handleSearch={handleSearch}/>
        </Box>
-       <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"50px", marginTop:{xs:-4,md:-20}}}>
-            <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:"start",cursor:"pointer"}}>
+       <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"20px", marginTop:{xs:-4,md:-20}}}>
+            <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:{xs:"center",md:"center",lg:"start"},cursor:"pointer"}}>
             {!search && combined && combined.length > 0 && combined.map((item)=>{
                     return <Package id={item._id} link={item.link} price={item.price} location={item.location} title={item.title} duration={item.duration} image={item.poster}/>
                   })

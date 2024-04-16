@@ -31,11 +31,26 @@ export default function TourPackages(){
     }
     const columns = [
         { field: 'title', headerName: 'Title', width: 150 },
-        { field: 'location', headerName: 'Location', width: 130 },
         { field: 'category', headerName: 'Destination', width: 130 },
+       {
+          field: 'cntry',
+          headerName: 'Country/Region',
+          width: 160,
+          valueGetter: (value, row) => `${row.country || ''} ${row.region || ''}`,
+        },
+        { field: 'hotel', headerName: 'Hotel', width: 130 },
+        { field: 'nights', headerName: 'No. of nights', width: 130 },
+        { field: 'days', headerName: 'No. of days', width: 130 },
+        {
+          field: 'crrncy',
+          headerName: 'Price',
+          width: 90,
+          valueGetter: (value, row) => `${row.currency || ''} ${Number(row.price).toLocaleString() || ''}`,
+        },
         { field: 'price', headerName: 'Price', width: 90, renderCell:(params)=>{
           return Number(params.value).toLocaleString()
         }},
+        { field: 'deadline', headerName: 'Valid Till', width: 130 },
         { field: 'createdAt', headerName: 'Created On', width: 130, renderCell:(params)=>{
            const createdAtDate = new Date(params.value.$date);
           // Format date using toLocaleString or any other formatting method
@@ -49,14 +64,7 @@ export default function TourPackages(){
            </Stack>
           )
          }}
-        // {
-        //   field: 'fullName',
-        //   headerName: 'Full name',
-        //   description: 'This column has a value getter and is not sortable.',
-        //   sortable: false,
-        //   width: 160,
-        //   valueGetter: (value, row) => `${row.firstName || ''} ${row.lastName || ''}`,
-        // },
+     
       ];
 
     async function getPackages(){
@@ -81,7 +89,7 @@ export default function TourPackages(){
           },
         }}
         pageSizeOptions={[5, 10]}
-      /> : <Typography>Loading...</Typography>}
+      /> : <Typography>No data</Typography>}
     </Box>
     </AdminDashboard>
 }

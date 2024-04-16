@@ -26,7 +26,7 @@ export default function PackageDetails(){
         color:"whitesmoke",
         justifyContent:"center",
         // alignItems:"start",
-        height:{xs:"50vh",sm:"80vh",md:"100vh", lg:"100vh", xl:"100vh"},
+        height:{xs:"60vh",sm:"80vh",md:"100vh", lg:"120vh", xl:"120vh"},
         width:"100%",
         backgroundSize: 'cover',
         backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Sky})`,
@@ -77,7 +77,7 @@ export default function PackageDetails(){
                 </Stack>
             </Grid>
 
-            <Grid position={{xs:"relative",sm:"absolute",md:"absolute"}} container width={{xs:"100%",sm:"40%",md:"40%"}} right={{sm:0, md:10}} marginTop={{xs:3,sm:0,md:0}} top={{xs:0,sm:-180,md:-180}} bgcolor="white" direction="column">
+            <Grid position={{xs:"relative",sm:"absolute",md:"absolute"}} container width={{xs:"100%",sm:"40%",md:"40%"}} right={{sm:0, md:10}} marginTop={{xs:3,sm:0,md:0}} top={{xs:0,sm:-280,md:-250,lg:-250,xl:-230}} bgcolor="white" direction="column">
                  <Box maxWidth display="flex" justifyContent="center" bgcolor="black" padding={1}>
                     <Typography color="whitesmoke" variant="body1">{data && data.promotion} % off</Typography>
                  </Box>

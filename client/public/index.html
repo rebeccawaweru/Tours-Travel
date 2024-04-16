@@ -16,6 +16,18 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+          }, 
+          'google_translate_element'
+        );
+      }
+    </script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -70,19 +82,6 @@
   </style>
   </head>
   <body>
-
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: "en",
-            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-          }, 
-          'google_translate_element'
-        );
-      }
-    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
       <div class="wrapper">

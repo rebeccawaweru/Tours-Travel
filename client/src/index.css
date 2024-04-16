@@ -58,3 +58,14 @@ div#google_translate_element div.goog-te-gadget-simple {
   border: none;
   color: white;
 }
+
+
+.custom-select {
+  width: 100%;
+  background-color: white;
+  border: 1px wheat solid;
+  padding: 12px 0px;
+  font-family:"Poppins",sans-serif;
+  font-size: medium;
+  border-radius: 5px;
+}  
