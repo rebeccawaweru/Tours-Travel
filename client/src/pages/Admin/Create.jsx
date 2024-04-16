@@ -1,16 +1,26 @@
 import { useState } from "react";
 import { BasicInput, CustomSelect, BreadCrumb, CheckBox, Loader} from "../../components";
 import { AdminDashboard } from "../../layouts";
-import { Box, Button, MenuItem, Stack, Typography } from "@mui/material";
+import { Box, Button, MenuItem, Stack, Typography,Grid } from "@mui/material";
 import { handleFileUpload } from "../../utils/helpers";
 import client from "../../api/client"
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import {CountryDropdown, RegionDropdown} from 'react-country-region-selector'
+import { DeleteForever } from "@mui/icons-material";
 export default function CreatePackage(){
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
     const [activities, setActivities] = useState([])
+    const [rate, setRate] = useState({
+        ratename: '',
+        pricerate: 0
+    });
+    const [rates, setRates] = useState([])
+    const [inclusive,setInclusive] = useState({
+        desc:''
+    })
+    const [inclusives,setInclusives] = useState([])
     const [preview,setPreview] = useState('')
     const [image, setImage] = useState('')
     const [country,setCountry] = useState('')
@@ -29,12 +39,53 @@ export default function CreatePackage(){
         startdate:"",
         endate:"",
         deadline:"",
-        description:"",
         currency:""
     })
     const handleChange = (e) => {
        setTour((tour) => ({...tour, [e.target.name]:e.target.value}))
     }
+    const handleChange2 = (e) => {
+        const { name, value } = e.target;
+        setRate((prevRate) => ({
+            ...prevRate,
+            [name]: name === 'pricerate' ? parseFloat(value) : value
+        }));
+    };
+    const handleChange3 = (e) => {
+        const { name, value } = e.target;
+        setInclusive((prevInc) => ({
+            ...prevInc,
+            [name]:value
+        }));
+    };
+
+
+    // Handle button click
+    const handleAdd = () => {
+        // Add the rate object to the rates array
+        setRates((prevRates) => [...prevRates, rate]);
+        setRate({
+            ratename: '',
+            pricerate: 0
+        });
+
+    };
+    const handleAdd2 = () => {
+        // Add the rate object to the rates array
+        setInclusives((prevInc) => [...prevInc, inclusive]);
+        // Optionally, clear the input fields after adding
+        setInclusive({
+            desc:''
+        })
+    };
+    const handleDelete = (index) => {
+        // Remove the rate at the specified index
+        setRates((prevRates) => prevRates.filter((_, i) => i !== index));
+    };
+    const handleDelete2 = (index) => {
+        // Remove the rate at the specified index
+        setInclusives((prevInc) => prevInc.filter((_, i) => i !== index));
+    };
     const handleCheckboxChange = (label) => {
         if(activities.includes(label)){
            setActivities(activities.filter(item => item !== label))
@@ -51,7 +102,7 @@ export default function CreatePackage(){
         e.preventDefault()
         setLoading(true)
         const cover = await handleFileUpload(image)
-        const data = {...tour, country:country,region:region,poster:cover.secure_url, activity:activities}
+        const data = {...tour, country:country,region:region,poster:cover.secure_url, rates:rates, inclusives:inclusives, activity:activities}
         await client.post('/new', data).then((response)=>{
             setLoading(false)
              if(response.data.success){
@@ -101,9 +152,9 @@ export default function CreatePackage(){
             <BasicInput required lbl="Price" type="number" name="price" onChange={handleChange}/>
             <CustomSelect required lbl="Currency" value={tour.currency} name="currency" onChange={handleChange}>
                 <MenuItem value="KES">KES</MenuItem>
-                <MenuItem value="USD">USD</MenuItem>
-                <MenuItem value="EURO">EURO</MenuItem>
-                <MenuItem value="RAND">RANDS</MenuItem>
+                <MenuItem value="$">USD</MenuItem>
+                <MenuItem value="€">EURO</MenuItem>
+                <MenuItem value="ZAR">RANDS</MenuItem>
             </CustomSelect>
             </Stack>
 
@@ -111,6 +162,45 @@ export default function CreatePackage(){
             <BasicInput required type="number" placeholder="e.g 2" lbl="Nights" name="nights" onChange={handleChange}/>
             <BasicInput lbl="Days" type="number" placeholder="e.g 2" name="days" onChange={handleChange}/>
              </Stack>
+
+
+            <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>+ Add Rates</Typography>
+            {rates.length > 0 ? 
+                <Grid container direction="column" gap={2} marginBottom={2}>
+                    {rates.map((rate,index) => (
+                        <Stack key={index} direction="row" spacing={2}>
+                            <Typography>{rate.ratename} - {Number(rate.pricerate).toLocaleString() || 0}</Typography> 
+                            <DeleteForever onClick={() => handleDelete(index)} />
+                        </Stack>
+                    ))}
+                </Grid> 
+                : null
+            }
+            <Stack direction={{xs:"column",md:"row"}} gap={2}>  
+            <BasicInput placeholder="e.g CHILDREN" lbl="Rate title" name="ratename"   value={rate.ratename} helperText="Please ensure you click 'Save' for each rate" onChange={handleChange2}/>
+            <BasicInput type="number"  lbl="Price Rate" name="pricerate"   value={rate.pricerate} onChange={handleChange2}/>
+            <Typography marginTop={3} onClick={handleAdd} sx={{cursor:"pointer"}}>Save</Typography>
+            </Stack>
+
+            <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>The Rates Include:</Typography>
+            {inclusives.length > 0 ? 
+                <Grid container direction="column" gap={2} marginBottom={2}>
+                    {inclusives.map((rate,index) => (
+                        <Stack key={index} direction="row" spacing={2}>
+                            <Typography>{rate.desc}</Typography> 
+                            <DeleteForever onClick={() => handleDelete2(index)} />
+                        </Stack>
+                    ))}
+                </Grid> 
+                : null
+            }
+           
+            <Stack direction={{xs:"column",md:"row"}} gap={2}>  
+            <BasicInput lbl="Notes" placeholder="e.g Half board meals" multiline rows={3} value={inclusive.desc} name="desc" helperText="Please add each point at a time and click 'Save'" onChange={handleChange3}/>
+            <Typography marginTop={3} onClick={handleAdd2} sx={{cursor:"pointer"}}>Save</Typography>
+            </Stack>
+    
+
             <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>Activities</Typography>
             <CheckBox label="Honeymoon" onChange={()=>handleCheckboxChange('Honeymoon')}/>
             <CheckBox label="Anniversaries" onChange={()=>handleCheckboxChange('Anniversaries')}/>
@@ -143,7 +233,7 @@ export default function CreatePackage(){
             <BasicInput lbl="End Date" type="date" name="endate" onChange={handleChange}/>
             </Stack>
             <BasicInput lbl="Deadline" type="date" helperText="Valid Till" name="deadline" onChange={handleChange}/>
-            <BasicInput lbl="Description" multiline rows={6} name="description" onChange={handleChange}/>
+           
              {loading ? <Loader/> :
             <Button type="submit" variant="contained">Submit</Button>}
            </Box>

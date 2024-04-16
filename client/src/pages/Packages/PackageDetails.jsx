@@ -46,7 +46,7 @@ export default function PackageDetails(){
             <Grid direction="column" width="50%" container gap={4}>
                 <Stack direction="row" spacing={1}>
                 <Timer/>
-                <Typography color="inherit" variant="body1">{data.nights} {data.days}</Typography>
+                <Typography color="inherit" variant="body1">{data.nights}nights {data.days}days</Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
@@ -100,9 +100,20 @@ export default function PackageDetails(){
            </Box>
 
            <Grid direction="column" container gap={4} marginTop={4}>
+            {data.rates &&
+            <>
+           <Divider></Divider>
+           <Typography variant="h5" fontWeight="bold" color="primary">Rates:</Typography>
+           {data.rates && data.rates.map((item,index)=> {
+              return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {item.pricerate}</Typography><hr></hr></Box>
+           })}
+           </>}
             <Divider></Divider>
-           <Typography width={{xs:"100%",md:"60%"}} variant="h5" fontWeight="bold" color="primary">Description</Typography>
-           <Typography color="inherit" variant="body1">{data.description}</Typography>
+           <Typography variant="h5" fontWeight="bold" color="primary">Includes:</Typography>
+           {data.inclusives && data.inclusives.map((item,index)=> {
+              return <Typography key={index} color="inherit" variant="body1">{item.desc}</Typography>
+           })}
+           
            <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">Activities</Typography>
            <Grid xs={12} sm={6} md={6} container gap={4}>

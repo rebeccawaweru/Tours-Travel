@@ -118,9 +118,9 @@ export default function UpdatePackage(){
             <BasicInput  lbl="Price" type="number" value={tour.price} name="price" onChange={handleChange}/>
             <CustomSelect required lbl="Currency" displayEmpty renderValue={()=>tour.currency}  value={tour.currency} name="currency" onChange={handleChange}>
                 <MenuItem value="KES">KES</MenuItem>
-                <MenuItem value="USD">USD</MenuItem>
-                <MenuItem value="EURO">EURO</MenuItem>
-                <MenuItem value="RAND">RANDS</MenuItem>
+                <MenuItem value="$">USD</MenuItem>
+                <MenuItem value="€">EURO</MenuItem>
+                <MenuItem value="ZAR">RANDS</MenuItem>
             </CustomSelect>
             </Stack>
 
