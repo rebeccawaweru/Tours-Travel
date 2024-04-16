@@ -44,8 +44,8 @@ export default function Contact(){
               <Box marginY={2} width="10%" borderBottom={2} borderColor="#2196f3"></Box>
               <Stack fontSize="large" color="primary" direction="column" spacing={5}>
               <ContactItem title="facebook.com" icon={<Facebook/>}/>
-              <ContactItem title="instagram.com" icon={ <Instagram/>}/>
-               <ContactItem title="twitter.com" icon={ <X/>}/>
+              <ContactItem title={<a style={{textDecoration:"none",color:"black"}} href="https://www.instagram.com/denzetoursandtravels" target="_blank">denzetoursandtravels</a>} icon={ <Instagram/>}/>
+               <ContactItem title={<a style={{textDecoration:"none",color:"black"}} href="https://twitter.com/DENZETours" target="_blank">DENZETours</a>} icon={ <X/>}/>
               </Stack>
            </Grid>
         </Grid>

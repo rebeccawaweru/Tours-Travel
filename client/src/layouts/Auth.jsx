@@ -14,7 +14,7 @@ export default function AuthWrapper (props) {
         height:{xs:"60vh", sm:"60vh",md:"80vh", lg:"85vh", xl:"50vh"},
         width:"100%",
         backgroundSize: 'cover',
-        backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${bg})`,
+        backgroundImage:`linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bg})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
        }}>

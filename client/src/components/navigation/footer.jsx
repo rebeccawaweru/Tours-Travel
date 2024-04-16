@@ -1,4 +1,4 @@
-import { Typography, Grid, Box, Container, Stack } from "@mui/material";
+import { Typography, Grid, Box, Container, Stack, IconButton } from "@mui/material";
 import Logo from '../../assets/denze-new.png'
 import { itemData } from "../../utils/helpers";
 import { Facebook, Instagram, X } from "@mui/icons-material";
@@ -11,7 +11,7 @@ export default function Footer(){
              
               <Grid display="flex" flexDirection="column" justifyContent={{xs:"center",sm:"start"}} xs={12} sm={4} md={3} lg={3} item container color="whitesmoke" fontSize="small" textAlign="left">
               <Typography color="whitesmoke" fontSize="small" fontWeight="bold" textAlign={{xs:"center",md:"left"}} >ABOUT US</Typography>
-                <Box component="img" src={Logo} alt="denze logo" width={240} height={100} sx={{objectFit:"cover",alignSelf:{xs:"center",md:"start"} }}/>
+                <Box component="img" src={Logo} alt="denze logo" width={230} height={100} sx={{objectFit:"cover",alignSelf:{xs:"center",md:"start"} }}/>
                 <Typography color="#8c8c8c" fontSize="small">An international tour operator that specializes in custom
             business and leisure itineraries, and luxury vacation packages with an intent to provide
             travelers with flawless holidays and sparkling travel experience.</Typography>
@@ -40,9 +40,9 @@ export default function Footer(){
                  </Box>
    
                 <Stack direction="row" gap={2}>
-                    <Facebook/>
-                    <Instagram/>
-                    <X/>
+                    <Typography><Facebook/></Typography>
+                    <a href="https://www.instagram.com/denzetoursandtravels/" target='_blank'><Typography color="whitesmoke"><Instagram/></Typography></a>
+                    <a href='https://twitter.com/DENZETours' target='_blank'><Typography color="whitesmoke"><X/></Typography></a>
                 </Stack>
               </Grid>
 

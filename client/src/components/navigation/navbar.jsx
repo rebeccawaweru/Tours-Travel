@@ -75,8 +75,8 @@ export default function NavBar({hideToolbar}) {
           </Stack>
           <Box display={{xs:'none',sm:"none", md:"flex"}}>
           <IconButton><Facebook sx={{ fontSize: 16 }} /></IconButton>
-          <IconButton><Instagram sx={{ fontSize: 16 }} /></IconButton>
-          <IconButton><X sx={{ fontSize: 16 }} /></IconButton>
+          <a href="https://www.instagram.com/denzetoursandtravels/" target='_blank'><IconButton><Instagram sx={{ fontSize: 16 }} /></IconButton></a>
+          <a href='https://twitter.com/DENZETours' target='_blank'><IconButton><X sx={{ fontSize: 16 }} /></IconButton></a>
           <Link className='link' to="/signup"><IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Person sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Sign up</IconButton></Link>
           </Box>
           <Link className='link' to="/signin"> <IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Lock sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Login</IconButton></Link>
@@ -85,7 +85,7 @@ export default function NavBar({hideToolbar}) {
 
         <Toolbar>
           <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
-            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 220 : 240} height={hideToolbar ? 80 : 75} style={{objectFit:"cover"}}/>
+            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 220 : 230} height={hideToolbar ? 80 : 75} style={{objectFit:"cover"}}/>
             {/* width={240} height={100} */}
             <Box id="google_translate_element"  style={{opacity:translate ? 1 : 0}}></Box> 
             {translate && <Typography onClick={()=>setTranslate(false)} marginLeft={2} sx={{cursor:"pointer"}}>Exit</Typography>}
