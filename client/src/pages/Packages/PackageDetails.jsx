@@ -82,11 +82,11 @@ export default function PackageDetails(){
 
              </Stack>
             <Grid direction="column" container gap={4} marginTop={2}>
-            {data.rates.length > 0 &&
+            {data.rates && data.rates.length > 0 &&
             <>
            <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">Rates:</Typography>
-           {data.rates.length > 0 && data.rates.map((item,index)=> {
+           {data.rates && data.rates.length > 0 && data.rates.map((item,index)=> {
               return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {item.pricerate}</Typography><hr></hr></Box>
            })}
            </>}
