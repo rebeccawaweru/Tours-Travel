@@ -82,7 +82,7 @@ export default function PackageDetails(){
 
              </Stack>
             <Grid direction="column" container gap={4} marginTop={2}>
-            {data.rates &&
+            {data.rates.length > 0 &&
             <>
            <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">Rates:</Typography>
