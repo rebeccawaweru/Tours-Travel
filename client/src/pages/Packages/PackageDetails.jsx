@@ -1,20 +1,56 @@
 import Wrapper from "../../layouts/Wrapper";
 import { Box, Container, Stack, Typography, Grid, Divider, Button, Paper } from "@mui/material";
 import Sky from '../../assets/packagebg.jpg'
-import { CalendarMonth, LabelImportant, Public, LocationOn,  Timer, People, Done, TrendingUp} from "@mui/icons-material";
+import { CalendarMonth, LabelImportant, Public, LocationOn,  Timer, People,TrendingUp} from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
 import { useParams } from "react-router-dom";
-import { BasicInput } from "../../components";
-
+import { BasicInput,Loader } from "../../components";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 export default function PackageDetails(){
      const {id} = useParams()
     const [data,setData] = useState({})
+    const [loading, setLoading] = useState(false)
+    const [values, setValues] = useState({
+      fullname:"",
+      email:"",
+      phone:"",
+      message:""
+    })
     async function getPackage(){
         await client.get(`/${id}`).then((response)=>{
              setData(response.data.package)
         })
       }
+   const handleChange = (e) =>{
+    setValues(values => ({...values, [e.target.name]:e.target.value}))
+   }
+   const handleSubmit = async (e) => {
+      e.preventDefault()
+      setLoading(true);
+            await emailjs
+            .send(
+              process.env.REACT_APP_SERVICE_ID,
+              process.env.REACT_APP_TEMPLATE_ID,
+              {
+                name: values.fullname,
+                phone: values.phone,
+                email: values.email,
+                message: values.message,
+                subject:'Tour Package Enquiry'
+              },
+            ).then(()=>{
+               // console.log(res)
+               setValues({fullname:"", email:"", phone:"", message:""})
+               Swal.fire('SUCCESS', 'Your enquiry has been received.', 'success')
+            }).catch((error)=>{
+               // console.log(error)
+              Swal.fire('ERROR', 'An error occured.Please try again.', 'error')
+            })
+           setLoading(false)
+       
+   }
     useEffect(()=>{
         getPackage()
     },[id])
@@ -115,14 +151,14 @@ export default function PackageDetails(){
                  <Box maxWidth display="flex" justifyContent="center" bgcolor="#2196f3" padding={3}>
                     <Typography color="whitesmoke" variant="h3">{data.currency} {data && Number(data.price).toLocaleString()}</Typography>
                  </Box>
-                <Box padding={4}>
+                <Box component="form" onSubmit={handleSubmit} padding={4}>
                 <Typography variant="h5" marginBottom={3}>Are you interested? </Typography>
-                <BasicInput required lbl="Name"/>
-                <BasicInput required lbl="Email"/>
-                <BasicInput required lbl="Phone"/>
-                <BasicInput required lbl="Enquiry" multiline rows={4}/>
+                <BasicInput required lbl="Name" name="fullname" value={values.fullname} onChange={handleChange}/>
+                <BasicInput required lbl="Email" name="email" value={values.email} onChange={handleChange}/>
+                <BasicInput required lbl="Phone" name="phone" value={values.phone} onChange={handleChange}/>
+                <BasicInput required lbl="Enquiry" name="message" value={values.message} onChange={handleChange} multiline rows={4}/>
                 <Box>
-                <Button variant="contained" sx={{color:"whitesmoke"}}>Send</Button>
+                {loading ? <Loader/> : <Button type="submit" variant="contained" sx={{color:"whitesmoke"}}>Send</Button>}
                 </Box>
 
                 </Box>
