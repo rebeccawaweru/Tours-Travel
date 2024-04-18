@@ -3,6 +3,7 @@ import { useSwipeable } from 'react-swipeable';
 import { Box, Container, IconButton, Typography, Grid, Button } from '@mui/material';
 import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material';
 import {motion as m} from 'framer-motion';
+import {Link} from 'react-router-dom'
 const Slider = ({ images, autoSwipeInterval = 5000 }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,7 +83,7 @@ const Slider = ({ images, autoSwipeInterval = 5000 }) => {
               }}
             /> */}
         {/* Text overlay */}
-           <Grid component={Container} container direction="column" position="absolute" left={0}>
+           <Grid component={Container} container direction="column" position="absolute" columnGap={0} left={0}>
             {index === currentIndex &&
              <>
             <m.h3 
@@ -100,13 +101,10 @@ const Slider = ({ images, autoSwipeInterval = 5000 }) => {
             {image.caption}
            </m.h2>
             </>}
-           <Typography variant='p' color='inherit'>{image.arr} </Typography>
-           <Button size="medium" variant="contained" sx={{width:250, paddingY:2,marginTop:2}}>Learn More</Button>
+           {/* <Typography variant='p' color='inherit'>{image.arr} </Typography> */}
+           <Button size="medium" variant="contained" sx={{width:250, paddingY:2}}><Link style={{textDecoration:"none",color:"whitesmoke"}} to="/destinations">Learn More</Link></Button>
            </Grid>
-         
           </Box>
- 
-
           </div>
         ))}
       </div>

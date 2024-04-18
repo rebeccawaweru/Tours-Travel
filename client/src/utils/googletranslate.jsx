@@ -8,7 +8,7 @@ const GoogleTranslateProvider = ({ children }) => {
             new window.google.translate.TranslateElement(
                 {
                     pageLanguage: 'en',
-                    layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    layout: window.google.translate.TranslateElement.InlineLayout.HORIZONTAL,
                 },
                 'google_translate_element'
             );
@@ -33,6 +33,7 @@ const GoogleTranslateProvider = ({ children }) => {
 
     return (
         <>
+
             {children}
         </>
     );

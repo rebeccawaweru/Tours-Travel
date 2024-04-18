@@ -1,9 +1,7 @@
 import { useEffect,useState } from 'react';
 import { NavBar, Footer } from '../components';
-import { useLocation } from 'react-router-dom';
 import {Box} from '@mui/material';
 export default function Wrapper({children}){
-  const location = useLocation()
   const [hideToolbar, setHideToolbar] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +13,6 @@ export default function Wrapper({children}){
       }
     };
 
-    // if(location.pathname !== "/"){
-    //   setHideToolbar(true); // Hide the Toolbar
-    // }
-
     // Add event listener for scroll event
     window.addEventListener('scroll', handleScroll);
 
@@ -26,12 +20,11 @@ export default function Wrapper({children}){
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [location]);
+  }, [window.scrollY]);
+  
     return (
         <Box maxWidth width="100%" overflow="hidden">
- 
           <NavBar hideToolbar={hideToolbar} />
-       
           {children}
           <Footer/>
         </Box>

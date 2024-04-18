@@ -34,7 +34,7 @@ code {
 
 
 div#google_translate_element #goog-te-combo {
-  color: whitesmoke; /* Replace 'red' with your desired color */
+  /* Replace 'red' with your desired color */
 }
 div#google_translate_element div.goog-te-gadget-simple {
   font-size: small;
@@ -42,15 +42,15 @@ div#google_translate_element div.goog-te-gadget-simple {
 
 div#google_translate_element div.goog-te-gadget-simple {
   background-color: #2196f3;
-  color: whitesmoke;
+
 }
 
 div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span {
-  color: whitesmoke
+ 
 }
 
 div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span:hover {
-  color: whitesmoke
+ 
 }
 
 div#google_translate_element div.goog-te-gadget-simple {

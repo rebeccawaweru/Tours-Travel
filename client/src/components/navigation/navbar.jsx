@@ -58,34 +58,38 @@ export default function NavBar({hideToolbar}) {
    
          
       <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? '#000435' : 'rgba(0, 4, 53, 0.4)', color: "white",  }} elevation={0}>
-        <div style={{position:"absolute", zIndex:100,left:28}} id="google_translate_element"></div>
+     
+      {/* <div style={{position:"absolute", zIndex:100,left:28}} id="google_translate_element"></div> */}
+
+   
+        <Toolbar  sx={{ display: { xs: 'none', md: 'flex'},marginTop:-1}}>
+       
+          <div id="google_translate_element"></div>
+   
 
 
-      {!hideToolbar && 
-        <Toolbar  sx={{ display: { xs: 'none', md: 'flex'}, marginTop:2 }}>
           <Stack direction="row" spacing={1} component="div" sx={{ flexGrow: 1 }}>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 707 741 232 </IconButton>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline  sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
-  
-           
-            {/* {!translate &&
-            <IconButton onClick={()=>(setTranslate(true),googleTranslateElementInit())} sx={{ fontSize: 14, letterSpacing:1 }}><GTranslate color="primary" sx={{ fontSize: 16, marginRight: 0.8 }} />Translate</IconButton>
-             } */}
-
           </Stack>
-          <Box display={{xs:'none',sm:"none", md:"flex"}}>
+          <Box display={{ md:"none",lg:"flex"}}>
           <IconButton><Facebook sx={{ fontSize: 16 }} /></IconButton>
           <a href="https://www.instagram.com/denzetoursandtravels/" target='_blank'><IconButton><Instagram sx={{ fontSize: 16 }} /></IconButton></a>
           <a href='https://twitter.com/DENZETours' target='_blank'><IconButton><X sx={{ fontSize: 16 }} /></IconButton></a>
+         
           <Link className='link' to="/signup"><IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Person sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Sign up</IconButton></Link>
           </Box>
-          <Link className='link' to="/signin"> <IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Lock sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Login</IconButton></Link>
-        </Toolbar>
-        }
 
-        <Toolbar>
-          <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
-            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 220 : 230} height={hideToolbar ? 80 : 75} style={{objectFit:"cover"}}/>
+          <Box>
+          <Link className='link' to="/signin"> <IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Lock sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Login</IconButton></Link>
+          </Box>
+
+        </Toolbar>
+   
+
+        <Toolbar sx={{marginTop:-1}}>
+          <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1}}>
+            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 190 : 230} height={hideToolbar ? 50 : 60} style={{objectFit:"cover"}}/>
             {/* width={240} height={100} */}
         
             {/* {translate && <Typography onClick={()=>setTranslate(false)} marginLeft={2} sx={{cursor:"pointer"}}>Exit</Typography>} */}
