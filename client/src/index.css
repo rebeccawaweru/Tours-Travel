@@ -34,7 +34,7 @@ code {
 
 
 div#google_translate_element #goog-te-combo {
-  color: red; /* Replace 'red' with your desired color */
+  color: whitesmoke; /* Replace 'red' with your desired color */
 }
 div#google_translate_element div.goog-te-gadget-simple {
   font-size: small;
@@ -43,7 +43,6 @@ div#google_translate_element div.goog-te-gadget-simple {
 div#google_translate_element div.goog-te-gadget-simple {
   background-color: #2196f3;
   color: whitesmoke;
-  padding: 4;
 }
 
 div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span {

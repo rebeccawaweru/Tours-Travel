@@ -3,8 +3,13 @@ import Root from './routes/Root';
 const router = createBrowserRouter([
   {path:'*', Component:Root}
 ])
+
 function App() {
-  return (<RouterProvider router={router}/>);
+
+  return (
+  <RouterProvider router={router}/>
+
+);
 }
 
 export default App;

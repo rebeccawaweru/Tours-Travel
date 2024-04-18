@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Button, Container} from '@mui/material';
+import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Button, Divider, Container} from '@mui/material';
 import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu, GTranslate } from '@mui/icons-material';
 import Logo from '../../assets/denze-new.png'
 import LinkItem from './linkitem';
 import CustomDrawer from './drawer';
+import ListItem from './listItem';
+
 export default function NavBar({hideToolbar}) {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [translate, setTranslate] = useState(false)
@@ -15,9 +17,7 @@ export default function NavBar({hideToolbar}) {
   const handleDrawerClose = () => {
     setOpenDrawer(false);
   };
-    function googleTranslateElementInit() {
-      new window.google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-    }
+   
   // function googleTranslateElementInit() {
   //   new window.google.translate.TranslateElement({pageLanguage: 'en', layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element')
   // }
@@ -53,24 +53,24 @@ export default function NavBar({hideToolbar}) {
   //   window.googleTranslateElementInit = googleTranslateElementInit;
   // }, []);
   return (
-    <Container  sx={{ flexGrow: 1}}>
 
+    <Container  sx={{ flexGrow: 1,position:"relative",background:"transparent"}} >
+   
+         
       <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? '#000435' : 'rgba(0, 4, 53, 0.4)', color: "white",  }} elevation={0}>
-      
-      
+        <div style={{position:"absolute", zIndex:100,left:28}} id="google_translate_element"></div>
 
-  
 
       {!hideToolbar && 
-        <Toolbar sx={{ display: { xs: 'none', md: 'flex'} }}>
+        <Toolbar  sx={{ display: { xs: 'none', md: 'flex'}, marginTop:2 }}>
           <Stack direction="row" spacing={1} component="div" sx={{ flexGrow: 1 }}>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 707 741 232 </IconButton>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline  sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
+  
            
-           
-            {!translate &&
+            {/* {!translate &&
             <IconButton onClick={()=>(setTranslate(true),googleTranslateElementInit())} sx={{ fontSize: 14, letterSpacing:1 }}><GTranslate color="primary" sx={{ fontSize: 16, marginRight: 0.8 }} />Translate</IconButton>
-             }
+             } */}
 
           </Stack>
           <Box display={{xs:'none',sm:"none", md:"flex"}}>
@@ -87,8 +87,8 @@ export default function NavBar({hideToolbar}) {
           <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1,paddingY:{xs:2,sm:2,md:0}}}>
             <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 220 : 230} height={hideToolbar ? 80 : 75} style={{objectFit:"cover"}}/>
             {/* width={240} height={100} */}
-            <Box id="google_translate_element"  style={{opacity:translate ? 1 : 0}}></Box> 
-            {translate && <Typography onClick={()=>setTranslate(false)} marginLeft={2} sx={{cursor:"pointer"}}>Exit</Typography>}
+        
+            {/* {translate && <Typography onClick={()=>setTranslate(false)} marginLeft={2} sx={{cursor:"pointer"}}>Exit</Typography>} */}
           </Typography>
 
           <IconButton sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
@@ -106,24 +106,24 @@ export default function NavBar({hideToolbar}) {
       {/* Drawer */}
       <CustomDrawer open={openDrawer} onClose={handleDrawerClose}>
         <Stack
+           bgcolor="#000435"
            direction="column"
-           gap={10}
+           gap={5}
            sx={{ width: 200,  height:"100vh", paddingTop:4, textAlign:"center" }} // Set color to black
           role="presentation"
           onClick={handleDrawerClose}
           onKeyDown={handleDrawerClose}
         >
-   
-         <Link style={{textDecoration:"none"}} to="/">Home</Link>
-         <Link style={{textDecoration:"none"}} to="/about">About</Link>
-         <Link style={{textDecoration:"none"}} to="/packages">Packages</Link>
-         <Link style={{textDecoration:"none"}} to="/destinations">Destinations</Link>
-        {/* <Link style={{textDecoration:"none"}} to="/classes">Classes</Link> */}
-         <Link style={{textDecoration:"none"}} to="/contact">Contact</Link>
-         <Link style={{textDecoration:"none"}} to="/signup">Sign Up</Link>
-         <Link style={{textDecoration:"none"}} to="/signin">Login</Link>
+         <ListItem to="/" title="Home"/>
+         <ListItem to="/about" title="About"/>
+         <ListItem to="/packages" title="Packages"/>
+         <ListItem to="/destinations" title="Destinations"/>
+         <ListItem to="/contact" title="Contact"/>
+         <ListItem to="/signup" title="Sign Up"/>
+         <ListItem to="/signin" title="Login"/>
         </Stack>
       </CustomDrawer>
     </Container>
+
   );
 }

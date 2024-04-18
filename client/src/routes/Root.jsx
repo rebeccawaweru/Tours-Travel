@@ -43,11 +43,8 @@ export default function Root(){
 
         }
     })
-
-
     return (
         <ThemeProvider theme={theme}>
-          {/* <GoogleTranslate/> */}
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
           <Route path='/signup' element={<SignUp/>}/>

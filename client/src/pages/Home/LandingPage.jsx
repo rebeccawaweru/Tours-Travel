@@ -15,6 +15,7 @@ import Calender from '../../assets/calender.webp'
 import Train from '../../assets/train.jpg'
 import America from '../../assets/america.webp'
 import Bridge from '../../assets/bridge.jpg'
+
 export default function LandingPage(){
   const navigate = useNavigate()
   const [data,setData] = useState([])
@@ -34,6 +35,7 @@ export default function LandingPage(){
       getPackages()
       getReferrals()
   },[data,referrals])
+  
     return (
         <Wrapper>
           <WhatsAppChat/>
