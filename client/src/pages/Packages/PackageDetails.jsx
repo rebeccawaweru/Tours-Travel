@@ -38,7 +38,8 @@ export default function PackageDetails(){
                 phone: values.phone,
                 email: values.email,
                 message: values.message,
-                subject:'Tour Package Enquiry'
+                subject:`${data.title} Package Enquiry`
+
               },
             ).then(()=>{
                // console.log(res)
