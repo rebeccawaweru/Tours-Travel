@@ -87,7 +87,7 @@ export default function NavBar({hideToolbar}) {
         </Toolbar>
    
 
-        <Toolbar sx={{marginTop:-1}}>
+        <Toolbar sx={{marginTop:hideToolbar ? -2 : 0}}>
           <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1}}>
             <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 190 : 230} height={hideToolbar ? 50 : 60} style={{objectFit:"cover"}}/>
             {/* width={240} height={100} */}
