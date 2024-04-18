@@ -89,7 +89,7 @@ export default function NavBar({hideToolbar}) {
 
         <Toolbar sx={{marginTop:hideToolbar ? -2 : 0}}>
           <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1}}>
-            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 190 : 230} height={hideToolbar ? 50 : 60} style={{objectFit:"cover"}}/>
+            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 190 : 230} height={hideToolbar ? 50 : 60} style={{objectFit:"cover",marginBottom:hideToolbar ? 0 : 10}}/>
             {/* width={240} height={100} */}
         
             {/* {translate && <Typography onClick={()=>setTranslate(false)} marginLeft={2} sx={{cursor:"pointer"}}>Exit</Typography>} */}
