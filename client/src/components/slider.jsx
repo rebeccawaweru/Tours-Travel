@@ -87,7 +87,7 @@ const Slider = ({ images, autoSwipeInterval = 5000 }) => {
             {index === currentIndex &&
              <>
             <m.h3 
-            style={{fontSize:"25px",color:"#2196f3"}}
+            style={{fontSize:"25px",color:"#2196f3",}}
             initial={{y:"300%"}} 
             animate={{y:"100%"}} 
             transition={{delay:0.5, duration:1.5}}

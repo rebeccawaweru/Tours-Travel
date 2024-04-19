@@ -1,16 +1,7 @@
-import Train from '../assets/train.jpg'
-import Bridge from '../assets/bridge.jpg'
-import Sky from '../assets/sky.jpg'
 import Palm from '../assets/palm.jpg'
 import Europe from '../assets/europe.webp'
 import Asia from '../assets/asia.webp'
 import Africa from '../assets/africa.webp'
-import one from '../assets/1.jpg'
-import two from '../assets/2.jpg'
-import three from '../assets/3.jpg'
-import four from '../assets/4.jpg'
-import five from '../assets/5.jpg'
-import six from '../assets/6.jpg'
 import vacation from '../assets/vacation.jpg'
 import sport from '../assets/sport.jpg'
 import education from '../assets/education.jpg'
@@ -26,55 +17,55 @@ export const content = [
         title:"Special",
         caption:"7 days in Switzerland",
         arr:"Bern, Lucern, Zurich, Zermatt, Metahorn, Jungfrau",
-        image:Train
+        image:"https://res.cloudinary.com/marite/image/upload/q_80/f_auto/v1713484106/train_mimx5c.jpg"
     },
     {
         title:"It is time to",
         caption:"GO ON A VACATION",
         arr:"Italy, Rome, Venice, Milan",
-        image:Bridge
+        image:"https://res.cloudinary.com/marite/image/upload/q_80/f_auto/v1713484767/bridge_kxmfxh.jpg"
     },
     {
         title:"OPEN YOUR EYES TO",
         caption:"THE HIDDEN WORLD",
         arr:"",
-        image:Sky
+        image:"https://res.cloudinary.com/marite/image/upload/q_80/f_auto/v1713484810/sky_pg0dxa.jpg"
     },
     {
       title:"Paradise Unleashed",
       caption:"Dive into Sun-Kissed Shores",
       arr:"Embrace the Serenity of the Sea",
-      image:one
+      image:"https://res.cloudinary.com/marite/image/upload/q_80/f_auto/v1713484696/1_wafeas.jpg"
   },
   {
     title:"Where the Waves Whisper",
     caption:"Memories Last Forever",
     arr:"Your Gateway to Coastal Tranquility",
-    image:two
+    image:"https://res.cloudinary.com/marite/image/upload/q_80/f_auto/v1713484710/2_rweqde.jpg"
    },
    {
     title:"Tall and Majestic",
     caption:"Discover the Grace of the Giraffe",
     arr:"Walk Among Nature's Towering Beauties",
-    image:three
+    image:"https://res.cloudinary.com/marite/image/upload/q_80/f_auto/v1713484700/3_wkt1nh.jpg"
   },
   {
     title:"Flamingo Haven",
     caption:"Discover Nature's Pink Parade",
     arr:"A Symphony of Pink Elegance",
-    image:four
+    image:"https://res.cloudinary.com/marite/image/upload/q_80/f_auto/v1713484727/4_pyhm5o.jpg"
   },
   {
     title:"Golden Sands",
     caption:"Explore the Magic of the Desert Dunes",
     arr:"Journey into the Heart of Untamed Beauty",
-    image:five
+    image:"https://res.cloudinary.com/marite/image/upload/q_80/f_auto/v1713484734/5_bx7i9u.jpg"
   },
   {
     title:"Zebra Serengeti",
     caption:"Stripes in Motion on the Savannah",
     arr:"Witness the Beauty of Black and White Majesty",
-    image:six
+    image:"https://res.cloudinary.com/marite/image/upload/q_80/f_auto/v1713484730/6_b9pati.jpg"
 },
 
 ]
