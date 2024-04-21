@@ -8,9 +8,18 @@ import Typography from '@mui/material/Typography';
 import { Timer, Star, Share, LocationOn } from '@mui/icons-material';
 import { Stack, Grid} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
 export default function Package({id,image, duration, title, price, location, link}) {
   const rating = [1, 2, 3, 4, 5]
   const navigate = useNavigate()
+  const handleShare = (id) => {
+      Swal.fire({
+        title:"Share tour package via link",
+        text:'https://denzetoursandtravels.com/package/'+id,
+        icon:"info",
+        showCancelButton:true
+      })
+  }
   return (
     <Card sx={{width:{xs:"100%",sm:320,md:380}}}>
       <CardMedia
@@ -46,7 +55,7 @@ export default function Package({id,image, duration, title, price, location, lin
         {link ? <Button variant="outlined" size="small" component="a" href={link}>LEARN MORE</Button> :
         <Button onClick={()=>navigate(`/package/${id}`)} variant="outlined" size="small">Learn More</Button> 
         }
-        <Share/>
+        <Share onClick={()=>handleShare(id)}/>
       </CardActions>
     </Card>
   );

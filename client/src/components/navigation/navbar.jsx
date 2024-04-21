@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Button, Divider, Container} from '@mui/material';
 import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu, GTranslate } from '@mui/icons-material';
 import Logo from '../../assets/denze-new.png'
@@ -10,6 +10,7 @@ import ListItem from './listItem';
 export default function NavBar({hideToolbar}) {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [translate, setTranslate] = useState(false)
+  const location = useLocation()
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
   };
@@ -74,8 +75,8 @@ export default function NavBar({hideToolbar}) {
           </Stack>
           <Box display={{ md:"none",lg:"flex"}}>
           <IconButton><Facebook sx={{ fontSize: 16 }} /></IconButton>
-          <a href="https://www.instagram.com/denzetoursandtravels/" target='_blank'><IconButton><Instagram sx={{ fontSize: 16 }} /></IconButton></a>
-          <a href='https://twitter.com/DENZETours' target='_blank'><IconButton><X sx={{ fontSize: 16 }} /></IconButton></a>
+          <a href="https://www.instagram.com/denzetoursandtravels/" rel="noreferrer" target='_blank'><IconButton><Instagram sx={{ fontSize: 16 }} /></IconButton></a>
+          <a href='https://twitter.com/DENZETours' rel="noreferrer" target='_blank'><IconButton><X sx={{ fontSize: 16 }} /></IconButton></a>
          
           <Link className='link' to="/signup"><IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Person sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Sign up</IconButton></Link>
           </Box>
@@ -87,9 +88,9 @@ export default function NavBar({hideToolbar}) {
         </Toolbar>
    
 
-        <Toolbar sx={{marginTop:hideToolbar ? -2 : 0}}>
-          <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1}}>
-            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 190 : 230} height={hideToolbar ? 50 : 60} style={{objectFit:"cover",marginBottom:hideToolbar ? 0 : 10}}/>
+        <Toolbar>
+        <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1, paddingY:{xs:1,md:0}}}>
+            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 210 : 230} height={60} style={{objectFit:"cover",marginBottom:hideToolbar ? 6 : 8}}/>
             {/* width={240} height={100} */}
         
             {/* {translate && <Typography onClick={()=>setTranslate(false)} marginLeft={2} sx={{cursor:"pointer"}}>Exit</Typography>} */}
@@ -97,7 +98,10 @@ export default function NavBar({hideToolbar}) {
 
           <IconButton sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
           <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }}>
-            <LinkItem to="/" page="Home"/>
+          <Typography fontWeight={location.pathname === "/" ? "bold" : null} component="a" href="/" sx={{'&:hover':{scale:"110%", color:"#2196f3"}, color:location.pathname === "/" ? "#2196f3" :"whitesmoke", textDecoration:"none"}}>
+                Home
+               {location.pathname === "/" ? <hr></hr> : null}
+          </Typography>
             <LinkItem to="/about" page="About"/>
             <LinkItem to="/packages" page="Packages"/>
             <LinkItem to="/destinations" page="Destinations"/>

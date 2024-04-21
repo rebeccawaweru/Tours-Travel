@@ -21,7 +21,7 @@ export default function Footer(){
                 <Typography color="whitesmoke" fontSize="small" fontWeight="bold">TOP DESTINATIONS</Typography>
                  <Grid  alignItems="center" display="flex" justifyContent="center" container maxWidth gap={1} direction="row" marginTop={2} >
                 {itemData.slice(0, 4).map((item)=>{
-                return <Box  onClick={()=>navigate(`/packages?category=${item.title}`)} height={100} component={Grid}  item sm={5} md={5}  xs={2}
+                return <Box  onClick={()=>navigate(`/destination?category=${item.title}`)} height={100} component={Grid}  item sm={5} md={5}  xs={2}
                 alignItems="center" display="flex" justifyContent="center"
                sx={{backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${item.img})`,backgroundPosition:"center", cursor:"pointer"}}>
                 <Typography display={{xs:"none",sm:"block"}} color="whitesmoke" fontWeight="bold">{item.title}</Typography>
