@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Button, Divider, Container} from '@mui/material';
+import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Container} from '@mui/material';
 import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu, GTranslate } from '@mui/icons-material';
 import Logo from '../../assets/denze-new.png'
 import LinkItem from './linkitem';

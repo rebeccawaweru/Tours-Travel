@@ -24,8 +24,11 @@ export default function Package({id,image, duration, title, price, location, lin
     <Card sx={{width:{xs:"100%",sm:320,md:380}}}>
       <CardMedia
         sx={{ height: 250, objectFit:"cover" }}
+        component="img"
+        loading="lazy"
+        alt="tours and travels"
         image={image}
-        title="green iguana"
+        title={title}
       />
       <CardContent component={Grid} direction="column" container gap={2}>
         
