@@ -16,7 +16,7 @@ export default function CustomImageList({...props}) {
   return (
     <Grid container alignItems="center" direction="row" {...props}>
             {itemData.slice(0, 4).map((item) =>  (
-            <Grid component={Link} to={`/packages?category=${item.title}`} position="relative" item xs={12} sm={3} md={3}  key={item.title}>
+            <Grid component={Link} to={`/destination?category=${item.title}`} position="relative" item xs={12} sm={3} md={3}  key={item.title}>
             <Box  
              onMouseEnter={handleMouseEnter}
              onMouseLeave={handleMouseLeave}
