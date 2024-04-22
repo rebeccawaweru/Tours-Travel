@@ -25,6 +25,7 @@ export default function Destinations(){
                   backgroundImage: `linear-gradient(to right, rgba(0, 0, 0.2, 0.6), rgba(0, 0, 0.2, 0.6)), url(${item.img})`,
                   borderBottom:'3px solid #2196f3'
                 },
+              
                 backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${item.img})`,
                 borderBottom:'0px solid transparent'
               }}><Stack  position="absolute" bottom={4} color="whitesmoke" direction="row" spacing={1}><LocationOn/><Typography variant="h6" fontWeight="bold">{item.title}</Typography></Stack></Grid>
