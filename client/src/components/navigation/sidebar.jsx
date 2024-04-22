@@ -12,8 +12,8 @@ export default function SideBar() {
 
       <MenuList component={Stack} spacing={3}> 
         <CustomMenuItem icon={<Dashboard/>} title="Dashboard" to="/dashboard"/>
-        <CustomMenuItem icon={<TravelExplore/>} title="Tours" to="/tourpackages"/>
         <CustomMenuItem icon={<Add/>} title="Create Package" to="/newpackage"/>
+        <CustomMenuItem icon={<TravelExplore/>} title="Tour Packages" to="/tourpackages"/>
         <CustomMenuItem icon={<AddLink/>} title="Referrals" to="/bookings"/>
         {/* <CustomMenuItem icon={<Tour/>} title="Referals"/> */}
         {/* <CustomMenuItem icon={<Notifications/>} title="Notifications"/> */}
