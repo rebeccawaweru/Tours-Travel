@@ -41,10 +41,10 @@ export default function LandingPage(){
           <WhatsAppChat/>
         <Slider images={content}/>
         <Box sx={{height:"40vh",backgroundColor:"#2196f3",display:"flex", flexDirection:{xs:"column",md:"row"},justifyContent:"space-around", alignItems:"center"}}>
-          <Quality src={Plane} alt="destinations" title="500+ DESTINATIONS" caption="Morbi leo risus, porta ac"/>
-          <Quality src={Price} alt="prices" title="BEST PRICE GUARANTEE" caption="Morbi leo risus, porta ac"/>
-          <Quality src={Support} alt="support" title="GREAT CUSTOMER" caption="Morbi leo risus, porta ac"/>
-          <Quality src={Calender} alt="bookings" title="SUPER FAST BOOKING" caption="Morbi leo risus, porta ac"/>
+          <Quality src={Plane} alt="destinations" title="500+ DESTINATIONS" caption="Explore beyond the horizon"/>
+          <Quality src={Price} alt="prices" title="BEST PRICE GUARANTEE" caption="Best Price Assurance, Always"/>
+          <Quality src={Support} alt="support" title="GREAT CUSTOMER" caption="Exceptional Customer Care Always"/>
+          <Quality src={Calender} alt="bookings" title="SUPER FAST BOOKING" caption="Instant Booking, Swift Travel"/>
         </Box>
 
         
