@@ -1,10 +1,10 @@
 import { Logout,Menu} from '@mui/icons-material'
-import {AppBar, Container, IconButton, Stack, Toolbar, Typography, Grid, Box} from '@mui/material'
+import {AppBar, Container, IconButton, Stack, Toolbar, Typography, Grid} from '@mui/material'
 import { SideBar, CustomDrawer } from '../components'
 import {useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../assets/tour-logo.png'
+
 
 export default function AdminDashboard({children}){
     const navigate = useNavigate()
@@ -49,7 +49,7 @@ export default function AdminDashboard({children}){
           onKeyDown={handleDrawerClose}
         >
    
-      <img src={Logo} alt="denzetours&travel" width={180} height={80} style={{objectFit:"cover", alignSelf:"center"}}/>
+      <img src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485084/denze-new_rgtnmg.png" alt="denzetours&travel" width={180} height={80} style={{objectFit:"cover", alignSelf:"center"}}/>
   
          <Link style={{textDecoration:"none"}} to="/dashboard">Dashboard</Link>
          <Link style={{textDecoration:"none"}} to="/tourpackages">Tours</Link>

@@ -5,18 +5,22 @@ body {
   letter-spacing:0.9px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
-
 code {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 .link {
   text-decoration: none;
   color: white; 
 }
-
+.slogan {
+  font-family:'Times New Roman', Times, serif;
+  
+ font-weight: 900;
+ background: linear-gradient(to right, yellow, wheat,green, #4286f4);
+  -webkit-background-clip: text; /* Apply gradient to text */
+  -webkit-text-fill-color: transparent; /* Hide original text color */
+}
 .custom-loader {
   width:50px;
   height:50px;
@@ -31,8 +35,6 @@ code {
   animation:s4 1s infinite steps(10);
 }
 @keyframes s4 {to{transform: rotate(1turn)}}
-
-
 div#google_translate_element #goog-te-combo {
   /* Replace 'red' with your desired color */
   color: whitesmoke;
@@ -40,12 +42,9 @@ div#google_translate_element #goog-te-combo {
 div#google_translate_element div.goog-te-gadget-simple {
   font-size: small;
 }
-
 div#google_translate_element div.goog-te-gadget-simple {
   background-color: #2196f3;
-
 }
-
 div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span {
  color: whitesmoke;
 }
@@ -58,8 +57,6 @@ div#google_translate_element div.goog-te-gadget-simple {
   border: none;
   color: white;
 }
-
-
 .custom-select {
   width: 100%;
   background-color: white;
@@ -69,3 +66,12 @@ div#google_translate_element div.goog-te-gadget-simple {
   font-size: medium;
   border-radius: 5px;
 }  
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%); /* Start off-screen */
+  }
+  100% {
+    transform: translateX(100%); /* Move to the left */
+  }
+}

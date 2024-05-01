@@ -1,6 +1,5 @@
 import Wrapper from "../../layouts/Wrapper";
 import { Box, Container, Stack, Typography, Grid, Divider, Button, Paper } from "@mui/material";
-import Sky from '../../assets/packagebg.jpg'
 import { CalendarMonth, LabelImportant, Public, LocationOn,  Timer, People,TrendingUp} from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
@@ -66,7 +65,7 @@ export default function PackageDetails(){
         height:{xs:"60vh",sm:"80vh",md:"100vh", lg:"120vh", xl:"120vh"},
         width:"100%",
         backgroundSize: 'cover',
-        backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Sky})`,
+        backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485110/packagebg_m0y7fg.jpg')`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
        }}>

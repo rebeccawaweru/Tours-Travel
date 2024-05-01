@@ -1,6 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import { LandingPage, SignUp, SignIn, Category, ForgotPassword, ResetPassword, About, Packages, PackageDetails, Destinations, Contact, Bookings,CreatePackage, UpdatePackage, TourPackages, AddReferal, UpdateReferal, Dashboard, Classes } from "../pages";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import i18n from '../i18n';
+import { I18nextProvider } from 'react-i18next';
+import Translate from "../translation/Translate";
 export default function Root(){
     const theme = createTheme({
         components: {
@@ -44,6 +47,7 @@ export default function Root(){
         }
     })
     return (
+      <I18nextProvider i18n={i18n}>
         <ThemeProvider theme={theme}>
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
@@ -67,5 +71,6 @@ export default function Root(){
           <Route path="/destination" element={<Category/>}/>
         </Routes>
         </ThemeProvider>
+        </I18nextProvider>
     )
 }

@@ -1,6 +1,7 @@
 import { useEffect,useState } from 'react';
 import { NavBar, Footer } from '../components';
 import {Box} from '@mui/material';
+import LanguageSelector from '../components/languageselector';
 export default function Wrapper({children}){
   const [hideToolbar, setHideToolbar] = useState(false);
   useEffect(() => {
@@ -23,8 +24,9 @@ export default function Wrapper({children}){
   }, [window.scrollY]);
   
     return (
-        <Box maxWidth width="100%" overflow="hidden">
+        <Box maxWidth width="100%" >
           <NavBar hideToolbar={hideToolbar} />
+  
           {children}
           <Footer/>
         </Box>

@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { Paper, MenuList, Stack, Box} from '@mui/material';
 import {Add, AddLink, Dashboard, TravelExplore} from '@mui/icons-material';
-import Logo from '../../assets/denze-new.png'
 import CustomMenuItem from './menuitem';
 export default function SideBar() {
   return (
     <Paper elevation={0} sx={{ width:{xs:"",sm:"",md:"25%", lg:"16.8%", xl:"16.5%"}, height:"100vh", backgroundColor:"black", position:"fixed" }}>
       <Box marginY={4}>
-      <img src={Logo} alt="denzetours&travel" width={180} height={80} style={{objectFit:"cover", alignSelf:"center"}}/>
+      <img src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485084/denze-new_rgtnmg.png" alt="denzetours&travel" width={180} height={80} style={{objectFit:"cover", alignSelf:"center"}}/>
       </Box>
 
       <MenuList component={Stack} spacing={3}> 

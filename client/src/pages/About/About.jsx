@@ -1,7 +1,6 @@
 import { Service, Video } from "../../components";
 import Wrapper from "../../layouts/Wrapper";
-import {Container, Typography, Grid, Stack, Box } from "@mui/material";
-import AboutImg from '../../assets/about.jpg'
+import {Container, Typography, Grid, Box } from "@mui/material";
 export default function About(){
     return (
         <Wrapper>
@@ -33,7 +32,7 @@ export default function About(){
        </Container>
        <Grid maxWidth container>
            <Grid item xs={12} md={6} maxWidth container>
-             <img src={AboutImg} alt="tours and travels background" width="100%" height="100%" sx={{objectFit:"contain"}}/>
+             <img src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485044/about_zdghml.jpg" alt="denze tours and travels background" width="100%" height="100%" sx={{objectFit:"contain"}}/>
             </Grid>
 
              <Grid item xs={12} md={6} gap={2} container justifyContent="center" alignItems="center" padding={4}>

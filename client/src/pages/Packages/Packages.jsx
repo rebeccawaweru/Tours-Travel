@@ -1,10 +1,6 @@
 import Wrapper from "../../layouts/Wrapper";
 import { Box, Grid, Container, Stack, Typography, Button} from "@mui/material";
-import Sky from '../../assets/packagebg.jpg'
 import { Filter, Package} from "../../components";
-import Train from '../../assets/train.jpg'
-import America from '../../assets/america.webp'
-import Bridge from '../../assets/bridge.jpg'
 import { TravelExplore } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
@@ -63,7 +59,7 @@ export default function Packages(){
         height:{xs:"120vh",sm:"80vh",md:"100vh", lg:"120vh", xl:"100vh"},
         width:"100%",
         backgroundSize: 'cover',
-        backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Sky})`,
+        backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485110/packagebg_m0y7fg.jpg')`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
        }}>
@@ -88,9 +84,9 @@ export default function Packages(){
                 } 
                 
           
-             <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image={Train}/>
-             <Package price={3000} image={America} title="America – 2 Days in Lake Tahoe" location="America" duration="7 days"/>
-             <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image={Bridge}/>
+                <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485121/train_kfyezj.jpg"/>
+             <Package price={3000} image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485099/america_u0clei.webp" title="America – 2 Days in Lake Tahoe" location="America" duration="7 days"/>
+             <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485084/bridge_fmrmqp.jpg"/>
             </Grid>
         </Container>
     </Wrapper>

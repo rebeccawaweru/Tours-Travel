@@ -14,7 +14,7 @@ export default function Video({children}){
         backgroundPosition: 'center',
        }}>
         <video width="100%" style={{height:"100%", objectFit:"cover", overflow:"hidden"}} preload="auto" muted autoPlay loop>   
-        <source src="https://res.cloudinary.com/marite/video/upload/v1712313886/Spectacular_Norway_-_from_the_air_1_dk3pnx.mp4" type="video/mp4"></source>
+        <source src="https://res.cloudinary.com/dkjb6ziqg/video/upload/v1714563846/Spectacular_Norway_-_from_the_air_1_dk3pnx_i2iruj.mp4" type="video/mp4"></source>
         </video>
         <Box position="absolute" textAlign="center">
            {children}

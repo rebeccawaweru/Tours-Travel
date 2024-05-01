@@ -1,5 +1,4 @@
 import { Typography, Grid, Box, Container, Stack, IconButton } from "@mui/material";
-import Logo from '../../assets/denze-new.png'
 import { itemData } from "../../utils/helpers";
 import { Facebook, Instagram, X } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +10,7 @@ export default function Footer(){
              
               <Grid display="flex" flexDirection="column" justifyContent={{xs:"center",sm:"start"}} xs={12} sm={4} md={3} lg={3} item container color="whitesmoke" fontSize="small" textAlign="left">
               <Typography color="whitesmoke" fontSize="small" fontWeight="bold" textAlign={{xs:"center",md:"left"}} >ABOUT US</Typography>
-                <Box component="img" src={Logo} alt="denze logo" loading="lazy" width={230} height={100} sx={{objectFit:"cover",alignSelf:{xs:"center",md:"start"} }}/>
+                <Box component="img" src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485084/denze-new_rgtnmg.png" alt="denze logo" loading="lazy" width={230} height={100} sx={{objectFit:"cover",alignSelf:{xs:"center",md:"start"} }}/>
                 <Typography color="#8c8c8c" fontSize="small">An international tour operator that specializes in custom
             business and leisure itineraries, and luxury vacation packages with an intent to provide
             travelers with flawless holidays and sparkling travel experience.</Typography>

@@ -1,5 +1,4 @@
 import { Box, Typography, Grid, Stack, Button } from "@mui/material";
-import Contactbg from '../../assets/contactbg.jpg'
 import { AuthWrapper } from "../../layouts";
 import { Phone, CallMade, Email, LocationOn, Facebook, Instagram, X} from "@mui/icons-material";
 import { BasicInput, ContactItem, WhatsAppChat, Loader } from "../../components";
@@ -42,7 +41,7 @@ export default function Contact(){
        
     }
     return (
-      <AuthWrapper title="Get In Touch" caption="Contact Us" bg={Contactbg}>
+      <AuthWrapper title="Get In Touch" caption="Contact Us" bg="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485086/contactbg_e8ukqt.jpg">
         <WhatsAppChat/>
         <Grid maxWidth container gap={5} bgcolor="whitesmoke" padding={4}>
            <Grid component="form" onSubmit={handleSubmit} item xs={12} md={6} container gap={2}>

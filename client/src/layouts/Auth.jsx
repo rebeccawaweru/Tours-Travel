@@ -1,8 +1,7 @@
 import Wrapper from "./Wrapper";
 import { Box, Typography, Container } from "@mui/material";
-import Travel from '../assets/warm.jpg'
 export default function AuthWrapper (props) {
-    const {title, caption, children, bg=Travel} = props
+    const {title, caption, children, bg="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485143/warm_ig2cae.jpg"} = props
     return (
         <Wrapper>
         <Box sx={{

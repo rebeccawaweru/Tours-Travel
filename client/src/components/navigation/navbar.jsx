@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Typography, Toolbar, AppBar, Box, Stack, IconButton, Container} from '@mui/material';
-import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu, GTranslate } from '@mui/icons-material';
-import Logo from '../../assets/denze-new.png'
+import { Typography, Toolbar,  AppBar, Box, Stack, IconButton, Container} from '@mui/material';
+import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu, Star } from '@mui/icons-material';
 import LinkItem from './linkitem';
 import CustomDrawer from './drawer';
 import ListItem from './listItem';
+import LanguageSelector from '../languageselector';
+import {motion as m} from 'framer-motion' 
 
 export default function NavBar({hideToolbar}) {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -19,89 +20,49 @@ export default function NavBar({hideToolbar}) {
     setOpenDrawer(false);
   };
    
-  // function googleTranslateElementInit() {
-  //   new window.google.translate.TranslateElement({pageLanguage: 'en', layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element')
-  // }
-  const handleTranslateClick = () => {
-    const translateElement = document.getElementById('google_translate_element');
-    if (translateElement) {
-        // Simulate a click event on the Google Translate dropdown
-        const translateDropdown = translateElement.querySelector('.goog-te-menu-value');
-        if (translateDropdown) {
-            translateDropdown.click();
-        }
-    }
-}
-  // useEffect(()=>{
-  //   googleTranslateElementInit()
-  // },[])
-  // const googleTranslateElementInit = () => {
-  //   new window.google.translate.TranslateElement(
-  //     {
-  //       pageLanguage: "en",
-  //       autoDisplay: false
-  //     },
-  //     "google_translate_element"
-  //   );
-  // };
-  // useEffect(() => {
-  //   if (!document.getElementById('google_translate_script')) {
-  //     var addScript = document.createElement("script");
-  //     addScript.id = 'google_translate_script'; // Add an ID to the script element
-  //     addScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-  //     document.body.appendChild(addScript);
-  // }
-  //   window.googleTranslateElementInit = googleTranslateElementInit;
-  // }, []);
   return (
-
-    <Container  sx={{ flexGrow: 1,position:"relative",background:"transparent"}} >
-   
-         
-      <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? '#000435' : 'rgba(0, 4, 53, 0.4)', color: "white",  }} elevation={0}>
-     
-      {/* <div style={{position:"absolute", zIndex:100,left:28}} id="google_translate_element"></div> */}
-
-   
-        <Toolbar  sx={{ display: { xs: 'none', md: 'flex'},marginTop:-1}}>
-       
-          <div id="google_translate_element"></div>
-   
-
-
+    <Container  sx={{ flexGrow: 1,position:"relative",background:"transparent"}} > 
+      <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? '#000435' : 'rgba(0, 4, 53, 0.4)', color: "white",  }} elevation={0}> 
+        <Toolbar  sx={{ display: { xs: 'none', md: 'flex'},marginTop:-1}}>    
           <Stack direction="row" spacing={1} component="div" sx={{ flexGrow: 1 }}>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 707 741 232 </IconButton>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline  sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
+            <IconButton sx={{ fontSize: 14, letterSpacing:1 }}>KES</IconButton>
+            <LanguageSelector/>
           </Stack>
           <Box display={{ md:"none",lg:"flex"}}>
           <IconButton><Facebook sx={{ fontSize: 16 }} /></IconButton>
-          <a href="https://www.instagram.com/denzetoursandtravels/" rel="noreferrer" target='_blank'><IconButton><Instagram sx={{ fontSize: 16 }} /></IconButton></a>
+          <a href="https://www.instagram.com/denzetoursandtravels" rel="noreferrer" target='_blank'><IconButton><Instagram sx={{ fontSize: 16 }} /></IconButton></a>
           <a href='https://twitter.com/DENZETours' rel="noreferrer" target='_blank'><IconButton><X sx={{ fontSize: 16 }} /></IconButton></a>
-         
           <Link className='link' to="/signup"><IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Person sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Sign up</IconButton></Link>
           </Box>
-
           <Box>
           <Link className='link' to="/signin"> <IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Lock sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Login</IconButton></Link>
           </Box>
-
         </Toolbar>
-   
-
         <Toolbar>
         <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1, paddingY:{xs:1,md:0}}}>
-            <img src={Logo} alt="denzetours&travel" width={hideToolbar ? 210 : 230} height={60} style={{objectFit:"cover",marginBottom:hideToolbar ? 6 : 8}}/>
-            {/* width={240} height={100} */}
-        
-            {/* {translate && <Typography onClick={()=>setTranslate(false)} marginLeft={2} sx={{cursor:"pointer"}}>Exit</Typography>} */}
+            <img src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485084/denze-new_rgtnmg.png" alt="denzetours&travel" width={hideToolbar ? 210 : 230} height={60} style={{objectFit:"cover",marginBottom:hideToolbar ? 6 : 8}}/>
+            <Box sx={{
+                  // backgroundImage: 'linear-gradient(to right, rgba(255, 204, 40, 0.1), rgba(255, 204, 40, 0.1))',
+                  overflow: 'hidden',
+              }}>
+            <m.h3
+               className="slogan"
+               style={{
+              
+                whiteSpace: 'nowrap', // Prevent text from wrapping
+                // Hide overflowing text
+                animation: 'moveLeftToRight 10s linear infinite', // Adjust duration as needed
+              }}
+            >
+              <i><b>For a Sparkling Travel Experience! <Star fontSize='6' sx={{color:"#FFCA28"}}/> <Star fontSize='6' sx={{color:"#FFCA28"}}/></b></i>
+              </m.h3>
+            </Box>
           </Typography>
-
           <IconButton sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
           <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }}>
-          <Typography fontWeight={location.pathname === "/" ? "bold" : null} component="a" href="/" sx={{'&:hover':{scale:"110%", color:"#2196f3"}, color:location.pathname === "/" ? "#2196f3" :"whitesmoke", textDecoration:"none"}}>
-                Home
-               {location.pathname === "/" ? <hr></hr> : null}
-          </Typography>
+          <LinkItem to="/" page="Home"/>
             <LinkItem to="/about" page="About"/>
             <LinkItem to="/packages" page="Packages"/>
             <LinkItem to="/destinations" page="Destinations"/>
@@ -110,7 +71,6 @@ export default function NavBar({hideToolbar}) {
           </Box>
         </Toolbar>
       </AppBar>
-
       {/* Drawer */}
       <CustomDrawer open={openDrawer} onClose={handleDrawerClose}>
         <Stack
