@@ -4,8 +4,8 @@ import { Box, Container, IconButton, Button } from '@mui/material';
 import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material';
 import { motion as m } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-const Slider = ({ images, autoSwipeInterval = 5000 }) => {
+import Loader from './loader'
+const Slider = ({ images, autoSwipeInterval = 7000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState(new Array(images.length).fill(false));
 
@@ -54,11 +54,11 @@ const Slider = ({ images, autoSwipeInterval = 5000 }) => {
           <div key={index} style={{ display: index === currentIndex ? 'block' : 'none', width: '100%' }}>
             <img
               src={image.image}
-              alt=""
+              alt="denzetoursandtravels"
               onLoad={() => handleImageLoad(index)}
               style={{ display: 'none' }}
             />
-            {loadedImages[index] && (
+            {loadedImages[index] ? (
               <Container
               maxWidth
                 key={index}
@@ -97,7 +97,22 @@ const Slider = ({ images, autoSwipeInterval = 5000 }) => {
                   <Link style={{ textDecoration: "none", color: "whitesmoke" }} to="/destinations">Learn More</Link>
                 </Button>
               </Container>
-            )}
+            ) :    <Box
+            key={index}
+            sx={{
+              paddingTop: 8,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: '100%',
+              height: '100vh',
+              backgroundColor:'#000435',
+              color: 'white',
+              fontSize:"large"
+            }}
+          >
+            <div class="custom-loaderrr"></div>
+          </Box>}
           </div>
         ))}
       </div>

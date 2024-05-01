@@ -44,6 +44,7 @@ export default function NavBar({hideToolbar}) {
         <Typography  variant="p" component="div" display="flex" alignItems="center" sx={{ flexGrow: 1, paddingY:{xs:1,md:0}}}>
             <img src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485084/denze-new_rgtnmg.png" alt="denzetours&travel" width={hideToolbar ? 210 : 230} height={60} style={{objectFit:"cover",marginBottom:hideToolbar ? 6 : 8}}/>
             <Box sx={{
+                  display:{xs:'none', md:'none', lg:'block'},
                   // backgroundImage: 'linear-gradient(to right, rgba(255, 204, 40, 0.1), rgba(255, 204, 40, 0.1))',
                   overflow: 'hidden',
               }}>

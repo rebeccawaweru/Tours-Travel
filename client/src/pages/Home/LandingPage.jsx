@@ -33,7 +33,7 @@ export default function LandingPage(){
         <Wrapper>
           <WhatsAppChat/>
         <Slider images={content}/>
-        <Box sx={{height:"40vh",backgroundColor:"#2196f3",display:"flex", flexDirection:{xs:"column",md:"row"},justifyContent:"space-around", alignItems:"center"}}>
+        <Box sx={{height:{xs:"50vh", md:"40vh"},backgroundColor:"#2196f3",display:"flex", flexDirection:{xs:"column",md:"row"},justifyContent:"space-around", alignItems:"center"}}>
           <Quality src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485108/plane_ixfry2.webp" alt="denzedestinations" title="500+ DESTINATIONS" caption="Explore beyond the horizon"/>
           <Quality src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485109/prices_npfyfs.png" alt="denzeprices" title="BEST PRICE GUARANTEE" caption="Best Price Assurance, Always"/>
           <Quality src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485115/support_qbin6j.png" alt="denzesupport" title="GREAT CUSTOMER" caption="Exceptional Customer Care Always"/>

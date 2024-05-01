@@ -8,7 +8,7 @@ export default function Lang(props){
     };
   
     return  <Stack component={Grid} item xs={12} md={3} marginBottom={4} direction="row" gap={1} alignItems="center" sx={{cursor:"pointer"}}>
-    <img src={url} alt={lang} onClick={() => changeLanguage(abb)} width="36" height="36"/>
+    <img src={url} alt={lang} loading="lazy" onClick={() => changeLanguage(abb)} width="36" height="36"/>
     <Typography variant="body2" color="text.secondary">{lang}</Typography>
     </Stack>
 }
