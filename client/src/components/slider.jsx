@@ -4,7 +4,7 @@ import { Box, Container, IconButton, Button } from '@mui/material';
 import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material';
 import { motion as m } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import Loader from './loader'
+
 const Slider = ({ images, autoSwipeInterval = 7000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState(new Array(images.length).fill(false));
@@ -56,28 +56,41 @@ const Slider = ({ images, autoSwipeInterval = 7000 }) => {
               src={image.image}
               alt="denzetoursandtravels"
               onLoad={() => handleImageLoad(index)}
-              style={{ display: 'none' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
             />
-            {loadedImages[index] ? (
+            {loadedImages[index] && (
               <Container
-              maxWidth
+                maxWidth
                 key={index}
                 sx={{
-                  paddingTop: 8,
-                  display: "flex",
-                  flexDirection: "column",
-                  color: "whitesmoke",
-                  justifyContent: "center",
-                  alignItems: "start",
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
                   width: '100%',
-                  height: '100vh',
-                  background: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(${image.image}) no-repeat center center / cover`,
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'start',
+                  color: 'whitesmoke',
+                  paddingTop:10
                 }}
               >
-                {index === currentIndex &&
+                <div
+                  style={{
+                    background: 'linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4))',
+                    width: '100%',
+                    height: '100%',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    zIndex: 1,
+                  }}
+                />
+                {index === currentIndex && (
                   <>
                     <m.h3
-                      style={{ fontSize: "25px", color: "#2196f3" }}
+                      style={{ fontSize: "25px", color: "#2196f3", zIndex:2,}}
                       initial={{ y: "300%" }}
                       animate={{ y: "100%" }}
                       transition={{ delay: 0.5, duration: 1.5 }}
@@ -88,39 +101,46 @@ const Slider = ({ images, autoSwipeInterval = 7000 }) => {
                       initial={{ x: "-50%" }}
                       animate={{ x: "0%" }}
                       transition={{ delay: 0.8, duration: 1.5 }}
-                      style={{ color: '#818181', fontSize: "40px" }}
+                      style={{ color: '#818181', fontSize: "40px", zIndex:2  }}
                     >
                       {image.caption}
                     </m.h2>
-                  </>}
-                <Button size="medium" variant="contained" sx={{ width: 250, paddingY: 2 }}>
-                  <Link style={{ textDecoration: "none", color: "whitesmoke" }} to="/destinations">Learn More</Link>
-                </Button>
+                    <Button size="medium" variant="contained" sx={{ width: 250, paddingY: 2, zIndex:2  }}>
+                      <Link style={{ textDecoration: "none", color: "whitesmoke" }} to="/destinations">Learn More</Link>
+                    </Button>
+                  </>
+                )}
               </Container>
-            ) :    <Box
-            key={index}
-            sx={{
-              paddingTop: 8,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: '100%',
-              height: '100vh',
-              backgroundColor:'#000435',
-              color: 'white',
-              fontSize:"large"
-            }}
-          >
-            <div class="custom-loaderrr"></div>
-          </Box>}
+            )}
+            {!loadedImages[index] && (
+              <Box
+                key={index}
+                sx={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#000435',
+                  color: 'white',
+                  fontSize: 'large',
+                }}
+              >
+                <div class="custom-loaderrr"></div>
+              </Box>
+            )}
           </div>
         ))}
       </div>
-      <div style={{ textAlign: 'center', position: 'absolute', right: 0, left: 0, bottom: 0, transform: 'translateY(-50%)' }}>
+      <div style={{ textAlign: 'center', zIndex:2, position: 'absolute', right: 0, left: 0, bottom: 0, transform: 'translateY(-50%)' }}>
         {images.map((_, index) => (
           <span
             key={index}
             style={{
+        
               display: 'inline-block',
               width: '15px',
               height: '15px',
