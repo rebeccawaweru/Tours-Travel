@@ -1,5 +1,5 @@
 {
-    "navbar": {
+  "navbar": {
       "slogan": "Pro zářivý zážitek z cestování!",
       "home": "Domů",
       "about": "O nás",
@@ -8,6 +8,175 @@
       "contact": "Kontakt",
       "signup": "Registrace",
       "signin": "Přihlášení"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "Speciální",
+          "caption": "7 dní ve Švýcarsku"
+      },
+      "second": {
+          "title": "Je čas",
+          "caption": "JET NA DOVOLENKU"
+      },
+      "third": {
+          "title": "OTEVŘETE SVÉ OČI PRO",
+          "caption": "SKRYTÝ SVĚT"
+      },
+      "fourth": {
+          "title": "Ráj odhalen",
+          "caption": "Ponořte se do osluněných břehů"
+      },
+      "fifth": {
+          "title": "Kde vlny šepotají",
+          "caption": "Vzpomínky trvají navždy"
+      },
+      "sixth": {
+          "title": "Vysoký a majestátní",
+          "caption": "Objevte krásu žirafy"
+      },
+      "seventh": {
+          "title": "Oáza plameňáků",
+          "caption": "Objevte růžový průvod přírody"
+      },
+      "eigth": {
+          "title": "Zlaté písky",
+          "caption": "Prozkoumejte kouzlo pouštních dun"
+      },
+      "nineth": {
+          "title": "Zebra Serengeti",
+          "caption": "Pruhy v pohybu na savaně"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ DESTINACÍ",
+          "caption": "Prozkoumejte za obzor"
+      },
+      "price": {
+          "title": "NEJLEPŠÍ CENA ZÁRUKA",
+          "caption": "Vždy nejlepší cena zaručena"
+      },
+      "care": {
+          "title": "SKVĚLÁ KONCEPCE ZÁKAZNÍKA",
+          "caption": "Výjimečná péče o zákazníka vždy"
+      },
+      "booking": {
+          "title": "VELMI RYCHLÁ REZERVACE",
+          "caption": "Okamžitá rezervace, rychlé cestování"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Klíčové slovo",
+          "name": "klíčové_slovo"
+      },
+      "activity": {
+          "label1": "Aktivita",
+          "name": "aktivita",
+          "Swimming": "Plavání",
+          "Sightseeing": "Prohlížení památek",
+          "Hiking": "Pěší turistika",
+          "Ski": "Lyžování",
+          "Paragliding": "Paragliding",
+          "Parachuting": "Padák",
+          "Kayaking": "Kajak",
+          "Baloon Safaris": "Balónové safari",
+          "Game Drive": "Safari"
+      },
+      "destination": {
+          "label1": "Destinace",
+          "name": "kategorie"
+      },
+      "duration": {
+          "label1": "Trvání",
+          "name": "trvání",
+          "1 Day Tour": "1denní výlet",
+          "2 - 4 Days Tour": "2 - 4denní výlet",
+          "5 - 7 Days Tour": "5 - 7denní výlet",
+          "7+ Days Tour": "7 a více denní výlet"
+      },
+      "Search": "Hledat",
+      "Date": "Datum"
+  },
+  "popular": "Oblíbené turistické balíčky",
+  "viewall": "Zobrazit všechny zájezdy",
+  "popular2": "Oblíbené destinace",
+  "viewall2": "Zobrazit všechny destinace",
+  "description": "Ponořte se do pokladnice okouzlujících lokalit, každá nabízí jedinečnou krajinku kultury, dobrodružství a přírodní krásy. Od ikonických památek po skryté poklady se s námi vydejte na virtuální cestu, kde ukážeme destinace, které dobyly srdce a představivost cestovatelů po celém světě.",
+  "destination": {
+      "heading": "DESTINACE",
+      "caption": "Prozkoumejte zájezdy podle destinací",
+      "local": "Místní cesty",
+      "hot": "Oblíbené",
+      "holiday": "Mezinárodní prázdniny",
+      "africa": "Východní Afrika",
+      "vacay": "Dovolená",
+      "edu": "Vzdělávací zájezdy",
+      "special": "Speciální zájezdy",
+      "sports": "Sportovní události",
+      "charity": "Charitativní zájezdy",
+      "wine": "Degustace vín",
+      "food": "Festivaly jídla",
+      "bird": "Pozorování ptáků",
+      "sky": "Létání na kluzáku",
+      "learn": "Více informací",
+      "view": "Zobrazit všechny zájezdy"
+  },
+  "shortabout": "Mezinárodní cestovní operátor specializující se na přizpůsobené obchodní a rekreační itineráře a luxusní dovolenkové balíčky s cílem poskytnout cestovatelům bezchybnou dovolenou a zářivý zážitek z cestování.",
+  "longabout": "Mezinárodní cestovní operátor specializující se na přizpůsobené obchodní a rekreační itineráře a luxusní dovolenkové balíčky s cílem poskytnout cestovatelům bezchybnou dovolenou a zářivý zážitek z cestování. Vybudovali jsme portfólio světových exkluzivních destinací, nádherných luxusních hotelů a letovisek, stejně jako luxusních služeb a zařízení, které jsou nabízeny společně s velmi personalizovanou službou a neúnavnou pozorností ke každému detailu při plánování ultimátního cestovního zážitku.",
+  "footer": {
+      "about": "O NÁS",
+      "top": "TOP DESTINACE",
+      "contact": "KONTAKTNÍ INFORMACE",
+      "location": "Lokace: Hurlingham Plaza, podél Argwings Kodhek Road, Nairobi, Keňa",
+      "tel": "Tel: +254 707 741 232",
+      "copyright": "Autorská práva © 2024 Denze Tours and Travels. Všechna práva vyhrazena"
+  },
+  "vsn": "Naše vize",
+  "msn": "Naše mise",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "Společnost DENZE Tours and Travels usiluje o vytváření zářivých vzpomínek pro vás při každé cestě. Jsme oddáni zdokonalování cestovních zážitků ve všech směrech a nabízíme velmi personalizovanou službu a velkou oddanost porozumění potřebám cestovatelů.",
+      "mission": "Společnost DENZE Tours and Travels se zavazuje plně porozumět vašim cestovním preferencím, abychom mohli poskytnout nejvýznamnější, autentické a osobní nebo skupinové zážitky. Těšíme se na spolupráci s vámi při každé vaší dobrodružství a cestě s velkým potěšením."
+  },
+  "searchtours": "Hledat zájezdy",
+  "details": {
+      "valid": "Platné do",
+      "night": "nocí",
+      "days": "dnů",
+      "rates": "Sazby",
+      "includes": "Zahrnuto",
+      "activity": "Aktivity",
+      "min": "Min",
+      "max": "Max",
+      "interest": "Zajímá vás to?",
+      "name": "Jméno",
+      "email": "Email",
+      "phone": "Telefon",
+      "enquiry": "Dotaz",
+      "send": "Odeslat",
+      "off": "sleva"
+  },
+  "location": "Lokalita",
+  "social": "Sociální média",
+  "contact": {
+      "title": "Kontaktujte nás",
+      "caption": "Kontaktujte nás",
+      "leave": "Zanechte nám své údaje",
+      "desc": "Kontaktujte nás ještě dnes, abyste začali plánovat svůj vysněný pobyt! Ať už máte otázky, chcete upravit svůj itinerář nebo potřebujete pomoc, náš tým je tu, aby vám pomohl.",
+      "name": "Celé jméno",
+      "sub": "Předmět",
+      "message": "Zpráva",
+      "submit": "Odeslat nyní",
+      "location": "Lokalita: Hurlingham Plaza, podél Argwings Kodhek Road, Nairobi, Keňa",
+      "phone1": "Celosvětově: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Evropa/USA: +41 779 361 338",
+      "phone3": "Spojené království: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "ÚSPĚCH",
+      "message": "Váš dotaz byl přijat.",
+      "error": "CHYBA",
+      "err": "Došlo k chybě. Prosím, zkuste to znovu."
   }
-  
+}

@@ -1,5 +1,5 @@
 import Wrapper from "../../layouts/Wrapper";
-import { Box, Container, Stack, Typography, Grid, Divider, Button, Paper } from "@mui/material";
+import { Box, Container,Table, TableHead, TableRow, TableCell, Stack, Typography, Grid, Divider, Button, Paper, TableBody } from "@mui/material";
 import { CalendarMonth, LabelImportant, Public, LocationOn,  Timer, People,TrendingUp} from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
@@ -117,8 +117,33 @@ export default function PackageDetails(){
                 <Typography color="inherit" variant="body1">{t("details.min")}. {data.minimum || '-'}</Typography>
                 </Stack>
                   </Grid>
-
              </Stack>
+
+             {data.hotels && data.hotels.length > 0 && 
+             <Table>
+              <TableHead>
+               <TableRow>
+                  <TableCell>Hotel</TableCell>
+                  <TableCell>Price</TableCell>
+               </TableRow>
+              </TableHead>
+              <TableBody>
+               {data.hotels.map((hotel)=>{
+                 <TableRow
+                 key={hotel.hotelname}
+                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+               >
+               <TableCell component="th" scope="row">
+                {hotel.hotelname}
+              </TableCell>
+              <TableCell align="right">{hotel.currency} {hotel.price}</TableCell>
+               </TableRow>
+               })}
+              </TableBody>
+            </Table>
+            }
+
+            
             <Grid direction="column" container gap={4} marginTop={2}>
             {data.rates && data.rates.length > 0 &&
             <>

@@ -19,6 +19,12 @@ export default function UpdatePackage(){
         pricerate: 0
     });
     const [rates, setRates] = useState([])
+    const [hotel,setHotel] = useState({
+        hotelname:"",
+        price:"",
+        currency:""
+    })
+    const [hotels,setHotels] = useState([])
     const [inclusive,setInclusive] = useState({
         desc:''
     })
@@ -61,6 +67,13 @@ export default function UpdatePackage(){
             [name]:value
         }));
     };
+    const handleChange4 = (e) => {
+        const { name, value } = e.target;
+        setHotel((prev) => ({
+            ...prev,
+            [name]:value
+        }));
+    };
      // Handle button click
      const handleAdd = () => {
         // Add the rate object to the rates array
@@ -79,6 +92,15 @@ export default function UpdatePackage(){
             desc:''
         })
     };
+    const handleAdd3 = () => {
+        // Add the rate object to the rates array
+        setHotels((prevHotels) => [...prevHotels, hotel]);
+        setHotel({
+            hotelname:"",
+            price:"",
+            currency:""
+        });
+    };
     const handleDelete = (index) => {
         // Remove the rate at the specified index
         setRates((prevRates) => prevRates.filter((_, i) => i !== index));
@@ -86,6 +108,9 @@ export default function UpdatePackage(){
     const handleDelete2 = (index) => {
         // Remove the rate at the specified index
         setInclusives((prevInc) => prevInc.filter((_, i) => i !== index));
+    };
+    const handleDelete3 = (index) => {
+        setHotels((prevHotels) => prevHotels.filter((_, i) => i !== index));
     };
     const handleCheckboxChange = (label) => {
         if(activities.includes(label)){
@@ -104,7 +129,7 @@ export default function UpdatePackage(){
         setLoading(true)
         const cover = image ? await handleFileUpload(image) : undefined
         const post = cover ? cover.secure_url : preview
-        const newdata = {...tour,country:country,region:region, poster:post,rates:rates, inclusives:inclusives, activity:activities}
+        const newdata = {...tour,country:country,region:region, poster:post,rates:rates, hotels:hotels, inclusives:inclusives, activity:activities}
         delete newdata._id
         delete newdata.createdAt
         await client.put(`/update/${id}`, newdata).then((response)=>{
@@ -124,6 +149,7 @@ export default function UpdatePackage(){
         setRates(response.data.package.rates)
         setInclusives(response.data.package.inclusives)
         setActivities(response.data.package.activity)
+        setHotels(response.data.package.hotels)
        })
     },[id])
     return <AdminDashboard>
@@ -162,9 +188,32 @@ export default function UpdatePackage(){
             value={region}
             onChange={(val) => setRegion(val)} />
             </Stack>
-            <BasicInput  lbl="Location" value={tour.location} name="location" onChange={handleChange}/>
-            <BasicInput  lbl="Hotel" value={tour.hotel} name="hotel" onChange={handleChange}/>
-            
+            <BasicInput lbl="Location" value={tour.location} name="location" onChange={handleChange}/>
+
+            <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>+ Hotels</Typography>
+           {hotels.length > 0 ? 
+                <Grid container direction="column" gap={2} marginBottom={2}>
+                    {hotels.map((hotel, index) => (
+                        <Stack key={index} direction="row" spacing={2}>
+                            <Typography>{hotel.hotelname} - {hotel.price} {hotel.currency}</Typography> 
+                            <DeleteForever onClick={() => handleDelete3(index)} />
+                        </Stack>
+                    ))}
+                </Grid> 
+                : null
+            }
+           <Stack direction="row" gap={2}>
+           <BasicInput lbl="Hotel" name="hotelname" value={hotel.hotelname} onChange={handleChange4} helperText="Click 'Save' to add hotel"/>
+           <BasicInput lbl="Price" name="price" value={hotel.price} onChange={handleChange4}/>
+           <CustomSelect required lbl="Currency" value={hotel.currency} name="currency" onChange={handleChange4}>
+                <MenuItem value="KES">KES</MenuItem>
+                <MenuItem value="$">USD</MenuItem>
+                <MenuItem value="€">EURO</MenuItem>
+                <MenuItem value="ZAR">RANDS</MenuItem>
+            </CustomSelect>
+            <Typography marginTop={3} onClick={handleAdd3} sx={{cursor:"pointer"}}>Save</Typography>
+            </Stack>
+
             <Stack direction="row" gap={2}>
             <BasicInput  lbl="Price" type="number" value={tour.price} name="price" onChange={handleChange}/>
             <CustomSelect required lbl="Currency" displayEmpty renderValue={()=>tour.currency}  value={tour.currency} name="currency" onChange={handleChange}>

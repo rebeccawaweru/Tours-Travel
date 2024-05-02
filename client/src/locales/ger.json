@@ -1,6 +1,6 @@
 {
-    "navbar": {
-      "slogan": "Für ein glänzendes Reiseerlebnis!",
+  "navbar": {
+      "slogan": "Für ein glitzerndes Reiseerlebnis!",
       "home": "Startseite",
       "about": "Über uns",
       "packages": "Pakete",
@@ -8,6 +8,175 @@
       "contact": "Kontakt",
       "signup": "Registrieren",
       "signin": "Anmelden"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "Besonders",
+          "caption": "7 Tage in der Schweiz"
+      },
+      "second": {
+          "title": "Es ist Zeit für",
+          "caption": "EINEN URLAUB"
+      },
+      "third": {
+          "title": "ÖFFNE DEINE AUGEN FÜR",
+          "caption": "DIE VERSTECKTE WELT"
+      },
+      "fourth": {
+          "title": "Paradies Entfesselt",
+          "caption": "Tauche ein in sonnenverwöhnte Strände"
+      },
+      "fifth": {
+          "title": "Wo die Wellen Flüstern",
+          "caption": "Erinnerungen halten für immer"
+      },
+      "sixth": {
+          "title": "Hoch und Majestätisch",
+          "caption": "Entdecke die Anmut der Giraffe"
+      },
+      "seventh": {
+          "title": "Flamingo Paradies",
+          "caption": "Entdecke den rosa Umzug der Natur"
+      },
+      "eigth": {
+          "title": "Goldener Sand",
+          "caption": "Erkunde die Magie der Wüstendünen"
+      },
+      "nineth": {
+          "title": "Zebra Serengeti",
+          "caption": "Streifen in Bewegung auf der Savanne"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ ZIELE",
+          "caption": "Erkunde über den Horizont hinaus"
+      },
+      "price": {
+          "title": "BESTPREISGARANTIE",
+          "caption": "Bestpreisgarantie, immer"
+      },
+      "care": {
+          "title": "GROßARTIGER KUNDENSERVICE",
+          "caption": "Außergewöhnliche Kundenbetreuung, immer"
+      },
+      "booking": {
+          "title": "SUPERSCHNELLE BUCHUNG",
+          "caption": "Sofortige Buchung, schnelles Reisen"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Stichwort",
+          "name": "stichwort"
+      },
+      "activity": {
+          "label1": "Aktivität",
+          "name": "aktivität",
+          "Swimming": "Schwimmen",
+          "Sightseeing": "Besichtigung",
+          "Hiking": "Wandern",
+          "Ski": "Skifahren",
+          "Paragliding": "Paragliding",
+          "Parachuting": "Fallschirmspringen",
+          "Kayaking": "Kajakfahren",
+          "Baloon Safaris": "Ballon-Safaris",
+          "Game Drive": "Safari"
+      },
+      "destination": {
+          "label1": "Ziel",
+          "name": "kategorie"
+      },
+      "duration": {
+          "label1": "Dauer",
+          "name": "dauer",
+          "1 Day Tour": "1-Tages-Tour",
+          "2 - 4 Days Tour": "2 - 4 Tage Tour",
+          "5 - 7 Days Tour": "5 - 7 Tage Tour",
+          "7+ Days Tour": "7+ Tage Tour"
+      },
+      "Search": "Suchen",
+      "Date": "Datum"
+  },
+  "popular": "Beliebte Tourpakete",
+  "viewall": "Alle Touren anzeigen",
+  "popular2": "Beliebte Ziele",
+  "viewall2": "Alle Ziele anzeigen",
+  "description": "Tauche ein in eine Schatztruhe bezaubernder Orte, die jeweils ein einzigartiges Geflecht aus Kultur, Abenteuer und natürlicher Schönheit bieten. Von ikonischen Wahrzeichen bis hin zu versteckten Schätzen, mach dich mit uns auf eine virtuelle Reise, während wir die Ziele präsentieren, die die Herzen und die Vorstellungskraft von Reisenden auf der ganzen Welt erobern.",
+  "destination": {
+      "heading": "ZIELE",
+      "caption": "Erkunde Touren nach Zielen",
+      "local": "Lokale Reisen",
+      "hot": "Beliebte Auswahl",
+      "holiday": "Internationaler Urlaub",
+      "africa": "Ostafrika",
+      "vacay": "Urlaub",
+      "edu": "Bildungsreisen",
+      "special": "Spezielle Touren",
+      "sports": "Sportveranstaltungen",
+      "charity": "Wohltätigkeitsreisen",
+      "wine": "Weinverkostungstouren",
+      "food": "Food-Festivals",
+      "bird": "Vogelbeobachtungsexpeditionen",
+      "sky": "Himmelsgleitentouren",
+      "learn": "Erfahre mehr",
+      "view": "Alle Touren anzeigen"
+  },
+  "shortabout": "Ein internationaler Reiseveranstalter, der sich auf maßgeschneiderte Geschäfts- und Freizeitpläne sowie luxuriöse Urlaubspakete spezialisiert hat, um Reisenden makellose Ferien und ein glitzerndes Reiseerlebnis zu bieten.",
+  "longabout": "Ein internationaler Reiseveranstalter, der sich auf maßgeschneiderte Geschäfts- und Freizeitpläne sowie luxuriöse Urlaubspakete spezialisiert hat, um Reisenden makellose Ferien und ein glitzerndes Reiseerlebnis zu bieten. Wir haben ein Portfolio von Weltklasse-Zielen, herrlichen Luxushotels und Resorts sowie luxuriöse Dienstleistungen und Annehmlichkeiten etabliert, die zusammen mit einem hochpersonalisierten Service und einer tadellosen Aufmerksamkeit für jedes Detail bei der Planung des ultimativen Tourerlebnisses angeboten werden.",
+  "footer": {
+      "about": "ÜBER UNS",
+      "top": "TOP-ZIELE",
+      "contact": "KONTAKTINFORMATIONEN",
+      "location": "Ort: Hurlingham Plaza, entlang der Argwings Kodhek Road, Nairobi, Kenia",
+      "tel": "Tel: +254 707 741 232",
+      "copyright": "Copyright © 2024 Denze Tours and Travels. Alle Rechte vorbehalten"
+  },
+  "vsn": "Unsere Vision",
+  "msn": "Unsere Mission",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "DENZE Tours and Travels strebt danach, für dich bei jeder Tour glänzende Erinnerungen zu schaffen. Wir sind bestrebt, die Reiseerfahrungen in jeder Hinsicht zu perfektionieren, und bieten einen äußerst persönlichen Service sowie eine große Hingabe, die Bedürfnisse der Reisenden zu verstehen.",
+      "mission": "DENZE Tours and Travels ist darauf spezialisiert, deine Reisepräferenzen vollständig zu verstehen, um das bedeutendste, authentischste und persönlichste oder Gruppenerlebnis zu bieten. Wir freuen uns darauf, dich bei jedem deiner Abenteuer und Touren mit großer Freude zu begleiten."
+  },
+  "searchtours": "Touren suchen",
+  "details": {
+      "valid": "Gültig bis",
+      "night": "Nächte",
+      "days": "Tage",
+      "rates": "Preise",
+      "includes": "Enthält",
+      "activity": "Aktivitäten",
+      "min": "Min",
+      "max": "Max",
+      "interest": "Interessiert?",
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "enquiry": "Anfrage",
+      "send": "Senden",
+      "off": "Rabatt"
+  },
+  "location": "Ort",
+  "social": "Sozial",
+  "contact": {
+      "title": "Kontaktiere uns",
+      "caption": "Nimm Kontakt mit uns auf",
+      "leave": "Hinterlasse uns deine Daten",
+      "desc": "Kontaktiere uns noch heute, um mit der Planung deines Traumurlaubs zu beginnen! Egal, ob du Fragen hast, deine Reiseroute anpassen möchtest oder einfach Hilfe benötigst, unser Team steht dir zur Verfügung.",
+      "name": "Vollständiger Name",
+      "sub": "Betreff",
+      "message": "Nachricht",
+      "submit": "Jetzt absenden",
+      "location": "Ort: Hurlingham Plaza, entlang der Argwings Kodhek Road, Nairobi, Kenia",
+      "phone1": "Weltweit: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Europa/USA: +41 779 361 338",
+      "phone3": "Vereinigtes Königreich: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "ERFOLG",
+      "message": "Deine Anfrage wurde erhalten.",
+      "error": "FEHLER",
+      "err": "Ein Fehler ist aufgetreten. Bitte versuche es erneut."
   }
-  
+}

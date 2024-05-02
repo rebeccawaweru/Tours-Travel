@@ -1,13 +1,182 @@
 {
-    "navbar": {
-      "slogan": "为了一个闪亮的旅行体验！",
-      "home": "主页",
+  "navbar": {
+      "slogan": "为了一个闪闪发光的旅行体验！",
+      "home": "首页",
       "about": "关于",
       "packages": "套餐",
       "destinations": "目的地",
       "contact": "联系我们",
       "signup": "注册",
       "signin": "登录"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "特别",
+          "caption": "瑞士7天"
+      },
+      "second": {
+          "title": "是时候",
+          "caption": "去度假了"
+      },
+      "third": {
+          "title": "打开你的眼睛",
+          "caption": "探索隐藏的世界"
+      },
+      "fourth": {
+          "title": "乐园解锁",
+          "caption": "沉浸在阳光普照的海岸中"
+      },
+      "fifth": {
+          "title": "波浪低语之处",
+          "caption": "记忆永存"
+      },
+      "sixth": {
+          "title": "高大而威严",
+          "caption": "发现长颈鹿的优雅"
+      },
+      "seventh": {
+          "title": "火烈鸟天堂",
+          "caption": "发现大自然的粉色游行"
+      },
+      "eigth": {
+          "title": "金色沙滩",
+          "caption": "探索沙漠沙丘的魔力"
+      },
+      "nineth": {
+          "title": "斑马塞伦盖蒂",
+          "caption": "在大草原上感受斑纹的动态"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ 目的地",
+          "caption": "探索更远的地平线"
+      },
+      "price": {
+          "title": "最优价格保证",
+          "caption": "始终保证最优价格"
+      },
+      "care": {
+          "title": "出色的客户服务",
+          "caption": "始终提供卓越的客户关怀"
+      },
+      "booking": {
+          "title": "超快速预订",
+          "caption": "即时预订，快捷旅行"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "关键字",
+          "name": "keyword"
+      },
+      "activity": {
+          "label1": "活动",
+          "name": "activity",
+          "Swimming": "游泳",
+          "Sightseeing": "观光",
+          "Hiking": "徒步旅行",
+          "Ski": "滑雪",
+          "Paragliding": "滑翔伞",
+          "Parachuting": "跳伞",
+          "Kayaking": "皮划艇",
+          "Baloon Safaris": "热气球野生动物园",
+          "Game Drive": "野生动物园游览"
+      },
+      "destination": {
+          "label1": "目的地",
+          "name": "category"
+      },
+      "duration": {
+          "label1": "持续时间",
+          "name": "duration",
+          "1 Day Tour": "1天旅游",
+          "2 - 4 Days Tour": "2 - 4天旅游",
+          "5 - 7 Days Tour": "5 - 7天旅游",
+          "7+ Days Tour": "7天以上旅游"
+      },
+      "Search": "搜索",
+      "Date": "日期"
+  },
+  "popular": "热门旅游套餐",
+  "viewall": "查看所有旅游",
+  "popular2": "热门目的地",
+  "viewall2": "查看所有目的地",
+  "description": "探索一个充满迷人景点的宝库，每个景点都提供独特的文化、冒险和自然之美。从标志性地标到隐藏的宝石，让我们与您一起展示那些俘获了全球旅行者心灵和想象力的目的地。",
+  "destination": {
+      "heading": "目的地",
+      "caption": "按目的地探索旅游",
+      "local": "本地旅行",
+      "hot": "热门选择",
+      "holiday": "国际假期",
+      "africa": "东非",
+      "vacay": "度假",
+      "edu": "教育旅游",
+      "special": "特别旅游",
+      "sports": "体育赛事",
+      "charity": "慈善旅游",
+      "wine": "品酒之旅",
+      "food": "美食节",
+      "bird": "观鸟探险",
+      "sky": "滑翔之旅",
+      "learn": "了解更多",
+      "view": "查看所有旅游"
+  },
+  "shortabout": "我们是一家国际旅行社，专门提供定制商务和休闲行程，以及豪华度假套餐，旨在为旅行者提供完美无瑕的假期和闪闪发光的旅行体验。",
+  "longabout": "我们是一家国际旅行社，专门提供定制商务和休闲行程，以及豪华度假套餐，旨在为旅行者提供完美无瑕的假期和闪闪发光的旅行体验。我们建立了一个世界一流的精致目的地组合，以及令人惊叹的高档酒店和度假村，同时提供与高度个性化的服务和对每个细节的无可挑剔的关注相结合的豪华服务和设施，以规划终极旅游体验。",
+  "footer": {
+      "about": "关于我们",
+      "top": "热门目的地",
+      "contact": "联系信息",
+      "location": "位置：内罗毕，肯尼亚，阿格文斯科德黑路，Hurlingham Plaza",
+      "tel": "电话：+254 707 741 232",
+      "copyright": "版权 © 2024 Denze Tours and Travels。保留所有权"
+  },
+  "vsn": "我们的愿景",
+  "msn": "我们的使命",
+  "about": {
+      "company": "丹泽旅游",
+      "vision": "丹泽旅游致力于为您创造闪耀的回忆。我们致力于在各个方面完善旅行体验，并提供高度个性化的服务以及对了解旅行者需求的极大关注。",
+      "mission": "丹泽旅游致力于充分了解您的旅行偏好，以提供最有意义、最真实和最个人化的个人或团体体验。我们期待与您一起愉快地参与每次冒险和旅行。"
+  },
+  "searchtours": "搜索旅游",
+  "details": {
+      "valid": "有效期至",
+      "night": "夜",
+      "days": "天",
+      "rates": "费率",
+      "includes": "包括",
+      "activity": "活动",
+      "min": "最低",
+      "max": "最高",
+      "interest": "您感兴趣吗？",
+      "name": "姓名",
+      "email": "电子邮件",
+      "phone": "电话",
+      "enquiry": "询问",
+      "send": "发送",
+      "off": "折扣"
+  },
+  "location": "位置",
+  "social": "社交媒体",
+  "contact": {
+      "title": "联系我们",
+      "caption": "联系我们",
+      "leave": "留下您的信息",
+      "desc": "今天就与我们联系，开始计划您梦寐以求的假期！无论您是否有问题，想要定制您的行程，还是仅需要帮助，我们的团队都在这里为您提供帮助。",
+      "name": "姓名",
+      "sub": "主题",
+      "message": "消息",
+      "submit": "立即提交",
+      "location": "位置：内罗毕，肯尼亚，阿格文斯科德黑路，Hurlingham Plaza",
+      "phone1": "全球：+254 707 741 232 | +254 769 665 298",
+      "phone2": "欧洲/美国：+41 779 361 338",
+      "phone3": "英国：+44 792 805 4212"
+  },
+  "swal": {
+      "success": "成功",
+      "message": "您的询问已收到。",
+      "error": "错误",
+      "err": "发生错误。请重试。"
   }
-  
+}

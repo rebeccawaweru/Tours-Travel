@@ -1,13 +1,182 @@
 {
-    "navbar": {
-      "slogan": "Per a una experiència de viatge brillant!",
-      "home": "Inici",
-      "about": "Sobre nosaltres",
-      "packages": "Paquets",
-      "destinations": "Destinacions",
-      "contact": "Contacte",
-      "signup": "Registra't",
-      "signin": "Inicia la sessió"
+  "navbar": {
+    "slogan": "Per a una experiència de viatge brillant!",
+    "home": "Inici",
+    "about": "Sobre nosaltres",
+    "packages": "Paquets",
+    "destinations": "Destinacions",
+    "contact": "Contacte",
+    "signup": "Registre",
+    "signin": "Inici de sessió"
+  },
+  "slider": {
+    "first": {
+      "title": "Especial",
+      "caption": "7 dies a Suïssa"
+    },
+    "second": {
+      "title": "És hora de",
+      "caption": "ANAR DE VACANCES"
+    },
+    "third": {
+      "title": "OBRIU ELS ULLS A",
+      "caption": "EL MÓN AMAGAT"
+    },
+    "fourth": {
+      "title": "Paradís Desencadenat",
+      "caption": "Submergeix-te en costes besades pel sol"
+    },
+    "fifth": {
+      "title": "On les ones murmuren",
+      "caption": "Els records duren per sempre"
+    },
+    "sixth": {
+      "title": "Alt i majestuós",
+      "caption": "Descobreix la gràcia de la girafa"
+    },
+    "seventh": {
+      "title": "Refugi de flamencs",
+      "caption": "Descobreix el desfile rosa de la natura"
+    },
+    "eigth": {
+      "title": "Arenes daurades",
+      "caption": "Explora la màgia de les dunes del desert"
+    },
+    "nineth": {
+      "title": "Serengeti de zebres",
+      "caption": "Ratlles en moviment a la sabana"
     }
+  },
+  "quality": {
+    "destination": {
+      "title": "500+ DESTINACIONS",
+      "caption": "Explora més enllà de l'horitzó"
+    },
+    "price": {
+      "title": "GARANTIA DEL MILLOR PREU",
+      "caption": "Garantia del millor preu, sempre"
+    },
+    "care": {
+      "title": "GRAN ATENCIÓ AL CLIENT",
+      "caption": "Atenció al client excepcional sempre"
+    },
+    "booking": {
+      "title": "RESERVA SUPER RÀPIDA",
+      "caption": "Reserva instantània, viatge ràpid"
+    }
+  },
+  "filter": {
+    "keyword": {
+      "label1": "Paraula clau",
+      "name": "paraula_clau"
+    },
+    "activity": {
+      "label1": "Activitat",
+      "name": "activitat",
+      "Swimming": "Nedar",
+      "Sightseeing": "Visita turística",
+      "Hiking": "Senderisme",
+      "Ski": "Esquí",
+      "Paragliding": "Parapent",
+      "Parachuting": "Paracaigudisme",
+      "Kayaking": "Caiac",
+      "Baloon Safaris": "Safaris amb globus",
+      "Game Drive": "Recorregut de joc"
+    },
+    "destination": {
+      "label1": "Destinació",
+      "name": "categoria"
+    },
+    "duration": {
+      "label1": "Durada",
+      "name": "durada",
+      "1 Day Tour": "Visita de 1 dia",
+      "2 - 4 Days Tour": "Visita de 2 a 4 dies",
+      "5 - 7 Days Tour": "Visita de 5 a 7 dies",
+      "7+ Days Tour": "Visita de més de 7 dies"
+    },
+    "Search": "Cerca",
+    "Date": "Data"
+  },
+  "popular": "Paquets de turisme populars",
+  "viewall": "Mostra tots els turismes",
+  "popular2": "Destinacions populars",
+  "viewall2": "Mostra totes les destinacions",
+  "description": "Submergeix-te en un tresor d'indrets encantadors, cadascun oferint un tapís únic de cultura, aventura i bellesa natural. Des de punts d'interès icònics fins a joies ocultes, embarca en un viatge virtual amb nosaltres mentre mostrem les destinacions que captiven els cors i les imaginacions dels viatgers de tot el món.",
+  "destination": {
+    "heading": "DESTINACIONS",
+    "caption": "Explora els turismes per destinacions",
+    "local": "Viatges locals",
+    "hot": "Selecció calenta",
+    "holiday": "Vacances internacionals",
+    "africa": "Àfrica oriental",
+    "vacay": "Vacances",
+    "edu": "Viatges educatius",
+    "special": "Turismes especials",
+    "sports": "Esdeveniments esportius",
+    "charity": "Turismes benèfics",
+    "wine": "Turismes de degustació de vins",
+    "food": "Festivals de menjar",
+    "bird": "Exploracions d'observació d'aus",
+    "sky": "Turismes de vol lliure",
+    "learn": "Més informació",
+    "view": "Mostra tots els turismes"
+  },
+  "shortabout": "Un operador turístic internacional especialitzat en itineraris personalitzats de negocis i oci, i paquets de vacances de luxe amb la intenció de proporcionar als viatgers vacances impecables i una experiència de viatge brillant.",
+  "longabout": "Un operador turístic internacional especialitzat en itineraris personalitzats de negocis i oci, i paquets de vacances de luxe amb la intenció de proporcionar als viatgers vacances impecables i una experiència de viatge brillant. Hem establert un portafoli de destinacions exquisides de classe mundial, meravellosos hotels i resorts de luxe, així com serveis i comoditats de luxe que es ofereixen juntament amb un servei altament personalitzat i atenció impecable a cada detall en la planificació de l'experiència turística definitiva.",
+  "footer": {
+    "about": "SOBRE NOSALTRES",
+    "top": "DESTINACIONS PRINCIPALS",
+    "contact": "INFORMACIÓ DE CONTACTE",
+    "location": "Ubicació: Hurlingham Plaza, al costat del carrer Argwings Kodhek, Nairobi, Kenya",
+    "tel": "Telèfon: +254 707 741 232",
+    "copyright": "Drets d'autor © 2024 Denze Tours and Travels. Tots els drets reservats"
+  },
+  "vsn": "La nostra Visió",
+  "msn": "La nostra Missió",
+  "about": {
+    "company": "DENZE TOURS AND TRAVELS",
+    "vision": "DENZE Tours and Travels esforça-se per crear records brillants per a tu en cada viatge. Estem dedicats a perfeccionar les experiències de viatge de totes les maneres possibles i oferim un servei altament personalitzat i una gran dedicació per entendre les necessitats dels viatgers.",
+    "mission": "DENZE Tours and Travels està dedicat a comprendre completament les vostres preferències de viatge per poder oferir l'experiència més significativa, autèntica i personal o en grup. Esperem associar-nos amb vosaltres en cada aventura i viatge amb molt de gust."
+  },
+  "searchtours": "Cerca Turismes",
+  "details": {
+    "valid": "Vàlid fins al",
+    "night": "nits",
+    "days": "dies",
+    "rates": "Tarifes",
+    "includes": "Inclou",
+    "activity": "Activitats",
+    "min": "Mín",
+    "max": "Màx",
+    "interest": "Esteu interessats?",
+    "name": "Nom",
+    "email": "Correu electrònic",
+    "phone": "Telèfon",
+    "enquiry": "Consulta",
+    "send": "Enviar",
+    "off": "descompte"
+  },
+  "location": "Ubicació",
+  "social": "Xarxes Socials",
+  "contact": {
+    "title": "Posa't en contacte",
+    "caption": "Contacta'ns",
+    "leave": "Deixa'ns la teva informació",
+    "desc": "Posa't en contacte amb nosaltres avui mateix per començar a planificar les teves vacances de somni! Ja sigui que tinguis preguntes, vulguis personalitzar el teu itinerari o simplement necessitis ajuda, el nostre equip està aquí per ajudar-te.",
+    "name": "Nom complet",
+    "sub": "Assumpte",
+    "message": "Missatge",
+    "submit": "Enviar ara",
+    "location": "Hurlingham Plaza, al costat del carrer Argwings Kodhek, Nairobi, Kenya",
+    "phone1": "Global: +254 707 741 232 | +254 769 665 298",
+    "phone2": "Europa/USA: +41 779 361 338",
+    "phone3": "Regne Unit: +44 792 805 4212"
+  },
+  "swal": {
+    "success": "ÈXIT",
+    "message": "S'ha rebut la vostra consulta.",
+    "error": "ERROR",
+    "err": "S'ha produït un error. Si us plau, torneu-ho a intentar."
   }
-  
+}

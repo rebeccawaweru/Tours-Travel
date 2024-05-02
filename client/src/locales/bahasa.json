@@ -1,13 +1,182 @@
 {
-    "navbar": {
-      "slogan": "Untuk Pengalaman Perjalanan yang Berkilau!",
-      "home": "Beranda",
-      "about": "Tentang",
-      "packages": "Paket",
-      "destinations": "Tujuan",
-      "contact": "Kontak",
-      "signup": "Daftar",
-      "signin": "Masuk"
+  "navbar": {
+    "slogan": "Untuk Pengalaman Wisata yang Memikat!",
+    "home": "Beranda",
+    "about": "Tentang",
+    "packages": "Paket",
+    "destinations": "Tujuan",
+    "contact": "Kontak",
+    "signup": "Daftar",
+    "signin": "Masuk"
+  },
+  "slider": {
+    "first": {
+      "title": "Spesial",
+      "caption": "7 hari di Swiss"
+    },
+    "second": {
+      "title": "Saatnya",
+      "caption": "PERGI LIBURAN"
+    },
+    "third": {
+      "title": "BUKA MATA ANDA KE",
+      "caption": "DUNIA TERSEMBUNYI"
+    },
+    "fourth": {
+      "title": "Paradise Unleashed",
+      "caption": "Terjun ke Pantai yang Diselimuti Sinar Matahari"
+    },
+    "fifth": {
+      "title": "Tempat di Mana Ombak Berbisik",
+      "caption": "Kenangan Selalu Abadi"
+    },
+    "sixth": {
+      "title": "Tinggi dan Megah",
+      "caption": "Temukan Keanggunan Jerapah"
+    },
+    "seventh": {
+      "title": "Surga Flamingo",
+      "caption": "Temukan Parade Pink Alam"
+    },
+    "eigth": {
+      "title": "Pasir Emas",
+      "caption": "Jelajahi Keajaiban Gugusan Gurun"
+    },
+    "nineth": {
+      "title": "Serengeti Zebra",
+      "caption": "Garis di Gerakan di Savana"
     }
+  },
+  "quality": {
+    "destination": {
+      "title": "500+ TUJUAN",
+      "caption": "Jelajahi di luar cakrawala"
+    },
+    "price": {
+      "title": "JAMINAN HARGA TERBAIK",
+      "caption": "Jaminan Harga Terbaik, Selalu"
+    },
+    "care": {
+      "title": "PELAYANAN PELANGGAN HEBAT",
+      "caption": "Perhatian Pelanggan yang Luar Biasa Selalu"
+    },
+    "booking": {
+      "title": "PENYELESAIAN PESANAN SUPER CEPAT",
+      "caption": "Pemesanan Instan, Perjalanan Cepat"
+    }
+  },
+  "filter": {
+    "keyword": {
+      "label1": "Kata Kunci",
+      "name": "kata_kunci"
+    },
+    "activity": {
+      "label1": "Aktivitas",
+      "name": "aktivitas",
+      "Swimming": "Renang",
+      "Sightseeing": "Melihat Pemandangan",
+      "Hiking": "Hiking",
+      "Ski": "Ski",
+      "Paragliding": "Paralayang",
+      "Parachuting": "Terjun Payung",
+      "Kayaking": "Kayaking",
+      "Baloon Safaris": "Safari Balon",
+      "Game Drive": "Perjalanan Bermain"
+    },
+    "destination": {
+      "label1": "Tujuan",
+      "name": "kategori"
+    },
+    "duration": {
+      "label1": "Durasi",
+      "name": "durasi",
+      "1 Day Tour": "Tur 1 Hari",
+      "2 - 4 Days Tour": "Tur 2 - 4 Hari",
+      "5 - 7 Days Tour": "Tur 5 - 7 Hari",
+      "7+ Days Tour": "Tur 7+ Hari"
+    },
+    "Search": "Cari",
+    "Date": "Tanggal"
+  },
+  "popular": "Paket Tur Populer",
+  "viewall": "Lihat Semua Tur",
+  "popular2": "Tujuan Populer",
+  "viewall2": "Lihat Semua Tujuan",
+  "description": "Terjun ke dalam peti harta tempat-tempat menarik yang menawarkan kain unik budaya, petualangan, dan keindahan alam. Dari markah tanah ikonik hingga batu permata tersembunyi, mulailah perjalanan virtual bersama kami saat kami mempersembahkan tujuan yang menangkap hati dan imajinasi para pelancong di seluruh dunia.",
+  "destination": {
+    "heading": "TUJUAN",
+    "caption": "Jelajahi Tur Berdasarkan Tujuan",
+    "local": "Perjalanan Lokal",
+    "hot": "Pilihan Panas",
+    "holiday": "Liburan Internasional",
+    "africa": "Afrika Timur",
+    "vacay": "Pengaturan Liburan",
+    "edu": "Tur Edukasi",
+    "special": "Tur Khusus",
+    "sports": "Acara Olahraga",
+    "charity": "Tur Amal",
+    "wine": "Tur Penyelamatan Anggur",
+    "food": "Festival Makanan",
+    "bird": "Eksplorasi Pengamatan Burung",
+    "sky": "Tur Terbang Langit",
+    "learn": "Pelajari Lebih Lanjut",
+    "view": "Lihat semua tur"
+  },
+  "shortabout": "Operator tur internasional yang mengkhususkan diri dalam jadwal perjalanan bisnis dan rekreasi yang disesuaikan, serta paket liburan mewah dengan tujuan menyediakan liburan tanpa cela dan pengalaman wisata yang memikat.",
+  "longabout": "Operator tur internasional yang mengkhususkan diri dalam jadwal perjalanan bisnis dan rekreasi yang disesuaikan, serta paket liburan mewah dengan tujuan menyediakan liburan tanpa cela dan pengalaman wisata yang memikat. Kami telah mendirikan portofolio destinasi eksklusif kelas dunia, hotel dan resor mewah yang luar biasa, serta layanan dan fasilitas mewah yang ditawarkan bersama dengan layanan yang sangat personal dan perhatian yang luar biasa terhadap setiap detail dalam merencanakan pengalaman tur utama.",
+  "footer": {
+    "about": "TENTANG KAMI",
+    "top": "TUJUAN UTAMA",
+    "contact": "INFO KONTAK",
+    "location": "Lokasi: Plaza Hurlingham, Sepanjang Jalan Argwings Kodhek, Nairobi, Kenya",
+    "tel": "Tel: +254 707 741 232",
+    "copyright": "Hak Cipta © 2024 Denze Tours and Travels. Semua Hak Dilindungi"
+  },
+  "vsn": "Visi Kami",
+  "msn": "Misi Kami",
+  "about": {
+    "company": "DENZE TOURS AND TRAVELS",
+    "vision": "DENZE Tours and Travels berusaha untuk menciptakan kenangan yang memikat bagi Anda dalam setiap tur. Kami berkomitmen untuk menyempurnakan pengalaman wisata dengan cara apa pun yang memungkinkan dan menawarkan layanan yang sangat personal serta dedikasi yang besar untuk memahami kebutuhan para pelancong.",
+    "mission": "DENZE Tours and Travels berdedikasi untuk sepenuhnya memahami preferensi perjalanan Anda untuk menyediakan pengalaman personal atau kelompok yang paling bermakna, otentik, dan personal. Kami berharap dapat bermitra dengan Anda dalam setiap petualangan dan tur Anda dengan sangat senang hati."
+  },
+  "searchtours": "Cari Tur",
+  "details": {
+    "valid": "Berlaku Hingga",
+    "night": "malam",
+    "days": "hari",
+    "rates": "Tarif",
+    "includes": "Termasuk",
+    "activity": "Aktivitas",
+    "min": "Min",
+    "max": "Max",
+    "interest": "Apakah Anda tertarik?",
+    "name": "Nama",
+    "email": "Email",
+    "phone": "Telepon",
+    "enquiry": "Pertanyaan",
+    "send": "Kirim",
+    "off": "off"
+  },
+  "location": "Lokasi",
+  "social": "Sosial",
+  "contact": {
+    "title": "Hubungi Kami",
+    "caption": "Hubungi Kami",
+    "leave": "Tinggalkan info Anda",
+    "desc": "Hubungi kami hari ini untuk memulai merencanakan liburan impian Anda! Baik Anda memiliki pertanyaan, ingin menyesuaikan itinerari Anda, atau hanya membutuhkan bantuan, tim kami di sini untuk membantu.",
+    "name": "Nama Lengkap",
+    "sub": "Subyek",
+    "message": "Pesan",
+    "submit": "Kirim Sekarang",
+    "location": "Plaza Hurlingham, Sepanjang Jalan Argwings Kodhek, Nairobi, Kenya",
+    "phone1": "Global: +254 707 741 232 | +254 769 665 298",
+    "phone2": "Eropa / AS: +41 779 361 338",
+    "phone3": "Britania Raya: +44 792 805 4212"
+  },
+  "swal": {
+    "success": "BERHASIL",
+    "message": "Permintaan Anda telah diterima.",
+    "error": "KESALAHAN",
+    "err": "Terjadi kesalahan. Harap coba lagi."
   }
-  
+}

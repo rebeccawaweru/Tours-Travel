@@ -1,6 +1,6 @@
 {
-    "navbar": {
-      "slogan": "為了一段耀眼的旅行體驗！",
+  "navbar": {
+      "slogan": "為了一個閃閃發光的旅行體驗！",
       "home": "首頁",
       "about": "關於",
       "packages": "套餐",
@@ -8,6 +8,175 @@
       "contact": "聯繫我們",
       "signup": "註冊",
       "signin": "登錄"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "特別",
+          "caption": "瑞士7天"
+      },
+      "second": {
+          "title": "是時候",
+          "caption": "去度假了"
+      },
+      "third": {
+          "title": "打開你的眼睛",
+          "caption": "探索隱藏的世界"
+      },
+      "fourth": {
+          "title": "樂園解鎖",
+          "caption": "沉浸在陽光普照的海岸中"
+      },
+      "fifth": {
+          "title": "波浪低語之處",
+          "caption": "記憶永存"
+      },
+      "sixth": {
+          "title": "高大而威嚴",
+          "caption": "發現長頸鹿的優雅"
+      },
+      "seventh": {
+          "title": "火烈鳥天堂",
+          "caption": "發現大自然的粉色遊行"
+      },
+      "eigth": {
+          "title": "金色沙灘",
+          "caption": "探索沙漠沙丘的魔力"
+      },
+      "nineth": {
+          "title": "斑馬塞倫蓋蒂",
+          "caption": "在大草原上感受斑紋的動態"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ 目的地",
+          "caption": "探索更遠的地平線"
+      },
+      "price": {
+          "title": "最優價格保證",
+          "caption": "始終保證最優價格"
+      },
+      "care": {
+          "title": "出色的客戶服務",
+          "caption": "始終提供卓越的客戶關懷"
+      },
+      "booking": {
+          "title": "超快速預訂",
+          "caption": "即時預訂，快捷旅行"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "關鍵字",
+          "name": "keyword"
+      },
+      "activity": {
+          "label1": "活動",
+          "name": "activity",
+          "Swimming": "游泳",
+          "Sightseeing": "觀光",
+          "Hiking": "徒步旅行",
+          "Ski": "滑雪",
+          "Paragliding": "滑翔傘",
+          "Parachuting": "跳傘",
+          "Kayaking": "皮划艇",
+          "Baloon Safaris": "熱氣球野生動物園",
+          "Game Drive": "野生動物園遊覽"
+      },
+      "destination": {
+          "label1": "目的地",
+          "name": "category"
+      },
+      "duration": {
+          "label1": "持續時間",
+          "name": "duration",
+          "1 Day Tour": "1天旅遊",
+          "2 - 4 Days Tour": "2 - 4天旅遊",
+          "5 - 7 Days Tour": "5 - 7天旅遊",
+          "7+ Days Tour": "7天以上旅遊"
+      },
+      "Search": "搜索",
+      "Date": "日期"
+  },
+  "popular": "熱門旅遊套餐",
+  "viewall": "查看所有旅遊",
+  "popular2": "熱門目的地",
+  "viewall2": "查看所有目的地",
+  "description": "探索一個充滿迷人景點的寶庫，每個景點都提供獨特的文化、冒險和自然之美。從標誌性地標到隱藏的寶石，讓我們與您一起展示那些俘獲了全球旅行者心靈和想象力的目的地。",
+  "destination": {
+      "heading": "目的地",
+      "caption": "按目的地探索旅遊",
+      "local": "本地旅行",
+      "hot": "熱門選擇",
+      "holiday": "國際假期",
+      "africa": "東非",
+      "vacay": "度假",
+      "edu": "教育旅遊",
+      "special": "特別旅遊",
+      "sports": "體育賽事",
+      "charity": "慈善旅遊",
+      "wine": "品酒之旅",
+      "food": "美食節",
+      "bird": "觀鳥探險",
+      "sky": "滑翔之旅",
+      "learn": "了解更多",
+      "view": "查看所有旅遊"
+  },
+  "shortabout": "我們是一家國際旅行社，專門提供定制商務和休閒行程，以及豪華度假套餐，旨在為旅行者提供完美無瑕的假期和閃閃發光的旅行體驗。",
+  "longabout": "我們是一家國際旅行社，專門提供定制商務和休閒行程，以及豪華度假套餐，旨在為旅行者提供完美無瑕的假期和閃閃發光的旅行體驗。我們建立了一個世界一流的精致目的地組合，以及令人驚嘆的高檔酒店和度假村，同時提供與高度個性化的服務和對每個細節的無可挑剔的關注相結合的豪華服務和設施，以規劃終極旅遊體驗。",
+  "footer": {
+      "about": "關於我們",
+      "top": "熱門目的地",
+      "contact": "聯繫信息",
+      "location": "位置：內羅畢，肯尼亞，阿格文斯科德黑路，Hurlingham Plaza",
+      "tel": "電話：+254 707 741 232",
+      "copyright": "版權 © 2024 Denze Tours and Travels。保留所有權"
+  },
+  "vsn": "我們的願景",
+  "msn": "我們的使命",
+  "about": {
+      "company": "丹澤旅遊",
+      "vision": "丹澤旅遊致力於為您創造閃耀的回憶。我們致力於在各個方面完善旅行體驗，並提供高度個性化的服務以及對了解旅行者需求的極大關注。",
+      "mission": "丹澤旅遊致力於充分了解您的旅行偏好，以提供最有意義、最真實和最個人化的個人或團體體驗。我們期待與您一起愉快地參與每次冒險和旅行。"
+  },
+  "searchtours": "搜索旅遊",
+  "details": {
+      "valid": "有效期至",
+      "night": "夜",
+      "days": "天",
+      "rates": "費率",
+      "includes": "包括",
+      "activity": "活動",
+      "min": "最低",
+      "max": "最高",
+      "interest": "您感興趣嗎？",
+      "name": "姓名",
+      "email": "電子郵件",
+      "phone": "電話",
+      "enquiry": "詢問",
+      "send": "發送",
+      "off": "折扣"
+  },
+  "location": "位置",
+  "social": "社交媒體",
+  "contact": {
+      "title": "聯繫我們",
+      "caption": "聯繫我們",
+      "leave": "留下您的信息",
+      "desc": "今天就與我們聯繫，開始計劃您夢寐以求的假期！無論您是否有問題，想要定制您的行程，還是僅需要幫助，我們的團隊都在這裡為您提供幫助。",
+      "name": "姓名",
+      "sub": "主題",
+      "message": "消息",
+      "submit": "立即提交",
+      "location": "位置：內羅畢，肯尼亞，阿格文斯科德黑路，Hurlingham Plaza",
+      "phone1": "全球：+254 707 741 232 | +254 769 665 298",
+      "phone2": "歐洲/美國：+41 779 361 338",
+      "phone3": "英國：+44 792 805 4212"
+  },
+  "swal": {
+      "success": "成功",
+      "message": "您的詢問已收到。",
+      "error": "錯誤",
+      "err": "發生錯誤。請重試。"
   }
-  
+}

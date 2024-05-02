@@ -1,13 +1,182 @@
 {
-    "navbar": {
-      "slogan": "Särava reisikogemuse jaoks!",
+  "navbar": {
+      "slogan": "Särava reisikogemuse nimel!",
       "home": "Avaleht",
       "about": "Meist",
       "packages": "Paketid",
       "destinations": "Sihtkohad",
       "contact": "Kontakt",
-      "signup": "Registreeri",
+      "signup": "Registreeru",
       "signin": "Logi sisse"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "Eriti",
+          "caption": "7 päeva Šveitsis"
+      },
+      "second": {
+          "title": "On aeg",
+          "caption": "MINNA PUHKUSELE"
+      },
+      "third": {
+          "title": "AVA OMA SILMAD",
+          "caption": "VARJATUD MAAILMALE"
+      },
+      "fourth": {
+          "title": "Paradiis Valla",
+          "caption": "Sukeldu päikesepaitatud kallastele"
+      },
+      "fifth": {
+          "title": "Kus lained sosistavad",
+          "caption": "Mälestused kestavad igavesti"
+      },
+      "sixth": {
+          "title": "Kõrge ja majesteetlik",
+          "caption": "Avasta kaelkirjaku graatsiat"
+      },
+      "seventh": {
+          "title": "Flamingode Paradiis",
+          "caption": "Avasta looduse roosat paraadi"
+      },
+      "eigth": {
+          "title": "Kuldse Liiva",
+          "caption": "Uuri kõrbe liivaduunide võlusid"
+      },
+      "nineth": {
+          "title": "Sebra Serengeti",
+          "caption": "Triibud liikumises savannis"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ SIHTKOHTA",
+          "caption": "Uuri kaugemale horisondist"
+      },
+      "price": {
+          "title": "PARIM HINNAGARANTII",
+          "caption": "Parim hind alati tagatud"
+      },
+      "care": {
+          "title": "SUUREPÄRANE KLIENDITEENINDUS",
+          "caption": "Erakordne klienditeenindus alati"
+      },
+      "booking": {
+          "title": "SUPER KIIRE BRONEERIMINE",
+          "caption": "Kohe broneerimine, kiire reisimine"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Märksõna",
+          "name": "märksõna"
+      },
+      "activity": {
+          "label1": "Tegevus",
+          "name": "tegevus",
+          "Swimming": "Ujumine",
+          "Sightseeing": "Vaatamisväärsused",
+          "Hiking": "Matkamine",
+          "Ski": "Suusatamine",
+          "Paragliding": "Paraplaanilend",
+          "Parachuting": "Langevarjuhüpped",
+          "Kayaking": "Kajakisõit",
+          "Baloon Safaris": "Õhupallisafarid",
+          "Game Drive": "Safari"
+      },
+      "destination": {
+          "label1": "Sihtkoht",
+          "name": "kategooria"
+      },
+      "duration": {
+          "label1": "Kestus",
+          "name": "kestus",
+          "1 Day Tour": "1-päevane ekskursioon",
+          "2 - 4 Days Tour": "2 - 4 päeva ekskursioon",
+          "5 - 7 Days Tour": "5 - 7 päeva ekskursioon",
+          "7+ Days Tour": "7+ päeva ekskursioon"
+      },
+      "Search": "Otsi",
+      "Date": "Kuupäev"
+  },
+  "popular": "Populaarsed tuuripaketid",
+  "viewall": "Vaata kõiki tuure",
+  "popular2": "Populaarsed sihtkohad",
+  "viewall2": "Vaata kõiki sihtkohti",
+  "description": "Sukeldu võlumispaikade aardekambrisse, kus igaüks pakub unikaalset kultuuri-, seiklus- ja loodusilu vaipa. Ikonilistest vaatamisväärsustest varjatud pärliteni võtke meiega virtuaalne reis, kui me näitame sihtkohti, mis vallutavad reisijate südamed ja kujutlusvõime üle kogu maailma.",
+  "destination": {
+      "heading": "SIHTKOHTADES",
+      "caption": "Uuri tuure sihtkohtade järgi",
+      "local": "Kohalikud reisid",
+      "hot": "Populaarne",
+      "holiday": "Rahvusvaheline puhkus",
+      "africa": "Ida-Aafrika",
+      "vacay": "Puhkus",
+      "edu": "Haridusreisid",
+      "special": "Eri tuurid",
+      "sports": "Spordisündmused",
+      "charity": "Heategevustuurid",
+      "wine": "Veinimaitsetuurid",
+      "food": "Toitlustusfestivalid",
+      "bird": "Linnuvaatlus",
+      "sky": "Taevasõidutuurid",
+      "learn": "Loe lähemalt",
+      "view": "Vaata kõiki tuure"
+  },
+  "shortabout": "Rahvusvaheline reisikorraldaja, kes on spetsialiseerunud kohandatud äri- ja puhkusereisidele ning luksuslikele puhkusepakettidele, et pakkuda reisijatele veatuid puhkuseid ja sädelevaid reisikogemusi.",
+  "longabout": "Rahvusvaheline reisikorraldaja, kes on spetsialiseerunud kohandatud äri- ja puhkusereisidele ning luksuslikele puhkusepakettidele, et pakkuda reisijatele veatuid puhkuseid ja sädelevaid reisikogemusi. Oleme loonud portfelli maailmatasemel eksklusiivsetest sihtkohtadest, imelistest luksushotellidest ja kuurortidest ning luksuslikest teenustest ja mugavustest, mida pakutakse koos väga isikupärase teeninduse ja veatu tähelepanuga igale detailile, et planeerida lõplikku reisikogemust.",
+  "footer": {
+      "about": "MEIST",
+      "top": "TOP SIHTKOHTADES",
+      "contact": "KONTAKTANDMED",
+      "location": "Asukoht: Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Keenia",
+      "tel": "Tel: +254 707 741 232",
+      "copyright": "Autoriõigus © 2024 Denze Tours and Travels. Kõik õigused kaitstud"
+  },
+  "vsn": "Meie nägemus",
+  "msn": "Meie missioon",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "DENZE Tours and Travels püüab luua teile igal reisil sädelevaid mälestusi. Oleme pühendunud reisikogemuste täiustamisele igal võimalikul viisil ning pakume väga isiklikku teenindust ja suurt pühendumist reisijate vajaduste mõistmisele.",
+      "mission": "DENZE Tours and Travels on pühendunud teie reisieelistuste täielikule mõistmisele, et pakkuda kõige tähendusrikkamaid, autentsemaid ja isiklikumaid või grupi kogemusi. Oleme põnevil, et saaksime teiega koostööd teha igas teie seikluses ja tuuris."
+  },
+  "searchtours": "Otsi tuure",
+  "details": {
+      "valid": "Kehtib kuni",
+      "night": "ööd",
+      "days": "päeva",
+      "rates": "Hinnad",
+      "includes": "Sisaldab",
+      "activity": "Tegevused",
+      "min": "Min",
+      "max": "Maks",
+      "interest": "Kas olete huvitatud?",
+      "name": "Nimi",
+      "email": "E-post",
+      "phone": "Telefon",
+      "enquiry": "Päring",
+      "send": "Saada",
+      "off": "soodustus"
+  },
+  "location": "Asukoht",
+  "social": "Sotsiaalmeedia",
+  "contact": {
+      "title": "Võtke ühendust",
+      "caption": "Võtke meiega ühendust",
+      "leave": "Jätke meile oma andmed",
+      "desc": "Võtke meiega täna ühendust, et alustada oma unistuste puhkuse planeerimist! Olgu teil küsimusi, soovite kohandada oma reisikava või vajate lihtsalt abi, meie meeskond on siin, et aidata.",
+      "name": "Täisnimi",
+      "sub": "Teema",
+      "message": "Sõnum",
+      "submit": "Saada kohe",
+      "location": "Asukoht: Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Keenia",
+      "phone1": "Ülemaailmne: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Euroopa/USA: +41 779 361 338",
+      "phone3": "Suurbritannia: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "EDUKALT",
+      "message": "Teie päring on vastu võetud.",
+      "error": "VIGA",
+      "err": "Tekkis viga. Palun proovige uuesti."
   }
-  
+}

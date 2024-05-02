@@ -1,13 +1,182 @@
 {
-    "navbar": {
-      "slogan": "Para sa isang kislap-kislap na karanasan sa paglalakbay!",
+  "navbar": {
+      "slogan": "Para sa isang Kintab na Karanasan sa Paglalakbay!",
       "home": "Bahay",
-      "about": "Tungkol sa",
+      "about": "Tungkol",
       "packages": "Mga Pakete",
       "destinations": "Mga Destinasyon",
       "contact": "Makipag-ugnayan",
-      "signup": "Mag-sign up",
-      "signin": "Mag-sign in"
-    }
+      "signup": "Mag-sign Up",
+      "signin": "Mag-login"
+  },
+  "slider": {
+      "first": {
+          "title": "Espesyal",
+          "caption": "7 araw sa Switzerland"
+      },
+      "second": {
+          "title": "Oras na",
+          "caption": "PUMUNTA SA BAKASYON"
+      },
+      "third": {
+          "title": "BUKSAN ANG IYONG MGA MATA SA",
+          "caption": "ANG LIHIM NA MUNDO"
+      },
+      "fourth": {
+          "title": "Paraisong Nakawala",
+          "caption": "Lumangoy sa mga Sinisikmura ng Araw"
+      },
+      "fifth": {
+          "title": "Kung Saan Ang Alon Ay Nagwawhisper",
+          "caption": "Ang Mga Alaalang Bumabalot Magpakailanman"
+      },
+      "sixth": {
+          "title": "Matangkad at Marangal",
+          "caption": "Alamin ang Kagandahan ng Giraffe"
+      },
+      "seventh": {
+          "title": "Flamingo Haven",
+          "caption": "Alamin ang Pink Parade ng Kalikasan"
+      },
+      "eigth": {
+          "title": "Gintong Buhangin",
+          "caption": "I-explore ang Sumpa ng mga Disyerto"
+      },
+      "nineth": {
+          "title": "Zebra Serengeti",
+          "caption": "Mga Tuldok na Gumagalaw sa Savannah"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ MGA DESTINASYON",
+          "caption": "Mag-explore sa labas ng horison"
+      },
+      "price": {
+          "title": "PINAKAMAHUSAY NA GARANTIYA SA PRESYO",
+          "caption": "Pinakamahusay na Garantiya sa Presyo, Lagi"
+      },
+      "care": {
+          "title": "MAGALING NA CUSTOMER",
+          "caption": "Espesyal na Alaga sa mga Customer Lagi"
+      },
+      "booking": {
+          "title": "SUPER BILIS NG PAGBUBOOK",
+          "caption": "Instant Booking, Mabilis na Paglalakbay"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Keyword",
+          "name": "keyword"
+      },
+      "activity": {
+          "label1": "Aktibidad",
+          "name": "aktibidad",
+          "Swimming": "Paglangoy",
+          "Sightseeing": "Pagtingin sa Tanawin",
+          "Hiking": "Pag-aakyat",
+          "Ski": "Ski",
+          "Paragliding": "Paragliding",
+          "Parachuting": "Parachuting",
+          "Kayaking": "Kayaking",
+          "Baloon Safaris": "Baloon Safaris",
+          "Game Drive": "Game Drive"
+      },
+      "destination": {
+          "label1": "Destinasyon",
+          "name": "kategorya"
+      },
+      "duration": {
+          "label1": "Tagal",
+          "name": "tagal",
+          "1 Day Tour": "1 Araw na Tour",
+          "2 - 4 Days Tour": "2 - 4 Araw na Tour",
+          "5 - 7 Days Tour": "5 - 7 Araw na Tour",
+          "7+ Days Tour": "7+ Araw na Tour"
+      },
+      "Search": "Maghanap",
+      "Date": "Petsa"
+  },
+  "popular": "Mga Sikat na Pakete sa Tur",
+  "viewall": "Tingnan Lahat ng Mga Tour",
+  "popular2": "Mga Sikat na Destinasyon",
+  "viewall2": "Tingnan Lahat ng Mga Destinasyon",
+  "description": "Lumubog sa isang kayamanang imbakan ng mga kaakit-akit na lokasyon, bawat isa ay nag-aalok ng isang natatanging kutson ng kultura, pakikipagsapalaran, at likas na kagandahan. Mula sa mga kilalang landmark hanggang sa mga nakatagong ginto, maglakbay kasama namin habang ipinapakita namin ang mga destinasyon na kumukuha sa mga puso at imahinasyon ng mga manlalakbay sa buong mundo.",
+  "destination": {
+      "heading": "MGA DESTINASYON",
+      "caption": "Mag-explore ng mga Tour Ayon sa Mga Destinasyon",
+      "local": "Lokal na Paglalakbay",
+      "hot": "Mainit na Pinili",
+      "holiday": "Internasyonal na Bakasyon",
+      "africa": "Silangang Africa",
+      "vacay": "Bakasyon",
+      "edu": "Edukasyunal na Mga Tour",
+      "special": "Espesyal na Mga Tour",
+      "sports": "Mga Pangyayari sa Isports",
+      "charity": "Mga Tour sa Charity",
+      "wine": "Mga Tour sa Paghigop ng Alak",
+      "food": "Mga Pista ng Pagkain",
+      "bird": "Mga Tour sa Pagnanood ng mga Ibon",
+      "sky": "Mga Tour sa Pag-Glide sa Kalangitan",
+      "learn": "Matuto Pa",
+      "view": "Tingnan ang Lahat ng Mga Tour"
+  },
+  "shortabout": "Isang internasyonal na tagapag-organisa ng tour na nagspecialize sa pasadyang negosyo at libangan itineraries, at mga de-lux na pakete sa bakasyon na may layuning magbigay sa mga manlalakbay ng walang kapintasan na bakasyon at kintab na karanasan sa paglalakbay.",
+  "longabout": "Isang internasyonal na tagapag-organisa ng tour na nagspecialize sa pasadyang negosyo at libangan itineraries, at mga de-lux na pakete sa bakasyon na may layuning magbigay sa mga manlalakbay ng walang kapintasan na bakasyon at kintab na karanasan sa paglalakbay. Itinatag namin ang isang portfolio ng mga prestihiyosong destinasyon sa buong mundo, kamangha-manghang de-lux na mga hotel at resort, pati na rin ang mga serbisyo at mga amenity na de-lux na inaalok kasama ang napaka-personalisadong serbisyo at walang kapintasang pansin sa bawat detalye sa pagpaplano ng pinakamataas na karanasan sa paglalakbay.",
+  "footer": {
+      "about": "TUNGKOL SA AMIN",
+      "top": "MGA TOP NA DESTINASYON",
+      "contact": "IMPORMASYON SA PAGKONTAK",
+      "location": "Lokasyon: Hurlingham Plaza, Kasama ang Argwings Kodhek Road, Nairobi, Kenya",
+      "tel": "Tel: +254 707 741 232",
+      "copyright": "Karapatan © 2024 Denze Tours and Travels. Lahat ng Karapatan ay Nakalaan"
+  },
+  "vsn": "Ang Aming Pangitain",
+  "msn": "Ang Aming Misyon",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "Pinagsisikapan ng DENZE Tours and Travels na lumikha ng kintab na mga alaala para sa iyo sa bawat biyahe. Kami ay nakatuon sa pagpapabuti ng mga karanasan sa paglalakbay sa anumang paraan at nag-aalok ng napakapersonal na serbisyo at malaking dedikasyon sa pag-unawa sa mga pangangailangan ng mga manlalakbay.",
+      "mission": "Ang DENZE Tours and Travels ay itinatag para lubusan unawain ang iyong mga kagustuhan sa paglalakbay upang magbigay ng pinakamakabuluhang, tunay, at personal o pangkat na karanasan. Kami ay umaasa na makipagtulungan sa iyo sa iyong bawat pakikipagsapalaran at biyahe na may malaking kasiyahan."
+  },
+  "searchtours": "Maghanap ng mga Tour",
+  "details": {
+      "valid": "Bisa Hanggang",
+      "night": "gabi",
+      "days": "araw",
+      "rates": "Mga Rate",
+      "includes": "Kasama",
+      "activity": "Aktibidades",
+      "min": "Min",
+      "max": "Max",
+      "interest": "Interesado ka ba?",
+      "name": "Pangalan",
+      "email": "Email",
+      "phone": "Telepono",
+      "enquiry": "Pagsisiyasat",
+      "send": "Ipadala",
+      "off": "diskwento"
+  },
+  "location": "Lokasyon",
+  "social": "Panlipunang Media",
+  "contact": {
+      "title": "Makipag-ugnayan",
+      "caption": "Makipag-ugnayan sa Amin",
+      "leave": "Iwanan ang iyong impormasyon",
+      "desc": "Makipag-ugnay sa amin ngayon upang simulan ang pagpaplano ng iyong pangarap na pag-alis! Kung mayroon kang mga tanong, nais na baguhin ang iyong itinakdang plano, o kailangan ng tulong, and aming koponan ay narito upang tumulong.",
+      "name": "Buong Pangalan",
+      "sub": "Paksa",
+      "message": "Mensahe",
+      "submit": "Ipasa ngayon",
+      "location": "Lokasyon: Hurlingham Plaza, Kasama ang Argwings Kodhek Road, Nairobi, Kenya",
+      "phone1": "Global: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Europe/USA: +41 779 361 338",
+      "phone3": "United Kingdom: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "TAGUMPAY",
+      "message": "Natanggap ang iyong pagsisiyasat.",
+      "error": "KAMALIAN",
+      "err": "May nangyaring kamalian. Subukan muli."
   }
-  
+}

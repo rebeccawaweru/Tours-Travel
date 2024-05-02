@@ -17,6 +17,12 @@ export default function CreatePackage(){
         pricerate: 0
     });
     const [rates, setRates] = useState([])
+    const [hotel,setHotel] = useState({
+        hotelname:"",
+        price:"",
+        currency:""
+    })
+    const [hotels,setHotels] = useState([])
     const [inclusive,setInclusive] = useState({
         desc:''
     })
@@ -58,6 +64,13 @@ export default function CreatePackage(){
             [name]:value
         }));
     };
+    const handleChange4 = (e) => {
+        const { name, value } = e.target;
+        setHotel((prev) => ({
+            ...prev,
+            [name]:value
+        }));
+    };
 
 
     // Handle button click
@@ -78,6 +91,16 @@ export default function CreatePackage(){
             desc:''
         })
     };
+    const handleAdd3 = () => {
+        // Add the rate object to the rates array
+        setHotels((prevHotels) => [...prevHotels, hotel]);
+        setHotel({
+            hotelname:"",
+            price:"",
+            currency:""
+        });
+    };
+
     const handleDelete = (index) => {
         // Remove the rate at the specified index
         setRates((prevRates) => prevRates.filter((_, i) => i !== index));
@@ -85,6 +108,9 @@ export default function CreatePackage(){
     const handleDelete2 = (index) => {
         // Remove the rate at the specified index
         setInclusives((prevInc) => prevInc.filter((_, i) => i !== index));
+    };
+    const handleDelete3 = (index) => {
+        setHotels((prevHotels) => prevHotels.filter((_, i) => i !== index));
     };
     const handleCheckboxChange = (label) => {
         if(activities.includes(label)){
@@ -102,7 +128,7 @@ export default function CreatePackage(){
         e.preventDefault()
         setLoading(true)
         const cover = await handleFileUpload(image)
-        const data = {...tour, country:country,region:region,poster:cover.secure_url, rates:rates, inclusives:inclusives, activity:activities}
+        const data = {...tour, country:country,region:region,poster:cover.secure_url, rates:rates,hotels:hotels, inclusives:inclusives, activity:activities}
         await client.post('/new', data).then((response)=>{
             setLoading(false)
              if(response.data.success){
@@ -147,9 +173,32 @@ export default function CreatePackage(){
 
             <BasicInput lbl="Location" name="location" onChange={handleChange}/>
 
-           <BasicInput lbl="Hotel" name="hotel" onChange={handleChange}/>
+           <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>+ Hotels</Typography>
+           {hotels.length > 0 ? 
+                <Grid container direction="column" gap={2} marginBottom={2}>
+                    {hotels.map((hotel, index) => (
+                        <Stack key={index} direction="row" spacing={2}>
+                            <Typography>{hotel.hotelname} - {hotel.price} {hotel.currency}</Typography> 
+                            <DeleteForever onClick={() => handleDelete3(index)} />
+                        </Stack>
+                    ))}
+                </Grid> 
+                : null
+            }
            <Stack direction="row" gap={2}>
-            <BasicInput required lbl="Price" type="number" name="price" onChange={handleChange}/>
+           <BasicInput lbl="Hotel" name="hotelname" value={hotel.hotelname} onChange={handleChange4} helperText="Click 'Save' to add hotel"/>
+           <BasicInput lbl="Price" name="price" value={hotel.price} onChange={handleChange4}/>
+           <CustomSelect required lbl="Currency" value={hotel.currency} name="currency" onChange={handleChange4}>
+                <MenuItem value="KES">KES</MenuItem>
+                <MenuItem value="$">USD</MenuItem>
+                <MenuItem value="€">EURO</MenuItem>
+                <MenuItem value="ZAR">RANDS</MenuItem>
+            </CustomSelect>
+            <Typography marginTop={3} onClick={handleAdd3} sx={{cursor:"pointer"}}>Save</Typography>
+            </Stack>
+
+           <Stack direction="row" gap={2}>
+            <BasicInput required lbl="Display Price" type="number" name="price"  onChange={handleChange}/>
             <CustomSelect required lbl="Currency" value={tour.currency} name="currency" onChange={handleChange}>
                 <MenuItem value="KES">KES</MenuItem>
                 <MenuItem value="$">USD</MenuItem>

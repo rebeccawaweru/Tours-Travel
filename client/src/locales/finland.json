@@ -1,13 +1,182 @@
 {
-    "navbar": {
-      "slogan": "Kirkkaan matkakokemuksen puolesta!",
+  "navbar": {
+      "slogan": "Kimalteleva matkakokemus odottaa!",
       "home": "Koti",
-      "about": "Tietoa meistä",
+      "about": "Tietoa",
       "packages": "Paketit",
       "destinations": "Kohteet",
       "contact": "Ota yhteyttä",
       "signup": "Rekisteröidy",
       "signin": "Kirjaudu sisään"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "Erityinen",
+          "caption": "7 päivää Sveitsissä"
+      },
+      "second": {
+          "title": "On aika",
+          "caption": "LÄHTEÄ LOMALLE"
+      },
+      "third": {
+          "title": "AVAA SILMÄSI",
+          "caption": "PIILOITETTUUN MAAILMAAN"
+      },
+      "fourth": {
+          "title": "Paratiisi Vapautuu",
+          "caption": "Sukella auringossa paistaville rannoille"
+      },
+      "fifth": {
+          "title": "Missä aallot kuiskivat",
+          "caption": "Muistot kestävät ikuisesti"
+      },
+      "sixth": {
+          "title": "Pitkä ja mahtava",
+          "caption": "Löydä kirahvin armo"
+      },
+      "seventh": {
+          "title": "Flamingojen keidas",
+          "caption": "Löydä luonnon vaaleanpunainen paraati"
+      },
+      "eigth": {
+          "title": "Kultaiset hiekat",
+          "caption": "Tutustu autiomaan dyynien taikuuteen"
+      },
+      "nineth": {
+          "title": "Seepran Serengeti",
+          "caption": "Raidat liikkeessä savannilla"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ KOHDETTA",
+          "caption": "Tutki horisontin taakse"
+      },
+      "price": {
+          "title": "PARAS HINTATAKUU",
+          "caption": "Paras hintatakuu aina"
+      },
+      "care": {
+          "title": "LOISTAVA ASIAKASPALVELU",
+          "caption": "Poikkeuksellinen asiakaspalvelu aina"
+      },
+      "booking": {
+          "title": "SUPERNOPEA VARAAMINEN",
+          "caption": "Välitön varaaminen, nopea matkustaminen"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Avainsana",
+          "name": "avainsana"
+      },
+      "activity": {
+          "label1": "Toiminta",
+          "name": "toiminta",
+          "Swimming": "Uinti",
+          "Sightseeing": "Nähtävyydet",
+          "Hiking": "Vaellus",
+          "Ski": "Hiihto",
+          "Paragliding": "Liitovarjoilu",
+          "Parachuting": "Laskuvarjohyppy",
+          "Kayaking": "Melonta",
+          "Baloon Safaris": "Ilmapallomatkat",
+          "Game Drive": "Safarimatkat"
+      },
+      "destination": {
+          "label1": "Kohde",
+          "name": "kategoria"
+      },
+      "duration": {
+          "label1": "Kesto",
+          "name": "kesto",
+          "1 Day Tour": "1 päivän kierros",
+          "2 - 4 Days Tour": "2 - 4 päivän kierros",
+          "5 - 7 Days Tour": "5 - 7 päivän kierros",
+          "7+ Days Tour": "7+ päivän kierros"
+      },
+      "Search": "Haku",
+      "Date": "Päivämäärä"
+  },
+  "popular": "Suositut kiertomatkat",
+  "viewall": "Näytä kaikki kierrokset",
+  "popular2": "Suositut kohteet",
+  "viewall2": "Näytä kaikki kohteet",
+  "description": "Sukella lumoavien paikkojen aarrearkkuun, joista jokainen tarjoaa ainutlaatuisen kudoksen kulttuuria, seikkailua ja luonnon kauneutta. Ikonisista maamerkeistä piilotettuihin aarteisiin, lähde virtuaaliselle matkalle kanssamme, kun esittelemme kohteita, jotka valloittavat matkailijoiden sydämet ja mielikuvituksen ympäri maailmaa.",
+  "destination": {
+      "heading": "KOhteet",
+      "caption": "Tutustu kiertomatkojen kohteisiin",
+      "local": "Paikalliset matkat",
+      "hot": "Suosittu valinta",
+      "holiday": "Kansainvälinen loma",
+      "africa": "Itä-Afrikka",
+      "vacay": "Lomat",
+      "edu": "Koulutusmatkat",
+      "special": "Erityiskierrokset",
+      "sports": "Urheilutapahtumat",
+      "charity": "Hyväntekeväisyyskierrokset",
+      "wine": "Viininmaistelukierrokset",
+      "food": "Ruokafestivaalit",
+      "bird": "Lintujen tarkkailumatkat",
+      "sky": "Taivaanliitokierrokset",
+      "learn": "Lue lisää",
+      "view": "Näytä kaikki kierrokset"
+  },
+  "shortabout": "Kansainvälinen matkanjärjestäjä, joka on erikoistunut räätälöityihin liike- ja lomamatkasuunnitelmiin sekä luksuslomapaketteihin tarkoituksenaan tarjota matkailijoille virheettömät lomat ja kimalteleva matkakokemus.",
+  "longabout": "Kansainvälinen matkanjärjestäjä, joka on erikoistunut räätälöityihin liike- ja lomamatkasuunnitelmiin sekä luksuslomapaketteihin tarkoituksenaan tarjota matkailijoille virheettömät lomat ja kimalteleva matkakokemus. Olemme luoneet valikoiman maailmanluokan upeita kohteita, upeita ylellisiä hotelleja ja lomakeskuksia sekä ylellisiä palveluja ja mukavuuksia, jotka tarjotaan yhdessä erittäin henkilökohtaisen palvelun kanssa ja moitteeton huomio jokaiseen yksityiskohtaan matkan suunnittelussa.",
+  "footer": {
+      "about": "Tietoa meistä",
+      "top": "Parhaat kohteet",
+      "contact": "Yhteystiedot",
+      "location": "Sijainti: Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Kenia",
+      "tel": "Puh: +254 707 741 232",
+      "copyright": "Tekijänoikeus © 2024 Denze Tours and Travels. Kaikki oikeudet pidätetään"
+  },
+  "vsn": "Näkymämme",
+  "msn": "Tehtävämme",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "DENZE Tours and Travels pyrkii luomaan kimaltelevia muistoja sinulle jokaisella matkalla. Olemme omistautuneet matkakokemusten täydellistämiseen jokaisella mahdollisella tavalla ja tarjoamme erittäin henkilökohtaista palvelua ja suurta omistautumista matkailijoiden tarpeiden ymmärtämiseen.",
+      "mission": "DENZE Tours and Travels on omistautunut täysin ymmärtämään matkustusmieltymyksesi tarjotakseen merkityksellisimmän, aidoimman ja henkilökohtaisimman tai ryhmäkokemuksen. Odottavat innolla yhteistyötä kanssasi jokaisessa seikkailussasi ja kierroksellasi suurella ilolla."
+  },
+  "searchtours": "Etsi kierroksia",
+  "details": {
+      "valid": "Voimassa asti",
+      "night": "yötä",
+      "days": "päivää",
+      "rates": "Hinnat",
+      "includes": "Sisältää",
+      "activity": "Aktiviteetit",
+      "min": "Minimi",
+      "max": "Maksimi",
+      "interest": "Oletko kiinnostunut?",
+      "name": "Nimi",
+      "email": "Sähköposti",
+      "phone": "Puhelin",
+      "enquiry": "Tiedustelu",
+      "send": "Lähetä",
+      "off": "alennus"
+  },
+  "location": "Sijainti",
+  "social": "Some",
+  "contact": {
+      "title": "Ota yhteyttä",
+      "caption": "Ota meihin yhteyttä",
+      "leave": "Jätä meille tietosi",
+      "desc": "Ota meihin yhteyttä tänään aloittaaksesi unelmiesi lomasi suunnittelun! Olipa sinulla kysyttävää, haluatko muokata matkasuunnitelmaasi tai tarvitsetko vain apua, tiimimme on täällä auttamassa.",
+      "name": "Koko nimi",
+      "sub": "Aihe",
+      "message": "Viesti",
+      "submit": "Lähetä nyt",
+      "location": "Sijainti: Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Kenia",
+      "phone1": "Maailmanlaajuinen: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Eurooppa/USA: +41 779 361 338",
+      "phone3": "Iso-Britannia: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "ONNISTUI",
+      "message": "Tiedustelusi on vastaanotettu.",
+      "error": "VIRHE",
+      "err": "Tapahtui virhe. Yritä uudelleen."
   }
-  
+}
