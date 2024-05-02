@@ -5,8 +5,7 @@ import {useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import { Link } from 'react-router-dom'
 
-
-export default function AdminDashboard({children}, user){
+export default function AdminDashboard({children}){
     const navigate = useNavigate()
     const handleLogout = () =>{
         localStorage.removeItem('user_id')
@@ -28,7 +27,7 @@ export default function AdminDashboard({children}, user){
             <Grid item xs={12} sm={12} md={9} lg={10}  display="flex" flexDirection="column">
              <AppBar position="static" elevation={0}>
                 <Toolbar>
-                  <Typography flexGrow={1}>Welcome, {user}</Typography>
+                  <Typography flexGrow={1}>Welcome, Administrator</Typography>
                   <IconButton sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
                   <IconButton sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' } }} onClick={handleLogout}><Logout/></IconButton>
                 </Toolbar>

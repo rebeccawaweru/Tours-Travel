@@ -6,11 +6,11 @@ import {Box, Grid, Typography} from '@mui/material'
 import { Group, Folder, AccountTree } from "@mui/icons-material";
 import { DataGrid } from '@mui/x-data-grid';
 export default function Dashboard(){
-   const id = localStorage.getItem('user_id')
+  //  const id = localStorage.getItem('user_id')
     const [users, setUsers] = useState([])
-    const user = users && users.length > 0 && users.filter(function(u){
-      return u._id === id
-    })
+    // const user = users && users.length > 0 && users.filter(function(u){
+    //   return u._id === id
+    // })
     const [data, setData] = useState(0)
     const [referral, setReferral] = useState(0)
     const columns = [
@@ -34,7 +34,7 @@ export default function Dashboard(){
     getPackages()
     getReferrals()
     },[])
-    return <AdminDashboard user={user ? user[0].username : 'Admin'}>
+    return <AdminDashboard>
      <BreadCrumb cap1="Report" cap2="Analysis"/>
      <Grid container direction="row" maxWidth gap={4} justifyContent="center">
      <Statistic icon={<Group/>} caption="Users" number={users.length}/>
