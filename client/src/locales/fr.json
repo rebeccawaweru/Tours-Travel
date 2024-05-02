@@ -1,5 +1,12 @@
 {
-  "home": {
-    "message": "Bonjour le monde !"
+  "navbar": {
+    "slogan":"Pour une expérience de voyage pétillante!",
+    "home": "Accueil",
+    "about": "À propos",
+    "packages":"Forfaits",
+    "destinations":"Destinations",
+    "contact": "Contact",
+    "signup":"S'inscrire",
+    "signin":"Se connecter"
   }
 }

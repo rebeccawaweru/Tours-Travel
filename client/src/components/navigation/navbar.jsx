@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { Typography, Toolbar,  AppBar, Box, Stack, IconButton, Container} from '@mui/material';
 import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu, Star } from '@mui/icons-material';
 import LinkItem from './linkitem';
@@ -7,11 +7,10 @@ import CustomDrawer from './drawer';
 import ListItem from './listItem';
 import LanguageSelector from '../languageselector';
 import {motion as m} from 'framer-motion' 
-
+import { useTranslation } from 'react-i18next';
 export default function NavBar({hideToolbar}) {
+  const { t } = useTranslation();
   const [openDrawer, setOpenDrawer] = useState(false);
-  const [translate, setTranslate] = useState(false)
-  const location = useLocation()
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
   };
@@ -34,10 +33,10 @@ export default function NavBar({hideToolbar}) {
           <IconButton><Facebook sx={{ fontSize: 16 }} /></IconButton>
           <a href="https://www.instagram.com/denzetoursandtravels" rel="noreferrer" target='_blank'><IconButton><Instagram sx={{ fontSize: 16 }} /></IconButton></a>
           <a href='https://twitter.com/DENZETours' rel="noreferrer" target='_blank'><IconButton><X sx={{ fontSize: 16 }} /></IconButton></a>
-          <Link className='link' to="/signup"><IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Person sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Sign up</IconButton></Link>
+          <Link className='link' to="/signup"><IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Person sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>{t('navbar.signup')}</IconButton></Link>
           </Box>
           <Box>
-          <Link className='link' to="/signin"> <IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Lock sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>Login</IconButton></Link>
+          <Link className='link' to="/signin"> <IconButton sx={{ fontSize: 14, fontWeight: "bold" }}><Lock sx={{ fontSize: 16, marginRight: 0.8 }} color='primary'/>{t('navbar.signin')}</IconButton></Link>
           </Box>
         </Toolbar>
         <Toolbar>
@@ -47,6 +46,7 @@ export default function NavBar({hideToolbar}) {
                   display:{xs:'none', md:'none', lg:'block'},
                   // backgroundImage: 'linear-gradient(to right, rgba(255, 204, 40, 0.1), rgba(255, 204, 40, 0.1))',
                   overflow: 'hidden',
+                  marginRight:2
               }}>
             <m.h3
                className="slogan"
@@ -57,18 +57,17 @@ export default function NavBar({hideToolbar}) {
                 animation: 'moveLeftToRight 10s linear infinite', // Adjust duration as needed
               }}
             >
-              <i><b>For a Sparkling Travel Experience! <Star fontSize='6' sx={{color:"#FFCA28"}}/> <Star fontSize='6' sx={{color:"#FFCA28"}}/></b></i>
+              <i><b>{t('navbar.slogan')} <Star fontSize='6' sx={{color:"#FFCA28"}}/> <Star fontSize='6' sx={{color:"#FFCA28"}}/></b></i>
               </m.h3>
             </Box>
           </Typography>
           <IconButton sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' } }} onClick={handleDrawerOpen}><Menu /></IconButton>
           <Box width={{sm:"75%", md:"50%"}} justifyContent="space-between" display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }}>
-          <LinkItem to="/" page="Home"/>
-            <LinkItem to="/about" page="About"/>
-            <LinkItem to="/packages" page="Packages"/>
-            <LinkItem to="/destinations" page="Destinations"/>
-           {/* <LinkItem to="/classes" page="Classes"/> */}
-            <LinkItem to="/contact" page="Contact"/>
+          <LinkItem to="/" page={t('navbar.home')}/>
+            <LinkItem to="/about" page={t('navbar.about')}/>
+            <LinkItem to="/packages" page={t('navbar.packages')}/>
+            <LinkItem to="/destinations" page={t('navbar.destinations')}/>
+            <LinkItem to="/contact" page={t('navbar.contact')}/>
           </Box>
         </Toolbar>
       </AppBar>

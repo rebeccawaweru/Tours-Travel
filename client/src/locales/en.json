@@ -1,6 +1,12 @@
 {
-    "home": {
-      "message": "Hello World!",
-      "q1":"Explore beyond the horizon"
+    "navbar": {
+      "slogan":"For a Sparkling Travel Experience!",
+      "home": "Home",
+      "about": "About",
+      "packages":"Packages",
+      "destinations":"Destinations",
+      "contact": "Contact",
+      "signup":"Sign Up",
+      "signin":"Login"
     }
   }
