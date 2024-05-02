@@ -3,11 +3,12 @@ import { useEffect, useState } from "react"
 import client from '../../api/client'
 import { Container, Box, Typography, Stack } from "@mui/material"
 import { Slider, Quality, Package } from "../../components"
-import { content } from "../../utils/helpers"
+import { content, services } from "../../utils/helpers"
 import {CustomImageList, Filter, WhatsAppChat} from "../../components"
 import { KeyboardArrowLeft, KeyboardArrowRight} from "@mui/icons-material"
 import { Link,useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next"
+
 export default function LandingPage(){
   const navigate = useNavigate()
   const { t } = useTranslation();
@@ -34,20 +35,18 @@ export default function LandingPage(){
           <WhatsAppChat/>
         <Slider images={content}/>
         <Box sx={{height:{xs:"50vh", md:"40vh"},backgroundColor:"#2196f3",display:"flex", flexDirection:{xs:"column",md:"row"},justifyContent:"space-around", alignItems:"center"}}>
-          <Quality src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485108/plane_ixfry2.webp" alt="denzedestinations" title="500+ DESTINATIONS" caption="Explore beyond the horizon"/>
-          <Quality src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485109/prices_npfyfs.png" alt="denzeprices" title="BEST PRICE GUARANTEE" caption="Best Price Assurance, Always"/>
-          <Quality src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485115/support_qbin6j.png" alt="denzesupport" title="GREAT CUSTOMER" caption="Exceptional Customer Care Always"/>
-          <Quality src="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485046/calender_yag80u.webp" alt="bookings" title="SUPER FAST BOOKING" caption="Instant Booking, Swift Travel"/>
+          {services.map((service)=>{
+            return <Quality key={service.title} src={service.img} alt={t(service.title)} title={t(service.title)} caption={t(service.caption)}/>
+          })}
         </Box>
-     
-        
+  
         <Box sx={{backgroundImage:`url('https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485103/background_szhgap.jpg')`, backgroundPosition:"center", backgroundSize:"cover"}}>
           <Container maxWidth sx={{backgroundColor: 'rgba(0, 0, 0, 0.9)', paddingY:15, color:"whitesmoke",width:"100%"}}>
           <Filter handleSearch={()=>navigate('/packages')}/>
         </Container>
      
         <Container maxWidth sx={{backgroundColor: 'rgba(0, 0, 0, 0.7)',paddingY:"50px"}}>
-            <Typography sx={{marginBottom:"40px"}} fontSize="large" fontWeight="bold" color="whitesmoke">Popular Tour Packages / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/packages">View All Tours</Link></Typography>
+            <Typography sx={{marginBottom:"40px"}} fontSize="large" fontWeight="bold" color="whitesmoke">{t("popular")} / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/packages">{t("viewall")}</Link></Typography>
            
             <Stack spacing={2} gap={2} direction={{xs:"column", sm:"row"}} justifyContent="center" flexWrap={{sm:"wrap",md:"nowrap"}} alignItems="center" sx={{cursor:"pointer"}}>
             <KeyboardArrowLeft sx={{backgroundColor:"#2196f3", padding:2, color:"whitesmoke", display:{xs:"none",sm:"none",md:"block"}}}/>
@@ -63,8 +62,10 @@ export default function LandingPage(){
         </Box>
      
         <Container maxWidth sx={{paddingY:"40px",backgroundColor:"white"}}>
-            <Typography fontWeight="bold" variant="h6" lineHeight={2}>Popular Destinations / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/destinations">View All Destinations</Link></Typography>
-            <Typography color="#8c8c8c" lineHeight={2}>Dive into a treasure trove of enchanting locales, each offering a unique tapestry of culture, adventure, and natural beauty. From iconic landmarks to hidden gems, embark on a virtual journey with us as we showcase the destinations that capture the hearts and imaginations of travelers worldwide. </Typography>
+            <Typography fontWeight="bold" variant="h6" lineHeight={2}>{t("popular2")} / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/destinations">{t("viewall2")}</Link></Typography>
+            <Typography color="#8c8c8c" lineHeight={2}>
+              {t("description")}
+            </Typography>
         </Container>
         <CustomImageList/>
         </Wrapper>

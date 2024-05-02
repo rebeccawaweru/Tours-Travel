@@ -7,7 +7,9 @@ import { useParams } from "react-router-dom";
 import { BasicInput,Loader } from "../../components";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import { useTranslation } from "react-i18next";
 export default function PackageDetails(){
+   const {t} = useTranslation()
      const {id} = useParams()
     const [data,setData] = useState({})
     const [loading, setLoading] = useState(false)
@@ -85,7 +87,7 @@ export default function PackageDetails(){
             <Grid  direction="column" container gap={4}>
                 <Stack direction="row" spacing={1}>
                 <Timer color="primary"/>
-                <Typography color="inherit" variant="body1">{data.nights}nights {data.days}days</Typography>
+                <Typography color="inherit" variant="body1">{data.nights} {t("details.night")} {data.days} {t("details.days")} </Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
@@ -102,17 +104,17 @@ export default function PackageDetails(){
                 <Grid  direction="column" container gap={4}>
                 <Stack direction="row" spacing={1}>
                 <CalendarMonth color="primary"/>
-                <Typography color="inherit" variant="body1">Valid Till: {data.deadline && new Date(data.deadline).toDateString()}</Typography>
+                <Typography color="inherit" variant="body1">{t("details.valid")}: {data.deadline && new Date(data.deadline).toDateString()}</Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
                 <People color="primary"/>
-                <Typography color="inherit" variant="body1">Max. {data.maximum || '-'}</Typography>
+                <Typography color="inherit" variant="body1">{t("details.max")}. {data.maximum || '-'}</Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
                 <People color="primary"/>
-                <Typography color="inherit" variant="body1">Min. {data.minimum || '-'}</Typography>
+                <Typography color="inherit" variant="body1">{t("details.min")}. {data.minimum || '-'}</Typography>
                 </Stack>
                   </Grid>
 
@@ -121,19 +123,19 @@ export default function PackageDetails(){
             {data.rates && data.rates.length > 0 &&
             <>
            <Divider></Divider>
-           <Typography variant="h5" fontWeight="bold" color="primary">Rates:</Typography>
+           <Typography variant="h5" fontWeight="bold" color="primary">{t("details.rates")}:</Typography>
            {data.rates && data.rates.length > 0 && data.rates.map((item,index)=> {
               return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {item.pricerate}</Typography><hr></hr></Box>
            })}
            </>}
             <Divider></Divider>
-           <Typography variant="h5" fontWeight="bold" color="primary">Includes:</Typography>
+           <Typography variant="h5" fontWeight="bold" color="primary">{t("details.includes")}:</Typography>
            {data.inclusives && data.inclusives.map((item,index)=> {
               return <Stack direction="row" spacing={1}><LabelImportant color="primary"/><Typography key={index} color="inherit" variant="body1">{item.desc}</Typography></Stack>
            })}
            
            <Divider></Divider>
-           <Typography variant="h5" fontWeight="bold" color="primary">Activities</Typography>
+           <Typography variant="h5" fontWeight="bold" color="primary">{t("details.activity")}</Typography>
            <Box display="flex" flexWrap="wrap" gap={2}>
            {data && data.activity && data.activity.length > 0 && data.activity.map((item)=>{
                  return  <Stack direction="row" key={item}><TrendingUp fontSize="small" color="primary"/><Typography color="inherit" variant="body1">{item}</Typography></Stack>
@@ -146,19 +148,19 @@ export default function PackageDetails(){
 
               <Grid height="fit-content"  item container xs={12} md={4} component={Paper} elevation={2} bgcolor="white" direction="column">
                  <Box maxWidth display="flex" justifyContent="center" bgcolor="black" padding={1}>
-                    <Typography color="whitesmoke" variant="body1">{data && data.promotion} % off</Typography>
+                    <Typography color="whitesmoke" variant="body1">{data && data.promotion} % {t("details.off")}</Typography>
                  </Box>
                  <Box maxWidth display="flex" justifyContent="center" bgcolor="#2196f3" padding={3}>
                     <Typography color="whitesmoke" variant="h3">{data.currency} {data && Number(data.price).toLocaleString()}</Typography>
                  </Box>
                 <Box component="form" onSubmit={handleSubmit} padding={4}>
-                <Typography variant="h5" marginBottom={3}>Are you interested? </Typography>
-                <BasicInput required lbl="Name" name="fullname" value={values.fullname} onChange={handleChange}/>
-                <BasicInput required lbl="Email" name="email" value={values.email} onChange={handleChange}/>
-                <BasicInput required lbl="Phone" name="phone" value={values.phone} onChange={handleChange}/>
-                <BasicInput required lbl="Enquiry" name="message" value={values.message} onChange={handleChange} multiline rows={4}/>
+                <Typography variant="h5" marginBottom={3}>{t("details.interest")} </Typography>
+                <BasicInput required lbl={t("details.name")} name="fullname" value={values.fullname} onChange={handleChange}/>
+                <BasicInput required lbl={t("details.email")} name="email" value={values.email} onChange={handleChange}/>
+                <BasicInput required lbl={t("details.phone")} name="phone" value={values.phone} onChange={handleChange}/>
+                <BasicInput required lbl={t("details.enquiry")} name="message" value={values.message} onChange={handleChange} multiline rows={4}/>
                 <Box>
-                {loading ? <Loader/> : <Button type="submit" variant="contained" sx={{color:"whitesmoke"}}>Send</Button>}
+                {loading ? <Loader/> : <Button type="submit" variant="contained" sx={{color:"whitesmoke"}}>{t("details.send")}</Button>}
                 </Box>
 
                 </Box>

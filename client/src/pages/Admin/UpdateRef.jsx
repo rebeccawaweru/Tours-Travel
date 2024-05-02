@@ -72,19 +72,19 @@ export default function UpdateReferal(){
              <BasicInput  lbl="Phone" value={tour.phone} name="phone" onChange={handleChange}/>
             <BasicInput  lbl="Package Title" value={tour.title} name="title" onChange={handleChange}/>
             <CustomSelect lbl="Destination Category" displayEmpty renderValue={()=>tour.category} value={tour.category} name="category" onChange={handleChange}>
-               <MenuItem value="Local Travels">Local Travels</MenuItem>
+            <MenuItem value="Local Travels">Local Travels</MenuItem>
                 <MenuItem value="East Africa">East Africa</MenuItem>
                 <MenuItem value="Hot Pick">Hot Pick</MenuItem>
                 <MenuItem value="International Holiday">International Holiday</MenuItem>
-                <MenuItem value="vacation">Vacations</MenuItem>
-                <MenuItem value="education">Educational Tours</MenuItem>
-                <MenuItem value="special">Special Tours</MenuItem>
-                <MenuItem value="sport">Sporting events</MenuItem>
-                <MenuItem value="charity">Charity Tours</MenuItem>
-                <MenuItem value="wine">Wine tasting tours</MenuItem>
-                <MenuItem value="food">Food festivals</MenuItem>
-                <MenuItem value="birds">Bird watching explorations</MenuItem>
-                <MenuItem value="gliding">Sky gliding tours</MenuItem>
+                <MenuItem value="Vacations">Vacations</MenuItem>
+                <MenuItem value="Educational Tours">Educational Tours</MenuItem>
+                <MenuItem value="Special Tours">Special Tours</MenuItem>
+                <MenuItem value="Sporting events">Sporting events</MenuItem>
+                <MenuItem value="Charity Tours">Charity Tours</MenuItem>
+                <MenuItem value="Wine tasting tours">Wine tasting tours</MenuItem>
+                <MenuItem value="Food festivals">Food festivals</MenuItem>
+                <MenuItem value="Bird watching explorations">Bird watching explorations</MenuItem>
+                <MenuItem value="Sky gliding tours">Sky gliding tours</MenuItem>
             </CustomSelect>
             <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>Country / Region</Typography>
             <Stack direction="row" gap={2} marginBottom={3}>

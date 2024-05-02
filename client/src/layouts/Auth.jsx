@@ -1,6 +1,8 @@
 import Wrapper from "./Wrapper";
 import { Box, Typography, Container } from "@mui/material";
+import { useTranslation } from "react-i18next";
 export default function AuthWrapper (props) {
+    const {t} = useTranslation()
     const {title, caption, children, bg="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485143/warm_ig2cae.jpg"} = props
     return (
         <Wrapper>
@@ -19,7 +21,7 @@ export default function AuthWrapper (props) {
        }}>
 
         <Typography variant="h5" fontWeight="bold" sx={{marginTop:8, letterSpacing:1}}>{title}</Typography>
-        <Typography variant="p" sx={{marginTop:2, letterSpacing:1}}>Home &gt; {caption}</Typography>
+        <Typography variant="p" sx={{marginTop:2, letterSpacing:1}}>{t('navbar.home')} &gt; {caption}</Typography>
        </Box>
         <Container maxWidth sx={{marginY:2}}>
         {children}

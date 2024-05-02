@@ -1,16 +1,18 @@
 import Wrapper from "../../layouts/Wrapper";
 import { Box, Grid, Container, Stack, Typography} from "@mui/material";
-import { Package} from "../../components";
+import { LinkBtn, Package} from "../../components";
 import { LocationSearching } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
 import { itemData } from "../../utils/helpers";
+import { useTranslation } from "react-i18next";
 export default function Category(){
+    const {t} = useTranslation()
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const category = urlParams.get('category')
     const tourdata = itemData.filter(function(item){
-        return item.title === category
+        return t(item.title) === category
     })
     const [data,setData] = useState([])
     const [referrals, setReferrals] = useState([])
@@ -54,25 +56,14 @@ export default function Category(){
         <Typography variant="h4" fontWeight="bold" > {category && `${category}`}</Typography>
         </Stack>
        </Container>
-   
        </Box>
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"50px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:"start",cursor:"pointer"}}>
-        
-       
-                
-                {/* {destinations && destinations.length > 0 ? destinations.map((item)=>{
+                {destinations && destinations.length > 0 ? destinations.map((item)=>{
                     return <Package id={item._id} link={item.link} price={item.price} location={item.location} title={item.title} duration={item.duration} image={item.poster}/>
-                  }) : <p>No tour packages available under {category}. <Button onClick={()=>window.location.replace('/packages')} component="p">Explore all tours</Button></p>
-                }  */}
-                  
-       
-                  <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485121/train_kfyezj.jpg"/>
-             <Package price={3000} image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485099/america_u0clei.webp" title="America – 2 Days in Lake Tahoe" location="America" duration="7 days"/>
-             <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485084/bridge_fmrmqp.jpg"/>
-          
+                  }) : <p>No tour packages available under {category}. <LinkBtn to="/packages" title="Explore all tours"/></p>
+                } 
             </Grid>
-
         </Container>
     </Wrapper>
     )

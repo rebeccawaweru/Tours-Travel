@@ -1,48 +1,48 @@
 import { Container, Box, TextField, Typography, Button, FormControl, Stack, MenuItem, Grid } from "@mui/material";
 import { BasicSelect, BasicInput} from "./inputs";
-import { BubbleChartTwoTone, Search } from "@mui/icons-material";
+import { Search } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 export default function Filter({handleChange, handleSearch}){
-    return (
+   const {t} = useTranslation()
+   return (
         <Container maxWidth>
         <Box component={Stack}  spacing={2}  direction={{xs:"column",sm:"row",md:"row"}} justifyContent="space-between" alignItems="center">
-        {/* <BasicSelect lbl="Keywords"/> */}
-        <BasicInput name="keyword" start={Search} lbl="Keyword" onChange={handleChange}/>
-         <BasicSelect name="activity" lbl="Activity" onChange={handleChange}>
-            <MenuItem value="Swimming">Swimming</MenuItem>
-            <MenuItem value="Sightseeing">Sightseeing</MenuItem>
-            <MenuItem value="Hiking">Hiking</MenuItem>
-            <MenuItem value="Ski">Ski</MenuItem>
-            <MenuItem value="Paragliding">Paragliding</MenuItem>
-            <MenuItem value="Parachuting">Parachuting</MenuItem>
-            <MenuItem value="Kayaking">Kayaking</MenuItem>
-            <MenuItem value="Baloon Safaris">Baloon Safaris</MenuItem>
-            <MenuItem value="Game Drive">Game Drive</MenuItem>
+        <BasicInput name={t('filter.keyword.name')} start={Search} lbl={t('filter.keyword.label1')} onChange={handleChange}/>
+         <BasicSelect name={t('filter.activity.name')} lbl={t('filter.activity.label1')} onChange={handleChange}>
+            <MenuItem value={t('filter.activity.Swimming')}>Swimming</MenuItem>
+            <MenuItem value={t('filter.activity.Sightseeing')}>Sightseeing</MenuItem>
+            <MenuItem value={t('filter.activity.Hiking')}>Hiking</MenuItem>
+            <MenuItem value={t('filter.activity.Ski')}>Ski</MenuItem>
+            <MenuItem value={t('filter.activity.Paragliding')}>Paragliding</MenuItem>
+            <MenuItem value={t('filter.activity.Parachuting')}>Parachuting</MenuItem>
+            <MenuItem value={t('filter.activity.Kayaking')}>Kayaking</MenuItem>
+            <MenuItem value={t('filter.activity.Baloon Safaris')}>Baloon Safaris</MenuItem>
+            <MenuItem value={t('filter.activity.Game Drive')}>Game Drive</MenuItem>
          </BasicSelect>
-         <BasicSelect lbl="Destination" name="category" onChange={handleChange}>
-                <MenuItem value="Local Travels">Local Travels</MenuItem>
-                <MenuItem value="East Africa">East Africa</MenuItem>
-                <MenuItem value="Hot Pick">Hot Pick</MenuItem>
-                <MenuItem value="International Holiday">International Holiday</MenuItem>
-                <MenuItem value="vacation">Vacations</MenuItem>
-                <MenuItem value="education">Educational Tours</MenuItem>
-                <MenuItem value="special">Special Tours</MenuItem>
-                <MenuItem value="sport">Sporting events</MenuItem>
-                <MenuItem value="charity">Charity Tours</MenuItem>
-                <MenuItem value="wine">Wine tasting tours</MenuItem>
-                <MenuItem value="food">Food festivals</MenuItem>
-                <MenuItem value="birds">Bird watching explorations</MenuItem>
-                <MenuItem value="gliding">Sky gliding tours</MenuItem>
-
+         <BasicSelect lbl={t('filter.destination.label1')} name={t('filter.destination.name')} onChange={handleChange}>
+                <MenuItem value={t("destination.local")}>{t("destination.local")}</MenuItem>
+                <MenuItem value={t("destination.africa")}>{t("destination.africa")}</MenuItem>
+                <MenuItem value={t("destination.hot")}>{t("destination.hot")}</MenuItem>
+                <MenuItem value={t("destination.holiday")}>{t("destination.holiday")}</MenuItem>
+                <MenuItem value={t("destination.vacay")}>{t("destination.vacay")}</MenuItem>
+                <MenuItem value={t("destination.edu")}>{t("destination.edu")}</MenuItem>
+                <MenuItem value={t("destination.special")}>{t("destination.special")}</MenuItem>
+                <MenuItem value={t("destination.sports")}>{t("destination.sports")}</MenuItem>
+                <MenuItem value={t("destination.charity")}>{t("destination.charity")}</MenuItem>
+                <MenuItem value={t("destination.wine")}>{t("destination.wine")}</MenuItem>
+                <MenuItem value={t("destination.food")}>{t("destination.food")}</MenuItem>
+                <MenuItem value={t("destination.bird")}>{t("destination.bird")}</MenuItem>
+                <MenuItem value={t("destination.sky")}>{t("destination.sky")}</MenuItem>
         </BasicSelect>
 
-         <BasicSelect name="duration" lbl="Duration" onChange={handleChange}>
-            <MenuItem value="1 day">1 Day Tour</MenuItem>
-            <MenuItem value="2 - 4 Days Tour">2 - 4 Days Tour</MenuItem>
-            <MenuItem value="5 - 7 Days Tour">5 - 7 Days Tour</MenuItem>
-            <MenuItem value="7+ Days Tour">7+ Days Tour</MenuItem>
+         <BasicSelect name={t("filter.duration.name")} lbl={t("filter.duration.label1")} onChange={handleChange}>
+            <MenuItem value={t("filter.duration.1 Day Tour")}>{t("filter.duration.1 Day Tour")}</MenuItem>
+            <MenuItem value={t("filter.duration.2 - 4 Days Tour")}>{t("filter.duration.2 - 4 Days Tour")}</MenuItem>
+            <MenuItem value={t("filter.duration.5 - 7 Days Tour")}>{t("filter.duration.5 - 7 Days Tour")}</MenuItem>
+            <MenuItem value={t("filter.duration.7+ Days Tour")}>{t("filter.duration.7+ Days Tour")}</MenuItem>
          </BasicSelect>
          <FormControl fullWidth size='small'>
-         <Typography fontSize="small" fontWeight="bold">Date</Typography>
+         <Typography fontSize="small" fontWeight="bold">{t("filter.Date")}</Typography>
          <TextField
          onChange={handleChange}
           fullWidth
@@ -54,7 +54,7 @@ export default function Filter({handleChange, handleSearch}){
          </FormControl>
          <Box>
         <label></label>
-        <Button onClick={handleSearch} variant="contained" sx={{marginTop:2}}>Search</Button>
+        <Button onClick={handleSearch} variant="contained" sx={{marginTop:2}}>{t("filter.Search")}</Button>
         </Box>
         </Box>
         </Container>

@@ -3,9 +3,10 @@ import { LocationOn } from '@mui/icons-material';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { itemData } from '../utils/helpers';
+import { useTranslation } from 'react-i18next';
 export default function CustomImageList({...props}) {
     const [hovered, setHovered] = useState(false);
-
+    const {t} = useTranslation()
     const handleMouseEnter = () => {
       setHovered(true);
     };
@@ -33,12 +34,12 @@ export default function CustomImageList({...props}) {
          <Box display={{xs:"block", sm:"block", md:"flex", lg:"flex", xl:"flex"}} justifyContent="space-between" >
            <Stack  direction="row" spacing={1} color="whitesmoke">
             <Typography><LocationOn /></Typography>
-            <Typography variant="h6" fontWeight="bold">{item.title}</Typography>
+            <Typography variant="h6" fontWeight="bold">{t(item.title)}</Typography>
            </Stack>
 
             {/* <Typography marginLeft={{xs:1,sm:1,md:6,lg:16,xl:16}} fontWeight="bold" color="primary">3 Tours</Typography> */}
          </Box>
-            {hovered ? <Typography marginLeft={1} component={Link} to="/destinations" fontWeight="bold" color="primary">View all tours</Typography> : null}
+            {hovered ? <Typography marginLeft={1} component={Link} to="/destinations" fontWeight="bold" color="primary">{t('destination.view')}</Typography> : null}
       
          </Box>
          </Box>

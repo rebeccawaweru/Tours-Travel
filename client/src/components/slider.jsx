@@ -4,11 +4,11 @@ import { Box, Container, IconButton, Button } from '@mui/material';
 import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material';
 import { motion as m } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 const Slider = ({ images, autoSwipeInterval = 7000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState(new Array(images.length).fill(false));
-
+  const {t} = useTranslation()
   useEffect(() => {
     const intervalId = setInterval(handleAutoSwipe, autoSwipeInterval);
     return () => clearInterval(intervalId);
@@ -95,7 +95,7 @@ const Slider = ({ images, autoSwipeInterval = 7000 }) => {
                       animate={{ y: "100%" }}
                       transition={{ delay: 0.5, duration: 1.5 }}
                     >
-                      {image.title}
+                      {t(image.title)} 
                     </m.h3>
                     <m.h2
                       initial={{ x: "-50%" }}
@@ -103,10 +103,10 @@ const Slider = ({ images, autoSwipeInterval = 7000 }) => {
                       transition={{ delay: 0.8, duration: 1.5 }}
                       style={{ color: '#818181', fontSize: "40px", zIndex:2  }}
                     >
-                      {image.caption}
+                      {t(image.caption)}
                     </m.h2>
                     <Button size="medium" variant="contained" sx={{ width: 250, paddingY: 2, zIndex:2  }}>
-                      <Link style={{ textDecoration: "none", color: "whitesmoke" }} to="/destinations">Learn More</Link>
+                      <Link style={{ textDecoration: "none", color: "whitesmoke" }} to="/destinations">{t('destination.learn')}</Link>
                     </Button>
                   </>
                 )}

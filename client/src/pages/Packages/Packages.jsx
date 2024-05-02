@@ -4,7 +4,9 @@ import { Filter, Package} from "../../components";
 import { TravelExplore } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
+import { useTranslation } from "react-i18next";
 export default function Packages(){
+    const {t} = useTranslation()
     const [search, setSearch] = useState(false)
     const [data,setData] = useState([])
     const [referrals, setReferrals] = useState([])
@@ -66,7 +68,7 @@ export default function Packages(){
        <Container maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:16,md:0}}}>
         <Stack direction="row" spacing={1}>
         <TravelExplore fontSize="large"/>
-        <Typography variant="h4" fontWeight="bold" >Search Tours </Typography>
+        <Typography variant="h4" fontWeight="bold">{t("searchtours")} </Typography>
         </Stack>
        </Container>
         <Filter handleChange={handleChange} handleSearch={handleSearch}/>

@@ -8,5 +8,175 @@
       "contact": "Contact",
       "signup":"Sign Up",
       "signin":"Login"
+    },
+    "slider":{
+      "first":{
+        "title":"Special",
+        "caption":"7 days in Switzerland"
+      },
+      "second":{
+        "title":"It is time to",
+        "caption":"GO ON A VACATION"
+      },
+      "third":{
+        "title":"OPEN YOUR EYES TO",
+        "caption":"THE HIDDEN WORLD"
+      },
+      "fourth":{
+        "title":"Paradise Unleashed",
+        "caption":"Dive into Sun-Kissed Shores"
+      },
+      "fifth":{
+        "title":"Where the Waves Whisper",
+        "caption":"Memories Last Forever"
+      },
+      "sixth":{
+        "title":"Tall and Majestic",
+        "caption":"Discover the Grace of the Giraffe"
+      },
+      "seventh":{
+        "title":"Flamingo Haven",
+        "caption":"Discover Nature's Pink Parade"
+      },
+      "eigth":{
+        "title":"Golden Sands",
+        "caption":"Explore the Magic of the Desert Dunes"
+      },
+      "nineth":{
+        "title":"Zebra Serengeti",
+        "caption":"Stripes in Motion on the Savannah"
+      }
+    },
+    "quality":{
+       "destination":{
+        "title":"500+ DESTINATIONS",
+        "caption":"Explore beyond the horizon"
+       },
+       "price":{
+        "title":"BEST PRICE GUARANTEE",
+        "caption":"Best Price Assurance, Always"
+       },
+       "care":{
+        "title":"GREAT CUSTOMER",
+        "caption":"Exceptional Customer Care Always"
+       },
+       "booking":{
+        "title":"SUPER FAST BOOKING",
+        "caption":"Instant Booking, Swift Travel"
+       }
+    },
+    "filter":{
+       "keyword":{
+        "label1":"Keyword",
+        "name":"keyword"
+       },
+       "activity":{
+        "label1":"Activity",
+        "name":"activity",
+        "Swimming":"Swimming",
+        "Sightseeing":"Sightseeing",
+        "Hiking":"Hiking",
+        "Ski":"Ski",
+        "Paragliding":"Paragliding",
+        "Parachuting":"Parachuting",
+        "Kayaking":"Kayaking",
+        "Baloon Safaris":"Baloon Safaris",
+        "Game Drive":"Game Drive"
+       },
+       "destination":{
+        "label1":"Destination",
+        "name":"category"
+       },
+       "duration":{
+        "label1":"Duration",
+        "name":"duration",
+        "1 Day Tour":"1 Day Tour",
+        "2 - 4 Days Tour":"2 - 4 Days Tour",
+        "5 - 7 Days Tour":"5 - 7 Days Tour",
+        "7+ Days Tour":"7+ Days Tour"
+       },
+       "Search":"Search",
+       "Date":"Date"
+    },
+    "popular":"Popular Tour Packages",
+    "viewall":"View All Tours",
+    "popular2":"Popular Destinations",
+    "viewall2":"View All Destinations",
+    "description":"Dive into a treasure trove of enchanting locales, each offering a unique tapestry of culture, adventure, and natural beauty. From iconic landmarks to hidden gems, embark on a virtual journey with us as we showcase the destinations that capture the hearts and imaginations of travelers worldwide.",
+    "destination":{
+      "heading":"DESTINATIONS",
+      "caption":"Explore Tours By Destinations",
+      "local":"Local Travels",
+      "hot":"Hot Pick",
+      "holiday":"International Holiday",
+      "africa":"East Africa",
+      "vacay":"Vacations",
+      "edu":"Educational Tours",
+      "special":"Special Tours",
+      "sports":"Sporting events",
+      "charity":"Charity tours",
+      "wine":"Wine tasting tours",
+      "food":"Food festivals",
+      "bird":"Bird watching explorations",
+      "sky":"Sky gliding tours",
+      "learn":"Learn More",
+      "view":"View all tours"
+    },
+    "shortabout":"An international tour operator that specializes in custom business and leisure itineraries, and luxury vacation packages with an intent to provide travelers with flawless holidays and sparkling travel experience.",
+    "longabout":"An international tour operator that specializes in custom business and leisure itineraries, and luxury vacation packages with an intent to provide travelers with flawless holidays and sparkling travel experience. We have established a portfolio of world class exquisite destinations, marvelous upscale hotels and resorts, as well as luxury services and amenities that are offered together with highly personalized service and impeccable attention to every detail in planning the ultimate tour experience.",
+    "footer":{
+      "about":"ABOUT US",
+      "top":"TOP DESTINATIONS",
+      "contact":"CONTACT INFO",
+      "location":"Location: Hurlingham Plaza, Along Argwings Kodhek Road, Nairobi, Kenya",
+      "tel":"Tel: +254 707 741 232",
+      "copyright":"Copyright © 2024 Denze Tours and Travels. All Rights Reseved"
+    },
+    "vsn":"Our Vision",
+    "msn":"Our Mission",
+    "about":{
+      "company":"DENZE TOURS AND TRAVELS",
+      "vision":"DENZE Tours and Travels strives to create sparkling memories for you in every tour. We are dedicated to perfecting the travel experiences in every way possible and offers a highly personalized service and a great dedication to understanding travelers' needs.",
+      "mission":"DENZE Tours and Travels is devoted to wholly understand your travel preferences in order to provide the most meaningful, authentic and personal or group experience. We look forward to partner with you in your every adventure and tour with great pleasure."
+    },
+    "searchtours":"Search Tours",
+    "details":{
+      "valid":"Valid Till",
+      "night":"nights",
+      "days":"days",
+      "rates":"Rates",
+      "includes":"Includes",
+      "activity":"Activities",
+      "min":"Min",
+      "max":"Max",
+      "interest":"Are you interested ?",
+      "name":"Name",
+      "email":"Email",
+      "phone":"Phone",
+      "enquiry":"Enquiry",
+      "send":"Send",
+      "off":"off"
+    },
+    "location":"Location",
+    "social":"Social",
+    "contact":{
+      "title":"Get In Touch",
+      "caption":"Contact Us",
+      "leave":"Leave us your info",
+      "desc":"Get in touch with us today to start planning your dream getaway! Whether you have questions, want to customize your itinerary, or simply need assistance, our team is here to help.",
+      "name":"Full Name",
+      "sub":"Subject",
+      "message":"Message",
+      "submit":"Submit Now",
+      "location":"Hurlingham Plaza, Along Argwings Kodhek Road, Nairobi, Kenya",
+      "phone1":"Global: +254 707 741 232 | +254 769 665 298",
+      "phone2":"Europe/USA: +41 779 361 338",
+      "phone3":"United Kingdom: +44 792 805 4212"
+    },
+    "swal":{
+      "success":"SUCCESS",
+      "message":"Your enquiry has been received.",
+      "error":"ERROR",
+      "err":"An error occured.Please try again."
     }
   }
