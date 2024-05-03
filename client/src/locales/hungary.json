@@ -1,5 +1,5 @@
 {
-    "navbar": {
+  "navbar": {
       "slogan": "Egy ragyogó utazási élményért!",
       "home": "Kezdőlap",
       "about": "Rólunk",
@@ -8,6 +8,171 @@
       "contact": "Kapcsolat",
       "signup": "Regisztráció",
       "signin": "Bejelentkezés"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "Különleges",
+          "caption": "7 nap Svájcban"
+      },
+      "second": {
+          "title": "Itt az ideje",
+          "caption": "NYARALNI"
+      },
+      "third": {
+          "title": "NYISSA MEG A SZEMEIT",
+          "caption": "A REJTETT VILÁGRA"
+      },
+      "fourth": {
+          "title": "Paradicsom szabadon",
+          "caption": "Merüljön el a napfényes partokban"
+      },
+      "fifth": {
+          "title": "Ahol a hullámok suttognak",
+          "caption": "Az emlékek örökké tartanak"
+      },
+      "sixth": {
+          "title": "Magas és méltóságteljes",
+          "caption": "Fedezze fel a zsiráf kecsességét"
+      },
+      "seventh": {
+          "title": "Flamingó Menedék",
+          "caption": "Fedezze fel a természet rózsaszín parádéját"
+      },
+      "eigth": {
+          "title": "Arany homok",
+          "caption": "Fedezze fel a sivatag dűnéinek varázsát"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ ÚTICÉL",
+          "caption": "Fedezze fel a horizonton túl"
+      },
+      "price": {
+          "title": "LEGJOBB ÁR GARANCIA",
+          "caption": "Mindig a legjobb ár biztosítása"
+      },
+      "care": {
+          "title": "KIVÁLÓ ÜGYFÉLSZOLGÁLAT",
+          "caption": "Kivételes ügyfélszolgálat mindig"
+      },
+      "booking": {
+          "title": "SZUPER GYORS FOGLALÁS",
+          "caption": "Azonnali foglalás, gyors utazás"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Kulcsszó",
+          "name": "kulcsszó"
+      },
+      "activity": {
+          "label1": "Tevékenység",
+          "name": "tevékenység",
+          "Swimming": "Úszás",
+          "Sightseeing": "Városnézés",
+          "Hiking": "Túrázás",
+          "Ski": "Síelés",
+          "Paragliding": "Siklóernyőzés",
+          "Parachuting": "Ejtőernyőzés",
+          "Kayaking": "Kajakozás",
+          "Baloon Safaris": "Léghajó szafari",
+          "Game Drive": "Safari"
+      },
+      "destination": {
+          "label1": "Úti cél",
+          "name": "kategória"
+      },
+      "duration": {
+          "label1": "Időtartam",
+          "name": "időtartam",
+          "1 Day Tour": "1 napos túra",
+          "2 - 4 Days Tour": "2 - 4 napos túra",
+          "5 - 7 Days Tour": "5 - 7 napos túra",
+          "7+ Days Tour": "7+ napos túra"
+      },
+      "Search": "Keresés",
+      "Date": "Dátum"
+  },
+  "popular": "Népszerű Utazási Csomagok",
+  "viewall": "Az összes túra megtekintése",
+  "popular2": "Népszerű Úti Célok",
+  "viewall2": "Az összes úti cél megtekintése",
+  "description": "Merüljön el egy bűvös helyszínek kincstárában, mindegyik egyedi kultúra, kaland és természetes szépség egyedi szövését kínálva. Az ikonikus látnivalóktól a rejtett ékkövekig, induljon el virtuális utazásunkon, amint bemutatjuk azokat a helyszíneket, amelyek megragadják a világ minden tájáról érkező utazók szívét és képzeletét.",
+  "destination": {
+      "heading": "ÚTI CÉLOK",
+      "caption": "Fedezze fel a célpontok szerinti túrákat",
+      "local": "Helyi utak",
+      "hot": "Népszerű",
+      "holiday": "Nemzetközi Ünnepek",
+      "africa": "Kelet-Afrika",
+      "vacay": "Szabadság",
+      "edu": "Oktatási túrák",
+      "special": "Különleges túrák",
+      "sports": "Sportesemények",
+      "charity": "Jótékonysági túrák",
+      "wine": "Borkóstoló túrák",
+      "food": "Étel fesztiválok",
+      "bird": "Madármegfigyelési túrák",
+      "sky": "Égbeli siklóernyőzés",
+      "learn": "További információ",
+      "view": "Az összes túra megtekintése"
+  },
+  "shortabout": "Egy nemzetközi utazási szervező, amely testreszabott üzleti és szabadidős útitervre, valamint luxusnyaralási csomagokra specializálódott, hogy a utazóknak hibátlan ünnepek és ragyogó utazási élményt nyújtson.",
+  "longabout": "Egy nemzetközi utazási szervező, amely testreszabott üzleti és szabadidős útitervre, valamint luxusnyaralási csomagokra specializálódott, hogy a utazóknak hibátlan ünnepek és ragyogó utazási élményt nyújtson. Kiváló minőségű úti célok, csodálatos luxus szállodák és üdülőhelyek portfólióját hoztuk létre, amelyeket kiválóan személyre szabott szolgáltatások és figyelem kísér minden részletében, hogy megtervezzük az utolsó túraélményt.",
+  "footer": {
+      "about": "Rólunk",
+      "top": "Legnépszerűbb úti célok",
+      "contact": "Kapcsolat információ",
+      "location": "Helyszín: Hurlingham Plaza, Argwings Kodhek út, Nairobi, Kenya",
+      "tel": "Telefon: +254 707 741 232",
+      "copyright": "A szerzői jogok © 2024 Denze Utazás és Utazás. Minden jog fenntartva"
+  },
+  "vsn": "A Mi Látásmódunk",
+  "msn": "A Mi Küldetésünk",
+  "about": {
+      "company": "DENZE UTAK ÉS UTAZÁSOK",
+      "vision": "A Denze Utazások és Utazások törekszik arra, hogy minden túrán ragyogó emlékeket teremtsen Önnek. Elkötelezettek vagyunk az utazási élmények tökéletesítése mellett minden lehetséges módon, és kivételesen személyre szabott szolgáltatást és nagy elkötelezettséget nyújtunk az utazók igényeinek megértésében.",
+      "mission": "A Denze Utazások és Utazások elkötelezett az Ön utazási preferenciáinak teljes megértése mellett, hogy a legérzékletesebb, autentikusabb és személyes vagy csoport élményt nyújtsa. Nagy örömmel várjuk, hogy minden kalandjában és túrájában Önnel együttműködjünk."
+  },
+  "searchtours": "Túrák keresése",
+  "details": {
+      "valid": "Érvényes",
+      "night": "éjszakák",
+      "days": "napok",
+      "rates": "Árak",
+      "includes": "Tartalmazza",
+      "activity": "Tevékenységek",
+      "min": "Min",
+      "max": "Max",
+      "interest": "Érdekli?",
+      "name": "Név",
+      "email": "Email",
+      "phone": "Telefon",
+      "enquiry": "Érdeklődés",
+      "send": "Küldés",
+      "off": "kedvezmény"
+  },
+  "location": "Helyszín",
+  "social": "Közösségi",
+  "contact": {
+      "title": "Lépjen kapcsolatba velünk",
+      "caption": "Lépjen velünk kapcsolatba",
+      "leave": "Hagyja el az adatait",
+      "desc": "Vegye fel velünk a kapcsolatot még ma, hogy elkezdje tervezni álmai vakációját! Legyen kérdése, szeretné testre szabni az útitervét, vagy egyszerűen csak segítségre van szüksége, csapatunk itt van, hogy segítsen.",
+      "name": "Teljes név",
+      "sub": "Tárgy",
+      "message": "Üzenet",
+      "submit": "Küldés most",
+      "location": "Hurlingham Plaza, Argwings Kodhek út, Nairobi, Kenya",
+      "phone1": "Global: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Európa/USA: +41 779 361 338",
+      "phone3": "Egyesült Királyság: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "Siker",
+      "message": "A megkeresését megkaptuk.",
+      "error": "Hiba",
+      "err": "Hiba történt. Kérjük, próbálja újra."
   }
-  
+}
