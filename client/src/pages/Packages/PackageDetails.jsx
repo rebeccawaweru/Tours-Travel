@@ -147,10 +147,9 @@ export default function PackageDetails(){
             <Grid direction="column" container gap={4} marginTop={2}>
             {data.rates && data.rates.length > 0 &&
             <>
-     
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.rates")}:</Typography>
            {data.rates && data.rates.length > 0 && data.rates.map((item,index)=> {
-              return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {item.pricerate}</Typography><hr></hr></Box>
+              return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {data.currency} {item.pricerate && item.pricerate.toLocaleString()}</Typography><hr></hr></Box>
            })}
            </>}
             <Divider></Divider>
