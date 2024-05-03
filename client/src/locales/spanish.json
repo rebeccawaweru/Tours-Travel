@@ -1,13 +1,185 @@
 {
-    "navbar": {
-      "slogan": "¡Para una experiencia de viaje brillante!",
-      "home": "Inicio",
-      "about": "Acerca de",
-      "packages": "Paquetes",
-      "destinations": "Destinos",
-      "contact": "Contacto",
-      "signup": "Registrarse",
-      "signin": "Iniciar sesión"
+  "navbar": {
+    "slogan":"¡Para una Experiencia de Viaje Deslumbrante!",
+    "home": "Inicio",
+    "about": "Acerca de",
+    "packages":"Paquetes",
+    "destinations":"Destinos",
+    "contact": "Contacto",
+    "signup":"Registrarse",
+    "signin":"Iniciar sesión"
+  },
+  "slider":{
+    "first":{
+      "title":"Especial",
+      "caption":"7 días en Suiza"
+    },
+    "second":{
+      "title":"Es hora de",
+      "caption":"IR DE VACACIONES"
+    },
+    "third":{
+      "title":"ABRE TUS OJOS A",
+      "caption":"EL MUNDO OCULTO"
+    },
+    "fourth":{
+      "title":"Paraíso Revelado",
+      "caption":"Sumérgete en Costas Bañadas por el Sol"
+    },
+    "fifth":{
+      "title":"Donde las Olas Susurran",
+      "caption":"Los Recuerdos Duran para Siempre"
+    },
+    "sixth":{
+      "title":"Alto y Majestuoso",
+      "caption":"Descubre la Gracia de la Jirafa"
+    },
+    "seventh":{
+      "title":"Refugio de Flamencos",
+      "caption":"Descubre el Desfile Rosado de la Naturaleza"
+    },
+    "eigth":{
+      "title":"Arenas Doradas",
+      "caption":"Explora la Magia de las Dunas del Desierto"
+    },
+    "nineth":{
+      "title":"Serengeti de Cebra",
+      "caption":"Rayas en Movimiento en la Sabana"
     }
+  },
+  "quality":{
+     "destination":{
+      "title":"500+ DESTINOS",
+      "caption":"Explora más allá del horizonte"
+     },
+     "price":{
+      "title":"MEJOR GARANTÍA DE PRECIO",
+      "caption":"La Mejor Garantía de Precio, Siempre"
+     },
+     "care":{
+      "title":"GRAN ATENCIÓN AL CLIENTE",
+      "caption":"Atención al Cliente Excepcional Siempre"
+     },
+     "booking":{
+      "title":"RESERVA SUPER RÁPIDA",
+      "caption":"Reserva Instantánea, Viaje Rápido"
+     }
+  },
+  "filter":{
+     "keyword":{
+      "label1":"Palabra Clave",
+      "name":"keyword"
+     },
+     "activity":{
+      "label1":"Actividad",
+      "name":"activity",
+      "Swimming":"Natación",
+      "Sightseeing":"Turismo",
+      "Hiking":"Senderismo",
+      "Ski":"Esquí",
+      "Paragliding":"Parapente",
+      "Parachuting":"Paracaidismo",
+      "Kayaking":"Kayak",
+      "Baloon Safaris":"Safaris en Globo",
+      "Game Drive":"Safari"
+     },
+     "destination":{
+      "label1":"Destino",
+      "name":"category"
+     },
+     "duration":{
+      "label1":"Duración",
+      "name":"duration",
+      "1 Day Tour":"Tour de 1 Día",
+      "2 - 4 Days Tour":"Tour de 2 - 4 Días",
+      "5 - 7 Days Tour":"Tour de 5 - 7 Días",
+      "7+ Days Tour":"Tour de 7+ Días"
+     },
+     "Search":"Buscar",
+     "Date":"Fecha"
+  },
+  "popular":"Paquetes Turísticos Populares",
+  "viewall":"Ver Todos los Tours",
+  "popular2":"Destinos Populares",
+  "viewall2":"Ver Todos los Destinos",
+  "description":"Sumérgete en un tesoro de lugares encantadores, cada uno ofreciendo una tapicería única de cultura, aventura y belleza natural. Desde monumentos icónicos hasta joyas ocultas, emprende un viaje virtual con nosotros mientras mostramos los destinos que capturan los corazones y la imaginación de los viajeros de todo el mundo.",
+  "destination":{
+    "heading":"DESTINOS",
+    "caption":"Explora Tours por Destinos",
+    "local":"Viajes Locales",
+    "hot":"Elección Popular",
+    "holiday":"Vacaciones Internacionales",
+    "africa":"África Oriental",
+    "vacay":"Vacaciones",
+    "edu":"Tours Educativos",
+    "special":"Tours Especiales",
+    "sports":"Eventos Deportivos",
+    "charity":"Tours Solidarios",
+    "wine":"Tours de Degustación de Vinos",
+    "food":"Festivales Gastronómicos",
+    "bird":"Exploraciones de Observación de Aves",
+    "sky":"Tours de Vuelo en Globo",
+    "learn":"Aprender Más",
+    "view":"Ver todos los tours"
+  },
+  "shortabout":"Operador turístico internacional especializado en itinerarios empresariales y de ocio personalizados, y paquetes de vacaciones de lujo con la intención de proporcionar a los viajeros unas vacaciones impecables y una experiencia de viaje deslumbrante.",
+  "longabout":"Operador turístico internacional especializado en itinerarios empresariales y de ocio personalizados, y paquetes de vacaciones de lujo con la intención de proporcionar a los viajeros unas vacaciones impecables y una experiencia de viaje deslumbrante. Hemos establecido un portafolio de destinos exquisitos de clase mundial, maravillosos hoteles y resorts de lujo, así como servicios de lujo y comodidades que se ofrecen junto con un servicio altamente personalizado y una atención impecable a cada detalle en la planificación de la experiencia turística definitiva.",
+  "footer":{
+    "about":"Acerca de Nosotros",
+    "top":"Destinos Más Populares",
+    "contact":"Información de Contacto",
+    "location":"Ubicación: Hurlingham Plaza, a lo largo de la carretera Argwings Kodhek, Nairobi, Kenia",
+
+
+    "tel":"Tel: +254 707 741 232",
+    "copyright":"Derechos de Autor © 2024 Denze Tours and Travels. Todos los Derechos Reservados"
+  },
+  "vsn":"Nuestra Visión",
+  "msn":"Nuestra Misión",
+  "about":{
+    "company":"DENZE TOURS AND TRAVELS",
+    "vision":"DENZE Tours and Travels se esfuerza por crear recuerdos deslumbrantes para ti en cada tour. Estamos dedicados a perfeccionar las experiencias de viaje en todos los aspectos y ofrecemos un servicio altamente personalizado y una gran dedicación para comprender las necesidades de los viajeros.",
+    "mission":"DENZE Tours and Travels está dedicado a comprender completamente tus preferencias de viaje para proporcionar la experiencia más significativa, auténtica y personal o en grupo. Esperamos con ansias asociarnos contigo en cada aventura y tour con gran placer."
+  },
+  "searchtours":"Buscar Tours",
+  "details":{
+    "valid":"Válido Hasta",
+    "night":"noches",
+    "days":"días",
+    "rates":"Tarifas",
+    "includes":"Incluye",
+    "excludes":"Excluye",
+    "activity":"Actividades",
+    "min":"Mín",
+    "max":"Máx",
+    "interest":"¿Estás interesado?",
+    "name":"Nombre",
+    "email":"Correo Electrónico",
+    "phone":"Teléfono",
+    "enquiry":"Consulta",
+    "send":"Enviar",
+    "off":"descuento"
+  },
+  "location":"Ubicación",
+  "social":"Social",
+  "contact":{
+    "title":"Ponte en Contacto",
+    "caption":"Contáctanos",
+    "leave":"Déjanos tus datos",
+    "desc":"¡Ponte en contacto con nosotros hoy para comenzar a planificar tus vacaciones de ensueño! Ya sea que tengas preguntas, quieras personalizar tu itinerario o simplemente necesites ayuda, nuestro equipo está aquí para ayudarte.",
+    "name":"Nombre Completo",
+    "sub":"Asunto",
+    "message":"Mensaje",
+    "submit":"Enviar Ahora",
+    "location":"Hurlingham Plaza, a lo largo de la carretera Argwings Kodhek, Nairobi, Kenia",
+    "phone1":"Global: +254 707 741 232 | +254 769 665 298",
+    "phone2":"Europa/EE. UU.: +41 779 361 338",
+    "phone3":"Reino Unido: +44 792 805 4212"
+  },
+  "swal":{
+    "success":"ÉXITO",
+    "message":"Tu consulta ha sido recibida.",
+    "error":"ERROR",
+    "err":"Se ha producido un error. Por favor, inténtalo de nuevo."
   }
-  
+}

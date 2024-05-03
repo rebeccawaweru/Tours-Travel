@@ -1,13 +1,183 @@
 {
-    "navbar": {
-      "slogan": "Za sjajno iskustvo putovanja!",
-      "home": "Početna",
-      "about": "O nama",
-      "packages": "Paketi",
-      "destinations": "Destinacije",
-      "contact": "Kontakt",
-      "signup": "Registracija",
-      "signin": "Prijava"
+  "navbar": {
+    "slogan":"Za sjajno iskustvo putovanja!",
+    "home": "Početna",
+    "about": "O nama",
+    "packages":"Paketi",
+    "destinations":"Destinacije",
+    "contact": "Kontakt",
+    "signup":"Registracija",
+    "signin":"Prijava"
+  },
+  "slider":{
+    "first":{
+      "title":"Posebno",
+      "caption":"7 dana u Švajcarskoj"
+    },
+    "second":{
+      "title":"Vreme je da",
+      "caption":"KRENEMO NA ODMOR"
+    },
+    "third":{
+      "title":"OTVORITE OČI ZA",
+      "caption":"SKRIVENI SVET"
+    },
+    "fourth":{
+      "title":"Raj Otkriven",
+      "caption":"Uronite u Sunčane Obale"
+    },
+    "fifth":{
+      "title":"Gde Talasi Šapuću",
+      "caption":"Uspomene Traju Zauvek"
+    },
+    "sixth":{
+      "title":"Visok i Veličanstven",
+      "caption":"Otkrijte Ljupkost Žirafe"
+    },
+    "seventh":{
+      "title":"Refugijum za Flamingose",
+      "caption":"Otkrijte Ružičastu Paradu Prirode"
+    },
+    "eigth":{
+      "title":"Zlatni Pesak",
+      "caption":"Istražite Čaroliju Pustinjskih Dina"
+    },
+    "nineth":{
+      "title":"Zebra Serengeti",
+      "caption":"Pruge u Pokretu na Savani"
     }
+  },
+  "quality":{
+     "destination":{
+      "title":"500+ DESTINACIJA",
+      "caption":"Istražite izvan horizonta"
+     },
+     "price":{
+      "title":"NAJBOLJA GARANCIJA CENE",
+      "caption":"Najbolja Garancija Cene, Uvek"
+     },
+     "care":{
+      "title":"SJAJNA KORISNIČKA BRIGA",
+      "caption":"Izuzetna Briga o Korisnicima Uvek"
+     },
+     "booking":{
+      "title":"SUPER BRZA REZERVACIJA",
+      "caption":"Brza Rezervacija, Brzo Putovanje"
+     }
+  },
+  "filter":{
+     "keyword":{
+      "label1":"Ključna Reč",
+      "name":"keyword"
+     },
+     "activity":{
+      "label1":"Aktivnost",
+      "name":"activity",
+      "Swimming":"Plivanje",
+      "Sightseeing":"Razgledanje",
+      "Hiking":"Planinarenje",
+      "Ski":"Ski",
+      "Paragliding":"Paraglajding",
+      "Parachuting":"Padobranstvo",
+      "Kayaking":"Kajaking",
+      "Baloon Safaris":"Safari Balonom",
+      "Game Drive":"Safari"
+     },
+     "destination":{
+      "label1":"Destinacija",
+      "name":"category"
+     },
+     "duration":{
+      "label1":"Trajanje",
+      "name":"duration",
+      "1 Day Tour":"Tura od 1 Dana",
+      "2 - 4 Days Tour":"Tura od 2 - 4 Dana",
+      "5 - 7 Days Tour":"Tura od 5 - 7 Dana",
+      "7+ Days Tour":"Tura od 7+ Dana"
+     },
+     "Search":"Pretraži",
+     "Date":"Datum"
+  },
+  "popular":"Popularni Turistički Paketi",
+  "viewall":"Pogledaj Sve Ture",
+  "popular2":"Popularne Destinacije",
+  "viewall2":"Pogledaj Sve Destinacije",
+  "description":"Zaronite u riznicu očaravajućih mesta, svako nudeći jedinstvenu tapiseriju kulture, avanture i prirodne lepote. Od ikoničnih znamenitosti do skrivenih dragulja, krenite na virtualno putovanje s nama dok prikazujemo destinacije koje osvajaju srca i maštu putnika širom sveta.",
+  "destination":{
+    "heading":"DESTINACIJE",
+    "caption":"Istražite Ture po Destinacijama",
+    "local":"Lokalna Putovanja",
+    "hot":"Popularan Izbor",
+    "holiday":"Međunarodni Odmori",
+    "africa":"Istočna Afrika",
+    "vacay":"Odmori",
+    "edu":"Obrazovne Ture",
+    "special":"Posebne Ture",
+    "sports":"Sportski Događaji",
+    "charity":"Ture Dobročinstva",
+    "wine":"Degustacija Vina",
+    "food":"Gastronomske Manifestacije",
+    "bird":"Posmatranje Ptica",
+    "sky":"Ture Padobranom",
+    "learn":"Saznajte Više",
+    "view":"Pogledaj sve ture"
+  },
+  "shortabout":"Međunarodni turoperator specijalizovan za individualne poslovne i slobodne itinerere, kao i luksuzne odmor pakete s namerom da putnicima pruži besprekorne praznike i sjajno iskustvo putovanja.",
+  "longabout":"Međunarodni turoperator specijalizovan za individualne poslovne i slobodne itinerere, kao i luksuzne odmor pakete s namerom da putnicima pruži besprekorne praznike i sjajno iskustvo putovanja. Izgradili smo portfelj destinacija svetskog ranga, predivnih luksuznih hotela i odmarališta, kao i luksuznih usluga i pogodnosti koje se nude zajedno s visoko personalizovanim uslugama i besprekornom pažnjom na svaki detalj u planiranju krajnjeg turističkog iskustva.",
+  "footer":{
+    "about":"O Nama",
+    "top":"Najpopularnije Destinacije",
+    "contact":"Kontakt Informacije",
+    "location":"Lokacija: Hurlingham Plaza, duž Puta Argwings Kodhek, Nairobi, Kenija",
+    "tel":"Tel: +254 707 741 232",
+    "copyright":"Autorska Prava © 2024 Denze Tours and Travels. Sva Prava Zadržana"
+  },
+  "vsn":"Naša Vizija",
+  "msn":"Naša Misija",
+  "about":{
+    "company":"DENZE TOURS AND TRAVELS",
+    "vision":"DENZE Ture i Putovanja teži da stvori sjajne uspomene za vas u svakom putovanju. Posvećeni smo usavršavanju iskustava putovanja na svaki mogući način i pružamo visoko personalizovanu uslugu i veliku posvećenost razumevanju potreba putnika.",
+    "mission":"DENZE Ture i Putovanja posvećeni su potpunom razumevanju vaših putničkih preferencija kako bi pružili najznačajnije, autentično i lično ili grupno iskustvo. Radujemo se što ćemo sarađivati s vama u svakoj avanturi i turi s velikim zadovoljstvom."
+  },
+  "searchtours":"Pretraži Ture",
+  "details":{
+    "valid":"Važi Do",
+    "night":"noći",
+    "days":"dana",
+    "rates":"Cene",
+    "includes":"Uključuje",
+    "excludes":"Isključuje",
+    "activity":"Aktivnosti",
+    "min":"Min",
+    "max":"Maks",
+    "interest":"Zainteresovani Ste?",
+    "name":"Ime",
+    "email":"E-pošta",
+    "phone":"Telefon",
+    "enquiry":"Upit",
+    "send":"Pošalji",
+    "off":"popust"
+  },
+  "location":"Lokacija",
+  "social":"Društvene Mreže",
+  "contact":{
+    "title":"Stupite u Kontakt",
+    "caption":"Kontaktirajte Nas",
+    "leave":"Ostavite nam vaše podatke",
+    "desc":"Stupite u kontakt s nama danas kako biste počeli planirati svoj sanoviti odmor! Bez obzira imate li pitanja, želite li prilagoditi svoj itinerar ili jednostavno trebate pomoć, naš tim je tu da vam pomogne.",
+    "name":"Puno Ime",
+    "sub":"Tema",
+    "message":"Poruka",
+    "submit":"Pošaljite Sada",
+    "location":"Hurlingham Plaza, duž Puta Argwings Kodhek, Nairobi, Kenija",
+    "phone1":"Globalno: +254 707 741 232 | +254 769 665 298",
+    "phone2":"Evropa/SAD: +41 779 361 338",
+    "phone3":"Ujedinjeno Kraljevstvo: +44 792 805 4212"
+  },
+  "swal":{
+    "success":"USPEH",
+    "message":"Vaš upit je primljen.",
+    "error":"GREŠKA",
+    "err":"Došlo je do greške. Molimo pokušajte ponovo."
   }
-  
+}
