@@ -33,6 +33,7 @@ export default function UpdatePackage(){
         desc:''
     })
     const [exclusives,setExclusives] = useState([])
+    
     const [activities, setActivities] = useState([])
     const [preview,setPreview] = useState(data.poster)
     const [image, setImage] = useState('')
@@ -254,7 +255,7 @@ export default function UpdatePackage(){
              </Stack>
 
              <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>+ Add Rates</Typography>
-            {rates.length > 0 ? 
+            {(rates && rates.length > 0) ? 
                 <Grid container direction="column" gap={2} marginBottom={2}>
                     {rates.map((rate,index) => (
                         <Stack key={index} direction="row" spacing={2}>
@@ -272,7 +273,7 @@ export default function UpdatePackage(){
             </Stack>
 
             <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>The Rates Include:</Typography>
-            {inclusives.length > 0 ? 
+            {(inclusives && inclusives.length > 0) ? 
                 <Grid container direction="column" gap={2} marginBottom={2}>
                     {inclusives.map((rate,index) => (
                         <Stack key={index} direction="row" spacing={2}>
@@ -290,7 +291,7 @@ export default function UpdatePackage(){
             </Stack>
 
             <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>The Rates Exclude:</Typography>
-            {exclusives.length > 0 ? 
+            {(exclusives && exclusives.length > 0) ? 
                 <Grid container direction="column" gap={2} marginBottom={2}>
                     {exclusives.map((rate,index) => (
                         <Stack key={index} direction="row" spacing={2}>

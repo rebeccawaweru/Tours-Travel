@@ -1,13 +1,178 @@
 {
-    "navbar": {
-      "slogan": "Voor een sprankelende reiservaring!",
-      "home": "Startpagina",
-      "about": "Over ons",
-      "packages": "Pakketten",
-      "destinations": "Bestemmingen",
-      "contact": "Contact",
-      "signup": "Registreren",
-      "signin": "Aanmelden"
-    }
+  "navbar": {
+      "slogan": "For en Gnistrande Reiseopplevelse!",
+      "home": "Hjem",
+      "about": "Om oss",
+      "packages": "Pakker",
+      "destinations": "Destinasjoner",
+      "contact": "Kontakt",
+      "signup": "Registrer deg",
+      "signin": "Logg inn"
+  },
+  "slider": {
+      "first": {
+          "title": "Spesiell",
+          "caption": "7 dager i Sveits"
+      },
+      "second": {
+          "title": "Det er tid for",
+          "caption": "Å TA EN FERIE"
+      },
+      "third": {
+          "title": "ÅPNE ØYNENE DINE FOR",
+          "caption": "DEN SKJULTE VERDENEN"
+      },
+      "fourth": {
+          "title": "Paradis Utløst",
+          "caption": "Dykk inn i Solkysste Kyster"
+      },
+      "fifth": {
+          "title": "Der Bølgene Hvisker",
+          "caption": "Minner Varer For Alltid"
+      },
+      "sixth": {
+          "title": "Høye og Majestetiske",
+          "caption": "Oppdag Sjiraffens Grace"
+      },
+      "seventh": {
+          "title": "Flamingo Havn",
+          "caption": "Oppdag Naturens Rosa Parade"
+      },
+      "eigth": {
+          "title": "Gylne Sands",
+          "caption": "Utforsk Magien til Ørkenens Sanddyner"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ DESTINASJONER",
+          "caption": "Utforsk utenfor horisonten"
+      },
+      "price": {
+          "title": "BESTE PRISGARANTI",
+          "caption": "Best pris garantert, Alltid"
+      },
+      "care": {
+          "title": "UTMERKET KUNDESERVICE",
+          "caption": "Utmattende kundeservice Alltid"
+      },
+      "booking": {
+          "title": "SUPERRASK BOOKING",
+          "caption": "Øyeblikkelig booking, Rask reise"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Nøkkelord",
+          "name": "nøkkelord"
+      },
+      "activity": {
+          "label1": "Aktivitet",
+          "name": "aktivitet",
+          "Swimming": "Svømming",
+          "Sightseeing": "Sightseeing",
+          "Hiking": "Fottur",
+          "Ski": "Ski",
+          "Paragliding": "Paragliding",
+          "Parachuting": "Fallskjermhopping",
+          "Kayaking": "Kajakkpadling",
+          "Baloon Safaris": "Ballongsafari",
+          "Game Drive": "Safaritur"
+      },
+      "destination": {
+          "label1": "Destinasjon",
+          "name": "kategori"
+      },
+      "duration": {
+          "label1": "Varighet",
+          "name": "varighet",
+          "1 Day Tour": "1 Dagstur",
+          "2 - 4 Days Tour": "2 - 4 Dagers Tur",
+          "5 - 7 Days Tour": "5 - 7 Dagers Tur",
+          "7+ Days Tour": "7+ Dagers Tur"
+      },
+      "Search": "Søk",
+      "Date": "Dato"
+  },
+  "popular": "Populære Turpakker",
+  "viewall": "Vis Alle Turer",
+  "popular2": "Populære Destinasjoner",
+  "viewall2": "Vis Alle Destinasjoner",
+  "description": "Dykk inn i en skattekiste av sjarmerende steder, hver med et unikt teppe av kultur, eventyr og naturskjønnhet. Fra ikoniske landemerker til skjulte skatter, begi deg ut på en virtuell reise med oss når vi viser frem destinasjonene som fanger hjertene og fantasiene til reisende over hele verden.",
+  "destination": {
+      "heading": "DESTINASJONER",
+      "caption": "Utforsk Turer Etter Destinasjoner",
+      "local": "Lokal Reiser",
+      "hot": "Hett Plukk",
+      "holiday": "Internasjonale Ferie",
+      "africa": "Øst-Afrika",
+      "vacay": "Ferie",
+      "edu": "Utdanningsreiser",
+      "special": "Spesielle Turer",
+      "sports": "Sportsarrangementer",
+      "charity": "Veldedighetsturer",
+      "wine": "Vinsmakingsturer",
+      "food": "Matfestivaler",
+      "bird": "Fugletitting Utforskninger",
+      "sky": "Himmelglidingsturer",
+      "learn": "Lær Mer",
+      "view": "Se alle turer"
+  },
+  "shortabout": "En internasjonal reiseoperatør som spesialiserer seg på skreddersydde forretnings- og fritidsreiseruter, og luksusferiepakker med sikte på å gi reisende feilfrie ferier og gnistrande reiseopplevelser.",
+  "longabout": "En internasjonal reiseoperatør som spesialiserer seg på skreddersydde forretnings- og fritidsreiseruter, og luksusferiepakker med sikte på å gi reisende feilfrie ferier og gnistrande reiseopplevelser. Vi har etablert en portefølje av verdensklasse, eksklusive destinasjoner, fantastiske luksushoteller og feriesteder, samt luksustjenester og fasiliteter som tilbys sammen med svært personlig service og feilfri oppmerksomhet på hver detalj i planleggingen av den ultimate reiseopplevelsen.",
+  "footer": {
+      "about": "OM OSS",
+      "top": "TOPPDESTINASJONER",
+      "contact": "KONTAKTINFO",
+      "location": "Plassering: Hurlingham Plaza, langs Argwings Kodhek Road, Nairobi, Kenya",
+      "tel": "Tel .: +254 707 741 232",
+      "copyright": "Opphavsrett © 2024 Denze Tours and Travels. Alle rettigheter reservert"
+  },
+  "vsn": "Vår Visjon",
+  "msn": "Vårt Oppdrag",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "DENZE Tours and Travels streber etter å skape gnistrande minner for deg på hver tur. Vi er dedikert til å perfeksjonere reiseopplevelsene på enhver måte mulig og tilbyr en svært personlig service og en stor dedikasjon til å forstå reisendes behov.",
+      "mission": "DENZE Tours and Travels er dedikert til fullt ut å forstå dine reisepreferanser for å kunne tilby den mest meningsfulle, autentiske og personlige eller gruppeopplevelsen. Vi ser frem til å samarbeide med deg i hvert eventyr og tur med stor glede."
+  },
+  "searchtours": "Søk Turer",
+  "details": {
+      "valid": "Gyldig Til",
+      "night": "netter",
+      "days": "dager",
+      "rates": "Priser",
+      "includes": "Inkluderer",
+      "activity": "Aktiviteter",
+      "min": "Min",
+      "max": "Maks",
+      "interest": "Er du interessert?",
+      "name": "Navn",
+      "email": "E-post",
+      "phone": "Telefon",
+      "enquiry": "Forespørsel",
+      "send": "Send",
+      "off": "av"
+  },
+  "location": "Plassering",
+  "social": "Sosial",
+  "contact": {
+      "title": "Kom i Kontakt",
+      "caption": "Ta kontakt med oss",
+      "leave": "La oss få din info",
+      "desc": "Ta kontakt med oss i dag for å begynne å planlegge din drømmeferie! Enten du har spørsmål, vil tilpasse reiseruten din, eller bare trenger hjelp, er teamet vårt her for å hjelpe deg.",
+      "name": "Fullt Navn",
+      "sub": "Emne",
+      "message": "Melding",
+      "submit": "Send nå",
+      "location": "Hurlingham Plaza, langs Argwings Kodhek Road, Nairobi, Kenya",
+      "phone1": "Global: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Europa/USA: +41 779 361 338",
+      "phone3": "Storbritannia: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "SUKSESS",
+      "message": "Din forespørsel er mottatt.",
+      "error": "FEIL",
+      "err": "En feil oppstod. Vennligst prøv igjen."
   }
-  
+}
