@@ -152,7 +152,7 @@ export default function UpdatePackage(){
         setLoading(true)
         const cover = image ? await handleFileUpload(image) : undefined
         const post = cover ? cover.secure_url : preview
-        const newdata = {...tour,country:country,region:region, poster:post,rates:rates, hotels:hotels, inclusives:inclusives, activity:activities}
+        const newdata = {...tour,country:country,region:region, poster:post,rates:rates, hotels:hotels, inclusives:inclusives, exclusives:exclusives, activity:activities}
         delete newdata._id
         delete newdata.createdAt
         await client.put(`/update/${id}`, newdata).then((response)=>{
