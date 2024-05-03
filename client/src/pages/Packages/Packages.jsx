@@ -5,6 +5,7 @@ import { TravelExplore } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
 import { useTranslation } from "react-i18next";
+import { textTranslate } from "../../utils/helpers";
 export default function Packages(){
     const {t} = useTranslation()
     const [search, setSearch] = useState(false)
@@ -47,9 +48,11 @@ export default function Packages(){
         })
       }
     useEffect(()=>{
-        getPackages()
+        getPackages().then((response)=>{
+          textTranslate('fr', response.data)
+        })
         getReferrals()
-        console.log(data)
+     
     },[])
     return (
         <Wrapper data={data}>
@@ -76,11 +79,11 @@ export default function Packages(){
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"20px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:{xs:"center",md:"center",lg:"start"},cursor:"pointer"}}>
             {!search && data && data.length > 0 && data.map((item)=>{
-                    return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights}nights ${item.days}days`} image={item.poster}/>
+                    return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
                   })
                }
             {search && filtered && filtered.length > 0 ? filtered.map((item)=>{
-                    return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights}nights ${item.days}days`} image={item.poster}/>
+                    return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
                   }) : search  && <p>No tour packages found <Button onClick={handleReset} component="p">Reset</Button> </p>
                 } 
             </Grid>

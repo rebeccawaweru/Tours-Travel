@@ -9,7 +9,9 @@ import { Timer, Star, Share, LocationOn } from '@mui/icons-material';
 import { Stack, Grid} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
+import {useTranslation} from 'react-i18next'
 export default function Package({id,image, duration, title, price, location, link}) {
+  const {t} = useTranslation()
   const rating = [1, 2, 3, 4, 5]
   const navigate = useNavigate()
   const handleShare = (id) => {
@@ -55,8 +57,8 @@ export default function Package({id,image, duration, title, price, location, lin
            </Stack>          
       </CardContent>
       <CardActions sx={{justifyContent:"space-between", cursor:"pointer"}}>
-        {link ? <Button variant="outlined" size="small" component="a" href={link}>LEARN MORE</Button> :
-        <Button onClick={()=>navigate(`/package/${id}`)} variant="outlined" size="small">Learn More</Button> 
+        {link ? <Button variant="outlined" size="small" component="a" href={link}>{t('destination.learn')}</Button> :
+        <Button onClick={()=>navigate(`/package/${id}`)} variant="outlined" size="small">{t('destination.learn')}</Button> 
         }
         <Share onClick={()=>handleShare(id)}/>
       </CardActions>
