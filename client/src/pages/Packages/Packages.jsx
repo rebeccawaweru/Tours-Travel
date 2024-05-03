@@ -48,14 +48,14 @@ export default function Packages(){
         })
       }
     useEffect(()=>{
-        getPackages().then((response)=>{
-          textTranslate('fr', response.data)
+        getPackages().then(()=>{
+          textTranslate('fr', data)
         })
         getReferrals()
      
     },[])
     return (
-        <Wrapper data={data}>
+        <Wrapper>
        <Box sx={{
         display:"flex",
         flexDirection:"column",
