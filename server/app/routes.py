@@ -4,6 +4,7 @@ from app.models import User
 from bson import json_util, ObjectId
 from datetime import datetime
 from pymongo import DESCENDING
+from translate import Translator
 
 db = mongo.get_database()
 
@@ -79,6 +80,19 @@ def get_users():
 
    return json_util.dumps(users), 200
 
+ # translation logic
+@app.route('/translate/<lang>', methods=['POST'], strict_slashes=True)
+def language_translate(lang):
+   data = request.json
+    
+    # Check if 'text' key exists in the JSON data
+   if 'text' in data:
+      text_to_translate = data['text']
+
+   translator = Translator(to_lang=lang)
+   translation = translator.translate(text_to_translate)
+   return translation
+
 
 @app.route('/find', methods=['GET'])
 def get_packages():
@@ -88,7 +102,7 @@ def get_packages():
    
    for package in packages:
       package['_id'] = str(package['_id'])
-
+   
    return json_util.dumps(packages), 200
 
 @app.route('/<id>', methods=['GET'], strict_slashes=True)

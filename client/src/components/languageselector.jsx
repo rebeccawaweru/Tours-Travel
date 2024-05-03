@@ -4,6 +4,7 @@ import { Box, Grid, IconButton, Typography } from '@mui/material';
 import { Close } from '@mui/icons-material';
 import Lang from './lang';
 import { languages } from '../utils/helpers';
+import { textTranslate } from '../utils/helpers';
 const styles = {
     container: {
       position: 'fixed',
@@ -28,7 +29,7 @@ function LanguageSelector({link}) {
           </Grid>
          <Grid maxWidth borderRadius={5} container>
           {languages.map((lang)=>{
-            return <Lang abb={lang.abb} url={lang.url} lang={lang.lang} onClick={()=>{setDropdown(false); handleChange(lang.url)}}/>
+            return <Lang abb={lang.abb} url={lang.url} lang={lang.lang} onClick={()=>{setDropdown(false); handleChange(lang.url); textTranslate('fr', 'Hello World')}}/>
           })}
       </Grid>
     </Box>}

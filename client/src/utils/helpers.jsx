@@ -1,3 +1,5 @@
+import client from '../api/client';
+
 export const content = [
     {
         title:"slider.first.title",
@@ -151,6 +153,15 @@ export const handleFileUpload = async (files) =>{
 
 export const whatsappchat = () =>{
   window.open('https://wa.me/254707741232', '_blank')
+}
+
+export const textTranslate = async(lang, text) =>{
+  try {
+    const response = await client.post(`/translate/${lang}`, { text });
+    console.log(response)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 export const languages = [
@@ -376,3 +387,4 @@ export const languages = [
   lang:"Filipino",
   }
 ]
+
