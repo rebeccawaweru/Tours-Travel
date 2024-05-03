@@ -10,8 +10,8 @@ import { Stack, Grid} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import {useTranslation} from 'react-i18next'
-import { currencyConverter } from '../utils/helpers';
-export default function Package({id,image, duration, title, price, currency, location, link}) {
+
+export default function Package({id,image, duration, title, price, currency, location, link, result}) {
   const {t} = useTranslation()
   const rating = [1, 2, 3, 4, 5]
   const navigate = useNavigate()
@@ -24,10 +24,6 @@ export default function Package({id,image, duration, title, price, currency, loc
       })
   }
   const from = currency === '$' ? 'USD' : currency === '€' ? 'EUR' : currency === 'ZAR' ? 'ZAR' : currency === 'KES' ? 'KES' : '';
-  const result = '$' +  currencyConverter(from,'USD', price, process.env.REACT_APP_CONVERSION_KEY) 
-  React.useEffect(()=>{
-    console.log(currencyConverter('KES','USD', 20000, process.env.REACT_APP_CONVERSION_KEY))
-  },[])
   return (
     <Card sx={{width:{xs:"100%",sm:320,md:380}}}>
       <CardMedia

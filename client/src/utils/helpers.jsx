@@ -171,7 +171,7 @@ export const currencyConverter = async (from, to, amount, key) => {
      const fetchedRates = response.conversion_rates
      const currentRate = fetchedRates[to]
      const result = amount * currentRate
-     console.log(result, response)
+     console.log(result)
      return result
    } catch (error) {
      console.log(error)
