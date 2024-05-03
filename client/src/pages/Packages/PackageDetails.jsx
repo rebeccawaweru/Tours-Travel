@@ -129,25 +129,25 @@ export default function PackageDetails(){
               </TableHead>
               <TableBody>
                {data.hotels.map((hotel)=>{
-                 <TableRow
+                 return <TableRow
                  key={hotel.hotelname}
                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                >
                <TableCell component="th" scope="row">
                 {hotel.hotelname}
               </TableCell>
-              <TableCell align="right">{hotel.currency} {hotel.price}</TableCell>
+              <TableCell>{hotel.currency} {hotel.price}</TableCell>
                </TableRow>
                })}
               </TableBody>
             </Table>
             }
 
-            
+
             <Grid direction="column" container gap={4} marginTop={2}>
             {data.rates && data.rates.length > 0 &&
             <>
-           <Divider></Divider>
+     
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.rates")}:</Typography>
            {data.rates && data.rates.length > 0 && data.rates.map((item,index)=> {
               return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {item.pricerate}</Typography><hr></hr></Box>

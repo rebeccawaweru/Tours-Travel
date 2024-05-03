@@ -35,7 +35,6 @@ export default function CreatePackage(){
         title:"",
         category:"",
         location:"",
-        hotel:"",
         minimum:0,
         maximum:0,
         price:0,
@@ -188,7 +187,7 @@ export default function CreatePackage(){
            <Stack direction="row" gap={2}>
            <BasicInput lbl="Hotel" name="hotelname" value={hotel.hotelname} onChange={handleChange4} helperText="Click 'Save' to add hotel"/>
            <BasicInput lbl="Price" name="price" value={hotel.price} onChange={handleChange4}/>
-           <CustomSelect required lbl="Currency" value={hotel.currency} name="currency" onChange={handleChange4}>
+           <CustomSelect lbl="Currency" value={hotel.currency} name="currency" onChange={handleChange4}>
                 <MenuItem value="KES">KES</MenuItem>
                 <MenuItem value="$">USD</MenuItem>
                 <MenuItem value="€">EURO</MenuItem>
