@@ -49,7 +49,7 @@ export default function Packages(){
       }
     useEffect(()=>{
         getPackages().then(()=>{
-          textTranslate('fr', data)
+          textTranslate('fr', {data})
         })
         getReferrals()
      
@@ -83,7 +83,7 @@ export default function Packages(){
                   })
                }
             {search && filtered && filtered.length > 0 ? filtered.map((item)=>{
-                    return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
+                    return <Package id={item._id} link={item.link} currency={item.currency} price={item.price} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
                   }) : search  && <p>No tour packages found <Button onClick={handleReset} component="p">Reset</Button> </p>
                 } 
             </Grid>

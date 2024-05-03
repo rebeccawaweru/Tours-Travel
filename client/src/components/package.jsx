@@ -10,7 +10,8 @@ import { Stack, Grid} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import {useTranslation} from 'react-i18next'
-export default function Package({id,image, duration, title, price, location, link}) {
+import { currencyConverter } from '../utils/helpers';
+export default function Package({id,image, duration, title, price, currency, location, link}) {
   const {t} = useTranslation()
   const rating = [1, 2, 3, 4, 5]
   const navigate = useNavigate()
@@ -22,6 +23,11 @@ export default function Package({id,image, duration, title, price, location, lin
         showCancelButton:true
       })
   }
+  const from = currency === '$' ? 'USD' : currency === '€' ? 'EUR' : currency === 'ZAR' ? 'ZAR' : currency === 'KES' ? 'KES' : '';
+  const result = '$' +  currencyConverter(from,'USD', price, process.env.REACT_APP_CONVERSION_KEY) 
+  React.useEffect(()=>{
+    console.log(currencyConverter('KES','USD', 20000, process.env.REACT_APP_CONVERSION_KEY))
+  },[])
   return (
     <Card sx={{width:{xs:"100%",sm:320,md:380}}}>
       <CardMedia
@@ -36,7 +42,7 @@ export default function Package({id,image, duration, title, price, location, lin
         
         <Typography sx={{display:"flex", justifyContent:"space-between"}} gutterBottom variant="p" component="div">
           <Typography fontSize="medium" fontWeight="bold" color="inherit">{title}</Typography>
-          <Typography color="primary" fontWeight="bold">{price}</Typography>
+          <Typography color="primary" fontWeight="bold">{result}</Typography>
         </Typography>
         <Stack direction="row" spacing={1}>
             <LocationOn/>

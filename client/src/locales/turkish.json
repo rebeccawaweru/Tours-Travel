@@ -1,13 +1,183 @@
 {
-    "navbar": {
-      "slogan": "Parlak bir seyahat deneyimi için!",
-      "home": "Anasayfa",
+  "navbar": {
+      "slogan": "Parlak Bir Seyahat Deneyimi İçin!",
+      "home": "Ana Sayfa",
       "about": "Hakkımızda",
       "packages": "Paketler",
       "destinations": "Hedefler",
       "contact": "İletişim",
-      "signup": "Kayıt Ol",
+      "signup": "Kaydol",
       "signin": "Giriş Yap"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "Özel",
+          "caption": "İsviçre'de 7 Gün"
+      },
+      "second": {
+          "title": "Artık Zamanı Geldi",
+          "caption": "TATİLE ÇIKMAK"
+      },
+      "third": {
+          "title": "GÖZLERİNİ AÇ",
+          "caption": "GİZLİ DÜNYAYA"
+      },
+      "fourth": {
+          "title": "Cennet Serbest",
+          "caption": "Güneşten Öpülen Kıyılara Dalış"
+      },
+      "fifth": {
+          "title": "Dalgaların Fısıldadığı Yer",
+          "caption": "Anılar Sonsuza Dek Sürer"
+      },
+      "sixth": {
+          "title": "Uzun ve Majestik",
+          "caption": "Zürafa Zarafetini Keşfet"
+      },
+      "seventh": {
+          "title": "Flamingo Cenneti",
+          "caption": "Doğanın Pembe Geçidini Keşfedin"
+      },
+      "eigth": {
+          "title": "Altın Kumlar",
+          "caption": "Çöl Kumlarının Sihirini Keşfet"
+      },
+      "nineth": {
+          "title": "Zebra Serengeti",
+          "caption": "Savanda Hareket Halindeki Çizgiler"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ HEDEF",
+          "caption": "Ufku Aşan Keşfet"
+      },
+      "price": {
+          "title": "EN İYİ FİYAT GARANTİSİ",
+          "caption": "Her Zaman En İyi Fiyat Güvencesi"
+      },
+      "care": {
+          "title": "HARİKA MÜŞTERİ",
+          "caption": "Her Zaman Olağanüstü Müşteri Bakımı"
+      },
+      "booking": {
+          "title": "ÇOK HIZLI REZERVASYON",
+          "caption": "Anında Rezervasyon, Hızlı Seyahat"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Anahtar Kelime",
+          "name": "anahtar_kelime"
+      },
+      "activity": {
+          "label1": "Aktivite",
+          "name": "aktivite",
+          "Swimming": "Yüzme",
+          "Sightseeing": "Gezi",
+          "Hiking": "Dağ Yürüyüşü",
+          "Ski": "Kayak",
+          "Paragliding": "Yamaç Paraşütü",
+          "Parachuting": "Paraşüt",
+          "Kayaking": "Kano",
+          "Baloon Safaris": "Balon Safarisi",
+          "Game Drive": "Safari"
+      },
+      "destination": {
+          "label1": "Hedef",
+          "name": "kategori"
+      },
+      "duration": {
+          "label1": "Süre",
+          "name": "süre",
+          "1 Day Tour": "1 Günlük Tur",
+          "2 - 4 Days Tour": "2 - 4 Günlük Tur",
+          "5 - 7 Days Tour": "5 - 7 Günlük Tur",
+          "7+ Days Tour": "7+ Günlük Tur"
+      },
+      "Search": "Ara",
+      "Date": "Tarih"
+  },
+  "popular": "Popüler Tur Paketleri",
+  "viewall": "Tüm Turları Görüntüle",
+  "popular2": "Popüler Hedefler",
+  "viewall2": "Tüm Hedefleri Görüntüle",
+  "description": "Büyüleyici yerlerin bir hazine sandığına dalın, her biri kültür, macera ve doğal güzelliklerin benzersiz bir dokusunu sunar. İkonik yerlerden gizli mücevherlere kadar, dünya çapındaki gezginlerin kalplerini ve hayal güçlerini yakalayan hedefleri sergilerken sanal bir yolculuğa çıkın.",
+  "destination": {
+      "heading": "HEDEFLER",
+      "caption": "Hedeflere Göre Turları Keşfedin",
+      "local": "Yerel Seyahatler",
+      "hot": "Popüler",
+      "holiday": "Uluslararası Tatil",
+      "africa": "Doğu Afrika",
+      "vacay": "Tatiller",
+      "edu": "Eğitim Turları",
+      "special": "Özel Turlar",
+      "sports": "Spor Etkinlikleri",
+      "charity": "Hayır Turları",
+      "wine": "Şarap Tadım Turları",
+      "food": "Yiyecek Festivali",
+      "bird": "Kuş İzleme Keşifleri",
+      "sky": "Gökyüzünde Süzülme Turları",
+      "learn": "Daha Fazla Bilgi",
+      "view": "Tüm Turları Görüntüle"
+  },
+  "shortabout": "Hatiksiz tatiller ve parlak seyahat deneyimleri sunmak amacıyla iş ve boş zaman itineraryolarına özel uzmanlaşmış uluslararası bir tur operatörü.",
+  "longabout": "Hatiksiz tatiller ve parlak seyahat deneyimleri sunmak amacıyla iş ve boş zaman itineraryolarına özel uzmanlaşmış uluslararası bir tur operatörü. Dünya çapında ünlü destinasyonlardan muhteşem lüksotellere ve tatil köylerine kadar portföy oluşturduk. Ayrıca, kişiselleştirilmiş hizmet ve en üst düzeyde ayrıntılara gösterilen kusursuz dikkat ile sunulan lüks hizmetler ve olanaklar sunuyoruz.",
+  "footer": {
+      "about": "HAKKIMIZDA",
+      "top": "EN İYİ HEDEFLER",
+      "contact": "İLETİŞİM BİLGİLERİ",
+      "location": "Konum: Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Kenya",
+      "tel": "Tel: +254 707 741 232",
+      "copyright": "Telif Hakkı © 2024 Denze Tours and Travels. Tüm Hakları Saklıdır."
+  },
+  "vsn": "Vizyonumuz",
+  "msn": "Misyonumuz",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "DENZE Tours and Travels, her turda sizin için parlak anılar yaratmayı amaçlar. Seyahat deneyimlerini her açıdan mükemmelleştirmeye adanmıştır ve gezginlerin ihtiyaçlarını anlamaya büyük bir özen ve kişiselleştirilmiş hizmet sunar.",
+      "mission": "DENZE Tours and Travels, sizin seyahat tercihlerinizi tamamen anlamaya adanmıştır, böylece en anlamlı, otantik ve kişisel veya grup deneyimini sunar. Her maceranızda ve turunuzda sizinle büyük bir memnuniyetle işbirliği yapmayı bekliyoruz."
+  },
+  "searchtours": "Turları Ara",
+  "details": {
+      "valid": "Geçerli",
+      "night": "gece",
+      "days": "gün",
+      "rates": "Fiyatlar",
+      "includes": "Dahil",
+      "excludes": "Hariç",
+      "activity": "Aktiviteler",
+      "min": "Minimum",
+      "max": "Maksimum",
+      "interest": "İlgileniyor musunuz?",
+      "name": "Ad",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "enquiry": "Sorgu",
+      "send": "Gönder",
+      "off": "indirim"
+  },
+  "location": "Konum",
+  "social": "Sosyal",
+  "contact": {
+      "title": "İletişime Geçin",
+      "caption": "Bize Ulaşın",
+      "leave": "Bize bilgilerinizi bırakın",
+      "desc": "Hayalinizdeki tatilinizi planlamaya bugün başlamak için bizimle iletişime geçin! Sorularınız mı var, tur planınızı özelleştirmek mi istiyorsunuz yoksa sadece yardıma mı ihtiyacınız var, ekibimiz burada size yardımcı olmak için hazır.",
+      "name": "Adınız Soyadınız",
+      "sub": "Konu",
+      "message": "Mesaj",
+      "submit": "Şimdi Gönderin",
+      "location": "Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Kenya",
+      "phone1": "Küresel: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Avrupa/ABD: +41 779 361 338",
+      "phone3": "Birleşik Krallık: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "BAŞARILI",
+      "message": "Sorgunuz alındı.",
+      "error": "HATA",
+      "err": "Bir hata oluştu. Lütfen tekrar deneyin."
   }
-  
+}

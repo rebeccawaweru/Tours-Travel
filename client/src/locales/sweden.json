@@ -1,13 +1,183 @@
 {
-    "navbar": {
-      "slogan": "För en glänsande reseupplevelse!",
+  "navbar": {
+      "slogan": "För en skinande reseupplevelse!",
       "home": "Hem",
       "about": "Om oss",
       "packages": "Paket",
       "destinations": "Destinationer",
       "contact": "Kontakt",
-      "signup": "Registrera",
+      "signup": "Registrera dig",
       "signin": "Logga in"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "Speciellt",
+          "caption": "7 dagar i Schweiz"
+      },
+      "second": {
+          "title": "Det är dags att",
+          "caption": "ÅKA PÅ SEMESTER"
+      },
+      "third": {
+          "title": "ÖPPNA DINA ÖGON FÖR",
+          "caption": "DEN GÖMDA VÄRLDEN"
+      },
+      "fourth": {
+          "title": "Paradis Avslöjat",
+          "caption": "Dyka ner i solskeniga stränder"
+      },
+      "fifth": {
+          "title": "Där vågorna viskar",
+          "caption": "Minnen varar för evigt"
+      },
+      "sixth": {
+          "title": "Höga och Majestätiska",
+          "caption": "Upptäck giraffens nåd"
+      },
+      "seventh": {
+          "title": "Flamingo Tillflyktsort",
+          "caption": "Upptäck naturens rosa parad"
+      },
+      "eigth": {
+          "title": "Gyllene Stränder",
+          "caption": "Utforska magin hos ökendynerna"
+      },
+      "nineth": {
+          "title": "Zebra Serengeti",
+          "caption": "Strimmor i rörelse på savannen"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ DESTINATIONER",
+          "caption": "Utforska bortom horisonten"
+      },
+      "price": {
+          "title": "BÄSTA PRISGARANTI",
+          "caption": "Bästa prisgaranti, Alltid"
+      },
+      "care": {
+          "title": "UTMÄRKT KUNDTJÄNST",
+          "caption": "Exceptionell Kundvård Alltid"
+      },
+      "booking": {
+          "title": "SUPERSNABB BOKNING",
+          "caption": "Direktbokning, Snabbt Resande"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Sökord",
+          "name": "keyword"
+      },
+      "activity": {
+          "label1": "Aktivitet",
+          "name": "activity",
+          "Swimming": "Simning",
+          "Sightseeing": "Sevärdheter",
+          "Hiking": "Vandring",
+          "Ski": "Skidåkning",
+          "Paragliding": "Skärmflygning",
+          "Parachuting": "Fallskärmshoppning",
+          "Kayaking": "Kajakpaddling",
+          "Baloon Safaris": "Ballong Safaris",
+          "Game Drive": "Safari"
+      },
+      "destination": {
+          "label1": "Destination",
+          "name": "category"
+      },
+      "duration": {
+          "label1": "Varaktighet",
+          "name": "duration",
+          "1 Day Tour": "1 Dagstur",
+          "2 - 4 Days Tour": "2 - 4 Dagars Tur",
+          "5 - 7 Days Tour": "5 - 7 Dagars Tur",
+          "7+ Days Tour": "7+ Dagars Tur"
+      },
+      "Search": "Sök",
+      "Date": "Datum"
+  },
+  "popular": "Populära Turpaket",
+  "viewall": "Visa Alla Turer",
+  "popular2": "Populära Destinationer",
+  "viewall2": "Visa Alla Destinationer",
+  "description": "Dyk in i en skattkista av förtrollande platser, var och en erbjuder en unik väv av kultur, äventyr och naturskönhet. Från ikoniska landmärken till gömda juveler ger vi dig en virtuell resa när vi presenterar destinationer som fångar resenärers hjärtan och fantasi världen över.",
+  "destination": {
+      "heading": "DESTINATIONER",
+      "caption": "Utforska Turer Efter Destinationer",
+      "local": "Lokala Resor",
+      "hot": "Populärt Val",
+      "holiday": "Internationella Semester",
+      "africa": "Östra Afrika",
+      "vacay": "Semester",
+      "edu": "Utbildningsresor",
+      "special": "Specialresor",
+      "sports": "Sportevenemang",
+      "charity": "Välgörenhetsresor",
+      "wine": "Vinprovningsturer",
+      "food": "Matfestivaler",
+      "bird": "Fågelskådningsexpeditioner",
+      "sky": "Himlarsvindlande turer",
+      "learn": "Lär Dig Mer",
+      "view": "Visa alla turer"
+  },
+  "shortabout": "En internationell researrangör som specialiserar sig på skräddarsydda affärs- och fritidsresor samt lyxiga semesterpaket med avsikt att ge resenärer felfria semester och skinande reseupplevelser.",
+  "longabout": "En internationell researrangör som specialiserar sig på skräddarsydda affärs- och fritidsresor samt lyxiga semesterpaket med avsikt att ge resenärer felfria semester och skinande reseupplevelser. Vi har etablerat en portfölj av världsklassiga exklusiva destinationer, fantastiska lyxhotell och resorts, samt lyxiga tjänster och bekvämligheter som erbjuds tillsammans med mycket personlig service och omsorgsfull uppmärksamhet på varje detalj vid planeringen av den ultimata turupplevelsen.",
+  "footer": {
+      "about": "OM OSS",
+      "top": "TOPPDESTINATIONER",
+      "contact": "KONTAKTINFORMATION",
+      "location": "Plats: Hurlingham Plaza, längs Argwings Kodhek Road, Nairobi, Kenya",
+      "tel": "Tel: +254 707 741 232",
+      "copyright": "Upphovsrätt © 2024 Denze Tours and Travels. Alla Rättigheter Förbehållna"
+  },
+  "vsn": "Vår Vision",
+  "msn": "Vår Mission",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "DENZE Tours and Travels strävar efter att skapa skinande minnen för dig på varje turné. Vi är dedikerade att förbättra reseupplevelser på alla sätt och erbjuder en högt personlig service och en stor hängivenhet till att förstå resenärers behov.",
+      "mission": "DENZE Tours and Travels är hängiven att helt förstå dina resepreferenser för att kunna erbjuda den mest meningsfulla, autentiska och personliga eller gruppupplevelsen. Vi ser fram emot att samarbeta med dig i varje äventyr och turné med stor glädje."
+  },
+  "searchtours": "Sök Turer",
+  "details": {
+      "valid": "Giltigt Till",
+      "night": "nätter",
+      "days": "dagar",
+      "rates": "Priser",
+      "includes": "Inkluderar",
+      "excludes": "Exkluderar",
+      "activity": "Aktiviteter",
+      "min": "Min",
+      "max": "Max",
+      "interest": "Är du intresserad?",
+      "name": "Namn",
+      "email": "E-post",
+      "phone": "Telefon",
+      "enquiry": "Förfrågan",
+      "send": "Skicka",
+      "off": "avdrag"
+  },
+  "location": "Plats",
+  "social": "Socialt",
+  "contact": {
+      "title": "Kom I Kontakt",
+      "caption": "Kontakta Oss",
+      "leave": "Lämna oss din information",
+      "desc": "Kontakta oss idag för att börja planera din drömsemester! Oavsett om du har frågor, vill anpassa din resplan eller helt enkelt behöver hjälp, är vårt team här för att hjälpa till.",
+      "name": "Fullständigt Namn",
+      "sub": "Ämne",
+      "message": "Meddelande",
+      "submit": "Skicka Nu",
+      "location": "Hurlingham Plaza, längs Argwings Kodhek Road, Nairobi, Kenya",
+      "phone1": "Globalt: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Europa/USA: +41 779 361 338",
+      "phone3": "Storbritannien: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "LYCKADES",
+      "message": "Din förfrågan har mottagits.",
+      "error": "FEL",
+      "err": "Ett fel uppstod. Försök igen."
   }
-  
+}
