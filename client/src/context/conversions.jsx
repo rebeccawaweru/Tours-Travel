@@ -1,5 +1,9 @@
 import { createContext, useEffect, useState } from "react"
-export const ConvertContext = createContext(null)
+export const ConvertContext = createContext({
+    language: '',
+    currency: '',
+    rates: []
+  });
 
 const Conversions = ({children}) => {
     const [language, setlanguage] = useState()
