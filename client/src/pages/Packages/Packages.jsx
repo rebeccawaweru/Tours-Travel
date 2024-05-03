@@ -57,7 +57,6 @@ export default function Packages(){
         flexDirection:"column",
         color:"whitesmoke",
         justifyContent:"center",
-        // alignItems:"start",
         height:{xs:"120vh",sm:"80vh",md:"100vh", lg:"120vh", xl:"100vh"},
         width:"100%",
         backgroundSize: 'cover',
@@ -75,20 +74,14 @@ export default function Packages(){
        </Box>
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"20px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:{xs:"center",md:"center",lg:"start"},cursor:"pointer"}}>
-            {!search && combined && combined.length > 0 && combined.map((item)=>{
+            {!search && data && data.length > 0 && data.map((item)=>{
                     return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights}nights ${item.days}days`} image={item.poster}/>
                   })
                }
-
             {search && filtered && filtered.length > 0 ? filtered.map((item)=>{
                     return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights}nights ${item.days}days`} image={item.poster}/>
                   }) : search  && <p>No tour packages found <Button onClick={handleReset} component="p">Reset</Button> </p>
                 } 
-                
-          
-                <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485121/train_kfyezj.jpg"/>
-             <Package price={3000} image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485099/america_u0clei.webp" title="America – 2 Days in Lake Tahoe" location="America" duration="7 days"/>
-             <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485084/bridge_fmrmqp.jpg"/>
             </Grid>
         </Container>
     </Wrapper>

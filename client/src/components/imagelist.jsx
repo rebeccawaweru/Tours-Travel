@@ -10,14 +10,13 @@ export default function CustomImageList({...props}) {
     const handleMouseEnter = () => {
       setHovered(true);
     };
-  
     const handleMouseLeave = () => {
       setHovered(false);
     };
   return (
     <Grid container alignItems="center" direction="row" {...props}>
             {itemData.slice(0, 4).map((item) =>  (
-            <Grid component={Link} to={`/destination?category=${item.title}`} position="relative" item xs={12} sm={3} md={3}  key={item.title}>
+            <Grid component={Link} to={`/destination?category=${t(item.title)}`} position="relative" item xs={12} sm={3} md={3}  key={item.title}>
             <Box  
              onMouseEnter={handleMouseEnter}
              onMouseLeave={handleMouseLeave}
@@ -36,40 +35,13 @@ export default function CustomImageList({...props}) {
             <Typography><LocationOn /></Typography>
             <Typography variant="h6" fontWeight="bold">{t(item.title)}</Typography>
            </Stack>
-
-            {/* <Typography marginLeft={{xs:1,sm:1,md:6,lg:16,xl:16}} fontWeight="bold" color="primary">3 Tours</Typography> */}
          </Box>
             {hovered ? <Typography marginLeft={1} component={Link} to="/destinations" fontWeight="bold" color="primary">{t('destination.view')}</Typography> : null}
-      
          </Box>
          </Box>
             </Grid>
             ))}
     </Grid>
-    // <Box sx={{width:"100%",display:'flex',flexDirection:{xs:"column",sm:"column",md:"row", lg:"row",xl:"row"},margin:0,justifyContent:"stretch", alignItems:"center"}}>
-    //   {itemData.map((item) => (
-    //       <Box  
-    //       component="img" 
-    //       src={`${item.img}`} 
-    //       alt={`${item.title}`} 
-    //       loading='lazy'
-    //       sx={{width:{xs:"100%", sm:"100%", md:"auto", lg:"auto", xl:"auto"}, height:"400px", objectFit:"cover"}}
-    //       >
-        
-    //       </Box>
-        //   <img
-        //    key={item.img}
-        //     width={260}
-        //     height={400}
-        //     src={`${item.img}`}
-        //     alt={item.title}
-        //      style={{objectFit:"cover"}}
-        //     loading="lazy"
-        //   />
-        
-   
-    //   ))}
-    // </Box>
   );
 }
 

@@ -1,13 +1,183 @@
 {
-    "navbar": {
-      "slogan": "Pentru o experiență strălucitoare de călătorie!",
-      "home": "Acasă",
-      "about": "Despre",
-      "packages": "Pachete",
-      "destinations": "Destinații",
-      "contact": "Contact",
-      "signup": "Înregistrare",
-      "signin": "Autentificare"
+  "navbar": {
+    "slogan":"Pentru o Experiență Strălucitoare de Călătorie!",
+    "home": "Acasă",
+    "about": "Despre",
+    "packages":"Pachete",
+    "destinations":"Destinații",
+    "contact": "Contact",
+    "signup":"Înregistrare",
+    "signin":"Autentificare"
+  },
+  "slider":{
+    "first":{
+      "title":"Special",
+      "caption":"7 zile în Elveția"
+    },
+    "second":{
+      "title":"Este timpul să",
+      "caption":"MERGI ÎN VACANȚĂ"
+    },
+    "third":{
+      "title":"ÎNCHIDE OCHII LA",
+      "caption":"LUMEA ASCUNSĂ"
+    },
+    "fourth":{
+      "title":"Raiul Dezvăluit",
+      "caption":"Înaintează în Țărmuri Îmbăiate de Soare"
+    },
+    "fifth":{
+      "title":"Unde Valurile Șoptesc",
+      "caption":"Amintirile Durează Întotdeauna"
+    },
+    "sixth":{
+      "title":"Înalt și Măreț",
+      "caption":"Descoperă Grația Girafei"
+    },
+    "seventh":{
+      "title":"Refugiu pentru Flamingo",
+      "caption":"Descoperă Parada Roz a Naturii"
+    },
+    "eigth":{
+      "title":"Nisipuri Aurii",
+      "caption":"Explorează Magia Dunelor de Deșert"
+    },
+    "nineth":{
+      "title":"Serengeti-ul Zebră",
+      "caption":"Dungi în Mișcare pe Savana"
     }
+  },
+  "quality":{
+     "destination":{
+      "title":"500+ DESTINAȚII",
+      "caption":"Explorează dincolo de orizont"
+     },
+     "price":{
+      "title":"CEA MAI BUNĂ GARANȚIE DE PREȚ",
+      "caption":"Garanția Celui Mai Bun Preț, Întotdeauna"
+     },
+     "care":{
+      "title":"O GRIJĂ DE EXCEPȚIE FAȚĂ DE CLIENT",
+      "caption":"O Îngrijire Excepțională a Clienților întotdeauna"
+     },
+     "booking":{
+      "title":"REZERVARE SUPER RAPIDĂ",
+      "caption":"Rezervare Instantanee, Călătorie Rapidă"
+     }
+  },
+  "filter":{
+     "keyword":{
+      "label1":"Cuvânt cheie",
+      "name":"keyword"
+     },
+     "activity":{
+      "label1":"Activitate",
+      "name":"activity",
+      "Swimming":"Înot",
+      "Sightseeing":"Vizită",
+      "Hiking":"Drumeție",
+      "Ski":"Schi",
+      "Paragliding":"Parapantă",
+      "Parachuting":"Parașutism",
+      "Kayaking":"Caiac",
+      "Baloon Safaris":"Safari cu Balonul",
+      "Game Drive":"Drum de Joc"
+     },
+     "destination":{
+      "label1":"Destinație",
+      "name":"category"
+     },
+     "duration":{
+      "label1":"Durată",
+      "name":"duration",
+      "1 Day Tour":"Tur de 1 Zi",
+      "2 - 4 Days Tour":"Tur de 2 - 4 Zile",
+      "5 - 7 Days Tour":"Tur de 5 - 7 Zile",
+      "7+ Days Tour":"Tur de 7+ Zile"
+     },
+     "Search":"Căutare",
+     "Date":"Dată"
+  },
+  "popular":"Pachete Turistice Populare",
+  "viewall":"Vezi Toate Tururile",
+  "popular2":"Destinații Populare",
+  "viewall2":"Vezi Toate Destinațiile",
+  "description":"Pornește într-un tezaur de locuri fermecătoare, fiecare oferind o tapiserie unică de cultură, aventură și frumusețe naturală. De la repere iconice la comori ascunse, îmbarcă-te într-o călătorie virtuală cu noi pe măsură ce prezentăm destinațiile care cuceresc inimile și imaginația călătorilor din întreaga lume.",
+  "destination":{
+    "heading":"DESTINAȚII",
+    "caption":"Explorează Tururile pe Destinații",
+    "local":"Călătorii Locale",
+    "hot":"Alegere Populară",
+    "holiday":"Vacanță Internațională",
+    "africa":"Africa de Est",
+    "vacay":"Vacanțe",
+    "edu":"Tururi Educaționale",
+    "special":"Tururi Speciale",
+    "sports":"Evenimente Sportive",
+    "charity":"Tururi de Caritate",
+    "wine":"Tururi de Degustare a Vinului",
+    "food":"Festivaluri Gastronomice",
+    "bird":"Explorări de Observare a Păsărilor",
+    "sky":"Tururi de Planorism",
+    "learn":"Află Mai Multe",
+    "view":"Vezi toate tururile"
+  },
+  "shortabout":"Un operator turistic internațional specializat în itinerarii personalizate pentru afaceri și timp liber, și pachete de vacanță de lux cu scopul de a oferi călătorilor vacanțe impecabile și o experiență strălucitoare de călătorie.",
+  "longabout":"Un operator turistic internațional specializat în itinerarii personalizate pentru afaceri și timp liber, și pachete de vacanță de lux cu scopul de a oferi călătorilor vacanțe impecabile și o experiență strălucitoare de călătorie. Am stabilit un portofoliu de destinații excepționale de clasă mondială, hoteluri și stațiuni de lux, precum și servicii și facilități de lux oferite împreună cu un serviciu foarte personalizat și atenție impecabilă la fiecare detaliu în planificarea experienței turistice definitive.",
+  "footer":{
+    "about":"DESPRE NOI",
+    "top":"PRINCIPALELE DESTINAȚII",
+    "contact":"INFORMAȚII DE CONTACT",
+    "location":"Locație: Hurlingham Plaza, de-a lungul Drumului Argwings Kodhek, Nairobi, Kenya",
+    "tel":"Tel: +254 707 741 232",
+    "copyright":"Drepturi de Autor © 2024 Denze Tours and Travels. Toate Drepturile Rezervate"
+  },
+  "vsn":"Viziunea Noastră",
+  "msn":"Misiunea Noastră",
+  "about":{
+    "company":"DENZE TOURS AND TRAVELS",
+    "vision":"DENZE Tours and Travels se străduiește să creeze amintiri strălucitoare pentru tine în fiecare tur. Suntem dedicați perfecționării experiențelor de călătorie în fiecare fel posibil și oferim un serviciu foarte personalizat și o mare dedicare în înțelegerea nevoilor călătorilor.",
+    "mission":"DENZE Tours and Travels este dedicat înțelegerii pe deplin a preferințelor tale de călătorie pentru a oferi cea mai semnificativă, autentică și personală sau experiență în grup. Așteptăm cu nerăbdare să colaborăm cu tine în fiecare aventură și tur cu mare plăcere."
+  },
+  "searchtours":"Caută Tururi",
+  "details":{
+    "valid":"Valabil Până la",
+    "night":"nopți",
+    "days":"zile",
+    "rates":"Tarife",
+    "includes":"Include",
+    "excludes":"Exclude",
+    "activity":"Activități",
+    "min":"Min",
+    "max":"Max",
+    "interest":"Ești interesat(ă)?",
+    "name":"Nume",
+    "email":"E-mail",
+    "phone":"Telefon",
+    "enquiry":"Întrebare",
+    "send":"Trimite",
+    "off":"reducere"
+  },
+  "location":"Locație",
+  "social":"Social",
+  "contact":{
+    "title":"Intrați în Contact",
+    "caption":"Contactați-ne",
+    "leave":"Lăsați-ne informațiile dumneavoastră",
+    "desc":"Contactați-ne astăzi pentru a începe planificarea vacanței de vis! Indiferent dacă aveți întrebări, doriți să personalizați itinerariul sau aveți nevoie doar de asistență, echipa noastră este aici pentru a vă ajuta.",
+    "name":"Nume Complet",
+    "sub":"Subiect",
+    "message":"Mesaj",
+    "submit":"Trimiteți Acum",
+    "location":"Hurlingham Plaza, de-a lungul Drumului Argwings Kodhek, Nairobi, Kenya",
+    "phone1":"Global: +254 707 741 232 | +254 769 665 298",
+    "phone2":"Europa/SUA: +41 779 361 338",
+    "phone3":"Marea Britanie: +44 792 805 4212"
+  },
+  "swal":{
+    "success":"SUCCES",
+    "message":"Cererea dumneavoastră a fost primită.",
+    "error":"EROARE",
+    "err":"A apărut o eroare. Vă rugăm să încercați din nou."
   }
-  
+}

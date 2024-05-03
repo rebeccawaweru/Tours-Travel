@@ -1,13 +1,183 @@
 {
-    "navbar": {
-      "slogan": "Para uma experiência de viagem brilhante!",
-      "home": "Início",
-      "about": "Sobre",
-      "packages": "Pacotes",
-      "destinations": "Destinos",
-      "contact": "Contato",
-      "signup": "Registar",
-      "signin": "Entrar"
+  "navbar": {
+    "slogan":"Para uma Experiência de Viagem Deslumbrante!",
+    "home": "Página Inicial",
+    "about": "Sobre",
+    "packages":"Pacotes",
+    "destinations":"Destinos",
+    "contact": "Contato",
+    "signup":"Cadastre-se",
+    "signin":"Entrar"
+  },
+  "slider":{
+    "first":{
+      "title":"Especial",
+      "caption":"7 dias na Suíça"
+    },
+    "second":{
+      "title":"É hora de",
+      "caption":"IR PARA AS FÉRIAS"
+    },
+    "third":{
+      "title":"ABRA OS OLHOS PARA",
+      "caption":"O MUNDO ESCONDIDO"
+    },
+    "fourth":{
+      "title":"Paraíso Deslumbrante",
+      "caption":"Mergulhe em Praias Banhadas pelo Sol"
+    },
+    "fifth":{
+      "title":"Onde as Ondas Sussurram",
+      "caption":"Memórias Duram para Sempre"
+    },
+    "sixth":{
+      "title":"Alto e Majestoso",
+      "caption":"Descubra a Graça da Girafa"
+    },
+    "seventh":{
+      "title":"Refúgio dos Flamingos",
+      "caption":"Descubra o Desfile Rosa da Natureza"
+    },
+    "eigth":{
+      "title":"Areias Douradas",
+      "caption":"Explore a Magia das Dunas do Deserto"
+    },
+    "nineth":{
+      "title":"Serengeti das Zebras",
+      "caption":"Listras em Movimento na Savana"
     }
+  },
+  "quality":{
+     "destination":{
+      "title":"500+ DESTINOS",
+      "caption":"Explore Além do Horizonte"
+     },
+     "price":{
+      "title":"MELHOR GARANTIA DE PREÇO",
+      "caption":"Melhor Garantia de Preço, Sempre"
+     },
+     "care":{
+      "title":"ÓTIMO ATENDIMENTO AO CLIENTE",
+      "caption":"Atendimento ao Cliente Excepcional Sempre"
+     },
+     "booking":{
+      "title":"RESERVA SUPER RÁPIDA",
+      "caption":"Reserva Instantânea, Viagem Ágil"
+     }
+  },
+  "filter":{
+     "keyword":{
+      "label1":"Palavra-chave",
+      "name":"keyword"
+     },
+     "activity":{
+      "label1":"Atividade",
+      "name":"activity",
+      "Swimming":"Natação",
+      "Sightseeing":"Turismo",
+      "Hiking":"Caminhada",
+      "Ski":"Esqui",
+      "Paragliding":"Parapente",
+      "Parachuting":"Paraquedismo",
+      "Kayaking":"Caiaque",
+      "Baloon Safaris":"Safáris de Balão",
+      "Game Drive":"Safári"
+     },
+     "destination":{
+      "label1":"Destino",
+      "name":"category"
+     },
+     "duration":{
+      "label1":"Duração",
+      "name":"duration",
+      "1 Day Tour":"Passeio de 1 Dia",
+      "2 - 4 Days Tour":"Passeio de 2 a 4 Dias",
+      "5 - 7 Days Tour":"Passeio de 5 a 7 Dias",
+      "7+ Days Tour":"Passeio de 7 Dias ou Mais"
+     },
+     "Search":"Buscar",
+     "Date":"Data"
+  },
+  "popular":"Pacotes Turísticos Populares",
+  "viewall":"Ver Todos os Passeios",
+  "popular2":"Destinos Populares",
+  "viewall2":"Ver Todos os Destinos",
+  "description":"Mergulhe em um tesouro de lugares encantadores, cada um oferecendo uma tapeçaria única de cultura, aventura e beleza natural. De marcos icônicos a joias escondidas, embarque em uma jornada virtual conosco enquanto mostramos os destinos que capturam os corações e imaginações dos viajantes em todo o mundo.",
+  "destination":{
+    "heading":"DESTINOS",
+    "caption":"Explore Passeios por Destinos",
+    "local":"Viagens Locais",
+    "hot":"Escolha Quente",
+    "holiday":"Férias Internacionais",
+    "africa":"África Oriental",
+    "vacay":"Férias",
+    "edu":"Passeios Educacionais",
+    "special":"Passeios Especiais",
+    "sports":"Eventos Esportivos",
+    "charity":"Passeios de Caridade",
+    "wine":"Passeios de Degustação de Vinhos",
+    "food":"Festivais Gastronômicos",
+    "bird":"Explorações de Observação de Pássaros",
+    "sky":"Passeios de Planador",
+    "learn":"Saiba Mais",
+    "view":"Ver todos os passeios"
+  },
+  "shortabout":"Operador turístico internacional especializado em itinerários personalizados para negócios e lazer, e pacotes de férias de luxo com o objetivo de proporcionar aos viajantes férias impecáveis e uma experiência de viagem deslumbrante.",
+  "longabout":"Operador turístico internacional especializado em itinerários personalizados para negócios e lazer, e pacotes de férias de luxo com o objetivo de proporcionar aos viajantes férias impecáveis e uma experiência de viagem deslumbrante. Estabelecemos um portfólio de destinos requintados de classe mundial, hotéis e resorts luxuosos e serviços e comodidades de luxo que são oferecidos junto com um serviço altamente personalizado e atenção impecável a todos os detalhes no planejamento da experiência turística definitiva.",
+  "footer":{
+    "about":"SOBRE NÓS",
+    "top":"PRINCIPAIS DESTINOS",
+    "contact":"INFORMAÇÕES DE CONTATO",
+    "location":"Localização: Hurlingham Plaza, Ao Longo da Estrada Argwings Kodhek, Nairóbi, Quênia",
+    "tel":"Tel: +254 707 741 232",
+    "copyright":"Direitos Autorais © 2024 Denze Tours and Travels. Todos os Direitos Reservados"
+  },
+  "vsn":"Nossa Visão",
+  "msn":"Nossa Missão",
+  "about":{
+    "company":"DENZE TOURS AND TRAVELS",
+    "vision":"DENZE Tours and Travels se esforça para criar memórias deslumbrantes para você em cada passeio. Estamos dedicados a aperfeiçoar as experiências de viagem de todas as maneiras possíveis e oferecemos um serviço altamente personalizado e umagrande dedicação em entender as necessidades dos viajantes.",
+    "mission":"DENZE Tours and Travels está dedicada a entender completamente suas preferências de viagem para fornecer a experiência mais significativa, autêntica e pessoal ou em grupo. Estamos ansiosos para nos associarmos a você em cada aventura e passeio com grande prazer."
+  },
+  "searchtours":"Buscar Passeios",
+  "details":{
+    "valid":"Válido Até",
+    "night":"noites",
+    "days":"dias",
+    "rates":"Tarifas",
+    "includes":"Inclui",
+    "excludes":"Exclui",
+    "activity":"Atividades",
+    "min":"Mín",
+    "max":"Máx",
+    "interest":"Você está interessado(a)?",
+    "name":"Nome",
+    "email":"E-mail",
+    "phone":"Telefone",
+    "enquiry":"Consulta",
+    "send":"Enviar",
+    "off":"desconto"
+  },
+  "location":"Localização",
+  "social":"Social",
+  "contact":{
+    "title":"Entre em Contato",
+    "caption":"Contate-nos",
+    "leave":"Deixe-nos suas informações",
+    "desc":"Entre em contato conosco hoje para começar a planejar sua viagem dos sonhos! Se você tiver dúvidas, quiser personalizar seu itinerário ou simplesmente precisar de assistência, nossa equipe está aqui para ajudar.",
+    "name":"Nome Completo",
+    "sub":"Assunto",
+    "message":"Mensagem",
+    "submit":"Enviar Agora",
+    "location":"Hurlingham Plaza, Ao Longo da Estrada Argwings Kodhek, Nairóbi, Quênia",
+    "phone1":"Global: +254 707 741 232 | +254 769 665 298",
+    "phone2":"Europa/EUA: +41 779 361 338",
+    "phone3":"Reino Unido: +44 792 805 4212"
+  },
+  "swal":{
+    "success":"SUCESSO",
+    "message":"Sua consulta foi recebida.",
+    "error":"ERRO",
+    "err":"Ocorreu um erro. Por favor, tente novamente."
   }
-  
+}
