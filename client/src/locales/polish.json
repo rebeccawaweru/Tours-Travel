@@ -1,13 +1,183 @@
 {
-    "navbar": {
-      "slogan": "Dla błyszczącego doświadczenia podróży!",
-      "home": "Strona główna",
-      "about": "O nas",
-      "packages": "Pakiety",
-      "destinations": "Destynacje",
-      "contact": "Kontakt",
-      "signup": "Zarejestruj się",
-      "signin": "Zaloguj się"
+  "navbar": {
+    "slogan":"Dla błyszczącego doświadczenia podróży!",
+    "home": "Strona główna",
+    "about": "O nas",
+    "packages":"Pakiety",
+    "destinations":"Destynacje",
+    "contact": "Kontakt",
+    "signup":"Zarejestruj się",
+    "signin":"Zaloguj się"
+  },
+  "slider":{
+    "first":{
+      "title":"Specjalne",
+      "caption":"7 dni w Szwajcarii"
+    },
+    "second":{
+      "title":"Czas",
+      "caption":"NA URLOP"
+    },
+    "third":{
+      "title":"OTWÓRZ OCZY NA",
+      "caption":"UKRYTY ŚWIAT"
+    },
+    "fourth":{
+      "title":"Raj uwolniony",
+      "caption":"Zanurz się w promieniowanych przez słońce brzegach"
+    },
+    "fifth":{
+      "title":"Gdzie fale szeptają",
+      "caption":"Wspomnienia trwają wiecznie"
+    },
+    "sixth":{
+      "title":"Wysoki i majestatyczny",
+      "caption":"Odkryj wdzięk żyrafy"
+    },
+    "seventh":{
+      "title":"Raj flamingów",
+      "caption":"Odkryj różowe paradę natury"
+    },
+    "eigth":{
+      "title":"Złote wydmy",
+      "caption":"Odkryj magię pustynnych wydm"
+    },
+    "nineth":{
+      "title":"Serengeti zebry",
+      "caption":"Paski w ruchu na sawannie"
     }
+  },
+  "quality":{
+     "destination":{
+      "title":"500+ DESTYNACJI",
+      "caption":"Odkryj za horyzontem"
+     },
+     "price":{
+      "title":"NAJLEPSZA GWARANCJA CENOWA",
+      "caption":"Zawsze najlepsza gwarancja ceny"
+     },
+     "care":{
+      "title":"WSPANIAŁA OBSŁUGA KLIENTA",
+      "caption":"Wyjątkowa opieka klienta zawsze"
+     },
+     "booking":{
+      "title":"BŁYSKAWICZNA REZERWACJA",
+      "caption":"Natychmiastowa rezerwacja, szybka podróż"
+     }
+  },
+  "filter":{
+     "keyword":{
+      "label1":"Słowo kluczowe",
+      "name":"keyword"
+     },
+     "activity":{
+      "label1":"Aktywność",
+      "name":"activity",
+      "Swimming":"Pływanie",
+      "Sightseeing":"Zwiedzanie",
+      "Hiking":"Wędrówka",
+      "Ski":"Narciarstwo",
+      "Paragliding":"Paralotniarstwo",
+      "Parachuting":"Spadochroniarstwo",
+      "Kayaking":"Kajakarstwo",
+      "Baloon Safaris":"Safari balonowe",
+      "Game Drive":"Safari"
+     },
+     "destination":{
+      "label1":"Destynacja",
+      "name":"kategoria"
+     },
+     "duration":{
+      "label1":"Czas trwania",
+      "name":"duration",
+      "1 Day Tour":"Wycieczka 1-dniowa",
+      "2 - 4 Days Tour":"Wycieczka 2 - 4 dniowa",
+      "5 - 7 Days Tour":"Wycieczka 5 - 7 dniowa",
+      "7+ Days Tour":"Wycieczka 7+ dniowa"
+     },
+     "Search":"Szukaj",
+     "Date":"Data"
+  },
+  "popular":"Popularne pakiety turystyczne",
+  "viewall":"Zobacz wszystkie wycieczki",
+  "popular2":"Popularne destynacje",
+  "viewall2":"Zobacz wszystkie destynacje",
+  "description":"Zanurz się w skarbnicy uroczych miejsc, każde z ofertą unikalnego krajobrazu kultury, przygody i naturalnego piękna. Od ikonicznych zabytków po ukryte klejnoty, wyrusz w wirtualną podróż z nami, gdy prezentujemy destynacje, które zdobywają serca i wyobraźnie podróżnych z całego świata.",
+  "destination":{
+    "heading":"DESTYNACJE",
+    "caption":"Odkryj wycieczki według destynacji",
+    "local":"Podróże lokalne",
+    "hot":"Gorący wybór",
+    "holiday":"Wakacje międzynarodowe",
+    "africa":"Afryka Wschodnia",
+    "vacay":"Wakacje",
+    "edu":"Wycieczki edukacyjne",
+    "special":"Specjalne wycieczki",
+    "sports":"Wydarzenia sportowe",
+    "charity":"Wycieczki charytatywne",
+    "wine":"Wycieczki degustacyjne win",
+    "food":"Festiwale kulinarnę",
+    "bird":"Obserwacje ptaków",
+    "sky":"Wycieczki szybowcowe",
+    "learn":"Dowiedz się więcej",
+    "view":"Zobacz wszystkie wycieczki"
+  },
+  "shortabout":"Międzynarodowy organizator turystyczny specjalizujący się w niestandardowych planach podróży biznesowych i wypoczynkowych, oraz luksusowych pakietach wakacyjnych, mający na celu zapewnienie podróżnym nieskazitelnych wakacji i błyszczącego doświadczenia podróży.",
+  "longabout":"Międzynarodowy organizator turystyczny specjalizujący się w niestandardowych planach podróży biznesowych i wypoczynkowych, oraz luksusowych pakietach wakacyjnych, mający na celu zapewnienie podróżnym nieskazitelnych wakacji i błyszczącego doświadczenia podróży. Stworzyliśmy portfel ekskluzywnych destynacji, wspaniałych luksusowych hoteli i kurortów, a także luksusowych usług i udogodnień, które oferujemy wraz z bardzo personalizowaną obsługą i niezwykłą uwagą na każdy szczegół w planowaniu ostatecznego doświadczenia turystycznego.",
+  "footer":{
+    "about":"O NAS",
+    "top":"Najlepsze destynacje",
+    "contact":"KONTAKT",
+    "location":"Lokalizacja: Hurlingham Plaza, Wzdłuż Drogi Argwings Kodhek, Nairobi, Kenia",
+    "tel":"Tel: +254 707 741 232",
+    "copyright":"Prawa autorskie © 2024 Denze Tours and Travels. Wszelkie prawa zastrzeżone"
+  },
+  "vsn":"Nasza Wizja",
+  "msn":"Nasza Misja",
+  "about":{
+    "company":"DENZE TOURS AND TRAVELS",
+    "vision":"DENZE Tours and Travels stara się tworzyć błyszczące wspomnienia podczas każdej wycieczki. Jestem poświęcony doskonaleniu doświadczeń podróżniczych w każdy możliwy sposób i oferujemy bardzo personalizowaną obsługę oraz wielkie zaangażowanie w zrozumienie potrzeb podróżnych.",
+    "mission":"DENZE Tours and Travels jest oddany całkowitemu zrozumieniu Twoich preferencji podróżniczych, aby zapewnić najbardziej znaczące, autentyczne i osobiste lub grupowe doświadczenie. Cieszymy się na możliwość współpracy z Tobą w każdej przygodzie i wycieczce z wielką przyjemnością."
+  },
+  "searchtours":"Wyszukaj Wycieczki",
+  "details":{
+    "valid":"Ważne do",
+    "night":"noc",
+    "days":"dni",
+    "rates":"Stawki",
+    "includes":"Zawiera",
+    "excludes":"Wyłącza",
+    "activity":"Aktywności",
+    "min":"Min",
+    "max":"Maks",
+    "interest":"Jesteś zainteresowany(a)?",
+    "name":"Imię",
+    "email":"E-mail",
+    "phone":"Telefon",
+    "enquiry":"Zapytanie",
+    "send":"Wyślij",
+    "off":"zniżka"
+  },
+  "location":"Lokalizacja",
+  "social":"Społeczność",
+  "contact":{
+    "title":"Skontaktuj się z nami",
+    "caption":"Skontaktuj się z nami",
+    "leave":"Podaj nam swoje dane",
+    "desc":"Skontaktuj się z nami już dziś, aby rozpocząć planowanie wymarzonego wyjazdu! Bez względu na to, czy masz pytania, chcesz dostosować swój plan podróży, czy po prostu potrzebujesz pomocy, nasz zespół jest tu, aby pomóc.",
+    "name":"Imię i nazwisko",
+    "sub":"Temat",
+    "message":"Wiadomość",
+    "submit":"Wyślij teraz",
+    "location":"Hurlingham Plaza, Wzdłuż Drogi Argwings Kodhek, Nairobi, Kenia",
+    "phone1":"Globalnie: +254 707 741 232 | +254 769 665 298",
+    "phone2":"Europa/USA: +41 779 361 338",
+    "phone3":"Wielka Brytania: +44 792 805 4212"
+  },
+  "swal":{
+    "success":"SUKCES",
+    "message":"Twoje zapytanie zostało odebrane.",
+    "error":"BŁĄD",
+    "err":"Wystąpił błąd. Spróbuj ponownie."
   }
-  
+}

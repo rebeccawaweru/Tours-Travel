@@ -158,10 +158,20 @@ export default function PackageDetails(){
            {data.inclusives && data.inclusives.map((item,index)=> {
               return <Stack direction="row" spacing={1}><LabelImportant color="primary"/><Typography key={index} color="inherit" variant="body1">{item.desc}</Typography></Stack>
            })}
-           
+
+           {(data.exclusives && data.exclusives.length > 0) ?
+           <>
            <Divider></Divider>
+           <Typography variant="h5" fontWeight="bold" color="primary">Excludes:</Typography>
+           {data.exclusives.map((item,index)=> {
+              return <Stack direction="row" spacing={1}><LabelImportant color="primary"/><Typography key={index} color="inherit" variant="body1">{item.desc}</Typography></Stack>
+           })}
+           </>
+         : null}
+         
+       <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.activity")}</Typography>
-           <Box display="flex" flexWrap="wrap" gap={2}>
+           <Box display="flex" flexWrap="wrap" gap={2} marginBottom={2}>
            {data && data.activity && data.activity.length > 0 && data.activity.map((item)=>{
                  return  <Stack direction="row" key={item}><TrendingUp fontSize="small" color="primary"/><Typography color="inherit" variant="body1">{item}</Typography></Stack>
             })}

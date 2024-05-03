@@ -146,6 +146,7 @@
       "days":"days",
       "rates":"Rates",
       "includes":"Includes",
+      "excludes":"Excludes",
       "activity":"Activities",
       "min":"Min",
       "max":"Max",

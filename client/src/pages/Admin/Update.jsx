@@ -33,7 +33,6 @@ export default function UpdatePackage(){
         desc:''
     })
     const [exclusives,setExclusives] = useState([])
-    
     const [activities, setActivities] = useState([])
     const [preview,setPreview] = useState(data.poster)
     const [image, setImage] = useState('')
@@ -116,7 +115,7 @@ export default function UpdatePackage(){
     };
     const handleAdd4 = () => {
         // Add the rate object to the rates array
-        setExclusives((prevExclusives) => [...prevExclusives, exclude]);
+        setExclusives((prev) => [...prev, exclude]);
         setExclude({
             desc:""
         });
