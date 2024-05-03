@@ -1,13 +1,178 @@
 {
-    "navbar": {
+  "navbar": {
       "slogan": "반짝이는 여행 경험을 위해!",
       "home": "홈",
-      "about": "소개",
+      "about": "회사 소개",
       "packages": "패키지",
       "destinations": "목적지",
       "contact": "연락처",
       "signup": "가입하기",
       "signin": "로그인"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "특별한",
+          "caption": "스위스 7일간"
+      },
+      "second": {
+          "title": "지금은",
+          "caption": "휴가를 가는 때"
+      },
+      "third": {
+          "title": "눈을 뜨고",
+          "caption": "숨겨진 세계를 보다"
+      },
+      "fourth": {
+          "title": "낙원이 펼쳐진",
+          "caption": "태양빛에 물들인 해변으로 뛰어들다"
+      },
+      "fifth": {
+          "title": "파도가 속삭이는 곳",
+          "caption": "추억은 영원히 남는다"
+      },
+      "sixth": {
+          "title": "키가 크고 위풍당당한",
+          "caption": "기린의 우아함을 발견하다"
+      },
+      "seventh": {
+          "title": "플라밍고의 안식처",
+          "caption": "자연의 분홍색 퍼레이드를 발견하다"
+      },
+      "eigth": {
+          "title": "황금 모래",
+          "caption": "사막의 모래 언덕의 마법을 탐험하다"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500개 이상의 목적지",
+          "caption": "지평선 너머로 탐험하다"
+      },
+      "price": {
+          "title": "최저가 보장",
+          "caption": "언제나 최고의 가격을 보장합니다"
+      },
+      "care": {
+          "title": "훌륭한 고객 서비스",
+          "caption": "언제나 우수한 고객 서비스"
+      },
+      "booking": {
+          "title": "초고속 예약",
+          "caption": "즉시 예약, 신속한 여행"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "키워드",
+          "name": "키워드"
+      },
+      "activity": {
+          "label1": "활동",
+          "name": "활동",
+          "Swimming": "수영",
+          "Sightseeing": "관광",
+          "Hiking": "등산",
+          "Ski": "스키",
+          "Paragliding": "패러글라이딩",
+          "Parachuting": "낙하산",
+          "Kayaking": "카약",
+          "Baloon Safaris": "풍선 사파리",
+          "Game Drive": "게임 드라이브"
+      },
+      "destination": {
+          "label1": "목적지",
+          "name": "카테고리"
+      },
+      "duration": {
+          "label1": "기간",
+          "name": "기간",
+          "1 Day Tour": "1일 투어",
+          "2 - 4 Days Tour": "2 - 4일 투어",
+          "5 - 7 Days Tour": "5 - 7일 투어",
+          "7+ Days Tour": "7일 이상 투어"
+      },
+      "Search": "검색",
+      "Date": "날짜"
+  },
+  "popular": "인기 투어 패키지",
+  "viewall": "모든 투어 보기",
+  "popular2": "인기 있는 목적지",
+  "viewall2": "모든 목적지 보기",
+  "description": "매혹적인 장소의 보물창고로 뛰어들어, 각각 독특한 문화, 모험 및 자연의 아름다움을 제공합니다. 상징적인 랜드마크부터 숨겨진 보석까지 전 세계 여행자들의 마음과 상상력을 사로잡는 목적지를 쇼케이스하는 가상 여행에 동행하세요.",
+  "destination": {
+      "heading": "목적지",
+      "caption": "목적지별 투어 탐색",
+      "local": "지역 여행",
+      "hot": "인기 있는 여행",
+      "holiday": "국제 휴일",
+      "africa": "동아프리카",
+      "vacay": "휴가",
+      "edu": "교육 투어",
+      "special": "특별 투어",
+      "sports": "스포츠 이벤트",
+      "charity": "자선 투어",
+      "wine": "와인 시음 투어",
+      "food": "음식 축제",
+      "bird": "새 관찰 탐사",
+      "sky": "하늘 비행 투어",
+      "learn": "더 알아보기",
+      "view": "모든 투어 보기"
+  },
+  "shortabout": "완벽한 휴가와 반짝이는 여행 경험을 제공하기 위해 맞춤 비즈니스 및 레저 여정 및 고급 휴가 패키지에 특화된 국제 여행사.",
+  "longabout": "완벽한 휴가와 반짝이는 여행 경험을 제공하기 위해 맞춤 비즈니스 및 레저 여정 및 고급 휴가 패키지에 특화된 국제 여행사. 우리는 세계적인 명소, 훌륭한 고급 호텔 및 리조트, 그리고 궁극의 투어 경험을 계획할 때 모든 세부 사항에 대한 매우 개인화된 서비스와 높은 주의를 제공하는 세계적인 우수 목적지의 포트폴리오를 구축했습니다.",
+  "footer": {
+      "about": "회사 소개",
+      "top": "인기 있는 목적지",
+      "contact": "연락 정보",
+      "location": "위치: Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Kenya",
+      "tel": "전화: +254 707 741 232",
+      "copyright": "저작권 © 2024 Denze Tours and Travels. 판권 소유"
+  },
+  "vsn": "우리의 비전",
+  "msn": "우리의 미션",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "DENZE Tours and Travels는 모든 투어에서 반짝이는 추억을 만들기 위해 노력합니다. 여행 경험을 최대한 완벽하게 만들기 위해 높은 수준의 개인 맞춤 서비스와 여행자의 요구를 이해하기 위한 큰 헌신을 제공합니다.",
+      "mission": "DENZE Tours and Travels는 여행자의 요구를 완전히 이해하여 가장 의미 있는, 진정한 및 개인적 또는 그룹 경험을 제공하기 위해 헌신합니다. 모든 모험과 여행에 대한 당신과의 파트너십을 기대합니다."
+  },
+  "searchtours": "투어 검색",
+  "details": {
+      "valid": "유효 기간",
+      "night": "박",
+      "days": "일",
+      "rates": "요금",
+      "includes": "포함 사항",
+      "activity": "활동",
+      "min": "최소",
+      "max": "최대",
+      "interest": "관심 있으십니까?",
+      "name": "이름",
+      "email": "이메일",
+      "phone": "전화번호",
+      "enquiry": "문의",
+      "send": "보내기",
+      "off": "할인"
+  },
+  "location": "위치",
+  "social": "소셜",
+  "contact": {
+      "title": "연락처",
+      "caption": "연락하기",
+      "leave": "귀하의 정보를 남겨주세요",
+      "desc": "오늘 저희와 연락하여 꿈꾸던 휴가 계획을 시작하세요! 궁금한 점이 있으시거나 여행 일정을 맞춤화하고자 하시거나 단순히 도움이 필요하신 경우 저희 팀이 도와드리겠습니다.",
+      "name": "전체 이름",
+      "sub": "제목",
+      "message": "메시지",
+      "submit": "지금 제출",
+      "location": "Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Kenya",
+      "phone1": "글로벌: +254 707 741 232 | +254 769 665 298",
+      "phone2": "유럽/미국: +41 779 361 338",
+      "phone3": "영국: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "성공",
+      "message": "귀하의 문의가 접수되었습니다.",
+      "error": "오류",
+      "err": "오류가 발생했습니다. 다시 시도하십시오."
   }
-  
+}

@@ -27,6 +27,10 @@ export default function CreatePackage(){
         desc:''
     })
     const [inclusives,setInclusives] = useState([])
+    const [exclude,setExclude] = useState({
+        desc:''
+    })
+    const [exclusives,setExclusives] = useState([])
     const [preview,setPreview] = useState('')
     const [image, setImage] = useState('')
     const [country,setCountry] = useState('')
@@ -70,6 +74,13 @@ export default function CreatePackage(){
             [name]:value
         }));
     };
+    const handleChange5 = (e) => {
+        const { name, value } = e.target;
+        setExclude((prev) => ({
+            ...prev,
+            [name]:value
+        }));
+    };
 
 
     // Handle button click
@@ -99,6 +110,13 @@ export default function CreatePackage(){
             currency:""
         });
     };
+    const handleAdd4 = () => {
+        // Add the rate object to the rates array
+        setExclusives((prevExclusives) => [...prevExclusives, exclude]);
+        setExclude({
+            desc:""
+        });
+    };
 
     const handleDelete = (index) => {
         // Remove the rate at the specified index
@@ -110,6 +128,10 @@ export default function CreatePackage(){
     };
     const handleDelete3 = (index) => {
         setHotels((prevHotels) => prevHotels.filter((_, i) => i !== index));
+    };
+    const handleDelete4 = (index) => {
+        // Remove the rate at the specified index
+        setExclusives((prevEx) => prevEx.filter((_, i) => i !== index));
     };
     const handleCheckboxChange = (label) => {
         if(activities.includes(label)){
@@ -127,7 +149,7 @@ export default function CreatePackage(){
         e.preventDefault()
         setLoading(true)
         const cover = await handleFileUpload(image)
-        const data = {...tour, country:country,region:region,poster:cover.secure_url, rates:rates,hotels:hotels, inclusives:inclusives, activity:activities}
+        const data = {...tour, country:country,region:region,poster:cover.secure_url, rates:rates,hotels:hotels, inclusives:inclusives, exclusives:exclusives, activity:activities}
         await client.post('/new', data).then((response)=>{
             setLoading(false)
              if(response.data.success){
@@ -242,12 +264,27 @@ export default function CreatePackage(){
                 </Grid> 
                 : null
             }
-           
             <Stack direction={{xs:"column",md:"row"}} gap={2}>  
             <BasicInput lbl="Notes" placeholder="e.g Half board meals" multiline rows={3} value={inclusive.desc} name="desc" helperText="Please add each point at a time and click 'Save'" onChange={handleChange3}/>
             <Typography marginTop={3} onClick={handleAdd2} sx={{cursor:"pointer"}}>Save</Typography>
             </Stack>
-    
+
+            <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>The Rates Exclude:</Typography>
+            {exclusives.length > 0 ? 
+                <Grid container direction="column" gap={2} marginBottom={2}>
+                    {exclusives.map((rate,index) => (
+                        <Stack key={index} direction="row" spacing={2}>
+                            <Typography>{rate.desc}</Typography> 
+                            <DeleteForever onClick={() => handleDelete4(index)} />
+                        </Stack>
+                    ))}
+                </Grid> 
+                : null
+            }
+            <Stack direction={{xs:"column",md:"row"}} gap={2}>  
+            <BasicInput lbl="Notes" placeholder="e.g Return tickets" multiline rows={3} value={exclude.desc} name="desc" helperText="Please add each point at a time and click 'Save'" onChange={handleChange5}/>
+            <Typography marginTop={3} onClick={handleAdd4} sx={{cursor:"pointer"}}>Save</Typography>
+            </Stack>
 
             <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>Activities</Typography>
             <CheckBox label="Honeymoon" onChange={()=>handleCheckboxChange('Honeymoon')}/>

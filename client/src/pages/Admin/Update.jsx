@@ -29,6 +29,10 @@ export default function UpdatePackage(){
         desc:''
     })
     const [inclusives,setInclusives] = useState([])
+    const [exclude,setExclude] = useState({
+        desc:''
+    })
+    const [exclusives,setExclusives] = useState([])
     const [activities, setActivities] = useState([])
     const [preview,setPreview] = useState(data.poster)
     const [image, setImage] = useState('')
@@ -74,6 +78,14 @@ export default function UpdatePackage(){
             [name]:value
         }));
     };
+
+    const handleChange5 = (e) => {
+        const { name, value } = e.target;
+        setExclude((prev) => ({
+            ...prev,
+            [name]:value
+        }));
+    };
      // Handle button click
      const handleAdd = () => {
         // Add the rate object to the rates array
@@ -101,6 +113,13 @@ export default function UpdatePackage(){
             currency:""
         });
     };
+    const handleAdd4 = () => {
+        // Add the rate object to the rates array
+        setExclusives((prevExclusives) => [...prevExclusives, exclude]);
+        setExclude({
+            desc:""
+        });
+    };
     const handleDelete = (index) => {
         // Remove the rate at the specified index
         setRates((prevRates) => prevRates.filter((_, i) => i !== index));
@@ -119,6 +138,10 @@ export default function UpdatePackage(){
             setActivities([...activities, label])
         }
     }
+    const handleDelete4 = (index) => {
+        // Remove the rate at the specified index
+        setExclusives((prevEx) => prevEx.filter((_, i) => i !== index));
+    };
     const handleUpload = (e) =>{
        setPreview(URL.createObjectURL(e.target.files[0]))
        setImage(e.target.files)
@@ -148,6 +171,7 @@ export default function UpdatePackage(){
         setPreview(response.data.package.poster)
         setRates(response.data.package.rates)
         setInclusives(response.data.package.inclusives)
+        setExclusives(response.data.package.exclusives)
         setActivities(response.data.package.activity)
         setHotels(response.data.package.hotels)
        })
@@ -263,6 +287,23 @@ export default function UpdatePackage(){
             <Stack direction={{xs:"column",md:"row"}} gap={2}>  
             <BasicInput lbl="Notes" placeholder="e.g Half board meals" multiline rows={3} value={inclusive.desc} name="desc" helperText="Please add each point at a time and click 'Save'" onChange={handleChange3}/>
             <Typography marginTop={3} onClick={handleAdd2} sx={{cursor:"pointer"}}>Save</Typography>
+            </Stack>
+
+            <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>The Rates Exclude:</Typography>
+            {exclusives.length > 0 ? 
+                <Grid container direction="column" gap={2} marginBottom={2}>
+                    {exclusives.map((rate,index) => (
+                        <Stack key={index} direction="row" spacing={2}>
+                            <Typography>{rate.desc}</Typography> 
+                            <DeleteForever onClick={() => handleDelete4(index)} />
+                        </Stack>
+                    ))}
+                </Grid> 
+                : null
+            }
+            <Stack direction={{xs:"column",md:"row"}} gap={2}>  
+            <BasicInput lbl="Notes" placeholder="e.g Return tickets" multiline rows={3} value={exclude.desc} name="desc" helperText="Please add each point at a time and click 'Save'" onChange={handleChange5}/>
+            <Typography marginTop={3} onClick={handleAdd4} sx={{cursor:"pointer"}}>Save</Typography>
             </Stack>
 
             <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>Activities</Typography>

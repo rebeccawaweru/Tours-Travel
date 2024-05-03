@@ -1,13 +1,178 @@
 {
-    "navbar": {
-      "slogan": "Švytuokliniam kelionių įspūdžiui!",
+  "navbar": {
+      "slogan": "Blyksniuojanti kelionių patirtis!",
       "home": "Pradžia",
       "about": "Apie mus",
-      "packages": "Pakuotės",
-      "destinations": "Kelionių tikslai",
+      "packages": "Paketai",
+      "destinations": "Kelionės tikslai",
       "contact": "Kontaktai",
-      "signup": "Registruotis",
+      "signup": "Užsiregistruoti",
       "signin": "Prisijungti"
-    }
+  },
+  "slider": {
+      "first": {
+          "title": "Speciali",
+          "caption": "7 dienos Šveicarijoje"
+      },
+      "second": {
+          "title": "Laikas",
+          "caption": "ATOSTOGAUTI"
+      },
+      "third": {
+          "title": "ATIDARYKITE AKIS",
+          "caption": "PASLĖPTAM PASAULIUI"
+      },
+      "fourth": {
+          "title": "Rojaus atšaukimas",
+          "caption": "Nardykite į saulės paliestas pakrantes"
+      },
+      "fifth": {
+          "title": "Kur bangos šnabžda",
+          "caption": "Atsiminimai amžinai"
+      },
+      "sixth": {
+          "title": "Aukštas ir didingas",
+          "caption": "Atraskite žirafos žavesį"
+      },
+      "seventh": {
+          "title": "Flamingo prieglauda",
+          "caption": "Atraskite gamtos rožinę parodą"
+      },
+      "eigth": {
+          "title": "Auksinės smėlio",
+          "caption": "Tyrinėkite dykumos duneles burtažolėje"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ KELIONIŲ TIKSLAI",
+          "caption": "Tyrinėkite už horizonto ribų"
+      },
+      "price": {
+          "title": "GERIAUSIA KAINA GARANTUOTA",
+          "caption": "Geriausia kaina visada"
+      },
+      "care": {
+          "title": "PUIKI KLIENTŲ",
+          "caption": "Išskirtinis klientų aptarnavimas visada"
+      },
+      "booking": {
+          "title": "SUPER GREITA REZERVACIJA",
+          "caption": "Momentinė rezervacija, greitas keliavimas"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Raktažodis",
+          "name": "raktažodis"
+      },
+      "activity": {
+          "label1": "Veikla",
+          "name": "veikla",
+          "Swimming": "Plaukimas",
+          "Sightseeing": "Lankymas",
+          "Hiking": "Ėjimas į kalnus",
+          "Ski": "Slidinėjimas",
+          "Paragliding": "Paraglaidingas",
+          "Parachuting": "Parašiutinėjimas",
+          "Kayaking": "Baidarėjimas",
+          "Baloon Safaris": "Balionų safari",
+          "Game Drive": "Žaidimų važiavimas"
+      },
+      "destination": {
+          "label1": "Kelionės tikslas",
+          "name": "kategorija"
+      },
+      "duration": {
+          "label1": "Trukmė",
+          "name": "trukmė",
+          "1 Day Tour": "Vienos dienos turas",
+          "2 - 4 Days Tour": "2 - 4 Dienų turas",
+          "5 - 7 Days Tour": "5 - 7 Dienų turas",
+          "7+ Days Tour": "7+ Dienų turas"
+      },
+      "Search": "Ieškoti",
+      "Date": "Data"
+  },
+  "popular": "Populiarios kelionių paketų",
+  "viewall": "Peržiūrėti visas keliones",
+  "popular2": "Populiarios kelionės tikslai",
+  "viewall2": "Peržiūrėti visus kelionių tikslus",
+  "description": "Nardykite į žavesį kupinų vietų lobyną, kiekviena siūlo unikalų kultūros, nuotykių ir gamtos grožio audinį. Nuo simboliškų objektų iki paslėptų perlų, leiskitės virtualiu kelione su mumis, kai mes pristatome kelionių tikslus, kurie užkariauja keliautojų širdis ir vaizduotę visame pasaulyje.",
+  "destination": {
+      "heading": "KELIONIŲ TIKSLAI",
+      "caption": "Tyrinėkite keliones pagal kelionių tikslus",
+      "local": "Vietinės kelionės",
+      "hot": "Karšta pasirinktis",
+      "holiday": "Tarptautinė atostogos",
+      "africa": "Rytų Afrika",
+      "vacay": "Atostogos",
+      "edu": "Mokomosios kelionės",
+      "special": "Specialios kelionės",
+      "sports": "Sporto renginiai",
+      "charity": "Labdaros kelionės",
+      "wine": "Vyno degustacijos kelionės",
+      "food": "Maisto festivaliai",
+      "bird": "Paukščių stebėjimo tyrimai",
+      "sky": "Dangaus glide kelionės",
+      "learn": "Sužinok daugiau",
+      "view": "Peržiūrėti visas keliones"
+  },
+  "shortabout": "Tarptautinis kelionių operatorius, specializuojantis įmonės ir poilsio kelionių maršrutų bei prabangų atostogų paketų kūrimą, siekiant keliautojams suteikti neklystančias atostogas ir blyksniuojančią kelionių patirtį.",
+  "longabout": "Tarptautinis kelionių operatorius, specializuojantis įmonės ir poilsio kelionių maršrutų bei prabangų atostogų paketų kūrimą, siekiant keliautojams suteikti neklystančias atostogas ir blyksniuojančią kelionių patirtį. Mes sukūrėme pasaulinio lygio ekskliuzyvinių kelionių tikslų, nuostabių aukštos klasės viešbučių ir kurortų bei prabangių paslaugų ir patogumų portfelį, kuris siūlomas kartu su labai individualizuotu aptarnavimu ir be priekaištų dėmesiu kiekvienam planuojant galutinį kelionės patyrimą.",
+  "footer": {
+      "about": "APIE MUS",
+      "top": "TOP KELIONIŲ TIKSLAI",
+      "contact": "KONTAKTAI",
+      "location": "Vieta: Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Kenija",
+      "tel": "Tel .: +254 707 741 232",
+      "copyright": "Autorių teisė © 2024 Denze Tours and Travels. Visos teisės saugomos"
+  },
+  "vsn": "Mūsų vizija",
+  "msn": "Mūsų misija",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "DENZE Tours and Travels siekia jums sukurti blyksniaujančias atsiminimus kiekvienoje kelionėje. Mes dedame visas pastangas tobulinant kelionių patirtis kiek įmanoma geriau ir siūlome labai individualizuotą aptarnavimą bei didelį dėmesį suprasti keliautojų poreikius.",
+      "mission": "DENZE Tours and Travels įsipareigoję visiškai suprasti jūsų kelionių pageidavimus, kad galėtume suteikti prasmingiausią, autentišką ir asmeninę ar grupinę patirtį. Mes su džiaugsmu laukiame bendradarbiavimo su jumis kiekvienoje jūsų nuotykių ir kelionių srityje."
+  },
+  "searchtours": "Ieškoti kelionių",
+  "details": {
+      "valid": "Galioja iki",
+      "night": "naktys",
+      "days": "dienos",
+      "rates": "Tarifai",
+      "includes": "Įskaitant",
+      "activity": "Veiklos",
+      "min": "Min",
+      "max": "Maks",
+      "interest": "Ar jums tai įdomu?",
+      "name": "Vardas",
+      "email": "El. paštas",
+      "phone": "Telefonas",
+      "enquiry": "Užklausa",
+      "send": "Siųsti",
+      "off": "nuolaida"
+  },
+  "location": "Vieta",
+  "social": "Socialiniai",
+  "contact": {
+      "title": "Susisiekite su mumis",
+      "caption": "Susisiekite su mumis",
+      "leave": "Palikite mums savo informaciją",
+      "desc": "Susisiekite su mumis jau šiandien, kad pradėtumėte planuoti savo svajonių atostogas! Ar turite klausimų, norite pritaikyti savo kelionės maršrutą ar tiesiog reikia pagalbos - mūsų komanda čia, kad padėtų.",
+      "name": "Pilnas vardas",
+      "sub": "Tema",
+      "message": "Žinutė",
+      "submit": "Pateikti dabar",
+      "location": "Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Kenija",
+      "phone1": "Pasaulio mastu: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Europa/JAV: +41 779 361 338",
+      "phone3": "Jungtinė Karalystė: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "SEKMĖ",
+      "message": "Jūsų užklausa gauta.",
+      "error": "KLAIDA",
+      "err": "Įvyko klaida. Bandykite dar kartą."
   }
-  
+}

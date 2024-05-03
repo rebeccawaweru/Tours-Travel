@@ -12,6 +12,7 @@ export default function PackageDetails(){
    const {t} = useTranslation()
      const {id} = useParams()
     const [data,setData] = useState({})
+    const img = data.poster ? data.poster : 'https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485110/packagebg_m0y7fg.jpg'
     const [loading, setLoading] = useState(false)
     const [values, setValues] = useState({
       fullname:"",
@@ -67,7 +68,7 @@ export default function PackageDetails(){
         height:{xs:"60vh",sm:"80vh",md:"100vh", lg:"120vh", xl:"120vh"},
         width:"100%",
         backgroundSize: 'cover',
-        backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485110/packagebg_m0y7fg.jpg')`,
+        backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
        }}>

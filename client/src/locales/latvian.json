@@ -1,13 +1,178 @@
 {
-    "navbar": {
-      "slogan": "Spilgtai ceļojuma pieredzei!",
-      "home": "Sākums",
+  "navbar": {
+      "slogan": "Mirdzoša ceļojuma pieredze!",
+      "home": "Mājas",
       "about": "Par mums",
       "packages": "Pakotnes",
-      "destinations": "Mērķi",
+      "destinations": "Galamērķi",
       "contact": "Kontakti",
       "signup": "Reģistrēties",
-      "signin": "Pierakstīties"
-    }
+      "signin": "Ieiet"
+  },
+  "slider": {
+      "first": {
+          "title": "Īpaša",
+          "caption": "7 dienas Šveicē"
+      },
+      "second": {
+          "title": "Ir laiks",
+          "caption": "DOTIES ATVAĻINĀJUMĀ"
+      },
+      "third": {
+          "title": "ATVĒRS SAVAS ACIS PRIEKŠĀ",
+          "caption": "SLĒPTO PASAULI"
+      },
+      "fourth": {
+          "title": "Paradīzes atlaišana",
+          "caption": "Ieelpot saules mīlētos krastos"
+      },
+      "fifth": {
+          "title": "Kur viļņi šņāc",
+          "caption": "Atmiņas paliek mūžīgi"
+      },
+      "sixth": {
+          "title": "Garš un mažestātisks",
+          "caption": "Atklājiet zirafes maigumu"
+      },
+      "seventh": {
+          "title": "Flamingo patvērums",
+          "caption": "Atklājiet dabas rozā parādi"
+      },
+      "eigth": {
+          "title": "Zelta smilši",
+          "caption": "Izpētiet tuksnesa dunu burvību"
+      }
+  },
+  "quality": {
+      "destination": {
+          "title": "500+ GALAMĒRĶI",
+          "caption": "Izpētiet pāri horizontam"
+      },
+      "price": {
+          "title": "LABĀKĀ CENA GARANTĒTA",
+          "caption": "Labākā cena, vienmēr"
+      },
+      "care": {
+          "title": "LIELISKA KLIJENTU",
+          "caption": "Izcilais klientu serviss vienmēr"
+      },
+      "booking": {
+          "title": "SUPER ĀTRA REZERVĀCIJA",
+          "caption": "Tūlītēja rezervācija, ātra ceļošana"
+      }
+  },
+  "filter": {
+      "keyword": {
+          "label1": "Atslēgvārds",
+          "name": "atslēgvārds"
+      },
+      "activity": {
+          "label1": "Aktivitāte",
+          "name": "aktivitāte",
+          "Swimming": "Peldēšana",
+          "Sightseeing": "Apskate",
+          "Hiking": "Pārgājiens",
+          "Ski": "Slēpošana",
+          "Paragliding": "Paragliding",
+          "Parachuting": "Parahodēšana",
+          "Kayaking": "Kajaka braukšana",
+          "Baloon Safaris": "Baložu safari",
+          "Game Drive": "Spēļu brauciens"
+      },
+      "destination": {
+          "label1": "Galamērķis",
+          "name": "kategorija"
+      },
+      "duration": {
+          "label1": "Ilgums",
+          "name": "ilgums",
+          "1 Day Tour": "1 Dienas tūre",
+          "2 - 4 Days Tour": "2 - 4 Dienas tūre",
+          "5 - 7 Days Tour": "5 - 7 Dienas tūre",
+          "7+ Days Tour": "7+ Dienas tūre"
+      },
+      "Search": "Meklēt",
+      "Date": "Datums"
+  },
+  "popular": "Populāras tūres pakotnes",
+  "viewall": "Skatīt visas tūres",
+  "popular2": "Populāri galamērķi",
+  "viewall2": "Skatīt visus galamērķus",
+  "description": "Ienirt burvīgu vietu krājumā, katra piedāvā unikālu kultūras, piedzīvojumu un dabas skaistumu audumu. No ikoniskām apskates vietām līdz slēptajiem dārgumiem, dodieties virtuālā ceļojumā kopā ar mums, kad mēs parādām galamērķus, kas iecienījuši ceļotāju sirdis un iztēli visā pasaulē.",
+  "destination": {
+      "heading": "GALAMĒRĶI",
+      "caption": "Izpētiet tūres pēc galamērķiem",
+      "local": "Vietējie ceļojumi",
+      "hot": "Karstā izvēle",
+      "holiday": "Starptautiski svētki",
+      "africa": "Austrumāfrika",
+      "vacay": "Atvaļinājumi",
+      "edu": "Izglītojošās tūres",
+      "special": "Īpašas tūres",
+      "sports": "Sporta pasākumi",
+      "charity": "Labdarības tūres",
+      "wine": "Vīna degustācijas tūres",
+      "food": "Ēdienu festivāli",
+      "bird": "Putnu skatīšanās izpētes",
+      "sky": "Debesu glide tūres",
+      "learn": "Uzzināt vairāk",
+      "view": "Skatīt visas tūres"
+  },
+  "shortabout": "Starptautisks tūroperators, kas specializējas individuālās biznesa un atpūtas ceļojumu maršrutu un luksusa atvaļinājumu pakotņu izstrādē, lai ceļotājiem nodrošinātu nevainojamas brīvdienas un mirdzošu ceļojuma pieredzi.",
+  "longabout": "Starptautisks tūroperators, kas specializējas individuālās biznesa un atpūtas ceļojumu maršrutu un luksusa atvaļinājumu pakotņu izstrādē, lai ceļotājiem nodrošinātu nevainojamas brīvdienas un mirdzošu ceļojuma pieredzi. Mēs esam izveidojuši izcilu pasaulslavenu galamērķu, brīnišķīgu augstas klases viesnīcu un kūrortu, kā arī luksusa pakalpojumu un ērtību portfeli, kas tiek piedāvāti kopā ar ļoti personalizētu servisu un nevainojamu uzmanību katram detaļu plānošanā, lai nodrošinātu galīgo tūres pieredzi.",
+  "footer": {
+      "about": "PAR MUMS",
+      "top": "TOP GALAMĒRĶI",
+      "contact": "KONTAKTI",
+      "location": "Atrašanās vieta: Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Kenya",
+      "tel": "Tālr .: +254 707 741 232",
+      "copyright": "Autortiesības © 2024 Denze Tours and Travels. Visas tiesības aizsargātas"
+  },
+  "vsn": "Mūsu vīzija",
+  "msn": "Mūsu misija",
+  "about": {
+      "company": "DENZE TOURS AND TRAVELS",
+      "vision": "DENZE Tours and Travels cenšas radīt spīdošas atmiņas jums katrā tūrē. Mēs esam veltīti ceļošanas pieredzes pilnveidošanai jebkurā veidā un piedāvājam augstu personalizētu servisu un lielu iedziļināšanos ceļotāju vajadzībās.",
+      "mission": "DENZE Tours and Travels ir veltīts jūsu ceļojuma preferencei pilnībā saprast, lai nodrošinātu visnozīmīgāko, autentisko un personīgo vai grupu pieredzi. Mēs gaidām ar prieku sadarbību ar jums jūsu katrā piedzīvojumā un tūrē."
+  },
+  "searchtours": "Meklēt tūres",
+  "details": {
+      "valid": "Derīgs līdz",
+      "night": "nakts",
+      "days": "dienas",
+      "rates": "Cenas",
+      "includes": "Iekļauts",
+      "activity": "Aktivitātes",
+      "min": "Min",
+      "max": "Maks",
+      "interest": "Vai jūs esat ieinteresēts?",
+      "name": "Vārds",
+      "email": "E-pasts",
+      "phone": "Tālrunis",
+      "enquiry": "Pieprasījums",
+      "send": "Nosūtīt",
+      "off": "atlaide"
+  },
+  "location": "Atrašanās vieta",
+  "social": "Sociālie",
+  "contact": {
+      "title": "Sazinieties ar mums",
+      "caption": "Sazinieties ar mums",
+      "leave": "Atstājiet mums savus datus",
+      "desc": "Sazinieties ar mums jau šodien, lai sāktu plānot savu sapņu atvaļinājumu! Vai arī jums ir jautājumi, vēlaties pielāgot savu maršrutu vai vienkārši jums nepieciešama palīdzība - mūsu komanda ir šeit, lai palīdzētu.",
+      "name": "Pilns vārds",
+      "sub": "Temats",
+      "message": "Ziņa",
+      "submit": "Iesniegt tagad",
+      "location": "Hurlingham Plaza, Argwings Kodhek Road, Nairobi, Kenya",
+      "phone1": "Globāli: +254 707 741 232 | +254 769 665 298",
+      "phone2": "Eiropa/ASV: +41 779 361 338",
+      "phone3": "Apvienotā Karaliste: +44 792 805 4212"
+  },
+  "swal": {
+      "success": "VEIKSMĪGI",
+      "message": "Jūsu vaicājums ir saņemts.",
+      "error": "KĻŪDA",
+      "err": "Radās kļūda. Lūdzu, mēģiniet vēlreiz."
   }
-  
+}
