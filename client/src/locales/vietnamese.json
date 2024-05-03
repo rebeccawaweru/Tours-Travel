@@ -1,13 +1,183 @@
 {
     "navbar": {
-      "slogan": "Cho một trải nghiệm du lịch rực rỡ!",
-      "home": "Trang chủ",
-      "about": "Giới thiệu",
-      "packages": "Gói",
-      "destinations": "Điểm đến",
-      "contact": "Liên hệ",
-      "signup": "Đăng ký",
-      "signin": "Đăng nhập"
+        "slogan": "Cho một Trải nghiệm Du lịch Tươi sáng!",
+        "home": "Trang chủ",
+        "about": "Giới thiệu",
+        "packages": "Gói du lịch",
+        "destinations": "Điểm đến",
+        "contact": "Liên hệ",
+        "signup": "Đăng ký",
+        "signin": "Đăng nhập"
+    },
+    "slider": {
+        "first": {
+            "title": "Đặc biệt",
+            "caption": "7 ngày ở Thụy Sĩ"
+        },
+        "second": {
+            "title": "Đã đến lúc",
+            "caption": "ĐI DU LỊCH"
+        },
+        "third": {
+            "title": "MỞ MẮT RA",
+            "caption": "THẾ GIỚI ẨN DƯỚI"
+        },
+        "fourth": {
+            "title": "Thiên đường được mở ra",
+            "caption": "Đắm mình trong những bờ biển nắng ấm"
+        },
+        "fifth": {
+            "title": "Nơi sóng thì thầm",
+            "caption": "Ký ức kéo dài mãi mãi"
+        },
+        "sixth": {
+            "title": "Cao lớn và nghiêm trang",
+            "caption": "Khám phá vẻ uy nghi của hươu cao cổ"
+        },
+        "seventh": {
+            "title": "Thiên đường của Hồng hạc",
+            "caption": "Khám phá Cuộc diễu hành Hồng của Tự nhiên"
+        },
+        "eigth": {
+            "title": "Cát vàng",
+            "caption": "Khám phá Phép màu của cát sa mạc"
+        },
+        "nineth": {
+            "title": "Savanna Zebras",
+            "caption": "Vẻ đẹp sọc trên thảo nguyên"
+        }
+    },
+    "quality": {
+        "destination": {
+            "title": "HƠN 500 ĐIỂM ĐẾN",
+            "caption": "Khám phá vượt ra ngoài tầm nhìn"
+        },
+        "price": {
+            "title": "ĐẢM BẢO GIÁ TỐT NHẤT",
+            "caption": "Bảo đảm Giá tốt nhất, Luôn luôn"
+        },
+        "care": {
+            "title": "DỊCH VỤ KHÁCH HÀNG TUYỆT VỜI",
+            "caption": "Chăm sóc Khách hàng Xuất sắc luôn luôn"
+        },
+        "booking": {
+            "title": "ĐẶT PHÒNG CỰC NHANH",
+            "caption": "Đặt phòng ngay, Đi du lịch nhanh chóng"
+        }
+    },
+    "filter": {
+        "keyword": {
+            "label1": "Từ khóa",
+            "name": "từ_khóa"
+        },
+        "activity": {
+            "label1": "Hoạt động",
+            "name": "hoạt_động",
+            "Swimming": "Bơi lội",
+            "Sightseeing": "Tham quan",
+            "Hiking": "Leo núi",
+            "Ski": "Trượt tuyết",
+            "Paragliding": "Dù lượn",
+            "Parachuting": "Nhảy dù",
+            "Kayaking": "Chèo thuyền kayak",
+            "Baloon Safaris": "Safari bằng khinh khí cầu",
+            "Game Drive": "Lữ hành xem động vật hoang dã"
+        },
+        "destination": {
+            "label1": "Điểm đến",
+            "name": "loại"
+        },
+        "duration": {
+            "label1": "Thời lượng",
+            "name": "thời_lượng",
+            "1 Day Tour": "Tour 1 ngày",
+            "2 - 4 Days Tour": "Tour 2 - 4 ngày",
+            "5 - 7 Days Tour": "Tour 5 - 7 ngày",
+            "7+ Days Tour": "Tour 7+ ngày"
+        },
+        "Search": "Tìm kiếm",
+        "Date": "Ngày"
+    },
+    "popular": "Các Gói Du lịch Phổ biến",
+    "viewall": "Xem tất cả các Tour",
+    "popular2": "Các Điểm đến Phổ biến",
+    "viewall2": "Xem tất cả các Điểm đến",
+    "description": "Đắm mình trong một kho báu của những địa điểm quyến rũ, mỗi nơi mang đến một bức tranh văn hóa, phiêu lưu và vẻ đẹp tự nhiên độc đáo. Từ các địa danh biểu tượng đến những viên ngọc ẩn, hãy bắt đầu một hành trình ảo với chúng tôi khi chúng tôi giới thiệu các điểm đến thu hút trái tim và trí tưởng tượng của những người du lịch trên toàn thế giới.",
+    "destination": {
+        "heading": "ĐIỂM ĐẾN",
+        "caption": "Khám phá Tour Theo Điểm đến",
+        "local": "Du lịch địa phương",
+        "hot": "Lựa chọn hàng đầu",
+        "holiday": "Kỳ nghỉ Quốc tế",
+        "africa": "Châu Phi Đông",
+        "vacay": "Kỳ nghỉ",
+        "edu": "Tour giáo dục",
+        "special": "Tour Đặc biệt",
+        "sports": "Sự kiện thể thao",
+        "charity": "Tour từ thiện",
+        "wine": "Tour nếm rượu",
+        "food": "Lễ hội ẩm thực",
+        "bird": "Quan sát chim",
+        "sky": "Tour lượn trời",
+        "learn": "Tìm hiểu thêm",
+        "view": "Xem tất cả các Tour"
+    },
+    "shortabout": "Một nhà tổ chức tour quốc tế chuyên về các lịch trình kinh doanh và giải trí tùy chỉnh, và các gói kỳ nghỉ sang trọng với ý định mang đến cho du khách những kỳ nghỉ hoàn hảo và trải nghiệm du lịch sáng sủa.",
+    "longabout": "Một nhà tổ chức tour quốc tế chuyên về các lịch trình kinh doanh và giải trí tùy chỉnh, và các gói kỳ nghỉ sang trọng với ý định mang đến cho du khách những kỳ nghỉ hoàn hảo và trải nghiệm du lịch sáng sủa. Chúng tôi đã thiết lập một danh mục các điểm đến tinh xảo trên thế giới, các khách sạn và khu nghỉ dưỡng cao cấp kỳ diệu, cũng như các dịch vụ và tiện nghi sang trọng được cung cấp cùng với dịch vụ cá nhân hóa cao và sự chú ý tận tâm đến mọi chi tiết trong việc lập kế hoạch trải nghiệm du lịch tối ưu nhất.",
+    "footer": {
+        "about": "VỀ CHÚNG TÔI",
+        "top": "ĐIỂM ĐẾN HÀNG ĐẦU",
+        "contact": "THÔNG TIN LIÊN HỆ",
+        "location": "Vị trí: Hurlingham Plaza, theo đường Argwings Kodhek, Nairobi, Kenya",
+        "tel": "Điện thoại: +254 707 741 232",
+        "copyright": "Bản quyền © 2024 Denze Tours and Travels. Tất cả các quyền đã được bảo lưu."
+    },
+    "vsn": "Tầm nhìn của chúng tôi",
+    "msn": "Sứ mệnh của chúng tôi",
+    "about": {
+        "company": "DENZE TOURS AND TRAVELS",
+        "vision": "DENZE Tours and Travels nỗ lực tạo ra những kỷ niệm sáng sủa cho bạn trong mỗi chuyến đi. Chúng tôi tận tâm hoàn thiện trải nghiệm du lịch ở mọi khía cạnh và cung cấp dịch vụ cá nhân hóa cao và sự chú ý lớn đến nhu cầu của người du lịch.",
+        "mission": "DENZE Tours and Travels tận tụy hiểu rõ sở thích du lịch của bạn để cung cấp trải nghiệm cá nhân hoặc nhóm ý nghĩa, chân thành và cá nhân nhất. Chúng tôi mong đợi được hợp tác với bạn trong mỗi cuộc phiêu lưu và tour với niềm vui lớn."
+    },
+    "searchtours": "Tìm Kiếm Tour",
+    "details": {
+        "valid": "Hiệu lực đến",
+        "night": "đêm",
+        "days": "ngày",
+        "rates": "Giá",
+        "includes": "Bao gồm",
+        "excludes": "Không bao gồm",
+        "activity": "Hoạt động",
+        "min": "Tối thiểu",
+        "max": "Tối đa",
+        "interest": "Bạn quan tâm?",
+        "name": "Tên",
+        "email": "Email",
+        "phone": "Số điện thoại",
+        "enquiry": "Yêu cầu",
+        "send": "Gửi",
+        "off": "giảm giá"
+    },
+    "location": "Vị trí",
+    "social": "Mạng xã hội",
+    "contact": {
+        "title": "Liên hệ với chúng tôi",
+        "caption": "Liên hệ với chúng tôi",
+        "leave": "Để lại thông tin của bạn",
+        "desc": "Hãy liên hệ với chúng tôi ngay hôm nay để bắt đầu lập kế hoạch cho chuyến du lịch mơ ước của bạn! Cho dù bạn có câu hỏi, muốn tùy chỉnh hành trình của mình, hoặc chỉ cần hỗ trợ, đội ngũ của chúng tôi luôn sẵn lòng giúp đỡ.",
+        "name": "Họ và tên",
+        "sub": "Chủ đề",
+        "message": "Tin nhắn",
+        "submit": "Gửi ngay",
+        "location": "Hurlingham Plaza, theo đường Argwings Kodhek, Nairobi, Kenya",
+        "phone1": "Toàn cầu: +254 707 741 232 | +254 769 665 298",
+        "phone2": "Châu Âu/Mỹ: +41 779 361 338",
+        "phone3": "Vương quốc Anh: +44 792 805 4212"
+    },
+    "swal": {
+        "success": "THÀNH CÔNG",
+        "message": "Yêu cầu của bạn đã được nhận.",
+        "error": "LỖI",
+        "err": "Đã xảy ra lỗi. Vui lòng thử lại."
     }
-  }
-  
+}

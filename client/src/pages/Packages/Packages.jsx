@@ -79,7 +79,7 @@ export default function Packages(){
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"20px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:{xs:"center",md:"center",lg:"start"},cursor:"pointer"}}>
             {!search && data && data.length > 0 && data.map((item)=>{
-                    return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
+                    return <Package id={item._id} link={item.link}  currency={item.currency} price={Number(item.price)} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
                   })
                }
             {search && filtered && filtered.length > 0 ? filtered.map((item)=>{
