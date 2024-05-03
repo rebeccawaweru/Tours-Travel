@@ -16,7 +16,7 @@ const styles = {
       zIndex: '60',
     },
   };
-function LanguageSelector({link}) {
+function LanguageSelector({link,data}) {
   const [dropdown, setDropdown] = useState(false)
   const handleChange = (url) => localStorage.setItem('link', url)
   return (
@@ -29,7 +29,7 @@ function LanguageSelector({link}) {
           </Grid>
          <Grid maxWidth borderRadius={5} container>
           {languages.map((lang)=>{
-            return <Lang abb={lang.abb} url={lang.url} lang={lang.lang} onClick={()=>{setDropdown(false); handleChange(lang.url); textTranslate('fr', 'Hello World')}}/>
+            return <Lang abb={lang.abb} url={lang.url} lang={lang.lang} onClick={()=>{setDropdown(false); handleChange(lang.url); textTranslate('fr', data)}}/>
           })}
       </Grid>
     </Box>}

@@ -51,7 +51,7 @@ export default function Packages(){
         getReferrals()
     },[])
     return (
-        <Wrapper>
+        <Wrapper data={combined}>
        <Box sx={{
         display:"flex",
         flexDirection:"column",

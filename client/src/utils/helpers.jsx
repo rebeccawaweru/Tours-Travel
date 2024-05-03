@@ -155,9 +155,9 @@ export const whatsappchat = () =>{
   window.open('https://wa.me/254707741232', '_blank')
 }
 
-export const textTranslate = async(lang, text) =>{
+export const textTranslate = async(lang, data) =>{
   try {
-    const response = await client.post(`/translate/${lang}`, { text });
+    const response = await client.post(`/translate/${lang}`, { data });
     console.log(response)
   } catch (error) {
     console.log(error)

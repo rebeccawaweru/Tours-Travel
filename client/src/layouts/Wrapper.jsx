@@ -2,7 +2,7 @@ import { useEffect,useState } from 'react';
 import { NavBar, Footer } from '../components';
 import {Box} from '@mui/material';
 import LanguageSelector from '../components/languageselector';
-export default function Wrapper({children}){
+export default function Wrapper({children,data}){
   const [hideToolbar, setHideToolbar] = useState(false);
   useEffect(() => {
     const handleScroll = () => {

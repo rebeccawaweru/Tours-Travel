@@ -8,7 +8,7 @@ import ListItem from './listItem';
 import LanguageSelector from '../languageselector';
 import {motion as m} from 'framer-motion' 
 import { useTranslation } from 'react-i18next';
-export default function NavBar({hideToolbar}) {
+export default function NavBar({hideToolbar,data}) {
   const { t } = useTranslation();
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleDrawerOpen = () => {
@@ -27,7 +27,7 @@ export default function NavBar({hideToolbar}) {
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 707 741 232 </IconButton>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline  sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}>KES</IconButton>
-            <LanguageSelector link={link}/>
+            <LanguageSelector link={link} data={data}/>
           </Stack>
           <Box display={{ md:"none",lg:"flex"}}>
           <IconButton><Facebook sx={{ fontSize: 16 }} /></IconButton>

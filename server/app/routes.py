@@ -80,18 +80,29 @@ def get_users():
 
    return json_util.dumps(users), 200
 
- # translation logic
+# translation logic
 @app.route('/translate/<lang>', methods=['POST'], strict_slashes=True)
-def language_translate(lang):
-   data = request.json
-    
-    # Check if 'text' key exists in the JSON data
-   if 'text' in data:
-      text_to_translate = data['text']
+def translate_array(lang):
+    try:
+        # Extract the data array from the request JSON body
+        data = request.json.get('data', [])
 
-   translator = Translator(to_lang=lang)
-   translation = translator.translate(text_to_translate)
-   return translation
+        # Translate the values in each object of the array
+        translated_data = []
+        for item in data:
+            translated_item = {}
+            for key, value in item.items():
+                # Translate the value using the translate module
+                translator = Translator(to_lang=lang)
+                translated_value = translator.translate(value)
+                translated_item[key] = translated_value
+            translated_data.append(translated_item)
+
+        # Return the translated array as JSON response
+        return jsonify(translated_data)
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 400
 
 
 @app.route('/find', methods=['GET'])
