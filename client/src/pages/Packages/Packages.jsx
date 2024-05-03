@@ -49,9 +49,10 @@ export default function Packages(){
     useEffect(()=>{
         getPackages()
         getReferrals()
+        console.log(data)
     },[])
     return (
-        <Wrapper data={combined}>
+        <Wrapper data={data}>
        <Box sx={{
         display:"flex",
         flexDirection:"column",

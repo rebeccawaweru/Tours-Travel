@@ -157,7 +157,8 @@ export const whatsappchat = () =>{
 
 export const textTranslate = async(lang, data) =>{
   try {
-    const response = await client.post(`/translate/${lang}`, { data });
+    const response = await client.post(`/translate/${lang}`, data);
+    console.log(data)
     console.log(response)
   } catch (error) {
     console.log(error)
