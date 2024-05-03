@@ -38,7 +38,7 @@ export default function Package({id,image, duration, title, price, currency, loc
         
         <Typography sx={{display:"flex", justifyContent:"space-between"}} gutterBottom variant="p" component="div">
           <Typography fontSize="medium" fontWeight="bold" color="inherit">{title}</Typography>
-          <Typography color="primary" fontWeight="bold">{result}</Typography>
+          <Typography color="primary" fontWeight="bold">{price}</Typography>
         </Typography>
         <Stack direction="row" spacing={1}>
             <LocationOn/>

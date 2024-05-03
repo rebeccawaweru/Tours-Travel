@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Link} from 'react-router-dom';
 import { Typography, Toolbar,  AppBar, Box, Stack, IconButton, Container} from '@mui/material';
 import { X, Instagram, Facebook, Lock, MailOutline, Phone, Person, Menu, Star } from '@mui/icons-material';
@@ -8,8 +8,11 @@ import ListItem from './listItem';
 import LanguageSelector from '../languageselector';
 import {motion as m} from 'framer-motion' 
 import { useTranslation } from 'react-i18next';
+import ConvertContext from '../../context/conversions'
+import CurrencySelector from '../currencyselector';
 export default function NavBar({hideToolbar}) {
   const { t } = useTranslation();
+  const {rates} = useContext(ConvertContext)
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
@@ -26,7 +29,7 @@ export default function NavBar({hideToolbar}) {
           <Stack direction="row" spacing={1} component="div" sx={{ flexGrow: 1 }}>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 707 741 232 </IconButton>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline  sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
-            <IconButton sx={{ fontSize: 14, letterSpacing:1 }}>KES</IconButton>
+            <CurrencySelector rates={rates}/>
             <LanguageSelector link={link}/>
           </Stack>
           <Box display={{ md:"none",lg:"flex"}}>
