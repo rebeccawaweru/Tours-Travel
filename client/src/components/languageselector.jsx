@@ -33,7 +33,7 @@ function LanguageSelector() {
           </Grid>
          <Grid maxWidth borderRadius={5} container>
           {languages.map((lang)=>{
-            return <Lang abb={lang.abb} url={lang.url} lang={lang.lang} onClick={()=>{setDropdown(false); handleChange(lang.url); handleChangeLang(lang.abb)}}/>
+            return <Lang abb={lang.abb} url={lang.url} lang={lang.lang} onClick={()=>{setDropdown(false); handleChange(lang.url); handleChangeLang(lang.abv)}}/>
           })}
       </Grid>
     </Box>}

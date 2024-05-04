@@ -11,11 +11,13 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import {useTranslation} from 'react-i18next'
 import { useCurrency } from '../context/currency';
-import { currencyConverter } from '../utils/helpers';
+import { currencyConverter,textTranslate } from '../utils/helpers';
 
 export default function Package({id,image, duration, title, price, currency, location, link}) {
   const {t} = useTranslation()
-  const { selectedCurrency,conversionRates } = useCurrency();
+  const { selectedCurrency,conversionRates, selectLang } = useCurrency();
+ const [finalTitle, setFinalTitle] = React.useState(title)
+ const [finalLocation, setFinalLocation] = React.useState(location)
   const rating = [1, 2, 3, 4, 5]
   const navigate = useNavigate()
   const handleShare = (id) => {
@@ -41,6 +43,17 @@ export default function Package({id,image, duration, title, price, currency, loc
       convertPrice()
 
   },[selectedCurrency,price, conversionRates])
+  React.useEffect(() => {
+       const convertLanguage = async() => {
+        try {
+          setFinalTitle(textTranslate(selectLang,title))
+          setFinalLocation(textTranslate(selectLang,location))
+        } catch (error) {
+          console.log(error)
+        }
+       }
+       convertLanguage()
+  },[selectLang,title,location])
   return (
     <Card sx={{width:{xs:"100%",sm:320,md:380}}}>
       <CardMedia
@@ -54,12 +67,12 @@ export default function Package({id,image, duration, title, price, currency, loc
       <CardContent component={Grid} direction="column" container gap={2}>
         
         <Typography sx={{display:"flex", justifyContent:"space-between"}} gutterBottom variant="p" component="div">
-          <Typography fontSize="medium" fontWeight="bold" color="inherit">{title}</Typography>
+          <Typography fontSize="medium" fontWeight="bold" color="inherit">{finalTitle}</Typography>
           <Typography color="primary" fontWeight="bold">{selectedCurrency} {result ? result.toLocaleString() : 0} </Typography>
         </Typography>
         <Stack direction="row" spacing={1}>
             <LocationOn/>
-           <Typography>{location}</Typography>
+           <Typography>{finalLocation} </Typography>
         </Stack>
            <Stack direction="row" spacing={1}>
             <Timer/>

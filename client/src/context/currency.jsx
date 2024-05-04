@@ -9,7 +9,7 @@ export const useCurrency = () => {
 
 export const CurrencyProvider = ({ children }) => {
   const [selectedCurrency, setSelectedCurrency] = useState('KES')
-  const [selectLang, setSelectedLang] = useState('en')
+  const [selectLang, setSelectedLang] = useState('EN')
   const [flag, setFlag] = useState("https://res.cloudinary.com/dkjb6ziqg/image/upload/united-states-removebg-preview_mbwjxr.png")
   const [conversionRates, setConversionRates] = useState(null);
   useEffect(()=>{

@@ -86,21 +86,10 @@ def get_users():
 def translate_array(lang):
     try:
         # Extract the data array from the request JSON body
-        data = request.json.get('data', [])
-
-        # Translate the values in each object of the array
-        translated_data = []
-        for item in data:
-            translated_item = {}
-            for key, value in item.items():
-                # Translate the value using the translate module
-                translator = Translator(to_lang=lang)
-                translated_value = translator.translate(value)
-                translated_item[key] = translated_value
-            translated_data.append(translated_item)
-
-        # Return the translated array as JSON response
-        return jsonify(translated_data)
+        text = request.json.get('text')
+        translator = Translator(to_lang=lang)
+        translation = translator.translate(text)
+        return translation
 
     except Exception as e:
         return jsonify({'error': str(e)}), 400
@@ -108,7 +97,6 @@ def translate_array(lang):
 # currecy converter 
 @app.route('/convert', methods=['GET'])
 def get_rates():
-    fr = request.args.get('fr')
     key = os.getenv('CONVERSION_KEY')
     
     url = f"https://v6.exchangerate-api.com/v6/{key}/latest/KES"

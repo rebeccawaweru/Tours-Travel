@@ -155,10 +155,9 @@ export const whatsappchat = () =>{
   window.open('https://wa.me/254707741232', '_blank')
 }
 
-export const textTranslate = async(lang, data) =>{
+export const textTranslate = async(lang, text) =>{
   try {
-    const response = await client.post(`/translate/${lang}`, data);
-    console.log(data)
+    const response = await client.post(`/translate/${lang}`, {text});
     console.log(response)
   } catch (error) {
     console.log(error)
@@ -178,225 +177,269 @@ export const languages = [
   {
     url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/united-states-removebg-preview_mbwjxr.png",
     abb:'en',
-    lang:"English (US)"
+    lang:"English (US)",
+    abv: 'EN'
   },
   {
     url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/united-kingdom_up03xv.png",
     abb:'uk',
-    lang:"English (UK)"
+    lang:"English (UK)",
+    abv: 'UK'
   },
   {
     url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/france_wjph1w.png",
     abb:'fr',
-    lang:"Français"
+    lang:"Français",
+    abv: 'FR'
   },
   {
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/germany_c5a1yx.png",
-  abb:"ger",
-  lang:"Deutsch"
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/germany_c5a1yx.png",
+    abb:"ger",
+    lang:"Deutsch",
+    abv: 'DE'
   },
- {
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714485902/netherlands_sph9h8.png",
-  abb:"nth",
-  lang:"Nederlands"
- },
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714472109/flag_zcbv1j.png",
-  abb:"spanish",
-  lang:"Español"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714485902/flag_1_v8s3jw.png",
-  abb:"spanish",
-  lang:"Español (AR)"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714485901/flag_2_uckvbs.png",
-  abb:"spanish",
-  lang:"Español (MX)"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714487075/catala-removebg-preview_qh6njj.png",
-  abb:"catala",
-  lang:"Català"
-},
   {
-   url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714487222/flag_3_tswaf4.png",
-  abb:"italy",
-  lang:"Italiano"
-},
- {
-   url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714487559/flag_4_ajwpjy.png",
-  abb:"portugal",
-  lang:"Português (PT)"
-},
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714485902/netherlands_sph9h8.png",
+    abb:"nth",
+    lang:"Nederlands",
+    abv: 'NL'
+  },
   {
-   url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714487459/flag_5_nvqb3p.png",
-  abb:"portugal",
-  lang:"Português (BR)"
-},
- {
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488228/world_mvt8j2.png",
-  abb:"norway",
-  lang:"Norsk"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488222/flag_6_iqka4d.png",
-  abb:"finland",
-  lang:"Suomi"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488072/world_1_xvbvg1.png",
-  abb:"sweden",
-  lang:"Svenska"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488046/denmark_ogipgj.png",
-  abb:"denmark",
-  lang:"Dansk"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488674/flag_7_folmi5.png",
-  abb:"czech",
-  lang:"Čeština"
-},
-{
-   url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488669/flag_8_bz7vtl.png",
-  abb:"hungary",
-  lang:"Magyar"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714489058/flag_9_f1peds.png",
-  abb:"romania",
-  lang:"Română"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714489079/flag_10_v52dco.png",
-  abb:"japan",
-  lang:"日本語"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/china_dgm4gy.png",
-  abb:"chinesesimplified",
-  lang:"简体中文"
-},
-{
- url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714490183/tradchineese_coajko.png",
-  abb:"chinesetraditional",
-  lang:"繁體中文"
-},
-{
- url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714496690/flag_11_ttccsb.png",
-  abb:"polish",
-  lang:"Polski"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714496689/flag_12_asu5ed.png",
-  abb:"greek",
-  lang:"Ελληνικά"
-},
-{
-
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714497191/russia_dwxatl.png",
-  abb:"russian",
-  lang:"Русский"
-},
-{
-   url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714497348/turkey_t0vfvu.png",
-  abb:"turkish",
-  lang:"Türkçe"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714497022/flag_13_pbx7so.png",
-  abb:"bulgaria",
-  lang:"Български"
-},
-{
-   url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714552770/flag_14_q4cozy.png",
-  abb:"arabic",
-  lang:"العربية"
-},
-{
- url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714552823/flag_15_fumeon.png",
-  abb:"korean",
-  lang:"한국어"
-},
-{
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714472109/flag_zcbv1j.png",
+    abb:"spanish",
+    lang:"Español",
+    abv: 'ES'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714485902/flag_1_v8s3jw.png",
+    abb:"spanish",
+    lang:"Español (AR)",
+    abv: 'ES-AR'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714485901/flag_2_uckvbs.png",
+    abb:"spanish",
+    lang:"Español (MX)",
+    abv: 'ES-MX'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714487075/catala-removebg-preview_qh6njj.png",
+    abb:"catala",
+    lang:"Català",
+    abv: 'CA'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714487222/flag_3_tswaf4.png",
+    abb:"italy",
+    lang:"Italiano",
+    abv: 'IT'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714487559/flag_4_ajwpjy.png",
+    abb:"portugal",
+    lang:"Português (PT)",
+    abv: 'PT'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714487459/flag_5_nvqb3p.png",
+    abb:"portugal",
+    lang:"Português (BR)",
+    abv: 'BR'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488228/world_mvt8j2.png",
+    abb:"norway",
+    lang:"Norsk",
+    abv: 'NO'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488222/flag_6_iqka4d.png",
+    abb:"finland",
+    lang:"Suomi",
+    abv: 'FI'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488072/world_1_xvbvg1.png",
+    abb:"sweden",
+    lang:"Svenska",
+    abv: 'SV'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488046/denmark_ogipgj.png",
+    abb:"denmark",
+    lang:"Dansk",
+    abv: 'DA'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488674/flag_7_folmi5.png",
+    abb:"czech",
+    lang:"Čeština",
+    abv: 'CS'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714488669/flag_8_bz7vtl.png",
+    abb:"hungary",
+    lang:"Magyar",
+    abv: 'HU'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714489058/flag_9_f1peds.png",
+    abb:"romania",
+    lang:"Română",
+    abv: 'RO'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714489079/flag_10_v52dco.png",
+    abb:"japan",
+    lang:"日本語",
+    abv: 'JA'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/china_dgm4gy.png",
+    abb:"chinesesimplified",
+    lang:"简体中文",
+    abv: 'ZH-CN'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714490183/tradchineese_coajko.png",
+    abb:"chinesetraditional",
+    lang:"繁體中文",
+    abv: 'ZH-TW'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714496690/flag_11_ttccsb.png",
+    abb:"polish",
+    lang:"Polski",
+    abv: 'PL'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714496689/flag_12_asu5ed.png",
+    abb:"greek",
+    lang:"Ελληνικά",
+    abv: 'EL'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714497191/russia_dwxatl.png",
+    abb:"russian",
+    lang:"Русский",
+    abv: 'RU'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714497348/turkey_t0vfvu.png",
+    abb:"turkish",
+    lang:"Türkçe",
+    abv: 'TR'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714497022/flag_13_pbx7so.png",
+    abb:"bulgaria",
+    lang:"Български",
+    abv: 'BG'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714552770/flag_14_q4cozy.png",
+    abb:"arabic",
+    lang:"العربية",
+    abv: 'AR'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714552823/flag_15_fumeon.png",
+    abb:"korean",
+    lang:"한국어",
+    abv: 'KO'
+  },
+  {
     url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714553424/flag_16_jpdmgo.png",
-  abb:"hebrew",
-  lang:"עברית"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714553237/austria_b0xnwn.png",
-  abb:"latvian",
-  lang:"Latviski"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714553592/flag_17_sbulus.png",
-  abb:"ukranian",
-  lang:"Українська"
-},
-{
-   url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714553858/flag_18_lxh0kh.png",
-  abb:"hindi",
-  lang:"हिन्दी"
-},
-{ 
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714553931/flag_19_ppc5rp.png",
-  abb:"bahasa",
-  lang:"Bahasa Indonesia"
-},
-{   
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714556575/malaysia_jcqoam.png",
-  abb:"bahasa" ,
-  lang:"Bahasa Malysia"
-},
-{
- url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714556532/flag_20_a5lxw0.png",
-  abb:"thai",
-  lang:"ภาษาไทย"
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714557049/flag_21_dszynv.png",
-  abb:"estonia",
-  lang:"Eesti"
-},
-{
-   url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714556981/flag_22_aa1fwf.png",
-  abb:"croatian",
-  lang:"Hrvatski"
-},
-{     
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714557307/flag_23_qk3hnj.png",
-  abb:"lithuanian",
-  lang:"Lietuvių"
-},
-{   
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714559058/slovania_twbw7f.png",
-  abb:"slovak",
-  lang:"Slovenčina"
-},
-{      
- url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714559749/flag_24_m3wsna.png",
-  abb:"serbian",
-  lang:"Srpski",
-},
-{     
- url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714559058/slovania_twbw7f.png",
-  abb:"slovene",
-  lang:"Slovenščina",
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714559786/world_2_mxthme.png",
-  abb:"vietnamese",
-  lang:"Tiếng Việt",
-},
-{
-  url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714560040/flag_25_kfnwxa.png",
-  abb:"filipino",
-  lang:"Filipino",
+    abb:"hebrew",
+    lang:"עברית",
+    abv: 'HE'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714553237/austria_b0xnwn.png",
+    abb:"latvian",
+    lang:"Latviski",
+    abv: 'LV'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714553592/flag_17_sbulus.png",
+    abb:"ukranian",
+    lang:"Українська",
+    abv: 'UKR'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714553858/flag_18_lxh0kh.png",
+    abb:"hindi",
+    lang:"हिन्दी",
+    abv: 'HI'
+  },
+  { 
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714553931/flag_19_ppc5rp.png",
+    abb:"bahasa",
+    lang:"Bahasa Indonesia",
+    abv: 'ID'
+  },
+  {   
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714556575/malaysia_jcqoam.png",
+    abb:"bahasa" ,
+    lang:"Bahasa Malysia",
+    abv: 'MS'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714556532/flag_20_a5lxw0.png",
+    abb:"thai",
+    lang:"ภาษาไทย",
+    abv: 'TH'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714557049/flag_21_dszynv.png",
+    abb:"estonia",
+    lang:"Eesti",
+    abv: 'ET'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714556981/flag_22_aa1fwf.png",
+    abb:"croatian",
+    lang:"Hrvatski",
+    abv: 'HR'
+  },
+  {     
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714557307/flag_23_qk3hnj.png",
+    abb:"lithuanian",
+    lang:"Lietuvių",
+    abv: 'LT'
+  },
+  {   
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714559058/slovania_twbw7f.png",
+    abb:"slovak",
+    lang:"Slovenčina",
+    abv: 'SK'
+  },
+  {      
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714559749/flag_24_m3wsna.png",
+    abb:"serbian",
+    lang:"Srpski",
+    abv: 'SR'
+  },
+  {     
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714559058/slovania_twbw7f.png",
+    abb:"slovene",
+    lang:"Slovenščina",
+    abv: 'SL'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714559786/world_2_mxthme.png",
+    abb:"vietnamese",
+    lang:"Tiếng Việt",
+    abv: 'VI'
+  },
+  {
+    url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/v1714560040/flag_25_kfnwxa.png",
+    abb:"filipino",
+    lang:"Filipino",
+    abv: 'TL'
   }
-]
+];
+
 
 export const currencies = {
 "AED": "United Arab Emirates Dirham",
