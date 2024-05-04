@@ -46,8 +46,10 @@ export default function Package({id,image, duration, title, price, currency, loc
   React.useEffect(() => {
        const convertLanguage = async() => {
         try {
-          setFinalTitle(textTranslate(selectLang,title))
-          setFinalLocation(textTranslate(selectLang,location))
+          const t = await textTranslate(selectLang,title)
+          setFinalTitle(t)
+          const lc = await textTranslate(selectLang,location)
+          setFinalLocation(lc)
         } catch (error) {
           console.log(error)
         }
