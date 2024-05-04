@@ -22,7 +22,7 @@ export default function UpdatePackage(){
     const [hotel,setHotel] = useState({
         hotelname:"",
         price:"",
-        currency:""
+        currency:"KES"
     })
     const [hotels,setHotels] = useState([])
     const [inclusive,setInclusive] = useState({
@@ -52,7 +52,7 @@ export default function UpdatePackage(){
         startdate:"",
         endate:"",
         deadline:"",
-        currency:""
+        currency:"KES"
     })
     const handleChange = (e) => {
        setTour((tour) => ({...tour, [e.target.name]:e.target.value}))
@@ -110,7 +110,7 @@ export default function UpdatePackage(){
         setHotel({
             hotelname:"",
             price:"",
-            currency:""
+            currency:"KES"
         });
     };
     const handleAdd4 = () => {
@@ -231,20 +231,14 @@ export default function UpdatePackage(){
            <BasicInput lbl="Price" name="price" value={hotel.price} onChange={handleChange4}/>
            <CustomSelect lbl="Currency" value={hotel.currency} name="currency" onChange={handleChange4}>
                 <MenuItem value="KES">KES</MenuItem>
-                <MenuItem value="$">USD</MenuItem>
-                <MenuItem value="€">EURO</MenuItem>
-                <MenuItem value="ZAR">RANDS</MenuItem>
             </CustomSelect>
             <Typography marginTop={3} onClick={handleAdd3} sx={{cursor:"pointer"}}>Save</Typography>
             </Stack>
 
             <Stack direction="row" gap={2}>
             <BasicInput  lbl="Price" type="number" value={tour.price} name="price" onChange={handleChange}/>
-            <CustomSelect required lbl="Currency" displayEmpty renderValue={()=>tour.currency}  value={tour.currency} name="currency" onChange={handleChange}>
+            <CustomSelect lbl="Currency" displayEmpty renderValue={()=>tour.currency}  value={tour.currency} name="currency" onChange={handleChange}>
                 <MenuItem value="KES">KES</MenuItem>
-                <MenuItem value="$">USD</MenuItem>
-                <MenuItem value="€">EURO</MenuItem>
-                <MenuItem value="ZAR">RANDS</MenuItem>
             </CustomSelect>
             </Stack>
 

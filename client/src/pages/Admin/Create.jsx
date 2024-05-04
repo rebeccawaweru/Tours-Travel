@@ -20,7 +20,7 @@ export default function CreatePackage(){
     const [hotel,setHotel] = useState({
         hotelname:"",
         price:"",
-        currency:""
+        currency:"KES"
     })
     const [hotels,setHotels] = useState([])
     const [inclusive,setInclusive] = useState({
@@ -48,7 +48,7 @@ export default function CreatePackage(){
         startdate:"",
         endate:"",
         deadline:"",
-        currency:""
+        currency:"KES"
     })
     const handleChange = (e) => {
        setTour((tour) => ({...tour, [e.target.name]:e.target.value}))
@@ -106,7 +106,7 @@ export default function CreatePackage(){
         setHotels((prevHotels) => [...prevHotels, hotel]);
         setHotel({
             hotelname:"",
-            price:"",
+            price:"KES",
             currency:""
         });
     };
@@ -211,20 +211,14 @@ export default function CreatePackage(){
            <BasicInput lbl="Price" name="price" value={hotel.price} onChange={handleChange4}/>
            <CustomSelect lbl="Currency" value={hotel.currency} name="currency" onChange={handleChange4}>
                 <MenuItem value="KES">KES</MenuItem>
-                <MenuItem value="$">USD</MenuItem>
-                <MenuItem value="€">EURO</MenuItem>
-                <MenuItem value="ZAR">RANDS</MenuItem>
             </CustomSelect>
             <Typography marginTop={3} onClick={handleAdd3} sx={{cursor:"pointer"}}>Save</Typography>
             </Stack>
 
            <Stack direction="row" gap={2}>
             <BasicInput required lbl="Display Price" type="number" name="price"  onChange={handleChange}/>
-            <CustomSelect required lbl="Currency" value={tour.currency} name="currency" onChange={handleChange}>
+            <CustomSelect lbl="Currency" value={tour.currency} name="currency" onChange={handleChange}>
                 <MenuItem value="KES">KES</MenuItem>
-                <MenuItem value="$">USD</MenuItem>
-                <MenuItem value="€">EURO</MenuItem>
-                <MenuItem value="ZAR">RANDS</MenuItem>
             </CustomSelect>
             </Stack>
 

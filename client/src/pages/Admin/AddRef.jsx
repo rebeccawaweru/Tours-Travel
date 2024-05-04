@@ -28,7 +28,7 @@ export default function AddReferal(){
         nights:0,
         charge:"",
         link:"",
-        currency:""
+        currency:"KES"
     })
     const handleChange = (e) => {
        setTour((tour) => ({...tour, [e.target.name]:e.target.value}))
@@ -92,11 +92,8 @@ export default function AddReferal(){
             <BasicInput lbl="Hotel" name="hotel" onChange={handleChange}/>
            <Stack direction="row" gap={2}>
             <BasicInput required lbl="Price" type="number" name="price" onChange={handleChange}/>
-            <CustomSelect required lbl="Currency" value={tour.currency} name="currency" onChange={handleChange}>
+            <CustomSelect lbl="Currency" value={tour.currency} name="currency" onChange={handleChange}>
                 <MenuItem value="KES">KES</MenuItem>
-                <MenuItem value="$">USD</MenuItem>
-                <MenuItem value="€">EURO</MenuItem>
-                <MenuItem value="ZAR">RANDS</MenuItem>
             </CustomSelect>
             </Stack>
            
