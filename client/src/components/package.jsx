@@ -46,16 +46,24 @@ export default function Package({id,image, duration, title, price, currency, loc
   React.useEffect(() => {
        const convertLanguage = async() => {
         try {
-          const t = await textTranslate(selectLang,title)
-          console.log(t['data'])
-          if (t['data'] !== "PLEASE SELECT TWO DISTINCT LANGUAGES") {
-            setFinalTitle(t['data'])
+         await textTranslate(selectLang,title).then((t) =>{
+          console.log(t.data)
+          if (t.data !== "PLEASE SELECT TWO DISTINCT LANGUAGES") {
+            setFinalTitle(t.data)
+          } else {
+            setFinalTitle(title)
           }
-          const lc = await textTranslate(selectLang,location)
-          console.log(lc)
-          if (lc['data'] !== "PLEASE SELECT TWO DISTINCT LANGUAGES") {
-            setFinalLocation(lc['data'])
-          }
+          })
+        
+          await textTranslate(selectLang,location).then((lc) =>{
+            console.log(lc.data)
+            if (lc.data !== "PLEASE SELECT TWO DISTINCT LANGUAGES") {
+              setFinalLocation(lc.data)
+            } else {
+              setFinalLocation(location)
+            }
+          })
+      
         } catch (error) {
           console.log(error)
         }
