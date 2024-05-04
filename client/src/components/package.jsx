@@ -47,14 +47,14 @@ export default function Package({id,image, duration, title, price, currency, loc
        const convertLanguage = async() => {
         try {
           const t = await textTranslate(selectLang,title)
-          console.log(t)
-          if (t.data !== "PLEASE SELECT TWO DISTINCT LANGUAGES") {
-            setFinalTitle(t.data)
+          console.log(t['data'])
+          if (t['data'] !== "PLEASE SELECT TWO DISTINCT LANGUAGES") {
+            setFinalTitle(t['data'])
           }
           const lc = await textTranslate(selectLang,location)
           console.log(lc)
-          if (lc.data !== "PLEASE SELECT TWO DISTINCT LANGUAGES") {
-            setFinalLocation(lc.data)
+          if (lc['data'] !== "PLEASE SELECT TWO DISTINCT LANGUAGES") {
+            setFinalLocation(lc['data'])
           }
         } catch (error) {
           console.log(error)
