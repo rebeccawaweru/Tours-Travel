@@ -71,7 +71,6 @@ export default function PackageDetails(){
       const convertPrice = async()=>{
         try {
           const pr = await currencyConverter(selectedCurrency,data.price,conversionRates)
-          console.log(pr)
           setResult((Math.round(pr)))
         } catch (error) {
           console.log(error)
@@ -185,7 +184,7 @@ export default function PackageDetails(){
                </TableRow>
               </TableHead>
               <TableBody>
-               {data.hotels.map(async(hotel)=>{
+               {data.hotels.map((hotel)=>{
                  return <TableRow
                  key={hotel.hotelname}
                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -193,7 +192,7 @@ export default function PackageDetails(){
                <TableCell component="th" scope="row">
                 {hotel.hotelname}
               </TableCell>
-              <TableCell>{selectedCurrency} {hotel.price && (Math.round(hotel.price)).toLocaleString()}</TableCell>
+              <TableCell>{hotel.currency} {hotel.price.toLocaleString()}</TableCell>
                </TableRow>
                })}
               </TableBody>
@@ -244,7 +243,7 @@ export default function PackageDetails(){
                     <Typography color="whitesmoke" variant="body1">{data && data.promotion} % {t("details.off")}</Typography>
                  </Box>
                  <Box maxWidth display="flex" justifyContent="center" bgcolor="#2196f3" padding={3}>
-                    <Typography color="whitesmoke" variant="h3">{data.currency} {data.price && data.price.toLocaleString()}</Typography>
+                    <Typography color="whitesmoke" variant="h3">{selectedCurrency} {result && result.toLocaleString()}</Typography>
                  </Box>
                 <Box component="form" onSubmit={handleSubmit} padding={4}>
                 <Typography variant="h5" marginBottom={3}>{t("details.interest")} </Typography>
