@@ -12,7 +12,6 @@ export const CurrencyProvider = ({ children }) => {
   const [conversionRates, setConversionRates] = useState(null);
   useEffect(()=>{
     client.get('/convert').then((response) => {
-        console.log(response)
         setConversionRates(response.data)
     })
   },[])
