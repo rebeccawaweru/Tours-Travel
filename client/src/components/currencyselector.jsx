@@ -1,7 +1,8 @@
 // LanguageSelector.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Grid, IconButton, Typography } from '@mui/material';
 import { Close } from '@mui/icons-material';
+import client from '../api/client';
 const styles = {
     container: {
       position: 'fixed',
@@ -13,12 +14,20 @@ const styles = {
       zIndex: '60',
     },
   };
-function CurrencySelector({link,rates}) {
+function CurrencySelector({link}) {
   const [dropdown, setDropdown] = useState(false)
+  const [rates, setRates] = useState([])
   const handleChange = (url) => localStorage.setItem('link', url)
+  useEffect(() => {
+    const rates =  client.get('/convert')
+    const array = Object.entries(rates).map(([currency, rate]) => ({
+        currency, rate
+    }))
+    setRates(array)
+  },[])
   return (
     <Box  sx={{cursor:"pointer"}}>
-  {!dropdown &&  <IconButton sx={{ fontSize: 14, letterSpacing:1 }}>KES</IconButton>}
+  {!dropdown &&  <IconButton onClick={()=>setDropdown(true)} sx={{ fontSize: 14, letterSpacing:1 }}>KES</IconButton>}
     {dropdown &&  <Box borderRadius={5} sx={{overflowY:"scroll"}} width="80%" style={styles.container}>
           <Grid display="flex" justifyContent="space-between" marginBottom={2}>
           <Typography variant="h6" fontWeight="bold" color="black">Choose currency</Typography>

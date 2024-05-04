@@ -164,19 +164,19 @@ export const textTranslate = async(lang, data) =>{
     console.log(error)
   }
 }
-export const currencyConverter = async (from, to, amount, key) => {
-   try {
-     const url = `https://v6.exchangerate-api.com/v6/${key}/latest/${from}`
-     const response = await fetch(url).then((response) => response.json())
-     const fetchedRates = response.conversion_rates
-     const currentRate = fetchedRates[to]
-     const result = amount * currentRate
-     console.log(result)
-     return result
-   } catch (error) {
-     console.log(error)
-   }
-}
+// export const currencyConverter = async (from, to, amount, key) => {
+//    try {
+//      const url = `https://v6.exchangerate-api.com/v6/${key}/latest/${from}`
+//      const response = await fetch(url).then((response) => response.json())
+//      const fetchedRates = response.conversion_rates
+//      const currentRate = fetchedRates[to]
+//      const result = amount * currentRate
+//      console.log(result)
+//      return result
+//    } catch (error) {
+//      console.log(error)
+//    }
+// }
 
 export const languages = [
   {

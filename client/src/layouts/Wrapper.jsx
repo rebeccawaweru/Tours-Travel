@@ -1,7 +1,6 @@
 import { useEffect,useState } from 'react';
 import { NavBar, Footer } from '../components';
 import {Box} from '@mui/material';
-import Conversions from '../context/conversions';
 export default function Wrapper({children}){
   const [hideToolbar, setHideToolbar] = useState(false);
   useEffect(() => {
@@ -25,10 +24,8 @@ export default function Wrapper({children}){
   
     return (
         <Box maxWidth width="100%" >
-          <Conversions>
           <NavBar hideToolbar={hideToolbar} />
           {children}
-          </Conversions>
           <Footer/>
         </Box>
     )
