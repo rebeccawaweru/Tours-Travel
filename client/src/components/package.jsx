@@ -33,7 +33,7 @@ export default function Package({id,image, duration, title, price, currency, loc
       const convertPrice = async()=>{
         try {
           const pr = await currencyConverter(selectedCurrency,price,conversionRates)
-          setResult(pr.toFixed(2))
+          setResult((Math.round(pr)))
         } catch (error) {
           console.log(error)
         }
@@ -55,7 +55,7 @@ export default function Package({id,image, duration, title, price, currency, loc
         
         <Typography sx={{display:"flex", justifyContent:"space-between"}} gutterBottom variant="p" component="div">
           <Typography fontSize="medium" fontWeight="bold" color="inherit">{title}</Typography>
-          <Typography color="primary" fontWeight="bold">{selectedCurrency} {result} </Typography>
+          <Typography color="primary" fontWeight="bold">{selectedCurrency} {result ? result.toLocaleString() : 0} </Typography>
         </Typography>
         <Stack direction="row" spacing={1}>
             <LocationOn/>
