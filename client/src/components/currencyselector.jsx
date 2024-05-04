@@ -20,7 +20,7 @@ function CurrencySelector() {
   const handleChange = (url) => localStorage.setItem('link', url)
   useEffect(() => {
     client.get('/convert').then((r)=>{
-        const array = Object.entries(r).map(([currency, rate]) => ({
+        const array = Object.entries(r.data).map(([currency, rate]) => ({
             currency, rate
         }))
         
@@ -39,7 +39,7 @@ function CurrencySelector() {
           </Grid>
          <Grid maxWidth borderRadius={5} container>
           {(rates && rates.length > 0) ? rates.map((rate)=>{
-            return <Typography color="black">{rate.currency}</Typography>
+            return <Typography component={Grid} item xs={12} md={3} marginBottom={4} color="black">{rate.currency}</Typography>
           }) : <Typography color="black">Fetching currencies....</Typography>}
       </Grid>
     </Box>}
