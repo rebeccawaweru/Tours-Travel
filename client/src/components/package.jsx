@@ -46,30 +46,23 @@ export default function Package({id,image, duration, title, price, currency, loc
   React.useEffect(() => {
        const convertLanguage = async() => {
         try {
-         await textTranslate(selectLang,title).then((t) =>{
-          console.log(t.data)
-          if (t.data !== "PLEASE SELECT TWO DISTINCT LANGUAGES") {
-            setFinalTitle(t.data)
-          } else {
+          if (selectLang === 'EN') {
+            setFinalLocation(location)
             setFinalTitle(title)
-          }
-          })
-        
-          await textTranslate(selectLang,location).then((lc) =>{
-            console.log(lc.data)
-            if (lc.data !== "PLEASE SELECT TWO DISTINCT LANGUAGES") {
+          } else {
+            await textTranslate(selectLang,title).then((t) =>{
+              setFinalTitle(t.data)
+            });
+            await textTranslate(selectLang,location).then((lc) =>{
               setFinalLocation(lc.data)
-            } else {
-              setFinalLocation(location)
-            }
-          })
-      
+            });
+           }
         } catch (error) {
           console.log(error)
         }
        }
        convertLanguage()
-  },[selectLang,title,location])
+  },[selectLang])
   return (
     <Card sx={{width:{xs:"100%",sm:320,md:380}}}>
       <CardMedia
@@ -81,7 +74,6 @@ export default function Package({id,image, duration, title, price, currency, loc
         title={title}
       />
       <CardContent component={Grid} direction="column" container gap={2}>
-        
         <Typography sx={{display:"flex", justifyContent:"space-between"}} gutterBottom variant="p" component="div">
           <Typography fontSize="medium" fontWeight="bold" color="inherit">{finalTitle}</Typography>
           <Typography color="primary" fontWeight="bold">{selectedCurrency} {result ? result.toLocaleString() : 0} </Typography>

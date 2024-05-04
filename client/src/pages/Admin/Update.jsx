@@ -7,7 +7,7 @@ import client from "../../api/client"
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router-dom";
 import {CountryDropdown, RegionDropdown} from 'react-country-region-selector'
-import { DeleteForever } from "@mui/icons-material";
+import { DeleteForever, Edit } from "@mui/icons-material";
 
 export default function UpdatePackage(){
     const {id} = useParams()
@@ -142,11 +142,46 @@ export default function UpdatePackage(){
         // Remove the rate at the specified index
         setExclusives((prevEx) => prevEx.filter((_, i) => i !== index));
     };
+    const handleUpdate = (index) => {
+        const current = hotels[index]
+        setHotel({
+          hotelname:current.hotelname,
+          price: current.price,
+          currency: current.currency
+  
+        })
+        handleDelete3(index)
+    }
+    const handleUpdate2 = (index) => {
+        const current = rates[index]
+        setRate({
+            ratename: current.ratename,
+            pricerate: current.pricerate
+  
+        })
+        handleDelete(index)
+    }
+    const handleUpdate3 = (index) => {
+        const current = inclusives[index]
+        setInclusive({     
+            desc: current.desc
+  
+        })
+        handleDelete2(index)
+    }
+    const handleUpdate4 = (index) => {
+        const current = exclusives[index]
+        setExclude({     
+            desc: current.desc
+  
+        })
+        handleDelete4(index)
+    }
     const handleUpload = (e) =>{
        setPreview(URL.createObjectURL(e.target.files[0]))
        setImage(e.target.files)
     }
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault()
         setLoading(true)
@@ -220,6 +255,7 @@ export default function UpdatePackage(){
                     {hotels.map((hotel, index) => (
                         <Stack key={index} direction="row" spacing={2}>
                             <Typography>{hotel.hotelname} - {hotel.price} {hotel.currency}</Typography> 
+                            <Edit onClick={()=>handleUpdate(index)}/>
                             <DeleteForever onClick={() => handleDelete3(index)} />
                         </Stack>
                     ))}
@@ -253,6 +289,7 @@ export default function UpdatePackage(){
                     {rates.map((rate,index) => (
                         <Stack key={index} direction="row" spacing={2}>
                             <Typography>{rate.ratename} - {Number(rate.pricerate).toLocaleString() || 0}</Typography> 
+                            <Edit onClick={()=>handleUpdate2(index)}/>
                             <DeleteForever onClick={() => handleDelete(index)} />
                         </Stack>
                     ))}
@@ -271,6 +308,7 @@ export default function UpdatePackage(){
                     {inclusives.map((rate,index) => (
                         <Stack key={index} direction="row" spacing={2}>
                             <Typography>{rate.desc}</Typography> 
+                            <Edit onClick={() => handleUpdate3(index)}/>
                             <DeleteForever onClick={() => handleDelete2(index)} />
                         </Stack>
                     ))}
@@ -289,6 +327,7 @@ export default function UpdatePackage(){
                     {exclusives.map((rate,index) => (
                         <Stack key={index} direction="row" spacing={2}>
                             <Typography>{rate.desc}</Typography> 
+                            <Edit onClick={()=>handleUpdate4(index)}/>
                             <DeleteForever onClick={() => handleDelete4(index)} />
                         </Stack>
                     ))}
