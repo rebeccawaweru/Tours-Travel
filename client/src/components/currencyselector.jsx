@@ -14,16 +14,18 @@ const styles = {
       zIndex: '60',
     },
   };
-function CurrencySelector({link}) {
+function CurrencySelector() {
   const [dropdown, setDropdown] = useState(false)
   const [rates, setRates] = useState([])
   const handleChange = (url) => localStorage.setItem('link', url)
   useEffect(() => {
-    const rates =  client.get('/convert')
-    const array = Object.entries(rates).map(([currency, rate]) => ({
+    const r =  client.get('/convert')
+    const array = Object.entries(r).map(([currency, rate]) => ({
         currency, rate
     }))
+    
     setRates(array)
+    console.log(r, array)
   },[])
   return (
     <Box  sx={{cursor:"pointer"}}>
