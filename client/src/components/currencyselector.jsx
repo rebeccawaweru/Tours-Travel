@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, Grid, IconButton, Typography } from '@mui/material';
 import { Close } from '@mui/icons-material';
 import client from '../api/client';
+import { useCurrency } from '../context/currency';
 const styles = {
     container: {
       position: 'fixed',
@@ -16,7 +17,10 @@ const styles = {
 function CurrencySelector({symbol}) {
   const [dropdown, setDropdown] = useState(false)
   const [rates, setRates] = useState([])
-  const handleChange = (c) => localStorage.setItem('currency', c)
+  const { setSelectedCurrency } = useCurrency();
+  const handleChangeCurrency = (currency) => {
+    setSelectedCurrency(currency);
+  };
   useEffect(() => {
     client.get('/convert').then((r)=>{
         const array = Object.entries(r.data).map(([currency, rate]) => ({
@@ -24,7 +28,6 @@ function CurrencySelector({symbol}) {
         }))
         
         setRates(array)
-        console.log(r, array)
     })
  
   },[])
@@ -38,7 +41,7 @@ function CurrencySelector({symbol}) {
           </Grid>
          <Grid maxWidth borderRadius={5} container>
           {(rates && rates.length > 0) ? rates.map((rate)=>{
-            return <Typography component={Grid} item xs={12} md={3} marginBottom={4} color="black" onClick={() => handleChange(rate.currency)}>{rate.currency}</Typography>
+            return <Typography component={Grid} item xs={12} md={3} marginBottom={4} color="black" onClick={()=>handleChangeCurrency(rate.currency)}>{rate.currency}</Typography>
           }) : <Typography color="black">Fetching currencies....</Typography>}
       </Grid>
     </Box>}

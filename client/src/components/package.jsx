@@ -10,9 +10,12 @@ import { Stack, Grid} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import {useTranslation} from 'react-i18next'
+import { useCurrency } from '../context/currency';
+import { currencyConverter } from '../utils/helpers';
 
-export default function Package({id,image, duration, title, price, currency, location, link, result}) {
+export default function Package({id,image, duration, title, price, currency, location, link}) {
   const {t} = useTranslation()
+  const { selectedCurrency,conversionRates } = useCurrency();
   const rating = [1, 2, 3, 4, 5]
   const navigate = useNavigate()
   const handleShare = (id) => {
@@ -24,6 +27,20 @@ export default function Package({id,image, duration, title, price, currency, loc
       })
   }
   const from = currency === '$' ? 'USD' : currency === '€' ? 'EUR' : currency === 'ZAR' ? 'ZAR' : currency === 'KES' ? 'KES' : '';
+    // Function to convert price to the selected currency
+  const [result, setResult] = React.useState(price)
+  React.useEffect(() => {
+      const convertPrice = async()=>{
+        try {
+          const pr = await currencyConverter(selectedCurrency,price,conversionRates)
+          setResult(pr)
+        } catch (error) {
+          console.log(error)
+        }
+      }
+      convertPrice()
+
+  },[selectedCurrency,price, conversionRates])
   return (
     <Card sx={{width:{xs:"100%",sm:320,md:380}}}>
       <CardMedia
@@ -38,7 +55,7 @@ export default function Package({id,image, duration, title, price, currency, loc
         
         <Typography sx={{display:"flex", justifyContent:"space-between"}} gutterBottom variant="p" component="div">
           <Typography fontSize="medium" fontWeight="bold" color="inherit">{title}</Typography>
-          <Typography color="primary" fontWeight="bold">{price}</Typography>
+          <Typography color="primary" fontWeight="bold">{selectedCurrency} {result} </Typography>
         </Typography>
         <Stack direction="row" spacing={1}>
             <LocationOn/>

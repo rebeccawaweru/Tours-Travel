@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import i18n from '../i18n';
 import { I18nextProvider } from 'react-i18next';
 import Translate from "../translation/Translate";
+import CurrencyProvider from "../context/currency";
 export default function Root(){
     const theme = createTheme({
         components: {
@@ -48,6 +49,7 @@ export default function Root(){
     })
     return (
       <I18nextProvider i18n={i18n}>
+         <CurrencyProvider>
         <ThemeProvider theme={theme}>
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
@@ -71,6 +73,7 @@ export default function Root(){
           <Route path="/destination" element={<Category/>}/>
         </Routes>
         </ThemeProvider>
+        </CurrencyProvider>
         </I18nextProvider>
     )
 }
