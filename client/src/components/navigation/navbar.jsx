@@ -12,7 +12,7 @@ import ConvertContext from '../../context/conversions'
 import CurrencySelector from '../currencyselector';
 export default function NavBar({hideToolbar}) {
   const { t } = useTranslation();
-  const rates = useContext(ConvertContext)
+  const {rates} = useContext(ConvertContext)
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleDrawerOpen = () => {
     setOpenDrawer(true);

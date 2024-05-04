@@ -5,7 +5,8 @@ from bson import json_util, ObjectId
 from datetime import datetime
 from pymongo import DESCENDING
 from translate import Translator
-
+import os
+import requests
 db = mongo.get_database()
 
 
@@ -103,6 +104,18 @@ def translate_array(lang):
 
     except Exception as e:
         return jsonify({'error': str(e)}), 400
+
+# currecy converter 
+@app.route('/convert', methods=['GET'])
+def get_rates():
+    fr = request.args.get('fr')
+    key = os.getenv('CONVERSION_KEY')
+    
+    url = f"https://v6.exchangerate-api.com/v6/{key}/latest/KES"
+    response = requests.get(url)
+    data = response.json()
+    rates = data['conversion_rates']
+    return rates
 
 
 @app.route('/find', methods=['GET'])

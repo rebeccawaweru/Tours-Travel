@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react"
+import client from "../api/client";
 export const ConvertContext = createContext({
     language: '',
     currency: '',
@@ -10,9 +11,8 @@ const Conversions = ({children}) => {
     const [currency, setCurrency] = useState('KES')
     const [rates, setRates] = useState([])
     useEffect(async()=>{
-        const url = `https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_CONVERSION_KEY}/latest/${currency}`
-        const response = await fetch(url).then((response) => response.json())
-        const array = Object.entries(response.conversion_rates).map(([currency, rate]) => ({
+        const rates = await client.get('/convert')
+        const array = Object.entries(rates).map(([currency, rate]) => ({
             currency, rate
         }))
         setRates(array)
