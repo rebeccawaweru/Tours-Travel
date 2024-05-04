@@ -78,7 +78,7 @@ const Slider = ({ images, autoSwipeInterval = 7000 }) => {
               >
                 <div
                   style={{
-                    background: 'linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4))',
+                    background: 'linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4))',
                     width: '100%',
                     height: '100%',
                     position: 'absolute',

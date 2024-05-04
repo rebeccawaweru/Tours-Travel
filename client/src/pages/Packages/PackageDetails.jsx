@@ -185,7 +185,6 @@ export default function PackageDetails(){
               </TableHead>
               <TableBody>
                {data.hotels.map(async(hotel)=>{
-                 const pr = await currencyConverter(selectedCurrency,hotel.price, conversionRates)
                  return <TableRow
                  key={hotel.hotelname}
                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -193,7 +192,7 @@ export default function PackageDetails(){
                <TableCell component="th" scope="row">
                 {hotel.hotelname}
               </TableCell>
-              <TableCell>{selectedCurrency} {pr && (Math.round(pr)).toLocaleString()}</TableCell>
+              <TableCell>{selectedCurrency} {hotel.price && (Math.round(hotel.price)).toLocaleString()}</TableCell>
                </TableRow>
                })}
               </TableBody>
@@ -206,16 +205,16 @@ export default function PackageDetails(){
             <>
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.rates")}:</Typography>
            {data.rates && data.rates.length > 0 && data.rates.map((item,index)=> {
-              const r = currencyConverter(selectedCurrency, item.pricerate, conversionRates)
-              const lang = selectLang === 'EN' ? item.ratename : textTranslate(selectLang, item.ratename);
-              return <Box><Typography key={index} color="inherit" variant="body1">{lang} - {selectedCurrency} {r && (Math.round(r)).toLocaleString()}</Typography><hr></hr></Box>
+            //   const r = currencyConverter(selectedCurrency, item.pricerate, conversionRates)
+            //   const lang = selectLang === 'EN' ? item.ratename : textTranslate(selectLang, item.ratename);
+              return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {selectedCurrency} {item.pricerate && (Math.round(item.pricerate)).toLocaleString()}</Typography><hr></hr></Box>
            })}
            </>}
             <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.includes")}:</Typography>
            {data.inclusives && data.inclusives.map((item,index)=> {
-              const lang = selectLang === 'EN' ? item.desc : textTranslate(selectLang, item.desc);
-              return <Stack direction="row" spacing={1}><LabelImportant color="primary"/><Typography key={index} color="inherit" variant="body1">{lang}</Typography></Stack>
+            //   const lang = selectLang === 'EN' ? item.desc : textTranslate(selectLang, item.desc);
+              return <Stack direction="row" spacing={1}><LabelImportant color="primary"/><Typography key={index} color="inherit" variant="body1">{item.desc}</Typography></Stack>
            })}
 
            {(data.exclusives && data.exclusives.length > 0) ?
@@ -223,8 +222,8 @@ export default function PackageDetails(){
            <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">{excludes}:</Typography>
            {data.exclusives.map((item,index)=> {
-              const lang = selectLang === 'EN' ? item.desc : textTranslate(selectLang, item.desc);
-              return <Stack direction="row" spacing={1}><LabelImportant color="primary"/><Typography key={index} color="inherit" variant="body1">{lang}</Typography></Stack>
+            //   const lang = selectLang === 'EN' ? item.desc : textTranslate(selectLang, item.desc);
+              return <Stack direction="row" spacing={1}><LabelImportant color="primary"/><Typography key={index} color="inherit" variant="body1">{item.desc}</Typography></Stack>
            })}
            </>
          : null}
@@ -233,8 +232,8 @@ export default function PackageDetails(){
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.activity")}</Typography>
            <Box display="flex" flexWrap="wrap" gap={2} marginBottom={2}>
            {data && data.activity && data.activity.length > 0 && data.activity.map((item)=>{
-                const lang = selectLang === 'EN' ? item : textTranslate(selectLang, item);
-                 return  <Stack direction="row" key={item}><TrendingUp fontSize="small" color="primary"/><Typography color="inherit" variant="body1">{lang}</Typography></Stack>
+               //  const lang = selectLang === 'EN' ? item : textTranslate(selectLang, item);
+                 return  <Stack direction="row" key={item}><TrendingUp fontSize="small" color="primary"/><Typography color="inherit" variant="body1">{item}</Typography></Stack>
             })}
            </Box>
            </Grid>          
