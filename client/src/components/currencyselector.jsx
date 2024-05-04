@@ -3,8 +3,6 @@ import { Box, Grid, IconButton, Typography } from '@mui/material';
 import { Close } from '@mui/icons-material';
 import { useCurrency } from '../context/currency';
 import { currencies } from '../utils/helpers';
-import Currency from './currency';
-
 const styles = {
     container: {
       position: 'fixed',

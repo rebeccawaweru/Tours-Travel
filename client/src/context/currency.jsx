@@ -8,7 +8,9 @@ export const useCurrency = () => {
 };
 
 export const CurrencyProvider = ({ children }) => {
-  const [selectedCurrency, setSelectedCurrency] = useState('KES');
+  const [selectedCurrency, setSelectedCurrency] = useState('KES')
+  const [selectLang, setSelectedLang] = useState('en')
+  const [flag, setFlag] = useState("https://res.cloudinary.com/dkjb6ziqg/image/upload/united-states-removebg-preview_mbwjxr.png")
   const [conversionRates, setConversionRates] = useState(null);
   useEffect(()=>{
     client.get('/convert').then((response) => {
@@ -16,7 +18,7 @@ export const CurrencyProvider = ({ children }) => {
     })
   },[])
   return (
-    <CurrencyContext.Provider value={{ selectedCurrency, setSelectedCurrency, conversionRates }}>
+    <CurrencyContext.Provider value={{ selectedCurrency, setSelectedCurrency, selectLang, setSelectedLang, flag, setFlag, conversionRates }}>
       {children}
     </CurrencyContext.Provider>
   );
