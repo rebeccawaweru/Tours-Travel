@@ -80,38 +80,38 @@ export default function PackageDetails(){
 
   },[selectedCurrency,data.price, conversionRates])
 
-  React.useEffect(() => {
-   const convertLanguage = async() => {
-    try {
-      if (selectLang === 'EN') {
-        setFinalLocation(data.location)
-        setFinalTitle(data.title)
-        setHotel('Hotel')
-        setPrice('Price')
-        setExcludes('Excludes')
-      } else {
-        await textTranslate(selectLang,data.title).then((t) =>{
-          setFinalTitle(t.data)
-        });
-        await textTranslate(selectLang,data.location).then((lc) =>{
-          setFinalLocation(lc.data)
-        });
-        await textTranslate(selectLang,hotel).then((h)=>{
-         setHotel(h.data)
-        })
-        await textTranslate(selectLang,price).then((p)=>{
-         setPrice(p.data)
-        })
-        await textTranslate(selectLang,excludes).then((e)=>{
-         setExcludes(e.data)
-        })
-       }
-    } catch (error) {
-      console.log(error)
-    }
-   }
-   convertLanguage()
-},[selectLang,data])
+//   React.useEffect(() => {
+//    const convertLanguage = async() => {
+//     try {
+//       if (selectLang === 'EN') {
+//         setFinalLocation(data.location)
+//         setFinalTitle(data.title)
+//         setHotel('Hotel')
+//         setPrice('Price')
+//         setExcludes('Excludes')
+//       } else {
+//         await textTranslate(selectLang,data.title).then((t) =>{
+//           setFinalTitle(t.data)
+//         });
+//         await textTranslate(selectLang,data.location).then((lc) =>{
+//           setFinalLocation(lc.data)
+//         });
+//         await textTranslate(selectLang,hotel).then((h)=>{
+//          setHotel(h.data)
+//         })
+//         await textTranslate(selectLang,price).then((p)=>{
+//          setPrice(p.data)
+//         })
+//         await textTranslate(selectLang,excludes).then((e)=>{
+//          setExcludes(e.data)
+//         })
+//        }
+//     } catch (error) {
+//       console.log(error)
+//     }
+//    }
+//    convertLanguage()
+// },[selectLang,data])
     return (
         <Wrapper>
        <Box sx={{

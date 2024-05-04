@@ -48,11 +48,8 @@ export default function Packages(){
         })
       }
     useEffect(()=>{
-        getPackages().then(()=>{
-          textTranslate('fr', {data})
-        })
+        getPackages()
         getReferrals()
-     
     },[])
     return (
         <Wrapper>
