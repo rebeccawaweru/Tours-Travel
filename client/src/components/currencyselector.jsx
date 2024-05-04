@@ -19,13 +19,15 @@ function CurrencySelector() {
   const [rates, setRates] = useState([])
   const handleChange = (url) => localStorage.setItem('link', url)
   useEffect(() => {
-    const r =  client.get('/convert')
-    const array = Object.entries(r).map(([currency, rate]) => ({
-        currency, rate
-    }))
-    
-    setRates(array)
-    console.log(r, array)
+    client.get('/convert').then((r)=>{
+        const array = Object.entries(r).map(([currency, rate]) => ({
+            currency, rate
+        }))
+        
+        setRates(array)
+        console.log(r, array)
+    })
+ 
   },[])
   return (
     <Box  sx={{cursor:"pointer"}}>
