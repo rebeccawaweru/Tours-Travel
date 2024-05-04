@@ -33,7 +33,7 @@ export default function Package({id,image, duration, title, price, currency, loc
       const convertPrice = async()=>{
         try {
           const pr = await currencyConverter(selectedCurrency,price,conversionRates)
-          setResult(pr)
+          setResult(pr.toFixed(2))
         } catch (error) {
           console.log(error)
         }

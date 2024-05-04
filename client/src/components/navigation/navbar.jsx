@@ -20,7 +20,6 @@ export default function NavBar({hideToolbar}) {
     setOpenDrawer(false);
   };
   const link = localStorage.getItem('link') || "https://res.cloudinary.com/dkjb6ziqg/image/upload/united-states-removebg-preview_mbwjxr.png"
-  const symbol = localStorage.getItem('currency') || 'KES'
   return (
     <Container  sx={{ flexGrow: 1,position:"relative",background:"transparent"}} > 
       <AppBar position="fixed" color="transparent" sx={{ backgroundColor:hideToolbar ? '#000435' : 'rgba(0, 4, 53, 0.4)', color: "white",  }} elevation={0}> 
@@ -28,7 +27,7 @@ export default function NavBar({hideToolbar}) {
           <Stack direction="row" spacing={1} component="div" sx={{ flexGrow: 1 }}>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><Phone sx={{ fontSize: 16, marginRight: 0.8 }} />+254 707 741 232 </IconButton>
             <IconButton sx={{ fontSize: 14, letterSpacing:1 }}><MailOutline  sx={{ fontSize: 16, marginRight: 0.8 }} />info@denzetoursandtravels.com</IconButton>
-            <CurrencySelector symbol={symbol}/>
+            <CurrencySelector/>
             <LanguageSelector link={link}/>
           </Stack>
           <Box display={{ md:"none",lg:"flex"}}>
