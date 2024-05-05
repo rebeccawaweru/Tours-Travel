@@ -9,7 +9,7 @@ app = Flask(__name__)
 mongo = Connection()
 
 #Enable CORS for all routes
-CORS(app, resources={r"/*": {"origins": ["https://denzetoursandtravels.com"]}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": ["https://denzetoursandtravels.netlify.app"]}}, supports_credentials=True)
 
 
 from app import routes
