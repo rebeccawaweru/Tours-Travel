@@ -60,7 +60,7 @@ export default function Category(){
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"50px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:"start",cursor:"pointer"}}>
                 {destinations && destinations.length > 0 ? destinations.map((item)=>{
-                    return <Package id={item._id} link={item.link} price={`${item.currency} ${Number(item.price).toLocaleString() || 0}`} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights}nights ${item.days}days`} image={item.poster}/>
+                    return <Package id={item._id} link={item.link} price={item.price} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
                   }) : <p>No tour packages available under {category}. <LinkBtn to="/packages" title="Explore all tours"/></p>
                 } 
             </Grid>
