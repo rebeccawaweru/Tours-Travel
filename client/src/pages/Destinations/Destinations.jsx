@@ -22,7 +22,7 @@ export default function Destinations(){
 
        <Grid container bgcolor="whitesmoke" display="flex" flexWrap="wrap" justifyContent="center" gap={1} sx={{paddingY:"5px", marginTop:{xs:-4,md:-10}}}>
              {itemData.map((item)=>{
-                return <Grid onClick={()=>navigate(`/destination?category=${t(item.title)}`)} position="relative"  key={item.title} item container  sx={{width:{xs:"100%",sm:"40%",md:"30%"}, height:"400px",cursor:"pointer",backgroundSize:"cover",
+                return <Grid onClick={()=>navigate(`/destination?category=${(item.cat)}`)} position="relative"  key={item.title} item container  sx={{width:{xs:"100%",sm:"40%",md:"30%"}, height:"400px",cursor:"pointer",backgroundSize:"cover",
                 '&:hover': {
                   backgroundImage: `linear-gradient(to right, rgba(0, 0, 0.2, 0.6), rgba(0, 0, 0.2, 0.6)), url(${item.img})`,
                   borderBottom:'3px solid #2196f3'

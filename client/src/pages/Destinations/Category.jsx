@@ -12,15 +12,19 @@ export default function Category(){
     const urlParams = new URLSearchParams(queryString);
     const category = urlParams.get('category')
     const tourdata = itemData.filter(function(item){
-        return t(item.title) === category
+        return item.cat === category
     })
+   const title = itemData.filter(function(item){
+       return item.cat === category ? item.title : null
+   })
+
     const [data,setData] = useState([])
     const [referrals, setReferrals] = useState([])
     const combined = [...data, ...referrals]
     const destinations = combined.filter(function(item){
         return item.category === category
     })
-  
+
     async function getPackages(){
         await client.get('/find').then((response)=>{
              setData(response.data)
@@ -53,7 +57,7 @@ export default function Category(){
        <Container  maxWidth sx={{marginBottom:3, marginTop:{xs:12,sm:15,md:0}}}>
         <Stack direction="row" spacing={1} justifyContent="center">
         <LocationSearching fontSize="large"/>
-        <Typography variant="h4" fontWeight="bold" > {category && `${category}`}</Typography>
+        <Typography variant="h4" fontWeight="bold" > {category && `${t(title[0].title)}`}</Typography>
         </Stack>
        </Container>
        </Box>

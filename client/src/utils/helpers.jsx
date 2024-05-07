@@ -62,54 +62,67 @@ export const itemData = [
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485108/palm_cvujpu.jpg",
       title: 'destination.local',
+      cat:'Local Travels'
     },
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485100/europe_m7hgbj.webp",
       title: 'destination.hot',
+      cat:'Hot Pick'
     },
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485100/asia_j4p5zt.webp",
       title: 'destination.holiday',
+      cat:'International Holiday'
     },
     {
       img: "https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485047/africa_situ5k.webp",
       title: 'destination.africa',
+      cat:'East Africa'
     },
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485185/vacation_p1cgqq.jpg",
       title: 'destination.vacay',
+      cat:'Vacations'
     },
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485102/education_wo56oh.jpg",
       title: 'destination.edu',
+      cat:'Educational Tours'
     },
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485136/special_el11px.jpg",
       title: 'destination.special',
+      cat:'Special Tours'
     },
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485113/sport_k25wyc.jpg",
       title: 'destination.sports',
+      cat:'Sporting events'
     },
     {
       img: "https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485086/charity_vz5muw.jpg",
       title: 'destination.charity',
+      cat:'Charity tours'
     },
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485168/wine_wzvtno.jpg",
       title: 'destination.wine',
+      cat:'Wine tasting tours'
     },
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485107/foodfestival_pjly9s.jpg",
       title: 'destination.food',
+      cat:'Food festivals'
     },
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485037/birds_bvn5uh.jpg",
       title: 'destination.bird',
+      cat:'Bird watching explorations'
     },
     {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485109/gliding_ndptrm.jpg",
       title: 'destination.sky',
+      cat:'Sky gliding tours'
     },
 ]
 
