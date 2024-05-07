@@ -94,6 +94,7 @@ def translate_array(lang):
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
+
 # currecy converter 
 @app.route('/convert', methods=['GET'])
 def get_rates():
@@ -117,6 +118,7 @@ def get_packages():
    
    return json_util.dumps(packages), 200
 
+
 @app.route('/<id>', methods=['GET'], strict_slashes=True)
 def get_package(id):
    query = {
@@ -125,7 +127,8 @@ def get_package(id):
    package = db.packages.find_one(query)
    if not package:
       return jsonify({'error':'Package not found'}), 404
-   
+      # Translate package values if lang parameter is provided
+
    package['_id'] = str(package['_id'])
    return jsonify({'package':package}), 200
 
@@ -151,7 +154,7 @@ def delete_package(id):
     if request.method == 'OPTIONS':
         # This is a preflight request, respond with the appropriate headers
         response = make_response()
-        response.headers.add("Access-Control-Allow-Origin", "https://denzetoursandtravels.netlify.app")
+        response.headers.add("Access-Control-Allow-Origin", "https://denzetoursandtravels.com")
         response.headers.add("Access-Control-Allow-Methods", "DELETE")
         response.headers.add("Access-Control-Allow-Headers", "Content-Type")
         return response
@@ -222,7 +225,7 @@ def delete_referral(id):
     if request.method == 'OPTIONS':
         # This is a preflight request, respond with the appropriate headers
         response = make_response()
-        response.headers.add("Access-Control-Allow-Origin", "https://denzetoursandtravels.netlify.app")
+        response.headers.add("Access-Control-Allow-Origin", "https://denzetoursandtravels.com")
         response.headers.add("Access-Control-Allow-Methods", "DELETE")
         response.headers.add("Access-Control-Allow-Headers", "Content-Type")
         return response

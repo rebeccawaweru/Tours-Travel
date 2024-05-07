@@ -34,8 +34,12 @@ export default function Package({id,image, duration, title, price, currency, loc
   React.useEffect(() => {
       const convertPrice = async()=>{
         try {
-          const pr = await currencyConverter(selectedCurrency,price,conversionRates)
-          setResult((Math.round(pr)))
+          if(selectedCurrency !== 'KES'){
+            const pr = await currencyConverter(selectedCurrency,price,conversionRates)
+            setResult((Math.round(pr)))
+          } else {
+            setResult(price)
+          }
         } catch (error) {
           console.log(error)
         }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, Grid, IconButton, Typography } from '@mui/material';
 import { Close } from '@mui/icons-material';
 import { useCurrency } from '../context/currency';
-import { currencies } from '../utils/helpers';
+import { currencies, currencyConverter} from '../utils/helpers';
 const styles = {
     container: {
       position: 'fixed',
@@ -17,7 +17,7 @@ const styles = {
 function CurrencySelector() {
   const [dropdown, setDropdown] = useState(false)
   const [rates, setRates] = useState([])
-  const { selectedCurrency, setSelectedCurrency } = useCurrency();
+  const { selectedCurrency, setSelectedCurrency, conversionRates} = useCurrency();
   const handleChangeCurrency = (currency) => {
     setSelectedCurrency(currency);
   };

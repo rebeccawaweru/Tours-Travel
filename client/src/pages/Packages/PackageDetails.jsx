@@ -70,8 +70,13 @@ export default function PackageDetails(){
     React.useEffect(() => {
       const convertPrice = async()=>{
         try {
-          const pr = await currencyConverter(selectedCurrency,data.price,conversionRates)
-          setResult((Math.round(pr)))
+          if(selectedCurrency !== 'KES') {
+            const pr = await currencyConverter(selectedCurrency,data.price,conversionRates)
+            setResult((Math.round(pr)))
+          } else {
+             setResult(data.price)
+          }
+    
         } catch (error) {
           console.log(error)
         }
