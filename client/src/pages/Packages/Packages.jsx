@@ -1,6 +1,6 @@
 import Wrapper from "../../layouts/Wrapper";
-import { Box, Grid, Container, Stack, Typography, Button} from "@mui/material";
-import { Filter, Package} from "../../components";
+import { Box, Grid, Container, Stack, Typography, Button, Skeleton} from "@mui/material";
+import { Filter, Package,Skeletons} from "../../components";
 import { TravelExplore } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
@@ -72,12 +72,19 @@ export default function Packages(){
        </Container>
         <Filter handleChange={handleChange} handleSearch={handleSearch}/>
        </Box>
+  
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"20px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:{xs:"center",md:"center",lg:"start"},cursor:"pointer"}}>
             {(!search && data && data.length > 0) ? data.map((item)=>{
                     return <Package id={item._id} link={item.link} price={item.price} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
                   })
-               : <p>Loading....</p>}
+               :<Grid display="flex" justifyContent="space-between" gap={2}> 
+                <Skeletons/>
+                <Skeletons/>
+                <Skeletons/>
+              
+               </Grid>
+               }
                
             {search && filtered && filtered.length > 0 ? filtered.map((item)=>{
                     return <Package id={item._id} link={item.link} price={item.price} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
