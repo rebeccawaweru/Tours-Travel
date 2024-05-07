@@ -80,7 +80,7 @@ export default function Package({id,image, duration, title, price, currency, loc
       <CardContent component={Grid} direction="column" container gap={2}>
         <Typography sx={{display:"flex", justifyContent:"space-between"}} gutterBottom variant="p" component="div">
           <Typography fontSize="medium" fontWeight="bold" color="inherit">{finalTitle}</Typography>
-          <Typography color="primary" fontWeight="bold">{selectedCurrency} {result ? result.toLocaleString() : 0} </Typography>
+          <Typography color="primary" fontWeight="bold">{selectedCurrency} {result ? (Number(result)).toLocaleString() : 0} </Typography>
         </Typography>
         <Stack direction="row" spacing={1}>
             <LocationOn/>

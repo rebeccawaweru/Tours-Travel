@@ -248,7 +248,7 @@ export default function PackageDetails(){
                     <Typography color="whitesmoke" variant="body1">{data && data.promotion} % {t("details.off")}</Typography>
                  </Box>
                  <Box maxWidth display="flex" justifyContent="center" bgcolor="#2196f3" padding={3}>
-                    <Typography color="whitesmoke" variant="h3">{selectedCurrency} {result && result.toLocaleString()}</Typography>
+                    <Typography color="whitesmoke" variant="h3">{selectedCurrency} {result && (Number(result)).toLocaleString()}</Typography>
                  </Box>
                 <Box component="form" onSubmit={handleSubmit} padding={4}>
                 <Typography variant="h5" marginBottom={3}>{t("details.interest")} </Typography>

@@ -82,7 +82,6 @@ export default function Packages(){
                 <Skeletons/>
                 <Skeletons/>
                 <Skeletons/>
-              
                </Grid>
                }
                
