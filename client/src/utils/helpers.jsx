@@ -120,9 +120,19 @@ export const itemData = [
       cat:'Bird watching explorations'
     },
     {
+      img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1715359001/pyramid_ddg56e.jpg",
+      title: 'Historic & Cultural Site Tours',
+      cat:'Historic & Cultural Site Tours'
+    },
+    {
       img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485109/gliding_ndptrm.jpg",
       title: 'destination.sky',
       cat:'Sky gliding tours'
+    },
+    {
+      img:"https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1715359264/cruises_l9jloe.jpg",
+      title: 'Luxury Cruise Trips',
+      cat:'Luxury Cruise Trips'
     },
 ]
 
