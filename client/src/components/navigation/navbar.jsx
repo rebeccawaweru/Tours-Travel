@@ -66,6 +66,7 @@ export default function NavBar({hideToolbar}) {
             <LinkItem to="/about" page={t('navbar.about')}/>
             <LinkItem to="/packages" page={t('navbar.packages')}/>
             <LinkItem to="/destinations" page={t('navbar.destinations')}/>
+            <LinkItem page="Gallery"/>
             <LinkItem to="/contact" page={t('navbar.contact')}/>
           </Box>
         </Toolbar>
