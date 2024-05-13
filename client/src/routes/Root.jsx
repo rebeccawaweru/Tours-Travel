@@ -1,9 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import { LandingPage, SignUp, SignIn, Category, ForgotPassword, ResetPassword, About, Packages, PackageDetails, Destinations, Contact, Bookings,CreatePackage, UpdatePackage, TourPackages, AddReferal, UpdateReferal, Dashboard, Classes } from "../pages";
+import { LandingPage, SignUp, SignIn, Gallery, Category, ForgotPassword, ResetPassword, About, Packages, PackageDetails, Destinations, Contact, Bookings,CreatePackage, UpdatePackage, TourPackages, AddReferal, UpdateReferal, Dashboard, Classes } from "../pages";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import i18n from '../i18n';
 import { I18nextProvider } from 'react-i18next';
-import Translate from "../translation/Translate";
 import CurrencyProvider from "../context/currency";
 export default function Root(){
     const theme = createTheme({
@@ -71,6 +70,7 @@ export default function Root(){
           <Route path="/tourpackages" element={<TourPackages/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
           <Route path="/destination" element={<Category/>}/>
+          <Route path="/gallery" element={<Gallery/>}/>
         </Routes>
         </ThemeProvider>
         </CurrencyProvider>
