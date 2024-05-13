@@ -98,7 +98,7 @@ def translate_array(lang):
 # currecy converter 
 @app.route('/convert', methods=['GET'])
 def get_rates():
-    key = os.getenv('CONVERSION_KEY')
+    key = os.environ.get('CONVERSION_KEY')
     
     url = f"https://v6.exchangerate-api.com/v6/{key}/latest/KES"
     response = requests.get(url)
