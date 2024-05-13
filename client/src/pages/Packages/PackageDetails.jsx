@@ -34,13 +34,11 @@ export default function PackageDetails(){
         await client.get(`/${id}`).then((response)=>{
              setData(response.data.package)
              console.log(response.data.package)
-             for (let d in response.data.package) {
-              console.log(d)
-              for (let item of d['inclusives']) {
+
+              for (let item of response.data.package.inclusives) {
                 let y = textTranslate(selectLang, item)
                 console.log(y)
               }
-          }
 
         });
         
