@@ -33,25 +33,7 @@ export default function PackageDetails(){
     async function getPackage(){
         await client.get(`/${id}`).then((response)=>{
              setData(response.data.package)
-             console.log(response.data.package)
-
-              // for (let item of response.data.package.inclusives) {
-              //   let y = textTranslate(selectLang, item)
-              //   console.log(y)
-              // }
-              async function processInclusives(response) {
-                const translationsPromises = response.data.package.inclusives.map(item => textTranslate(selectLang, item));
-                const translations = await Promise.all(translationsPromises);
-                translations.forEach(y => console.log(y));
-              }
-              
-              // Call processInclusives function with response object
-              processInclusives(response);
-
         });
-        
-   
-
       }
    const handleChange = (e) =>{
     setValues(values => ({...values, [e.target.name]:e.target.value}))

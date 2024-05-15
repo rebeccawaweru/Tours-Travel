@@ -33,7 +33,6 @@ export default function Packages(){
       }))
     }
     const handleReset = () => {
-        setSearch(false)
         window.location.reload()
     }
     async function getPackages(){
@@ -78,7 +77,7 @@ export default function Packages(){
             {(!search && data && data.length > 0) ? data.map((item)=>{
                     return <Package id={item._id} link={item.link} price={item.price} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
                   })
-               :<Grid display="flex" justifyContent="space-between" gap={2}> 
+               : !search && <Grid display="flex" justifyContent="space-between" gap={2}> 
                 <Skeletons/>
                 <Skeletons/>
                 <Skeletons/>

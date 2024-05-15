@@ -32,7 +32,9 @@ export default function Filter({handleChange, handleSearch}){
                 <MenuItem value={t("destination.wine")}>{t("destination.wine")}</MenuItem>
                 <MenuItem value={t("destination.food")}>{t("destination.food")}</MenuItem>
                 <MenuItem value={t("destination.bird")}>{t("destination.bird")}</MenuItem>
-                <MenuItem value={t("destination.sky")}>{t("destination.sky")}</MenuItem>
+                <MenuItem value="Historic & Cultural Site Tours">Historic & Cultural Site Tours</MenuItem>
+                <MenuItem value="Sky gliding tours">Sky gliding tours</MenuItem>
+                <MenuItem value="Luxury Cruise Trips">Luxury Cruise Trips</MenuItem>
         </BasicSelect>
 
          <BasicSelect name={t("filter.duration.name")} lbl={t("filter.duration.label1")} onChange={handleChange}>

@@ -84,7 +84,9 @@ export default function UpdateReferal(){
                 <MenuItem value="Wine tasting tours">Wine tasting tours</MenuItem>
                 <MenuItem value="Food festivals">Food festivals</MenuItem>
                 <MenuItem value="Bird watching explorations">Bird watching explorations</MenuItem>
+                <MenuItem value="Historic & Cultural Site Tours">Historic & Cultural Site Tours</MenuItem>
                 <MenuItem value="Sky gliding tours">Sky gliding tours</MenuItem>
+                <MenuItem value="Luxury Cruise Trips">Luxury Cruise Trips</MenuItem>
             </CustomSelect>
             <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>Country / Region</Typography>
             <Stack direction="row" gap={2} marginBottom={3}>
