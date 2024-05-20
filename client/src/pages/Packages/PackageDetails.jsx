@@ -153,30 +153,33 @@ export default function PackageDetails(){
 
                 <Stack direction="row" spacing={1}>
                 <LocationOn color="primary"/>
-                <Typography color="inherit" variant="body1">{data.hotel} {finalLocation} </Typography>
+                <Typography color="inherit" variant="body1">{data.region} {finalLocation} </Typography>
                 </Stack>
 
                 <Stack direction="row" spacing={1}>
                 <Public color="primary"/>
-                <Typography color="inherit" variant="body1">{data.region} {data.country}</Typography>
+                <Typography color="inherit" variant="body1"> {data.country}</Typography>
                 </Stack>
               </Grid>
 
-                <Grid  direction="column" container gap={4}>
+                <Grid  direction="column" container gap={4} marginTop={{sm:4, md:0}}>
                 <Stack direction="row" spacing={1}>
                 <CalendarMonth color="primary"/>
                 <Typography color="inherit" variant="body1">{t("details.valid")}: {data.deadline && new Date(data.deadline).toDateString()}</Typography>
                 </Stack>
-
+                
+                {data.maximum &&
                 <Stack direction="row" spacing={1}>
                 <People color="primary"/>
-                <Typography color="inherit" variant="body1">{t("details.max")}. {data.maximum || '-'}</Typography>
-                </Stack>
-
+                <Typography color="inherit" variant="body1">{t("details.max")}. {data.maximum}</Typography>
+                </Stack>}
+                
+                {data.minimum &&
                 <Stack direction="row" spacing={1}>
                 <People color="primary"/>
-                <Typography color="inherit" variant="body1">{t("details.min")}. {data.minimum || '-'}</Typography>
-                </Stack>
+                <Typography color="inherit" variant="body1">{t("details.min")}. {data.minimum}</Typography>
+                </Stack>}
+
                   </Grid>
              </Stack>
 
