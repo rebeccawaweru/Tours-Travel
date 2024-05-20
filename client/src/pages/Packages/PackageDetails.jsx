@@ -10,13 +10,12 @@ import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { useTranslation } from "react-i18next";
 import { useCurrency } from "../../context/currency";
-import { textTranslate,currencyConverter } from '../../utils/helpers';
+import {currencyConverter } from '../../utils/helpers';
 export default function PackageDetails(){
     const {t} = useTranslation()
     const {id} = useParams()
     const [data,setData] = useState({})
-    const { selectedCurrency,conversionRates, selectLang } = useCurrency();
-    const [finalTitle, setFinalTitle] = React.useState(data.title)
+    const { selectedCurrency,conversionRates} = useCurrency();
     const [finalLocation, setFinalLocation] = React.useState(data.location)
     const [hotel,setHotel] = useState('Hotel')
     const [price,setPrice] = useState('Price')
@@ -58,11 +57,9 @@ export default function PackageDetails(){
                setValues({fullname:"", email:"", phone:"", message:""})
                Swal.fire('SUCCESS', 'Your enquiry has been received.', 'success')
             }).catch((error)=>{
-               // console.log(error)
               Swal.fire('ERROR', 'An error occured.Please try again.', 'error')
             })
-           setLoading(false)
-       
+         setLoading(false)
    }
     useEffect(()=>{
         getPackage()
@@ -82,41 +79,7 @@ export default function PackageDetails(){
         }
       }
       convertPrice()
-
   },[selectedCurrency,data.price, conversionRates])
-
-//   React.useEffect(() => {
-//    const convertLanguage = async() => {
-//     try {
-//       if (selectLang === 'EN') {
-//         setFinalLocation(data.location)
-//         setFinalTitle(data.title)
-//         setHotel('Hotel')
-//         setPrice('Price')
-//         setExcludes('Excludes')
-//       } else {
-//         await textTranslate(selectLang,data.title).then((t) =>{
-//           setFinalTitle(t.data)
-//         });
-//         await textTranslate(selectLang,data.location).then((lc) =>{
-//           setFinalLocation(lc.data)
-//         });
-//         await textTranslate(selectLang,hotel).then((h)=>{
-//          setHotel(h.data)
-//         })
-//         await textTranslate(selectLang,price).then((p)=>{
-//          setPrice(p.data)
-//         })
-//         await textTranslate(selectLang,excludes).then((e)=>{
-//          setExcludes(e.data)
-//         })
-//        }
-//     } catch (error) {
-//       console.log(error)
-//     }
-//    }
-//    convertLanguage()
-// },[selectLang,data])
     return (
         <Wrapper>
        <Box sx={{
@@ -138,11 +101,9 @@ export default function PackageDetails(){
         <Typography variant="h4" fontWeight="bold">{data.title}</Typography>
         </Stack>
        </Container>
-
        </Box>
        <Container  maxWidth sx={{position:"relative", backgroundColor: 'whitesmoke',paddingY:"50px", marginTop:{xs:-4,md:-20}}}>
         <Grid container>
-
             <Grid item container xs={12} md={8} direction="column" gap={4}>
                <Stack direction={{xs:"column",md:"row"}}>
             <Grid  direction="column" container gap={4}>
@@ -150,39 +111,33 @@ export default function PackageDetails(){
                 <Timer color="primary"/>
                 <Typography color="inherit" variant="body1">{data.nights} {t("details.night")} {data.days} {t("details.days")} </Typography>
                 </Stack>
-
                 <Stack direction="row" spacing={1}>
                 <LocationOn color="primary"/>
                 <Typography color="inherit" variant="body1">{data.region} {finalLocation} </Typography>
                 </Stack>
-
                 <Stack direction="row" spacing={1}>
                 <Public color="primary"/>
                 <Typography color="inherit" variant="body1"> {data.country}</Typography>
                 </Stack>
               </Grid>
-
                 <Grid  direction="column" container gap={4} marginTop={{sm:4, md:0}}>
                 <Stack direction="row" spacing={1}>
                 <CalendarMonth color="primary"/>
                 <Typography color="inherit" variant="body1">{t("details.valid")}: {data.deadline && new Date(data.deadline).toDateString()}</Typography>
                 </Stack>
-                
                 {data.maximum  ?
                 <Stack direction="row" spacing={1}>
                 <People color="primary"/>
                 <Typography color="inherit" variant="body1">{t("details.max")}. {data.maximum}</Typography>
                 </Stack> : null}
-                
                 {data.minimum ?
                 <Stack direction="row" spacing={1}>
                 <People color="primary"/>
                 <Typography color="inherit" variant="body1">{t("details.min")}. {data.minimum}</Typography>
                 </Stack> : null}
-                
+
                   </Grid>
              </Stack>
-
              {data.hotels && data.hotels.length > 0 && 
              <Table>
               <TableHead>
@@ -206,41 +161,32 @@ export default function PackageDetails(){
               </TableBody>
             </Table>
             }
-
-
             <Grid direction="column" container gap={4} marginTop={2}>
             {data.rates && data.rates.length > 0 &&
             <>
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.rates")}:</Typography>
            {data.rates && data.rates.length > 0 && data.rates.map((item,index)=> {
-            //   const r = currencyConverter(selectedCurrency, item.pricerate, conversionRates)
-            //   const lang = selectLang === 'EN' ? item.ratename : textTranslate(selectLang, item.ratename);
               return <Box><Typography key={index} color="inherit" variant="body1">{item.ratename} - {selectedCurrency} {item.pricerate && (Math.round(item.pricerate)).toLocaleString()}</Typography><hr></hr></Box>
            })}
            </>}
             <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.includes")}:</Typography>
            {data.inclusives && data.inclusives.map((item,index)=> {
-            //   const lang = selectLang === 'EN' ? item.desc : textTranslate(selectLang, item.desc);
               return <Stack direction="row" spacing={1}><LabelImportant color="primary"/><Typography key={index} color="inherit" variant="body1">{item.desc}</Typography></Stack>
            })}
-
            {(data.exclusives && data.exclusives.length > 0) ?
            <>
            <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">{excludes}:</Typography>
            {data.exclusives.map((item,index)=> {
-            //   const lang = selectLang === 'EN' ? item.desc : textTranslate(selectLang, item.desc);
               return <Stack direction="row" spacing={1}><LabelImportant color="primary"/><Typography key={index} color="inherit" variant="body1">{item.desc}</Typography></Stack>
            })}
            </>
          : null}
-         
        <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.activity")}</Typography>
            <Box display="flex" flexWrap="wrap" gap={2} marginBottom={2}>
            {data && data.activity && data.activity.length > 0 && data.activity.map((item)=>{
-               //  const lang = selectLang === 'EN' ? item : textTranslate(selectLang, item);
                  return  <Stack direction="row" key={item}><TrendingUp fontSize="small" color="primary"/><Typography color="inherit" variant="body1">{item}</Typography></Stack>
             })}
            </Box>
