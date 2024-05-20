@@ -1,12 +1,13 @@
 import Wrapper from "../../layouts/Wrapper";
 import { Box, Grid, Container, Stack, Typography} from "@mui/material";
-import { LinkBtn, Package} from "../../components";
+import { LinkBtn, Package, Skeletons} from "../../components";
 import { LocationSearching } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import client from '../../api/client'
 import { itemData } from "../../utils/helpers";
 import { useTranslation } from "react-i18next";
 export default function Category(){
+    const [loading, isLoading] = useState(true)
     const {t} = useTranslation()
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -29,6 +30,7 @@ export default function Category(){
         await client.get('/find').then((response)=>{
              setData(response.data)
         })
+        isLoading(false)
       }
     async function getReferrals(){
         await client.get('/find/referrals').then((response)=>{
@@ -63,9 +65,14 @@ export default function Category(){
        </Box>
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"50px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:"start",cursor:"pointer"}}>
-                {destinations && destinations.length > 0 ? destinations.map((item)=>{
+                {loading && <Grid display="flex" justifyContent="space-between" gap={2}> 
+                <Skeletons/>
+                <Skeletons/>
+                <Skeletons/>
+               </Grid>}
+                {!loading && destinations && destinations.length > 0 ? destinations.map((item)=>{
                     return <Package id={item._id} link={item.link} price={item.price} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
-                  }) : <p>No tour packages available under {category}. <LinkBtn to="/packages" title="Explore all tours"/></p>
+                  }) : !loading && <p>No tour packages available under {category}. <LinkBtn to="/packages" title="Explore all tours"/></p>
                 } 
             </Grid>
         </Container>

@@ -23,7 +23,7 @@ export default function Packages(){
     const handleChange = (e) =>{
         setParameters((parameters) => ({...parameters, [e.target.name]:e.target.value}))
     }
-    const handleSearch = async() => {
+    const handleSearch = () => {
        setSearch(true)
        setFiltered(combined.filter(item => {
         // Check if any parameter value matches any property value in the combined item
