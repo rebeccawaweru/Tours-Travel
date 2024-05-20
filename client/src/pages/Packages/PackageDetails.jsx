@@ -168,18 +168,18 @@ export default function PackageDetails(){
                 <Typography color="inherit" variant="body1">{t("details.valid")}: {data.deadline && new Date(data.deadline).toDateString()}</Typography>
                 </Stack>
                 
-                {data.maximum &&
+                {data.maximum  ?
                 <Stack direction="row" spacing={1}>
                 <People color="primary"/>
                 <Typography color="inherit" variant="body1">{t("details.max")}. {data.maximum}</Typography>
-                </Stack>}
+                </Stack> : null}
                 
-                {data.minimum &&
+                {data.minimum ?
                 <Stack direction="row" spacing={1}>
                 <People color="primary"/>
                 <Typography color="inherit" variant="body1">{t("details.min")}. {data.minimum}</Typography>
-                </Stack>}
-
+                </Stack> : null}
+                
                   </Grid>
              </Stack>
 
