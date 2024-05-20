@@ -79,13 +79,14 @@ export default function Package({id,image, duration, title, price, currency, loc
       />
       <CardContent component={Grid} direction="column" container gap={2}>
         <Typography sx={{display:"flex", justifyContent:"space-between"}} gutterBottom variant="p" component="div">
-          <Typography fontSize="medium" fontWeight="bold" color="inherit">{finalTitle}</Typography>
-          <Typography color="primary" fontWeight="bold">{selectedCurrency} {result ? (Number(result)).toLocaleString() : 0} </Typography>
-        </Typography>
         <Stack direction="row" spacing={1}>
             <LocationOn/>
            <Typography>{finalLocation} </Typography>
         </Stack>
+          <Typography color="primary" fontWeight="bold">{selectedCurrency} {result ? (Number(result)).toLocaleString() : 0} </Typography>
+        </Typography>
+      
+        <Typography fontSize="medium" fontWeight="bold" color="inherit">{finalTitle}</Typography>
            <Stack direction="row" spacing={1}>
             <Timer/>
             <Typography variant="body2" color="text.secondary"> {duration}
