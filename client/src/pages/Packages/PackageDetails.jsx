@@ -69,9 +69,23 @@ export default function PackageDetails(){
         try {
           if(selectedCurrency !== 'KES') {
             const pr = await currencyConverter(selectedCurrency,data.price,conversionRates)
-            const hotelpr = data.hotels.map((hotel) => currencyConverter(selectedCurrency, Number(hotel.price.replace(/,/g,'')),conversionRates))
-            console.log(hotelpr)
             setResult((Math.round(pr)))
+            const hotelpr = data.hotels.map((hotel) => currencyConverter(selectedCurrency, Math.round(Number(hotel.price.replace(/,/g,''))),conversionRates))
+            Promise.all(hotelpr)
+            .then(resolvedValues => {
+              console.log(resolvedValues)
+              // Create a new array with updated prices
+              const updatedHotels = data.hotels.map((hotel, index) => {
+                return {
+                  ...hotel,
+                  price: resolvedValues[index] // Update the price with the resolved value
+                };
+              });
+          
+              console.log(updatedHotels); // Outputs the updated array of hotels
+              return updatedHotels;
+            })
+       
           } else {
              setResult(data.price)
           }
@@ -158,7 +172,7 @@ export default function PackageDetails(){
                <TableCell component="th" scope="row">
                 {hotel.hotelname}
               </TableCell>
-              <TableCell>{hotel.currency} {hotel.price.toLocaleString()}</TableCell>
+              <TableCell>{selectedCurrency} {hotel.price.toLocaleString()}</TableCell>
                </TableRow>
                })}
               </TableBody>
