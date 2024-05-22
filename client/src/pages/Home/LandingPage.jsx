@@ -1,35 +1,22 @@
 import Wrapper from "../../layouts/Wrapper"
-import { useEffect, useState } from "react"
-import client from '../../api/client'
-import { Container, Box, Typography, Stack } from "@mui/material"
-import { Slider, Quality, Package } from "../../components"
+import { useEffect } from "react"
+import { Container, Box, Typography, Stack} from "@mui/material"
+import { Slider, Quality, Package} from "../../components"
 import { content, services } from "../../utils/helpers"
 import {CustomImageList, Filter, WhatsAppChat} from "../../components"
 import { KeyboardArrowLeft, KeyboardArrowRight} from "@mui/icons-material"
 import { Link,useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next"
-
+import { getPackages } from "../../reducers/packageSlice"
+import {useDispatch, useSelector} from 'react-redux'
 export default function LandingPage(){
+  const dispatch = useDispatch()
+  const {packages} = useSelector((state) => state.package)
   const navigate = useNavigate()
   const { t } = useTranslation();
-  const [data,setData] = useState([])
-  const [referrals, setReferrals] = useState([])
-  const combined = [...data, ...referrals]
-  async function getPackages(){
-      await client.get('/find').then((response)=>{
-           setData(response.data)
-      })
-    }
-  async function getReferrals(){
-    await client.get('/find/referrals').then((response)=>{
-      setReferrals(response.data)
-    })
-  }
-  useEffect(()=>{
-      getPackages()
-      getReferrals()
-  },[data,referrals])
-  
+    useEffect(()=>{
+      dispatch(getPackages())
+  },[dispatch,packages])
     return (
         <Wrapper>
           <WhatsAppChat/>
@@ -47,10 +34,9 @@ export default function LandingPage(){
             <Typography sx={{marginBottom:"40px"}} fontSize="large" fontWeight="bold" color="whitesmoke">{t("popular")} / <Link style={{color:"#2196f3", textDecoration:"none"}} to="/packages">{t("viewall")}</Link></Typography>
             <Stack spacing={2} gap={2} direction={{xs:"column", sm:"row"}} justifyContent="center" flexWrap={{sm:"wrap",md:"nowrap"}} alignItems="center" sx={{cursor:"pointer"}}>
             <KeyboardArrowLeft sx={{backgroundColor:"#2196f3", padding:2, color:"whitesmoke", display:{xs:"none",sm:"none",md:"block"}}}/>
-             <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485121/train_kfyezj.jpg"/>
-             <Package price={3000} image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485099/america_u0clei.webp" title="America – 2 Days in Lake Tahoe" location="America" duration="7 days"/>
-             <Package price={4500} title="7 DAYS IN ZURICH, ZERMATT" location="Switzerland" duration="7 days" image="https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485084/bridge_fmrmqp.jpg"
-/>
+            {(packages && packages.length > 0) ? packages.slice(0, 3).map((item) => {
+              return <Package id={item._id} link={item.link} price={item.price} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
+            }): <Typography color="whitesmoke" fontWeight="bold">LOADING....</Typography>}
              <KeyboardArrowRight sx={{backgroundColor:"#2196f3", padding:2, color:"whitesmoke", display:{xs:"none",sm:"none",md:"block"}}}/>
             </Stack>
         </Container>

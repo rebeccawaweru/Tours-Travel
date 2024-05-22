@@ -1,14 +1,16 @@
 import Wrapper from "../../layouts/Wrapper";
-import { Box, Grid, Container, Stack, Typography, Button, Skeleton} from "@mui/material";
+import { Box, Grid, Container, Stack, Typography, Button} from "@mui/material";
 import { Filter, Package,Skeletons} from "../../components";
 import { TravelExplore } from "@mui/icons-material";
 import { useEffect, useState } from "react";
-import client from '../../api/client'
 import { useTranslation } from "react-i18next";
+import { getPackages } from "../../reducers/packageSlice";
+import {useDispatch, useSelector} from 'react-redux'
 export default function Packages(){
+  const dispatch = useDispatch()
+  const {packages} = useSelector((state) => state.package)
     const {t} = useTranslation()
     const [search, setSearch] = useState(false)
-    const [data,setData] = useState([])
     const [referrals, setReferrals] = useState([])
     const [filtered, setFiltered] = useState([])
     const [parameters, setParameters] = useState({
@@ -18,7 +20,7 @@ export default function Packages(){
         duration:"",
         date:""
     })
-    const combined = [...data, ...referrals]
+    const combined = [...packages, ...referrals]
  
     const handleChange = (e) =>{
         setParameters((parameters) => ({...parameters, [e.target.name]:e.target.value}))
@@ -35,20 +37,9 @@ export default function Packages(){
     const handleReset = () => {
         window.location.reload()
     }
-    async function getPackages(){
-        await client.get('/find').then((response)=>{
-             setData(response.data)
-        })
-      }
-    async function getReferrals(){
-        await client.get('/find/referrals').then((response)=>{
-          setReferrals(response.data)
-        })
-      }
-    useEffect(()=>{
-        getPackages()
-        getReferrals()
-    },[])
+      useEffect(()=>{
+        dispatch(getPackages())
+    },[dispatch,packages])
     return (
         <Wrapper>
        <Box sx={{
@@ -74,7 +65,7 @@ export default function Packages(){
   
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"20px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:{xs:"center",md:"center",lg:"start"},cursor:"pointer"}}>
-            {(!search && data && data.length > 0) ? data.map((item)=>{
+            {(!search && packages && packages.length > 0) ? packages.map((item)=>{
                     return <Package id={item._id} link={item.link} price={item.price} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
                   })
                : !search && <Grid display="flex" justifyContent="space-between" gap={2}> 
@@ -93,3 +84,9 @@ export default function Packages(){
     </Wrapper>
     )
 }
+
+// async function getReferrals(){
+//     await client.get('/find/referrals').then((response)=>{
+//       setReferrals(response.data)
+//     })
+//   }
