@@ -3,7 +3,6 @@ import Wrapper from "../../layouts/Wrapper";
 import { Box, Container,Table, TableHead, TableRow, TableCell, Stack, Typography, Grid, Divider, Button, Paper, TableBody } from "@mui/material";
 import { CalendarMonth, LabelImportant, Public, LocationOn,  Timer, People,TrendingUp} from "@mui/icons-material";
 import { useEffect, useState } from "react";
-import client from '../../api/client'
 import { useParams } from "react-router-dom";
 import { BasicInput,Loader } from "../../components";
 import emailjs from "@emailjs/browser";
@@ -11,10 +10,14 @@ import Swal from "sweetalert2";
 import { useTranslation } from "react-i18next";
 import { useCurrency } from "../../context/currency";
 import {currencyConverter } from '../../utils/helpers';
+import { getPackages } from "../../reducers/packageSlice";
+import {useDispatch, useSelector} from 'react-redux'
 export default function PackageDetails(){
-    const {t} = useTranslation()
-    const {id} = useParams()
-    const [data,setData] = useState({})
+  const dispatch = useDispatch()
+  const {packages} = useSelector((state) => state.package)
+  const {id} = useParams()
+  const data = packages.filter(item => item._id === id)[0]
+  const {t} = useTranslation()
     const { selectedCurrency,conversionRates} = useCurrency();
     const [finalLocation, setFinalLocation] = React.useState(data.location)
     const [hotel,setHotel] = useState('Hotel')
@@ -29,11 +32,6 @@ export default function PackageDetails(){
       phone:"",
       message:""
     })
-    async function getPackage(){
-        await client.get(`/${id}`).then((response)=>{
-             setData(response.data.package)
-        });
-      }
    const handleChange = (e) =>{
     setValues(values => ({...values, [e.target.name]:e.target.value}))
    }
@@ -62,8 +60,10 @@ export default function PackageDetails(){
          setLoading(false)
    }
     useEffect(()=>{
-        getPackage()
-    },[id])
+       if (!packages || packages.length === 0) {
+        dispatch(getPackages())
+       }
+    },[packages])
     React.useEffect(() => {
       const convertPrice = async()=>{
         try {
