@@ -16,10 +16,10 @@ export default function PackageDetails(){
   const dispatch = useDispatch()
   const {packages} = useSelector((state) => state.package)
   const {id} = useParams()
-  const data = packages.filter(item => item._id === id)[0]
+  const data = packages.filter(item => item._id === id)[0] || {}
   const {t} = useTranslation()
     const { selectedCurrency,conversionRates} = useCurrency();
-    const [finalLocation, setFinalLocation] = React.useState(data.location)
+    const [finalLocation, setFinalLocation] = React.useState(data.location ? data.location : '')
     const [hotel,setHotel] = useState('Hotel')
     const [price,setPrice] = useState('Price')
     const [excludes,setExcludes] = useState('Excludes')
