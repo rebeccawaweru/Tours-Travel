@@ -23,6 +23,7 @@ export default function PackageDetails(){
     const [hotel,setHotel] = useState('Hotel')
     const [price,setPrice] = useState('Price')
     const [excludes,setExcludes] = useState('Excludes')
+    const [updates, setUpdates] = useState(data.hotels ? data.hotels : [])
     const [result, setResult] = React.useState(data.price)
     const img = data.poster ? data.poster : 'https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485110/packagebg_m0y7fg.jpg'
     const [loading, setLoading] = useState(false)
@@ -73,7 +74,6 @@ export default function PackageDetails(){
             const hotelpr = data.hotels.map((hotel) => currencyConverter(selectedCurrency, Math.round(Number(hotel.price.replace(/,/g,''))),conversionRates))
             Promise.all(hotelpr)
             .then(resolvedValues => {
-              console.log(resolvedValues)
               // Create a new array with updated prices
               const updatedHotels = data.hotels.map((hotel, index) => {
                 return {
@@ -82,8 +82,7 @@ export default function PackageDetails(){
                 };
               });
           
-              console.log(updatedHotels); // Outputs the updated array of hotels
-              return updatedHotels;
+              setUpdates(updatedHotels); // Outputs the updated array of hotels
             })
        
           } else {
@@ -164,7 +163,7 @@ export default function PackageDetails(){
                </TableRow>
               </TableHead>
               <TableBody>
-               {data.hotels.map((hotel)=>{
+               {updates.hotels.map((hotel)=>{
                  return <TableRow
                  key={hotel.hotelname}
                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -172,7 +171,7 @@ export default function PackageDetails(){
                <TableCell component="th" scope="row">
                 {hotel.hotelname}
               </TableCell>
-              <TableCell>{selectedCurrency} {hotel.price.toLocaleString()}</TableCell>
+              <TableCell>{selectedCurrency} (Math.round(hotel.price)).toLocaleString()</TableCell>
                </TableRow>
                })}
               </TableBody>
