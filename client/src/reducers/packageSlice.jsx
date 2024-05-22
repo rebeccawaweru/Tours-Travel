@@ -22,7 +22,8 @@ const packageSlice = createSlice({
     name:"package",
     initialState:{
         packageInfo:{},
-        packages:[]
+        packages:[],
+        currency:'KES'
     },
     reducers:{},
     extraReducers:(builder)=> {
