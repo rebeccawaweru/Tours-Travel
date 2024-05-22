@@ -1,13 +1,15 @@
 import Wrapper from "../../layouts/Wrapper";
 import { Box, Grid, Container, Stack, Typography} from "@mui/material";
-import { LinkBtn, Package, Skeletons} from "../../components";
+import { LinkBtn, Package} from "../../components";
 import { LocationSearching } from "@mui/icons-material";
 import { useEffect, useState } from "react";
-import client from '../../api/client'
 import { itemData } from "../../utils/helpers";
 import { useTranslation } from "react-i18next";
+import { getPackages } from "../../reducers/packageSlice"
+import {useDispatch, useSelector} from 'react-redux'
 export default function Category(){
-    const [loading, isLoading] = useState(true)
+    const dispatch = useDispatch()
+    const {packages} = useSelector((state) => state.package)
     const {t} = useTranslation()
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -19,28 +21,14 @@ export default function Category(){
        return item.cat === category ? item.title : null
    })
 
-    const [data,setData] = useState([])
     const [referrals, setReferrals] = useState([])
-    const combined = [...data, ...referrals]
-    const destinations = combined.filter(function(item){
+    const destinations = packages.filter(function(item){
         return item.category === category
     })
 
-    async function getPackages(){
-        await client.get('/find').then((response)=>{
-             setData(response.data)
-        })
-        isLoading(false)
-      }
-    async function getReferrals(){
-        await client.get('/find/referrals').then((response)=>{
-          setReferrals(response.data)
-        })
-      }
     useEffect(()=>{
-        getPackages()
-        getReferrals()
-    },[data, referrals])
+       dispatch(getPackages())
+    },[dispatch,packages])
     return (
         <Wrapper>
        <Box sx={{
@@ -48,7 +36,6 @@ export default function Category(){
         flexDirection:"column",
         color:"whitesmoke",
         justifyContent:"center",
-        // alignItems:"start",
         height:{xs:"120vh",sm:"80vh",md:"95vh", lg:"120vh", xl:"100vh"},
         width:"100%",
         backgroundSize: 'cover',
@@ -65,14 +52,9 @@ export default function Category(){
        </Box>
        <Container maxWidth sx={{backgroundColor: 'whitesmoke',paddingY:"50px", marginTop:{xs:-4,md:-20}}}>
             <Grid direction="row" container  gap={1} sx={{alignItems:"center",justifyContent:"start",cursor:"pointer"}}>
-                {loading && <Grid display="flex" justifyContent="space-between" gap={2}> 
-                <Skeletons/>
-                <Skeletons/>
-                <Skeletons/>
-               </Grid>}
-                {!loading && destinations && destinations.length > 0 ? destinations.map((item)=>{
+                {destinations && destinations.length > 0 ? destinations.map((item)=>{
                     return <Package id={item._id} link={item.link} price={item.price} location={`${item.location} ${item.country}`} title={item.title} duration={`${item.nights} ${t("details.night")} ${item.days} ${t("details.days")}`} image={item.poster}/>
-                  }) : !loading && <p>No tour packages available under {category}. <LinkBtn to="/packages" title="Explore all tours"/></p>
+                  }) : <p>No tour packages available under {category}. <LinkBtn to="/packages" title="Explore all tours"/></p>
                 } 
             </Grid>
         </Container>

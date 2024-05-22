@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import client from "../api/client";
-export const getPackages = createAsyncThunk('/packages', async({rejectWithValue})=> {
+export const getPackages = createAsyncThunk('/packages', async(data,{rejectWithValue})=> {
     try {
         const response = await client.get('/find')
+        console.log(response)
         return response.data
     } catch (error) {
         return rejectWithValue(error)
@@ -27,6 +28,7 @@ const packageSlice = createSlice({
     reducers:{},
     extraReducers:(builder)=> {
         builder.addCase(getPackages.fulfilled, (state, action) => {
+            console.log(action.payload)
             state.packages = action.payload
         });
         builder.addCase(getPackage.fulfilled, (state, action) => {
