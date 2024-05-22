@@ -171,7 +171,7 @@ export default function PackageDetails(){
                <TableCell component="th" scope="row">
                 {hotel.hotelname}
               </TableCell>
-              <TableCell> KES (Math.round(hotel.price)).toLocaleString()</TableCell>
+              <TableCell> KES {hotel.price.toLocaleString()}</TableCell>
                </TableRow>
                }) : hotelupdates && hotelupdates.length > 0 && hotelupdates.map((hotel)=>{
                 return <TableRow
@@ -181,7 +181,7 @@ export default function PackageDetails(){
               <TableCell component="th" scope="row">
                {hotel.hotelname}
              </TableCell>
-             <TableCell>{selectedCurrency} (Math.round(hotel.price)).toLocaleString()</TableCell>
+             <TableCell>{selectedCurrency} {Math.round(hotel.price).toLocaleString()}</TableCell>
               </TableRow>
               })}
 
