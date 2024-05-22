@@ -69,7 +69,7 @@ export default function PackageDetails(){
         try {
           if(selectedCurrency !== 'KES') {
             const pr = await currencyConverter(selectedCurrency,data.price,conversionRates)
-            const hotelpr = data.hotels.map((hotel) => currencyConverter(selectedCurrency,hotel.price,conversionRates))
+            const hotelpr = data.hotels.map((hotel) => currencyConverter(selectedCurrency, Number(hotel.price.replace(/,/g,'')),conversionRates))
             console.log(hotelpr)
             setResult((Math.round(pr)))
           } else {
