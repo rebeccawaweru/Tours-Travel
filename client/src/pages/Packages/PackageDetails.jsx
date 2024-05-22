@@ -23,7 +23,7 @@ export default function PackageDetails(){
     const [hotel,setHotel] = useState('Hotel')
     const [price,setPrice] = useState('Price')
     const [excludes,setExcludes] = useState('Excludes')
-    const [updates, setUpdates] = useState(data.hotels ? data.hotels : [])
+    const [hotelupdates, setHotelUpdates] = useState([])
     const [result, setResult] = React.useState(data.price)
     const img = data.poster ? data.poster : 'https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485110/packagebg_m0y7fg.jpg'
     const [loading, setLoading] = useState(false)
@@ -81,8 +81,8 @@ export default function PackageDetails(){
                   price: resolvedValues[index] // Update the price with the resolved value
                 };
               });
-          
-              setUpdates(updatedHotels); // Outputs the updated array of hotels
+                console.log(updatedHotels)
+              setHotelUpdates(updatedHotels); // Outputs the updated array of hotels
             })
        
           } else {
@@ -163,7 +163,7 @@ export default function PackageDetails(){
                </TableRow>
               </TableHead>
               <TableBody>
-               {updates.hotels.map((hotel)=>{
+               {selectedCurrency === 'KES' ? data.hotels.map((hotel)=>{
                  return <TableRow
                  key={hotel.hotelname}
                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -171,9 +171,20 @@ export default function PackageDetails(){
                <TableCell component="th" scope="row">
                 {hotel.hotelname}
               </TableCell>
-              <TableCell>{selectedCurrency} (Math.round(hotel.price)).toLocaleString()</TableCell>
+              <TableCell> KES (Math.round(hotel.price)).toLocaleString()</TableCell>
                </TableRow>
-               })}
+               }) : hotelupdates && hotelupdates.length > 0 && hotelupdates.map((hotel)=>{
+                return <TableRow
+                key={hotel.hotelname}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+              <TableCell component="th" scope="row">
+               {hotel.hotelname}
+             </TableCell>
+             <TableCell>{selectedCurrency} (Math.round(hotel.price)).toLocaleString()</TableCell>
+              </TableRow>
+              })}
+
               </TableBody>
             </Table>
             }
