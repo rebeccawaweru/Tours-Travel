@@ -39,14 +39,9 @@ export default function CreatePackage(){
         title:"",
         category:"",
         location:"",
-        minimum:0,
-        maximum:0,
         price:0,
-        promotion:0,
         days:0,
         nights:0,
-        startdate:"",
-        endate:"",
         deadline:"",
         currency:"KES"
     })
@@ -267,7 +262,7 @@ export default function CreatePackage(){
              </Stack>
 
 
-            <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>+ Add Rates</Typography>
+            {/* <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>+ Add Rates</Typography>
             {rates.length > 0 ? 
                 <Grid container direction="column" gap={2} marginBottom={2}>
                     {rates.map((rate,index) => (
@@ -284,7 +279,7 @@ export default function CreatePackage(){
             <BasicInput placeholder="e.g CHILDREN" lbl="Rate title" name="ratename"   value={rate.ratename} helperText="Please ensure you click 'Save' for each rate" onChange={handleChange2}/>
             <BasicInput type="number"  lbl="Price Rate" name="pricerate"   value={rate.pricerate} onChange={handleChange2}/>
             <Typography marginTop={3} onClick={handleAdd} sx={{cursor:"pointer"}}>Save</Typography>
-            </Stack>
+            </Stack> */}
 
             <Typography variant="body1" color="primary" marginBottom={2} fontSize={14.5}>The Rates Include:</Typography>
             {inclusives.length > 0 ? 
@@ -340,21 +335,7 @@ export default function CreatePackage(){
              <CheckBox label="Stadia Visits" onChange={()=>handleCheckboxChange('Stadia Visits')}/>
              <CheckBox label="Olympics" onChange={()=>handleCheckboxChange('Olympics')}/>
              <CheckBox label="Formula One" onChange={()=>handleCheckboxChange('Formula One')}/>
-            <Typography variant="body1" color="primary" marginY={2} fontSize={14.5}>Number of people </Typography>
-            <Stack direction="row" gap={2}>
-            <BasicInput lbl="Maximum" type="number" name="maximum" onChange={handleChange}/>
-            <BasicInput lbl="Minimum" type="number" name="minimum" onChange={handleChange}/>
-            </Stack>
-
-           
-
-            <BasicInput lbl="Promotion (%)" placeholder="e.g 30" type="number" name="promotion" onChange={handleChange}/>
-            <Stack direction="row" gap={2}>
-            <BasicInput lbl="Start Date" type="date" name="startdate" onChange={handleChange}/>
-            <BasicInput lbl="End Date" type="date" name="endate" onChange={handleChange}/>
-            </Stack>
             <BasicInput lbl="Deadline" type="date" helperText="Valid Till" name="deadline" onChange={handleChange}/>
-           
              {loading ? <Loader/> :
             <Button type="submit" variant="contained">Submit</Button>}
            </Box>
