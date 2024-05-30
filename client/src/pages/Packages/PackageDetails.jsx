@@ -101,7 +101,7 @@ export default function PackageDetails(){
   },[selectedCurrency,data.price, conversionRates])
   useEffect(()=>{
     const convertLang = () => {
-      if (selectLang !== 'EN' && selectLang !== 'UK' && data.inclusives){
+      if (selectLang !== 'EN' && data.inclusives){
         const inc = data.inclusives.map((item) => textTranslate(selectLang,item.desc))
         const ac = data.activity.map((item) => textTranslate(selectLang, item))
         Promise.all(inc)

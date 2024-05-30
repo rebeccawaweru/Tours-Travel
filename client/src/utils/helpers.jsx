@@ -207,7 +207,7 @@ export const languages = [
     url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/united-kingdom_up03xv.png",
     abb:'uk',
     lang:"English (UK)",
-    abv: 'UK'
+    abv: 'EN'
   },
   {
     url:"https://res.cloudinary.com/dkjb6ziqg/image/upload/france_wjph1w.png",
