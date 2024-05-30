@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { useTranslation } from "react-i18next";
 import { useCurrency } from "../../context/currency";
-import {currencyConverter } from '../../utils/helpers';
+import {currencyConverter, textTranslate } from '../../utils/helpers';
 import { getPackages } from "../../reducers/packageSlice";
 import {useDispatch, useSelector} from 'react-redux'
 export default function PackageDetails(){
@@ -18,12 +18,13 @@ export default function PackageDetails(){
   const {id} = useParams()
   const data = packages.filter(item => item._id === id)[0] || {}
   const {t} = useTranslation()
-    const { selectedCurrency,conversionRates} = useCurrency();
+    const { selectedCurrency,conversionRates, selectLang} = useCurrency();
     const [finalLocation, setFinalLocation] = React.useState(data.location ? data.location : '')
     const [hotel,setHotel] = useState('Hotel')
     const [price,setPrice] = useState('Price')
     const [excludes,setExcludes] = useState('Excludes')
     const [hotelupdates, setHotelUpdates] = useState([])
+    const [incs, setIncs] = useState([])
     const [result, setResult] = React.useState(data.price)
     const img = data.poster ? data.poster : 'https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485110/packagebg_m0y7fg.jpg'
     const [loading, setLoading] = useState(false)
@@ -93,9 +94,32 @@ export default function PackageDetails(){
           console.log(error)
         }
       }
+     
       convertPrice()
+    
   },[selectedCurrency,data.price, conversionRates])
-
+  useEffect(()=>{
+    const convertLang = async() => {
+      if (selectLang !== 'EN' && data.inclusives){
+        const inc = data.inclusives.map((item) => textTranslate(selectLang,item.desc))
+        Promise.all(inc)
+        .then(resolvedValues => {
+          console.log(resolvedValues)
+          const update = data.inclusives.map((item,index) => {
+            return {
+              ...item,
+              desc:resolvedValues[index]
+            };
+          });
+          console.log(update)
+          setIncs(update)
+        })
+      } else {
+        setIncs(data.inclusives ? data.inclusives : [])
+      }
+  }
+    convertLang()
+  },[selectLang,data])
     return (
         <Wrapper>
        <Box sx={{
@@ -198,7 +222,7 @@ export default function PackageDetails(){
            </>}
             <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.includes")}:</Typography>
-           {data.inclusives && data.inclusives.map((item,index)=> {
+           {incs && incs.map((item,index)=> {
               return <Stack direction="row" spacing={1}><LabelImportant color="primary"/><Typography key={index} color="inherit" variant="body1">{item.desc}</Typography></Stack>
            })}
            {(data.exclusives && data.exclusives.length > 0) ?
@@ -220,9 +244,6 @@ export default function PackageDetails(){
            </Grid>          
             </Grid>
               <Grid height="fit-content"  item container xs={12} md={4} component={Paper} elevation={2} bgcolor="white" direction="column">
-                 <Box maxWidth display="flex" justifyContent="center" bgcolor="black" padding={1}>
-                    <Typography color="whitesmoke" variant="body1">{data && data.promotion} % {t("details.off")}</Typography>
-                 </Box>
                  <Box maxWidth display="flex" justifyContent="center" bgcolor="#2196f3" padding={3}>
                     <Typography color="whitesmoke" variant="h3">{selectedCurrency} {result && (Number(result)).toLocaleString()}</Typography>
                  </Box>
