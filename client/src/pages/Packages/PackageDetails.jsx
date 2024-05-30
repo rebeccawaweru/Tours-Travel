@@ -117,11 +117,7 @@ export default function PackageDetails(){
 
         Promise.all(ac).then(resolvedValues => {
           console.log(resolvedValues)
-          const update = data.activity.map((item,index) => {
-            return {
-              ...resolvedValues[index].data
-            }
-          });
+          const update = data.activity.map((item,index) => resolvedValues[index]);
           console.log(update)
           setAct(update)
         })
