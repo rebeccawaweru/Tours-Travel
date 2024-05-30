@@ -108,7 +108,7 @@ export default function PackageDetails(){
           const update = data.inclusives.map((item,index) => {
             return {
               ...item,
-              desc:resolvedValues[index]
+              desc:resolvedValues[index].data
             };
           });
           console.log(update)
