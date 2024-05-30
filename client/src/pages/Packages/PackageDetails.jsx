@@ -24,7 +24,8 @@ export default function PackageDetails(){
     const [price,setPrice] = useState('Price')
     const [excludes,setExcludes] = useState('Excludes')
     const [hotelupdates, setHotelUpdates] = useState([])
-    const [incs, setIncs] = useState([])
+    const [incs, setIncs] = useState(data.inclusives ? data.inclusives : [])
+    const [act,setAct] = useState(data.activity ? data.activity : [])
     const [result, setResult] = React.useState(data.price)
     const img = data.poster ? data.poster : 'https://res.cloudinary.com/dkjb6ziqg/image/upload/q_80/f_auto/v1714485110/packagebg_m0y7fg.jpg'
     const [loading, setLoading] = useState(false)
@@ -96,26 +97,38 @@ export default function PackageDetails(){
       }
      
       convertPrice()
-    
+
   },[selectedCurrency,data.price, conversionRates])
   useEffect(()=>{
-    const convertLang = async() => {
-      if (selectLang !== 'EN' && data.inclusives){
+    const convertLang = () => {
+      if (selectLang !== 'EN' && selectLang !== 'UK' && data.inclusives){
         const inc = data.inclusives.map((item) => textTranslate(selectLang,item.desc))
+        const ac = data.activity.map((item) => textTranslate(selectLang, item))
         Promise.all(inc)
         .then(resolvedValues => {
-          console.log(resolvedValues)
           const update = data.inclusives.map((item,index) => {
             return {
               ...item,
               desc:resolvedValues[index].data
             };
           });
-          console.log(update)
           setIncs(update)
+        });
+
+        Promise.all(ac).then(resolvedValues => {
+          console.log(resolvedValues)
+          const update = data.activity.map((item,index) => {
+            return {
+              ...resolvedValues[index].data
+            }
+          });
+          console.log(update)
+          setAct(update)
         })
+
       } else {
         setIncs(data.inclusives ? data.inclusives : [])
+        setAct(data.activity ? data.activity : [])
       }
   }
     convertLang()
@@ -237,7 +250,7 @@ export default function PackageDetails(){
        <Divider></Divider>
            <Typography variant="h5" fontWeight="bold" color="primary">{t("details.activity")}</Typography>
            <Box display="flex" flexWrap="wrap" gap={2} marginBottom={2}>
-           {data && data.activity && data.activity.length > 0 && data.activity.map((item)=>{
+           {data && data.activity && data.activity.length > 0 && act.map((item)=>{
                  return  <Stack direction="row" key={item}><TrendingUp fontSize="small" color="primary"/><Typography color="inherit" variant="body1">{item}</Typography></Stack>
             })}
            </Box>
