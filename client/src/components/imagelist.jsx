@@ -36,7 +36,7 @@ export default function CustomImageList({...props}) {
             <Typography variant="h6" fontWeight="bold">{t(item.title)}</Typography>
            </Stack>
          </Box>
-            {hovered ? <Typography marginLeft={1} component={Link} to="/destinations" fontWeight="bold" color="primary">{t('destination.view')}</Typography> : null}
+            {hovered ? <Typography marginLeft={1} component={Link} to={`/destination?category=${(item.cat)}`} fontWeight="bold" color="primary">{t('destination.view')}</Typography> : null}
          </Box>
          </Box>
             </Grid>

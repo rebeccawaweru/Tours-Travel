@@ -169,12 +169,12 @@ export default function PackageDetails(){
                 <Typography color="inherit" variant="body1"> {data.country}</Typography>
                 </Stack>
               </Grid>
-                <Grid  direction="column" container gap={4} marginTop={{sm:4, md:0}}>
-                <Stack direction="row" spacing={1}>
+                <Grid  direction="column" container gap={4} >
+                <Stack direction="row" spacing={1} marginTop={{xs:4, sm:4, md:0}}>
                 <CalendarMonth color="primary"/>
                 <Typography color="inherit" variant="body1">{t("details.valid")}: {data.deadline && new Date(data.deadline).toDateString()}</Typography>
                 </Stack>
-                {data.maximum  ?
+                {/* {data.maximum  ?
                 <Stack direction="row" spacing={1}>
                 <People color="primary"/>
                 <Typography color="inherit" variant="body1">{t("details.max")}. {data.maximum}</Typography>
@@ -183,9 +183,8 @@ export default function PackageDetails(){
                 <Stack direction="row" spacing={1}>
                 <People color="primary"/>
                 <Typography color="inherit" variant="body1">{t("details.min")}. {data.minimum}</Typography>
-                </Stack> : null}
-
-                  </Grid>
+                </Stack> : null} */}
+                </Grid>
              </Stack>
              {data.hotels && data.hotels.length > 0 && 
              <Table>
