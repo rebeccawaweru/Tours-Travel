@@ -13,6 +13,10 @@ code {
   text-decoration: none;
   color: white; 
 }
+.dues {
+  font-weight: bold;
+  color: red;
+}
 .slogan {
   font-family:'Times New Roman', Times, serif;
  font-weight: 900;

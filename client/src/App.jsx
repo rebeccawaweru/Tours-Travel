@@ -15,7 +15,8 @@ function App() {
    <Grid bgcolor="rgb(203 213 225)" height="100vh" gap={1} container display="flex" flexDirection="column" textAlign="center" justifyContent="center" alignItems="center">
       <img src={danger} alt="suspension" width={100} height={100}/>
       <Typography variant="h4" fontWeight="bold">Website Suspended</Typography>
-      <Typography>Contact developer for further information</Typography>
+      <Typography variant="h6">This website has been taken down due to <span className='dues'>non payment of dues</span>. If you own this website,<br></br> please pay the dues in full to avoid permanent termination of services.</Typography>
+      <Typography>Contact your developer for further information</Typography>
    </Grid>
 );
 }
