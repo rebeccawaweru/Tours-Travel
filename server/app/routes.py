@@ -12,7 +12,7 @@ db = mongo.get_database()
 
 @app.route('/')
 def start():
-   return 'Hello World'
+   return 'Hello World!'
 
 @app.route('/signup', methods=['POST'])
 def signup():
