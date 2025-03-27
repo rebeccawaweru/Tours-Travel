@@ -4,7 +4,7 @@ import client from '../api/client';
 const CurrencyContext = createContext();
 
 export const useCurrency = () => {
-  return useContext(CurrencyContext);
+  return useContext(CurrencyContext)
 };
 
 export const CurrencyProvider = ({ children }) => {
